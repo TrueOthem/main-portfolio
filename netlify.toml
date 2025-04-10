@@ -1,19 +1,10 @@
 [build]
   command = "bun run build"
-  publish = ".next"
+  publish = "out"
 
 [build.environment]
-  NEXT_USE_NETLIFY_EDGE = "true"
   NEXT_PUBLIC_BASE_URL = "https://same-4h9hy38yrn1-latest.netlify.app"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NODE_VERSION = "20"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [images]
   remote_images = ["https://ext.same-assets.com/*"]
-
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"

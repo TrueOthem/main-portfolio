@@ -2,6 +2,8 @@ import withNextIntl from 'next-intl/plugin';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  distDir: 'out',
   images: {
     domains: ['ext.same-assets.com'],
     remotePatterns: [
@@ -11,6 +13,7 @@ const nextConfig = {
         pathname: '**',
       },
     ],
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,

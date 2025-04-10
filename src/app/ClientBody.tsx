@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { motion } from 'framer-motion';
 
 export default function ClientBody({
   children,
@@ -14,8 +15,13 @@ export default function ClientBody({
   }, []);
 
   return (
-    <body className="antialiased" suppressHydrationWarning>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="grid grid-cols-1 md:grid-cols-3"
+    >
       {children}
-    </body>
+    </motion.div>
   );
 }

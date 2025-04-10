@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { AdvancedPageTransition } from "@/components/ui/page-transition";
+import { ScrollProgressBar } from "@/components/ui/interactive-motion";
 
 export const metadata: Metadata = {
   title: "Mohamed Adil Al Sabri - Process Development Engineer",
@@ -18,8 +20,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider defaultTheme="system">
+          <ScrollProgressBar height={3} color="hsl(var(--primary))" />
           <Navbar />
-          <main className="flex-grow grid-container">{children}</main>
+          <main className="flex-grow grid-container">
+            <AdvancedPageTransition>
+              {children}
+            </AdvancedPageTransition>
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

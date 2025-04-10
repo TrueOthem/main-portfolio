@@ -1,43 +1,95 @@
 'use client';
 
 import Link from 'next/link';
+import { FadeIn, StaggerContainer, StaggerItem, HoverScale } from '@/components/ui/motion';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#d1d1c7] bg-background">
-      {/* Social links */}
-      <div className="border-b border-[#d1d1c7]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center space-x-6">
-            <Link href="https://linkedin.com/in/mohamed-adil-al-sabri/" target="_blank" className="text-sm nav-link">LinkedIn</Link>
-            <Link href="mailto:trueothem@gmail.com" className="text-sm nav-link">Email</Link>
-            <Link href="tel:+16172333948" className="text-sm nav-link">Phone</Link>
+    <FadeIn>
+      <footer className="border-t border-[#d1d1c7] bg-background">
+        {/* Social links */}
+        <div className="border-b border-[#d1d1c7]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+            <StaggerContainer className="flex items-center space-x-6">
+              <StaggerItem>
+                <Link href="https://linkedin.com/in/mohamed-adil-al-sabri/" target="_blank" className="text-sm nav-link">
+                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                    LinkedIn
+                  </motion.span>
+                </Link>
+              </StaggerItem>
+              <StaggerItem>
+                <Link href="mailto:trueothem@gmail.com" className="text-sm nav-link">
+                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                    Email
+                  </motion.span>
+                </Link>
+              </StaggerItem>
+              <StaggerItem>
+                <Link href="tel:+16172333948" className="text-sm nav-link">
+                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                    Phone
+                  </motion.span>
+                </Link>
+              </StaggerItem>
+            </StaggerContainer>
           </div>
         </div>
-      </div>
 
-      {/* Navigation and credit */}
-      <div className="border-b border-[#d1d1c7]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-end items-center space-x-6">
-            <Link href="/" className="text-sm nav-link">Home</Link>
-            <Link href="/about" className="text-sm nav-link">About</Link>
-            <Link href="/works" className="text-sm nav-link">Works</Link>
-            <Link href="/blog" className="text-sm nav-link">Blog</Link>
+        {/* Navigation and credit */}
+        <div className="border-b border-[#d1d1c7]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+            <StaggerContainer className="flex justify-end items-center space-x-6">
+              <StaggerItem>
+                <Link href="/" className="text-sm nav-link">
+                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                    Home
+                  </motion.span>
+                </Link>
+              </StaggerItem>
+              <StaggerItem>
+                <Link href="/about" className="text-sm nav-link">
+                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                    About
+                  </motion.span>
+                </Link>
+              </StaggerItem>
+              <StaggerItem>
+                <Link href="/works" className="text-sm nav-link">
+                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                    Works
+                  </motion.span>
+                </Link>
+              </StaggerItem>
+              <StaggerItem>
+                <Link href="/blog" className="text-sm nav-link">
+                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
+                    Blog
+                  </motion.span>
+                </Link>
+              </StaggerItem>
+            </StaggerContainer>
           </div>
         </div>
-      </div>
 
-      {/* Credits */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex justify-center items-center">
-          <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} Mohamed Adil Al Sabri. All rights reserved.
-          </p>
+        {/* Credits */}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <FadeIn delay={0.3}>
+            <div className="flex justify-center items-center">
+              <motion.p
+                className="text-sm text-muted-foreground"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.2 }}
+              >
+                &copy; {currentYear} Mohamed Adil Al Sabri. All rights reserved.
+              </motion.p>
+            </div>
+          </FadeIn>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </FadeIn>
   );
 }
