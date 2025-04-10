@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ebebe4;
+    --foreground: #0f0f0f;
+
+    --card: #ffffff;
+    --card-foreground: #0f0f0f;
+
+    --popover: #ffffff;
+    --popover-foreground: #0f0f0f;
+
+    --primary: #0f0f0f;
+    --primary-foreground: #ebebe4;
+
+    --secondary: #f4f4f0;
+    --secondary-foreground: #0f0f0f;
+
+    --muted: #f4f4f0;
+    --muted-foreground: #6c6c6c;
+
+    --accent: #f4f4f0;
+    --accent-foreground: #0f0f0f;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #e4e4da;
+    --input: #e4e4da;
+    --ring: #0f0f0f;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #0f0f0f;
+    --foreground: #ebebe4;
+
+    --card: #27272a;
+    --card-foreground: #ffffff;
+
+    --popover: #27272a;
+    --popover-foreground: #ffffff;
+
+    --primary: #ffffff;
+    --primary-foreground: #0f0f0f;
+
+    --secondary: #27272a;
+    --secondary-foreground: #ffffff;
+
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+
+    --accent: #27272a;
+    --accent-foreground: #ffffff;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #ffffff;
+
+    --border: #3f3f46;
+    --input: #3f3f46;
+    --ring: #ffffff;
+  }
+}
+
+/* Import Raleway font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: 'Raleway', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@layer components {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
+                      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    @apply transition-colors duration-300;
+  }
+
+  .nav-link {
+    @apply hover:underline underline-offset-4;
+  }
+
+  .main-button {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full hover:opacity-90 transition-opacity;
+  }
+}

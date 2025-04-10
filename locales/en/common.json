@@ -1,0 +1,270 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "allRightsReserved": "© {{year}} Mohamed Adil Al Sabri. All rights reserved.",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "home": {
+    "hero": {
+      "name": "Mohamed Adil",
+      "surname": "Al Sabri"
+    },
+    "about": {
+      "section": "About",
+      "title": "Process Development Engineer",
+      "description": "Process Development Engineer specializing in green hydrogen production. I enhance process capability by developing scalable manufacturing processes, integrating cutting-edge technology, and applying data analysis to optimize production efficiency.",
+      "experience": "Years of Experience",
+      "projects": "Projects Completed",
+      "companies": "Companies Worked With"
+    },
+    "skills": {
+      "section": "Skills",
+      "title": "My Technical Expertise",
+      "description": "With a background in Mechanical Engineering and years of experience in process development, I bring a diverse skill set that combines engineering principles with data-driven approaches to optimize manufacturing processes.",
+      "processDevelopment": {
+        "title": "Process Development",
+        "description": "Developing scalable manufacturing processes for green hydrogen production using statistical tools like DOE and SPC."
+      },
+      "dataAnalysis": {
+        "title": "Data Analysis",
+        "description": "Applying large-data analysis in SaaS environments to optimize process efficiency and support continuous improvement initiatives."
+      },
+      "manufacturingSystems": {
+        "title": "Manufacturing Systems",
+        "description": "Building robust data architectures for real-time data storage and visualization to enhance project management capabilities."
+      },
+      "cadDesign": {
+        "title": "CAD & Engineering Design",
+        "description": "Generating structured CAD designs and quality-focused drawings using PDM systems for improved design accuracy and efficiency."
+      },
+      "technicalSkills": {
+        "title": "Technical Skills",
+        "description": "Proficient in CAD, SolidWorks, Python, SQL, Data Analysis, Machine Learning, Product Design, and Project Management."
+      }
+    },
+    "experience": {
+      "section": "Experience",
+      "title": "Professional Experience",
+      "viewFull": "View Full Experience",
+      "position": {
+        "processEngineer": "Process Development Engineer",
+        "manufacturingEngineer": "Manufacturing Engineer"
+      },
+      "company": {
+        "electricHydrogen": "Electric Hydrogen - Boston, MA",
+        "advancedPower": "Advanced Power Conversion - Colorado, USA"
+      },
+      "date": {
+        "present": "January 2023 - Present",
+        "previous": "January 2022 - December 2023"
+      },
+      "description": {
+        "processEngineer1": "Enhanced process capability by 20% for green hydrogen production by developing scalable manufacturing processes.",
+        "processEngineer2": "Integrated cutting-edge technology into production processes by working with suppliers and vendors.",
+        "processEngineer3": "Improved decision-making and stakeholder communication by providing actionable recommendations.",
+        "processEngineer4": "Developed robust data architectures for real-time data storage and visualization.",
+        "manufacturingEngineer1": "Enhanced product lifecycle management by 20% utilizing hands-on machining and efficient feedback mechanisms.",
+        "manufacturingEngineer2": "Reduced development iterations by 30% through collaboration with the R&D team.",
+        "manufacturingEngineer3": "Achieved 95% quality control compliance by analyzing production units against standards.",
+        "manufacturingEngineer4": "Facilitated cross-functional transformation in manufacturing processes."
+      }
+    },
+    "education": {
+      "section": "Education",
+      "title": "Academic Background",
+      "university": {
+        "colorado": "University of Colorado - Boulder",
+        "pennsylvania": "University of Pennsylvania"
+      },
+      "degree": {
+        "colorado": "Bachelor's, Mechanical Engineering (August 2016 - May 2021)",
+        "pennsylvania": "Certification, Mechanical Engineering (January 2015 - December 2016)"
+      }
+    },
+    "contact": {
+      "section": "Contact",
+      "title": "Get in Touch",
+      "description": "Interested in discussing process development, manufacturing efficiency, or potential opportunities? I'd love to connect.",
+      "form": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "subject": "Subject",
+        "message": "Your Message...",
+        "submit": "Submit"
+      },
+      "info": {
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "address": "Cambridge, MA, USA"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "aboutMe": "About Me",
+      "title": "Mohamed Adil Al Sabri",
+      "subtitle": "Process Development Engineer",
+      "getInTouch": "Get in Touch"
+    },
+    "career": {
+      "section": "Work Experience",
+      "title": "My Career Path",
+      "description": "With experience spanning multiple companies and roles, I've developed expertise in process development, manufacturing engineering, and project management across various industries.",
+      "contactMe": "Contact Me",
+      "position": {
+        "processEngineer": "Process Development Engineer",
+        "manufacturingEngineer": "Manufacturing Engineer",
+        "applicationEngineer": "Application Engineer",
+        "engineeringStaff": "Engineering Staff",
+        "rdIntern": "R&D Engineering Intern"
+      },
+      "company": {
+        "electricHydrogen": "Electric Hydrogen - Boston, MA, USA",
+        "advancedPower": "Advanced Power Conversion - Colorado, USA",
+        "advancedPowerVT": "Advanced Power Conversion - Barre, VT, USA",
+        "cuBoulder": "CU BOULDER - Boulder, CO, USA",
+        "nist": "NIST - Boulder, CO, USA"
+      }
+    },
+    "skills": {
+      "section": "Skills",
+      "title": "Technical Skills",
+      "categories": {
+        "engineering": "Engineering",
+        "dataAndTech": "Data & Technology",
+        "projectManagement": "Project Management"
+      },
+      "engineeringSkills": [
+        "CAD",
+        "SolidWorks",
+        "Product Design",
+        "Operations Research",
+        "Process Development"
+      ],
+      "dataSkills": [
+        "SQL",
+        "Python",
+        "Data Analysis",
+        "Data Science",
+        "Machine Learning"
+      ],
+      "managementSkills": [
+        "SCRUM",
+        "JIRA",
+        "Risk Management",
+        "Communication",
+        "Problem Solving"
+      ]
+    }
+  },
+  "works": {
+    "hero": {
+      "section": "Professional Work",
+      "title": "Projects & Accomplishments"
+    },
+    "categories": {
+      "all": "All",
+      "processDevelopment": "Process Development",
+      "manufacturing": "Manufacturing",
+      "designEngineering": "Design Engineering",
+      "dataArchitecture": "Data Architecture",
+      "rdEngineering": "R&D Engineering"
+    },
+    "projects": {
+      "company": "Company",
+      "year": "Year"
+    },
+    "skills": {
+      "section": "Skills",
+      "title": "Technical Expertise",
+      "categories": {
+        "engineering": "Engineering",
+        "programming": "Data & Programming",
+        "management": "Management"
+      },
+      "engineeringSkills": [
+        "CAD & SolidWorks",
+        "Operations Research",
+        "Process Development",
+        "Manufacturing Systems",
+        "Product Design"
+      ],
+      "programmingSkills": [
+        "SQL & Database Design",
+        "Python Development",
+        "Data Analysis & Visualization",
+        "C/C++ Programming",
+        "Machine Learning"
+      ],
+      "managementSkills": [
+        "Project Management",
+        "SCRUM & Agile Methodologies",
+        "Risk Management",
+        "Team Leadership",
+        "Cross-functional Collaboration"
+      ]
+    }
+  },
+  "blog": {
+    "hero": {
+      "section": "Technical Articles",
+      "title": "Engineering & Technical Insights"
+    },
+    "categories": {
+      "all": "All",
+      "processDevelopment": "Process Development",
+      "dataSystems": "Data Systems",
+      "engineering": "Engineering",
+      "qualityAssurance": "Quality Assurance",
+      "sustainability": "Sustainability",
+      "leadership": "Leadership"
+    },
+    "readMore": "Click to read more about",
+    "newsletter": {
+      "section": "Stay Updated",
+      "title": "Subscribe to My Newsletter",
+      "description": "Receive updates on the latest engineering advancements, process development techniques, and technical insights directly to your inbox.",
+      "placeholder": "Your Email Address",
+      "subscribe": "Subscribe"
+    }
+  },
+  "contact": {
+    "hero": {
+      "section": "Contact",
+      "title": "Let's Connect"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message...",
+      "submit": "Submit"
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "resume": {
+      "section": "My Resume",
+      "title": "Download My Resume",
+      "description": "Looking for more details about my professional experience, education, and skills? Download my full resume.",
+      "button": "Download Resume"
+    },
+    "connect": {
+      "section": "Connect",
+      "title": "Let's Connect on LinkedIn",
+      "description": "Connect with me on LinkedIn to stay updated on my professional journey and industry insights.",
+      "button": "LinkedIn Profile"
+    }
+  }
+}
