@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AdvancedPageTransition } from "@/components/ui/page-transition";
 import { ScrollProgressBar } from "@/components/ui/interactive-motion";
+import { DeviceContextProvider } from "@/components/device-provider";
 
 export const metadata: Metadata = {
   title: "Mohamed Adil Al Sabri - Process Development Engineer",
@@ -20,14 +21,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider defaultTheme="system">
-          <ScrollProgressBar height={3} color="hsl(var(--primary))" />
-          <Navbar />
-          <main className="flex-grow grid-container">
-            <AdvancedPageTransition>
-              {children}
-            </AdvancedPageTransition>
-          </main>
-          <Footer />
+          <DeviceContextProvider>
+            <ScrollProgressBar height={3} color="var(--primary)" />
+            <Navbar />
+            <main className="flex-grow grid-container">
+              <AdvancedPageTransition>
+                {children}
+              </AdvancedPageTransition>
+            </main>
+            <Footer />
+          </DeviceContextProvider>
         </ThemeProvider>
       </body>
     </html>

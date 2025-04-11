@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import ClientBody from './ClientBody';
 import { ScrollReveal, FadeIn, RevealText, ScaleIn, StaggerContainer, StaggerItem, HoverScale } from '@/components/ui/motion';
 import { ParallaxImage, ParallaxScroll, ParallaxRotate } from '@/components/ui/parallax';
-import { TiltCard, RippleButton, MagneticElement, CountUp } from '@/components/ui/interactive-motion';
+import { TiltCard, RippleButton, MagneticElement } from '@/components/ui/interactive-motion';
 
 // Define logo data with unique IDs and image paths
 const logoData = [
@@ -85,9 +85,7 @@ export default function Home() {
                   <StaggerItem>
                     <MagneticElement distanceThreshold={100} magnetStrength={0.3}>
                       <div className="cursor-pointer">
-                        <h3 className="text-3xl font-medium mb-2">
-                          <CountUp to={5} duration={1.5} formatter={(value) => `${value}+`} />
-                        </h3>
+                        <h3 className="text-3xl font-medium mb-2">5+</h3>
                         <p className="text-sm text-muted-foreground">Years of Experience</p>
                       </div>
                     </MagneticElement>
@@ -95,9 +93,7 @@ export default function Home() {
                   <StaggerItem>
                     <MagneticElement distanceThreshold={100} magnetStrength={0.3}>
                       <div className="cursor-pointer">
-                        <h3 className="text-3xl font-medium mb-2">
-                          <CountUp to={20} duration={2} formatter={(value) => `${value}+`} />
-                        </h3>
+                        <h3 className="text-3xl font-medium mb-2">20+</h3>
                         <p className="text-sm text-muted-foreground">Projects Completed</p>
                       </div>
                     </MagneticElement>
@@ -105,9 +101,7 @@ export default function Home() {
                   <StaggerItem>
                     <MagneticElement distanceThreshold={100} magnetStrength={0.3}>
                       <div className="cursor-pointer">
-                        <h3 className="text-3xl font-medium mb-2">
-                          <CountUp to={4} duration={1} formatter={(value) => `${value}+`} />
-                        </h3>
+                        <h3 className="text-3xl font-medium mb-2">4+</h3>
                         <p className="text-sm text-muted-foreground">Companies Worked With</p>
                       </div>
                     </MagneticElement>
