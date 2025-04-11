@@ -24,7 +24,7 @@ export default function RootLayout({
           <DeviceContextProvider>
             <ScrollProgressBar height={3} color="var(--primary)" />
             <Navbar />
-            <main className="flex-grow grid-container mx-auto px-4 md:px-6 lg:px-8">
+            <main className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0">
               <AdvancedPageTransition>
                 {children}
               </AdvancedPageTransition>

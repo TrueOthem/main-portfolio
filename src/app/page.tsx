@@ -9,7 +9,7 @@ import { TiltCard, RippleButton, MagneticElement } from '@/components/ui/interac
 // Define logo data with unique IDs and image paths
 const logoData = [
   { id: 'logo1', company: 'Electric Hydrogen', imgSrc: '/uploads/ehydrogen-logo2.png' },
-  { id: 'logo2', company: 'Advanced Power Conversion', imgSrc: '' },
+  { id: 'logo2', company: 'Advanced Power Conversion', imgSrc: '/uploads/Apc-logo.png' },
   { id: 'logo3', company: 'CU Boulder', imgSrc: '/uploads/cuboulderlogo.png' },
   { id: 'logo4', company: 'NIST', imgSrc: '/uploads/NIST-Logo-Brand-White.png' },
   { id: 'logo5', company: 'University of Pennsylvania', imgSrc: '/uploads/UniversityofPennsylvania_FullLogo_RGB-4_0.png' },
@@ -115,7 +115,7 @@ export default function Home() {
 
       {/* Company Logos Section */}
       <ScrollReveal>
-        <section className="col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 py-8 border-b border-[#d1d1c7] overflow-hidden">
+        <section className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8 border-b border-[#d1d1c7] overflow-hidden">
           <StaggerContainer staggerChildren={0.1} className="logo-grid">
             {logoData.map((logo) => (
               <StaggerItem key={logo.id}>
@@ -127,8 +127,9 @@ export default function Home() {
                           <Image
                             src={logo.imgSrc}
                             alt={logo.company}
-                            width={160}
-                            height={80}
+                            priority
+                            width={300}
+                            height={150}
                             className="logo-image"
                           />
                         </div>
@@ -292,6 +293,15 @@ export default function Home() {
                           <h3 className="experience-title">Manufacturing Engineer</h3>
                           <p className="experience-company">Advanced Power Conversion - Colorado, USA</p>
                           <p className="experience-date">January 2022 - December 2023</p>
+                        </div>
+                        <div className="experience-logo">
+                          <Image
+                            src="/uploads/Apc-logo.png"
+                            alt="Advanced Power Conversion"
+                            width={120}
+                            height={50}
+                            className="object-contain"
+                          />
                         </div>
                       </div>
                       <ul className="experience-details">

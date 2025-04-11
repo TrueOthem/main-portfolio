@@ -99,6 +99,8 @@
   /* Layout Components */
   .grid-container {
     display: grid;
+    padding-left: 0px;
+    padding-right: 0px;
     grid-template-columns: repeat(1, 1fr);
     background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
                       linear-gradient(to bottom, var(--border) 1px, transparent 1px);
@@ -216,7 +218,7 @@
 
   /* Profile Components */
   .profile-image-container {
-    @apply relative w-full aspect-square max-w-xs overflow-hidden rounded-full;
+    @apply relative w-full aspect-square max-w-xs overflow-visible rounded-full;
   }
 
   .profile-image {
