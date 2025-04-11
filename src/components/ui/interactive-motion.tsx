@@ -95,6 +95,10 @@ export const TiltCard = ({
   const xSpring = useSpring(rotateX, springConfig);
   const ySpring = useSpring(rotateY, springConfig);
 
+  // Create motion values for glare effect regardless of whether it's used
+  const glareIntensity = useMotionValue(Math.sqrt(rotateX * rotateX + rotateY * rotateY));
+  const glareOpacity = useTransform(glareIntensity, [0, 10], [0, 0.15]);
+
   // If reduced motion is enabled, render without effects
   if (isDisabled) {
     return (
@@ -103,6 +107,9 @@ export const TiltCard = ({
       </div>
     );
   }
+
+  // Check if glare effect should be shown
+  const showGlareEffect = glareEffect && mouseOver && isMounted && !useDeviceDetection().isMobile;
 
   return (
     <motion.div
@@ -123,18 +130,14 @@ export const TiltCard = ({
       {children}
 
       {/* Optional glare effect - disabled on mobile */}
-      {glareEffect && mouseOver && !useDeviceDetection().isMobile && (
+      {showGlareEffect && (
         <motion.div
           className="absolute inset-0 rounded-[inherit] pointer-events-none"
           style={{
             backgroundImage: 'radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%)',
             mixBlendMode: 'overlay',
             transform: 'translateZ(1px)', // Place slightly above content
-            opacity: useTransform(
-              useMotionValue(Math.sqrt(rotateX * rotateX + rotateY * rotateY)),
-              [0, 10],
-              [0, 0.15]
-            ),
+            opacity: glareOpacity,
           }}
         />
       )}
