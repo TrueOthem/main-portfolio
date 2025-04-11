@@ -82,7 +82,7 @@ export default function WorksPage() {
         </div>
         <div className="col-span-2 p-8 md:p-12">
           <h1 className="text-3xl md:text-5xl font-medium mb-6">
-            Projects & Accomplishments
+            My Creative Works
           </h1>
           <p className="text-muted-foreground mb-8">
             A selection of my professional work and projects across different industries,
@@ -106,11 +106,12 @@ export default function WorksPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-[#d1d1c7]">
+      <section className="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-[#d1d1c7] works-grid" data-testid="works-grid">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="border-r border-b border-[#d1d1c7] p-6 flex flex-col"
+            className="work-item border-r border-b border-[#d1d1c7] p-6 flex flex-col"
+            data-testid="work-item"
           >
             <div className={`${project.image} w-full aspect-video flex items-center justify-center mb-6`}>
               <span className="text-lg font-medium">{project.title.substring(0, 2)}</span>

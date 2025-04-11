@@ -34,17 +34,22 @@ export function ThemeProvider({
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
 
+    let appliedTheme = theme;
     if (theme === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
         ? "dark"
         : "light";
 
+      appliedTheme = systemTheme;
       root.classList.add(systemTheme);
-      return;
+    } else {
+      root.classList.add(theme);
     }
 
-    root.classList.add(theme);
+    // Add data attributes for testing
+    root.setAttribute('data-theme', appliedTheme);
+    root.setAttribute('data-theme-mode', theme);
   }, [theme]);
 
   const value = {

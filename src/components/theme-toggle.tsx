@@ -6,7 +6,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-export function ThemeToggle() {
+export function ThemeToggle({id, variant, className}: {id?: string, variant?: 'desktop' | 'mobile', className?: string} = {}) {
+  // For testing purposes, ensure only one theme toggle is visible at a time
+  const isDesktop = variant !== 'mobile';
+  const isMobile = variant === 'mobile';
+
+  // Add a unique ID for testing purposes
+  const uniqueId = id || (isMobile ? 'mobile-theme-toggle' : 'desktop-theme-toggle');
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
@@ -16,6 +22,11 @@ export function ThemeToggle() {
       setTheme("light");
     }
   };
+
+  // Add theme to data attribute for testing
+  if (typeof document !== 'undefined') {
+    document.documentElement.setAttribute('data-theme', theme || 'light');
+  }
 
   const springTransition = {
     type: "spring",
@@ -35,9 +46,15 @@ export function ThemeToggle() {
         onClick={toggleTheme}
         className={cn(
           "rounded-full w-8 h-8 border",
-          theme === "dark" ? "border-muted-foreground" : "border-border"
+          theme === "dark" ? "border-muted-foreground" : "border-border",
+          className,
+          isMobile ? "mobile-theme-toggle" : "desktop-theme-toggle",
+          isMobile ? "md:hidden" : "hidden md:inline-flex"
         )}
         aria-label="Toggle theme"
+        data-testid="theme-toggle"
+        data-variant={variant || 'desktop'}
+        id={uniqueId}
       >
         <motion.div
           initial={{ rotate: 0 }}

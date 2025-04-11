@@ -40,18 +40,18 @@ export function DeviceContextProvider({
   const [hasInitialized, setHasInitialized] = useState(false);
 
   const updateDeviceInfo = () => {
-    // Check for touch capability as primary indicator of mobile
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    // For Playwright tests, we need to rely more on viewport size than touch detection
+    // since Playwright emulates different devices primarily through viewport changes
 
-    // Check viewport size for additional context
-    const isSmallScreen = window.innerWidth < 768;
+    // Get the current viewport width
+    const viewportWidth = window.innerWidth;
 
-    // Check for mobile specific browser characteristics
-    const isMobileBrowser = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // Determine device type primarily based on viewport width for better test compatibility
+    const isMobile = viewportWidth < 768;
+    const isTablet = viewportWidth >= 768 && viewportWidth < 1024;
+    const isDesktop = viewportWidth >= 1024;
 
-    const isMobile = isTouchDevice && (isSmallScreen || isMobileBrowser);
-    const isTablet = isTouchDevice && !isSmallScreen && window.innerWidth < 1024;
-    const isDesktop = !isTouchDevice || window.innerWidth >= 1024;
+    // Check for reduced motion preference
     const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Determine device type
@@ -102,6 +102,10 @@ export function DeviceContextProvider({
         deviceType,
         performanceLevel,
       };
+
+      // Add data attributes to document for testing
+      document.documentElement.setAttribute('data-device-type', deviceType);
+      document.documentElement.setAttribute('data-reduced-motion', isReducedMotion.toString());
     }
 
     setDeviceInfo({

@@ -78,7 +78,12 @@ export async function takeScreenshot(
   page: Page,
   name: string
 ): Promise<void> {
-  await page.screenshot({ path: `./test-results/screenshots/${name}.png`, fullPage: false });
+  try {
+    await page.screenshot({ path: `./test-results/screenshots/${name}.png`, fullPage: false });
+  } catch (error) {
+    console.error(`Failed to take screenshot ${name}:`, error);
+    // Continue test execution even if screenshot fails
+  }
 }
 
 /**
@@ -90,6 +95,7 @@ export async function testDeviceDetection(
   page: Page,
   expectedDevice: 'mobile' | 'tablet' | 'desktop'
 ): Promise<void> {
+  // First try to get device info from the window object
   const deviceInfo = await page.evaluate(() => {
     // Check if the device context is available in the window
     return (window as any).__DEVICE_INFO__ || null;
@@ -97,17 +103,28 @@ export async function testDeviceDetection(
 
   if (deviceInfo) {
     expect(deviceInfo.deviceType).toBe(expectedDevice);
-  } else {
-    // Inject script to check device detection directly
-    const deviceType = await page.evaluate(() => {
-      const width = window.innerWidth;
-      if (width < 768) return 'mobile';
-      if (width < 1024) return 'tablet';
-      return 'desktop';
-    });
-
-    expect(deviceType).toBe(expectedDevice);
+    return;
   }
+
+  // Next try to get device info from data attributes
+  const dataDeviceType = await page.evaluate(() => {
+    return document.documentElement.getAttribute('data-device-type');
+  });
+
+  if (dataDeviceType) {
+    expect(dataDeviceType).toBe(expectedDevice);
+    return;
+  }
+
+  // Finally, fall back to checking viewport size
+  const deviceType = await page.evaluate(() => {
+    const width = window.innerWidth;
+    if (width < 768) return 'mobile';
+    if (width < 1024) return 'tablet';
+    return 'desktop';
+  });
+
+  expect(deviceType).toBe(expectedDevice);
 }
 
 // Create custom test with viewport helpers

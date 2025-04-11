@@ -9,7 +9,7 @@ import { TiltCard, RippleButton, MagneticElement } from '@/components/ui/interac
 // Define logo data with unique IDs and image paths
 const logoData = [
   { id: 'logo1', company: 'Electric Hydrogen', imgSrc: '/uploads/ehydrogen-logo2.png' },
-  { id: 'logo2', company: 'Advanced Power Conversion', imgSrc: '' },
+  { id: 'logo2', company: 'Advanced Power Conversion', imgSrc: '/uploads/Advanced-Conversion-logo-400-84px.png' },
   { id: 'logo3', company: 'CU Boulder', imgSrc: '/uploads/cuboulderlogo.png' },
   { id: 'logo4', company: 'NIST', imgSrc: '/uploads/NIST-Logo-Brand-White.png' },
   { id: 'logo5', company: 'University of Pennsylvania', imgSrc: '/uploads/UniversityofPennsylvania_FullLogo_RGB-4_0.png' },
@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <ClientBody>
       {/* Hero Section with Parallax */}
-      <section className="col-span-3 grid grid-cols-3 border-b border-[#d1d1c7] relative">
-        <div className="col-span-1 border-r border-[#d1d1c7] flex items-center justify-center p-8 relative overflow-hidden">
+      <section id="hero-section" className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7] relative hero-section w-full" data-testid="hero-section">
+        <div className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
           <ParallaxScroll speed={0.2} direction="down">
             <ScaleIn duration={0.7}>
               <div className="relative w-full aspect-square max-w-xs overflow-hidden rounded-full">
@@ -42,7 +42,7 @@ export default function Home() {
             </ScaleIn>
           </ParallaxScroll>
         </div>
-        <div className="col-span-2 flex items-center p-12 relative">
+        <div className="col-span-2 flex items-center p-4 md:p-8 lg:p-12 relative w-full">
           <ParallaxScroll speed={0.1} direction="up">
             <RevealText>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium">

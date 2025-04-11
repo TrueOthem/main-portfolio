@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]">
+      <section className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7] about-section" data-testid="about-section">
         <div className="col-span-1 border-r border-[#d1d1c7] flex flex-col justify-center p-8">
           <h3 className="text-lg mb-2">About Me</h3>
           <h1 className="text-3xl md:text-4xl font-medium mb-6">Mohamed Adil Al Sabri</h1>

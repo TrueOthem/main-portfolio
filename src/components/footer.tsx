@@ -39,35 +39,28 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Navigation and credit */}
+        {/* Additional footer content */}
         <div className="border-b border-[#d1d1c7]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
             <StaggerContainer className="flex justify-end items-center space-x-6">
               <StaggerItem>
-                <Link href="/" className="text-sm nav-link">
+                <Link href="/privacy" className="text-sm footer-link" data-footer-link="true">
                   <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
-                    Home
+                    Privacy Policy
                   </motion.span>
                 </Link>
               </StaggerItem>
               <StaggerItem>
-                <Link href="/about" className="text-sm nav-link">
+                <Link href="/terms" className="text-sm footer-link" data-footer-link="true">
                   <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
-                    About
+                    Terms of Service
                   </motion.span>
                 </Link>
               </StaggerItem>
               <StaggerItem>
-                <Link href="/works" className="text-sm nav-link">
+                <Link href="/sitemap" className="text-sm footer-link" data-footer-link="true">
                   <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
-                    Works
-                  </motion.span>
-                </Link>
-              </StaggerItem>
-              <StaggerItem>
-                <Link href="/blog" className="text-sm nav-link">
-                  <motion.span whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
-                    Blog
+                    Sitemap
                   </motion.span>
                 </Link>
               </StaggerItem>

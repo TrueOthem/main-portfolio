@@ -19,12 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
         <ThemeProvider defaultTheme="system">
           <DeviceContextProvider>
             <ScrollProgressBar height={3} color="var(--primary)" />
             <Navbar />
-            <main className="flex-grow grid-container">
+            <main className="flex-grow grid-container mx-auto px-4 md:px-6 lg:px-8">
               <AdvancedPageTransition>
                 {children}
               </AdvancedPageTransition>

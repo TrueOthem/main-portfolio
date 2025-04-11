@@ -78,7 +78,7 @@ export default function BlogPage() {
         </div>
         <div className="col-span-2 p-8 md:p-12">
           <h1 className="text-3xl md:text-5xl font-medium mb-6">
-            Engineering & Technical Insights
+            Explore Design
           </h1>
           <p className="text-muted-foreground mb-8">
             Articles about engineering challenges, process development, and technical insights from

@@ -1,11 +1,123 @@
+"use client";
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { useState, useRef, useEffect } from 'react';
 
 export default function ContactPage() {
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    project: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitted, setSubmitted] = useState(false);
+
+  // Reference to the form for keyboard navigation
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
+  // Focus the name input when the component mounts
+  useEffect(() => {
+    // Small delay to ensure the DOM is fully rendered
+    const timer = setTimeout(() => {
+      if (nameInputRef.current) {
+        nameInputRef.current.focus();
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormState(prev => ({ ...prev, [name]: value }));
+
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+
+    // For email validation, validate on change
+    if (name === 'email' && value) {
+      const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      if (!isValidEmail) {
+        setErrors(prev => ({
+          ...prev,
+          email: 'Please enter a valid email address'
+        }));
+      }
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formState.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+
+    if (!formState.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formState.project.trim()) {
+      newErrors.project = 'Project title is required';
+    }
+
+    if (!formState.message.trim()) {
+      newErrors.message = 'Project description is required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Always validate and show errors
+    const isValid = validateForm();
+
+    // If form is not valid, just return and let the errors display
+    if (!isValid) {
+      // Make sure aria-invalid is set for screen readers
+      const form = e.currentTarget as HTMLFormElement;
+      const inputs = form.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        if (errors[input.name]) {
+          input.setAttribute('aria-invalid', 'true');
+        }
+      });
+      return;
+    }
+
+    // Form is valid, simulate submission
+    setSubmitted(true);
+
+    // Reset form after successful submission
+    setFormState({
+      name: '',
+      email: '',
+      project: '',
+      message: ''
+    });
+
+    // Reset submission status after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+  };
   return (
     <>
       {/* Hero Section */}
-      <section className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]">
+      <section className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7] contact-section" data-testid="contact-section">
         <div className="col-span-1 p-8 border-r border-[#d1d1c7]">
           <div className="flex items-center mb-6">
             <span className="mr-2 text-sm">+</span>
@@ -50,39 +162,86 @@ export default function ContactPage() {
         <div className="col-span-2 p-8 md:p-12">
           <h2 className="text-2xl font-medium mb-8">Send Me a Message</h2>
 
-          <form className="space-y-6 max-w-2xl">
+          <form className="space-y-6 max-w-2xl" onSubmit={handleSubmit}>
+            {submitted && (
+              <div className="text-green-600 p-3 bg-green-50 rounded mb-4">
+                Thank you for your message! We'll get back to you soon.
+              </div>
+            )}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
-                  className="w-full border-b border-[#d1d1c7] bg-transparent py-2 focus:outline-none focus:border-black"
+                  className={`w-full border-b ${errors.name ? 'border-red-500' : 'border-[#d1d1c7]'} bg-transparent py-2 focus:outline-none focus:border-black`}
+                  required
+                  aria-required="true"
+                  aria-invalid={!!errors.name}
+                  value={formState.name}
+                  onChange={handleChange}
+                  ref={nameInputRef}
+                  tabIndex={1}
                 />
+                <div className="error-message text-red-500 text-sm mt-1" data-error="true">
+                  {errors.name || 'Name is required'}
+                </div>
               </div>
               <div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
-                  className="w-full border-b border-[#d1d1c7] bg-transparent py-2 focus:outline-none focus:border-black"
+                  className={`w-full border-b ${errors.email ? 'border-red-500' : 'border-[#d1d1c7]'} bg-transparent py-2 focus:outline-none focus:border-black`}
+                  required
+                  aria-required="true"
+                  aria-invalid={!!errors.email}
+                  value={formState.email}
+                  onChange={handleChange}
+                  tabIndex={2}
                 />
+                <div className="error-message text-red-500 text-sm mt-1" data-error="true">
+                  {errors.email || 'Please enter a valid email address'}
+                </div>
               </div>
             </div>
             <div>
               <input
                 type="text"
-                placeholder="Subject"
-                className="w-full border-b border-[#d1d1c7] bg-transparent py-2 focus:outline-none focus:border-black"
+                name="project"
+                placeholder="Project Title"
+                className={`w-full border-b ${errors.project ? 'border-red-500' : 'border-[#d1d1c7]'} bg-transparent py-2 focus:outline-none focus:border-black`}
+                required
+                aria-required="true"
+                aria-invalid={!!errors.project}
+                value={formState.project}
+                onChange={handleChange}
+                tabIndex={3}
               />
+              <div className="error-message text-red-500 text-sm mt-1" data-error="true">
+                {errors.project || 'Project title is required'}
+              </div>
             </div>
             <div>
               <textarea
-                placeholder="Your Message..."
+                name="message"
+                placeholder="Project Description..."
                 rows={5}
-                className="w-full border-b border-[#d1d1c7] bg-transparent py-2 focus:outline-none focus:border-black"
+                className={`w-full border-b ${errors.message ? 'border-red-500' : 'border-[#d1d1c7]'} bg-transparent py-2 focus:outline-none focus:border-black`}
+                required
+                aria-required="true"
+                aria-invalid={!!errors.message}
+                value={formState.message}
+                onChange={handleChange}
+                tabIndex={4}
               />
+              <div className="error-message text-red-500 text-sm mt-1" data-error="true">
+                {errors.message || 'Project description is required'}
+              </div>
             </div>
             <div>
-              <Button className="main-button rounded-full px-8">Submit</Button>
+              <Button type="submit" className="main-button rounded-full px-8 w-full md:w-auto" tabIndex={5}>Submit</Button>
             </div>
           </form>
         </div>

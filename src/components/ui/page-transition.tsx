@@ -32,8 +32,14 @@ export const PageTransition = ({ children }: { children: ReactNode }) => {
         setTransitionY(5);
         setDuration(0.15);
       }
+
+      // Add data attributes for testing
+      if (typeof document !== 'undefined') {
+        document.documentElement.setAttribute('data-page-transition', 'enabled');
+        document.documentElement.setAttribute('data-transition-duration', duration.toString());
+      }
     }
-  }, [isMounted]);
+  }, [isMounted, duration]);
 
   if (!isMounted) {
     return <>{children}</>;

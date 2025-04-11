@@ -85,39 +85,61 @@ interface ParallaxScrollProps {
   direction?: 'up' | 'down' | 'left' | 'right';
 }
 
-export const ParallaxScroll = ({
+// Create a separate component for the parallax effect to avoid conditional hook calls
+const ParallaxScrollEffect = ({
   children,
-  speed = 0.5,
-  className = '',
-  direction = 'up',
-}: ParallaxScrollProps) => {
+  speed,
+  direction,
+  className,
+  disabled,
+}: {
+  children: ReactNode;
+  speed: number;
+  direction: 'up' | 'down' | 'left' | 'right';
+  className: string;
+  disabled: boolean;
+}) => {
+  // Always call all hooks unconditionally
   const ref = useRef(null);
-  const [optimizedSpeed, setOptimizedSpeed] = useState(speed);
-  const [isMounted, setIsMounted] = useState(false);
-  const [shouldDisable, setShouldDisable] = useState(false);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
 
-  useEffect(() => {
-    setIsMounted(true);
+  // Create transform values for all directions
+  const upTransform = useTransform(scrollYProgress, [0, 1], ['0%', `-${speed * 100}%`]);
+  const downTransform = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 100}%`]);
+  const leftTransform = useTransform(scrollYProgress, [0, 1], ['0%', `-${speed * 100}%`]);
+  const rightTransform = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 100}%`]);
 
-    if (isMounted) {
-      const { isMobile, isTablet, isReducedMotion } = useDeviceDetection();
+  // Select the appropriate transform based on direction
+  let transformValue;
+  let transformProperty;
 
-      // Reduce parallax effect on mobile
-      if (isMobile) {
-        setOptimizedSpeed(speed * 0.5);
-      } else if (isTablet) {
-        setOptimizedSpeed(speed * 0.7);
-      }
+  switch (direction) {
+    case 'up':
+      transformValue = upTransform;
+      transformProperty = 'y';
+      break;
+    case 'down':
+      transformValue = downTransform;
+      transformProperty = 'y';
+      break;
+    case 'left':
+      transformValue = leftTransform;
+      transformProperty = 'x';
+      break;
+    case 'right':
+      transformValue = rightTransform;
+      transformProperty = 'x';
+      break;
+    default:
+      transformValue = upTransform;
+      transformProperty = 'y';
+  }
 
-      // Respect reduced motion preferences or disable on low-powered devices
-      if (isReducedMotion || shouldReduceMotion()) {
-        setShouldDisable(true);
-      }
-    }
-  }, [isMounted, speed]);
-
-  // Static render for reduced motion, mobile performance optimization, or SSR
-  if (shouldDisable || !isMounted) {
+  // If disabled, render static version
+  if (disabled) {
     return (
       <div className={`relative ${className}`}>
         <div className="relative">
@@ -127,52 +149,74 @@ export const ParallaxScroll = ({
     );
   }
 
-  // Wrap in try/catch for static site generation compatibility
-  try {
-    const { scrollYProgress } = useScroll({
-      target: ref,
-      offset: ['start end', 'end start'],
-    });
+  // Otherwise render with parallax effect
+  return (
+    <div ref={ref} className={`relative overflow-hidden ${className}`}>
+      <motion.div
+        style={{ [transformProperty]: transformValue }}
+        className="relative"
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+};
 
-    // Calculate transform values based on direction
-    const getTransformValue = () => {
-      switch (direction) {
-        case 'up':
-          return useTransform(scrollYProgress, [0, 1], ['0%', `-${optimizedSpeed * 100}%`]);
-        case 'down':
-          return useTransform(scrollYProgress, [0, 1], ['0%', `${optimizedSpeed * 100}%`]);
-        case 'left':
-          return useTransform(scrollYProgress, [0, 1], ['0%', `-${optimizedSpeed * 100}%`]);
-        case 'right':
-          return useTransform(scrollYProgress, [0, 1], ['0%', `${optimizedSpeed * 100}%`]);
-        default:
-          return useTransform(scrollYProgress, [0, 1], ['0%', `-${optimizedSpeed * 100}%`]);
+// Main component that handles device detection and mounting logic
+export const ParallaxScroll = ({
+  children,
+  speed = 0.5,
+  className = '',
+  direction = 'up',
+}: ParallaxScrollProps) => {
+  const [optimizedSpeed, setOptimizedSpeed] = useState(speed);
+  const [isMounted, setIsMounted] = useState(false);
+  const [shouldDisable, setShouldDisable] = useState(false);
+
+  // Handle device detection and reduced motion preferences
+  useEffect(() => {
+    setIsMounted(true);
+
+    // Only run client-side code after mounting
+    if (typeof window !== 'undefined') {
+      const { isMobile, isTablet, isReducedMotion } = useDeviceDetection();
+
+      // Reduce parallax effect on mobile
+      if (isMobile) {
+        setOptimizedSpeed(speed * 0.5);
+      } else if (isTablet) {
+        setOptimizedSpeed(speed * 0.7);
       }
-    };
 
-    const transformValue = getTransformValue();
-    const transformProperty = direction === 'left' || direction === 'right' ? 'x' : 'y';
+      // Respect reduced motion preferences
+      if (isReducedMotion || shouldReduceMotion()) {
+        setShouldDisable(true);
+      }
+    }
+  }, [speed]);
 
+  // For SSR or when not mounted yet, render static version
+  if (!isMounted) {
     return (
-      <div ref={ref} className={`relative overflow-hidden ${className}`}>
-        <motion.div
-          style={{ [transformProperty]: transformValue }}
-          className="relative"
-        >
-          {children}
-        </motion.div>
-      </div>
-    );
-  } catch (error) {
-    // Fallback for static site generation or errors
-    return (
-      <div className={`relative overflow-hidden ${className}`}>
+      <div className={`relative ${className}`}>
         <div className="relative">
           {children}
         </div>
       </div>
     );
   }
+
+  // Use the effect component for client-side rendering
+  return (
+    <ParallaxScrollEffect
+      speed={optimizedSpeed}
+      direction={direction}
+      className={className}
+      disabled={shouldDisable}
+    >
+      {children}
+    </ParallaxScrollEffect>
+  );
 };
 
 interface ParallaxImageProps {
@@ -186,6 +230,78 @@ interface ParallaxImageProps {
   direction?: 'up' | 'down';
 }
 
+// Create a separate component for the parallax image effect
+const ParallaxImageEffect = ({
+  src,
+  alt,
+  width,
+  height,
+  speed,
+  direction,
+  className,
+  priority,
+  disabled,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  speed: number;
+  direction: 'up' | 'down';
+  className: string;
+  priority: boolean;
+  disabled: boolean;
+}) => {
+  // Always call all hooks unconditionally
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+
+  // Create transform values for both directions
+  const upTransform = useTransform(scrollYProgress, [0, 1], ['0%', `-${speed * 50}%`]);
+  const downTransform = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 50}%`]);
+
+  // Select the appropriate transform based on direction
+  const y = direction === 'up' ? upTransform : downTransform;
+
+  // If disabled, render static version
+  if (disabled) {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <div className="relative h-full w-full">
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            className="object-cover h-full w-full"
+            priority={priority}
+          />
+        </div>
+      </div>
+    );
+  }
+
+  // Otherwise render with parallax effect
+  return (
+    <div ref={ref} className={`relative overflow-hidden ${className}`}>
+      <motion.div style={{ y }} className="relative h-full w-full">
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className="object-cover h-full w-full"
+          priority={priority}
+        />
+      </motion.div>
+    </div>
+  );
+};
+
+// Main component that handles device detection and mounting logic
 export const ParallaxImage = ({
   src,
   alt,
@@ -196,33 +312,34 @@ export const ParallaxImage = ({
   priority = false,
   direction = 'up',
 }: ParallaxImageProps) => {
-  const ref = useRef(null);
   const [optimizedSpeed, setOptimizedSpeed] = useState(speed);
   const [isMounted, setIsMounted] = useState(false);
   const [shouldDisable, setShouldDisable] = useState(false);
 
+  // Handle device detection and reduced motion preferences
   useEffect(() => {
     setIsMounted(true);
 
-    if (isMounted) {
+    // Only run client-side code after mounting
+    if (typeof window !== 'undefined') {
       const { isMobile, isTablet, isReducedMotion } = useDeviceDetection();
 
-      // Reduce parallax effect on mobile to improve performance
+      // Reduce parallax effect on mobile
       if (isMobile) {
         setOptimizedSpeed(speed * 0.4);
       } else if (isTablet) {
         setOptimizedSpeed(speed * 0.6);
       }
 
-      // Respect reduced motion preferences or disable on low-powered devices
+      // Respect reduced motion preferences
       if (isReducedMotion || shouldReduceMotion()) {
         setShouldDisable(true);
       }
     }
-  }, [isMounted, speed]);
+  }, [speed]);
 
-  // Static render for reduced motion, mobile optimization, or SSR
-  if (shouldDisable || !isMounted) {
+  // For SSR or when not mounted yet, render static version
+  if (!isMounted) {
     return (
       <div className={`relative overflow-hidden ${className}`}>
         <div className="relative h-full w-full">
@@ -239,52 +356,69 @@ export const ParallaxImage = ({
     );
   }
 
-  // Wrap in try/catch for static site generation compatibility
-  try {
-    const { scrollYProgress } = useScroll({
-      target: ref,
-      offset: ['start end', 'end start'],
-    });
-
-    const y = useTransform(
-      scrollYProgress,
-      [0, 1],
-      direction === 'up' ? ['0%', `-${optimizedSpeed * 50}%`] : ['0%', `${optimizedSpeed * 50}%`]
-    );
-
-    return (
-      <div ref={ref} className={`relative overflow-hidden ${className}`}>
-        <motion.div style={{ y }} className="relative h-full w-full">
-          <Image
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            className="object-cover h-full w-full"
-            priority={priority}
-          />
-        </motion.div>
-      </div>
-    );
-  } catch (error) {
-    // Fallback for static site generation
-    return (
-      <div className={`relative overflow-hidden ${className}`}>
-        <div className="relative h-full w-full">
-          <Image
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            className="object-cover h-full w-full"
-            priority={priority}
-          />
-        </div>
-      </div>
-    );
-  }
+  // Use the effect component for client-side rendering
+  return (
+    <ParallaxImageEffect
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      speed={optimizedSpeed}
+      direction={direction}
+      className={className}
+      priority={priority}
+      disabled={shouldDisable}
+    />
+  );
 };
 
+// Create a separate component for the parallax rotation effect
+const ParallaxRotateEffect = ({
+  children,
+  className,
+  rotation,
+  disabled,
+}: {
+  children: ReactNode;
+  className: string;
+  rotation: number;
+  disabled: boolean;
+}) => {
+  // Always call all hooks unconditionally
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+
+  // Create transform value for rotation
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, rotation]);
+
+  // If disabled, render static version
+  if (disabled) {
+    return (
+      <div className={className}>
+        <div className="w-full h-full">
+          {children}
+        </div>
+      </div>
+    );
+  }
+
+  // Otherwise render with rotation effect
+  return (
+    <div ref={ref} className={className}>
+      <motion.div
+        style={{ rotate }}
+        className="w-full h-full"
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+};
+
+// Main component that handles device detection and mounting logic
 export const ParallaxRotate = ({
   children,
   className = '',
@@ -294,15 +428,16 @@ export const ParallaxRotate = ({
   className?: string;
   maxRotation?: number;
 }) => {
-  const ref = useRef(null);
   const [optimizedRotation, setOptimizedRotation] = useState(maxRotation);
   const [isMounted, setIsMounted] = useState(false);
   const [shouldDisable, setShouldDisable] = useState(false);
 
+  // Handle device detection and reduced motion preferences
   useEffect(() => {
     setIsMounted(true);
 
-    if (isMounted) {
+    // Only run client-side code after mounting
+    if (typeof window !== 'undefined') {
       const { isMobile, isTablet, isReducedMotion } = useDeviceDetection();
 
       // Reduce rotation intensity on mobile
@@ -312,15 +447,15 @@ export const ParallaxRotate = ({
         setOptimizedRotation(maxRotation * 0.7);
       }
 
-      // Disable rotation for reduced motion
+      // Respect reduced motion preferences
       if (isReducedMotion || shouldReduceMotion()) {
         setShouldDisable(true);
       }
     }
-  }, [isMounted, maxRotation]);
+  }, [maxRotation]);
 
-  // Static render for reduced motion, mobile optimization, or SSR
-  if (shouldDisable || !isMounted) {
+  // For SSR or when not mounted yet, render static version
+  if (!isMounted) {
     return (
       <div className={className}>
         <div className="w-full h-full">
@@ -330,33 +465,14 @@ export const ParallaxRotate = ({
     );
   }
 
-  // Wrap in try/catch for static site generation compatibility
-  try {
-    const { scrollYProgress } = useScroll({
-      target: ref,
-      offset: ['start end', 'end start'],
-    });
-
-    const rotate = useTransform(scrollYProgress, [0, 1], [0, optimizedRotation]);
-
-    return (
-      <div ref={ref} className={className}>
-        <motion.div
-          style={{ rotate }}
-          className="w-full h-full"
-        >
-          {children}
-        </motion.div>
-      </div>
-    );
-  } catch (error) {
-    // Fallback for static site generation
-    return (
-      <div className={className}>
-        <div className="w-full h-full">
-          {children}
-        </div>
-      </div>
-    );
-  }
+  // Use the effect component for client-side rendering
+  return (
+    <ParallaxRotateEffect
+      rotation={optimizedRotation}
+      className={className}
+      disabled={shouldDisable}
+    >
+      {children}
+    </ParallaxRotateEffect>
+  );
 };
