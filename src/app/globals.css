@@ -244,7 +244,7 @@
 
   /* Logo Grid Components */
   .logo-grid {
-    @apply w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5;
+    @apply w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1;
   }
 
   .logo-container {
@@ -252,7 +252,7 @@
   }
 
   .logo-item {
-    @apply opacity-80 text-center h-20 cursor-pointer;
+    @apply opacity-80 text-center h-40 cursor-pointer;
   }
 
   .logo-image-container {
@@ -260,11 +260,11 @@
   }
 
   .logo-image {
-    @apply max-h-20 object-contain;
+    @apply max-h-40 object-contain;
   }
 
   .logo-placeholder {
-    @apply h-20 w-40 border border-[#d1d1c7] flex items-center justify-center;
+    @apply h-40 w-40 border border-[#d1d1c7] flex items-center justify-center;
   }
 
   /* Skills Grid Components */

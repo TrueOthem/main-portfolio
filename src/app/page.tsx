@@ -26,7 +26,7 @@ export default function Home() {
     <ClientBody>
       {/* Hero Section with Parallax */}
       <section id="hero-section" className="section-container hero-section relative w-full" data-testid="hero-section">
-        <div className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
+        <div className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-0 md:p-0 lg:p-0 relative overflow-visible">
           <ParallaxScroll speed={0.2} direction="down">
             <ScaleIn duration={0.7}>
               <div className="profile-image-container">
@@ -128,8 +128,8 @@ export default function Home() {
                             src={logo.imgSrc}
                             alt={logo.company}
                             priority
-                            width={300}
-                            height={150}
+                            width={200}
+                            height={100}
                             className="logo-image"
                           />
                         </div>
