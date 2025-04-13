@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AdvancedPageTransition } from "@/components/ui/page-transition";
 import { ScrollProgressBar } from "@/components/ui/interactive-motion";
@@ -29,7 +28,6 @@ export default function RootLayout({
                 {children}
               </AdvancedPageTransition>
             </main>
-            <Footer />
           </DeviceContextProvider>
         </ThemeProvider>
       </body>

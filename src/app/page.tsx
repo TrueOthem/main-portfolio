@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ClientBody from './ClientBody';
-import { ScrollReveal, FadeIn, RevealText, ScaleIn, StaggerContainer, StaggerItem, HoverScale } from '@/components/ui/motion';
+import { ScrollReveal, FadeIn, RevealText, StaggerContainer, StaggerItem, HoverScale } from '@/components/ui/motion';
 import { ParallaxImage, ParallaxScroll, ParallaxRotate } from '@/components/ui/parallax';
 import { TiltCard, RippleButton, MagneticElement } from '@/components/ui/interactive-motion';
 
@@ -27,22 +27,18 @@ export default function Home() {
       {/* Hero Section with Parallax */}
       <section id="hero-section" className="section-container hero-section relative w-full" data-testid="hero-section">
         <div className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-0 md:p-0 lg:p-0 relative overflow-visible">
-          <ParallaxScroll speed={0.2} direction="down">
-            <ScaleIn duration={0.7}>
-              <div className="profile-image-container">
-                <Image
-                  src="/uploads/profile-photo.jpg"
-                  alt="Mohamed Adil Al Sabri"
-                  width={400}
-                  height={400}
-                  className="profile-image"
-                  priority
-                />
-              </div>
-            </ScaleIn>
-          </ParallaxScroll>
+          <div className="profile-image-container">
+            <Image
+              src="/uploads/profile-photo.jpg"
+              alt="Mohamed Adil Al Sabri"
+              width={400}
+              height={400}
+              className="profile-image"
+              priority
+            />
+          </div>
         </div>
-        <div className="col-span-2 flex items-center p-0 md:p-0 lg:p-0 relative w-full">
+        <div className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full">
           <ParallaxScroll speed={0.1} direction="up">
             <RevealText>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium">
