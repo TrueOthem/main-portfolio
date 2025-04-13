@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
-import { ThemeToggle } from '@/components/theme-toggle';
 import { FadeIn, StaggerContainer, StaggerItem, HoverScale } from '@/components/ui/motion';
 import LanguageSwitcher from '@/components/common/language-switcher';
 import { motion } from 'framer-motion';
@@ -81,28 +80,17 @@ export default function Navbar() {
                     </motion.span>
                   </Link>
                 </StaggerItem>
-                <StaggerItem>
-                  <ThemeToggle id="desktop-theme-toggle" variant="desktop" className="desktop-theme-toggle" />
-                </StaggerItem>
+
                 <StaggerItem>
                   <LanguageSwitcher variant="desktop" />
                 </StaggerItem>
-                <StaggerItem>
-                  <Link href="/contact" data-nav-type="desktop" className="desktop-nav-link">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Button className="main-button rounded-full text-sm">Contact</Button>
-                    </motion.div>
-                  </Link>
-                </StaggerItem>
+
               </StaggerContainer>
             </div>
 
             {/* Mobile navigation */}
             <div className="flex md:hidden items-center space-x-2">
-              <ThemeToggle id="mobile-theme-toggle" variant="mobile" className="mobile-theme-toggle hidden md:hidden" />
+
               <Sheet>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" aria-label="Menu">
@@ -174,16 +162,7 @@ export default function Navbar() {
                         </motion.span>
                       </Link>
                     </StaggerItem>
-                    <StaggerItem direction="down">
-                      <Link href="/contact" className="mobile-nav-link" data-nav-type="mobile">
-                        <motion.div
-                          whileHover={{ scale: 1.03 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          <Button className="main-button rounded-full text-lg w-full">Contact</Button>
-                        </motion.div>
-                      </Link>
-                    </StaggerItem>
+
                     <StaggerItem direction="down">
                       <LanguageSwitcher variant="mobile" />
                     </StaggerItem>

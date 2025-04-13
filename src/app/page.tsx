@@ -405,52 +405,6 @@ export default function Home() {
                 Interested in discussing process development, manufacturing efficiency, or potential opportunities? I'd love to connect.
               </p>
 
-              <form className="form-container">
-                <div className="form-grid">
-                  <div>
-                    <TiltCard tiltFactor={3} scale={1.02} glareEffect={false}>
-                      <input
-                        type="text"
-                        placeholder="Your Name"
-                        className="form-input"
-                      />
-                    </TiltCard>
-                  </div>
-                  <div>
-                    <TiltCard tiltFactor={3} scale={1.02} glareEffect={false}>
-                      <input
-                        type="email"
-                        placeholder="Email Address"
-                        className="form-input"
-                      />
-                    </TiltCard>
-                  </div>
-                </div>
-                <div>
-                  <TiltCard tiltFactor={3} scale={1.02} glareEffect={false}>
-                    <input
-                      type="text"
-                      placeholder="Subject"
-                      className="form-input"
-                    />
-                  </TiltCard>
-                </div>
-                <div>
-                  <TiltCard tiltFactor={3} scale={1.02} glareEffect={false}>
-                    <textarea
-                      placeholder="Your Message..."
-                      rows={5}
-                      className="form-input"
-                    />
-                  </TiltCard>
-                </div>
-                <div>
-                  <RippleButton className="main-button rounded-full px-8 py-2">
-                    Submit
-                  </RippleButton>
-                </div>
-              </form>
-
               <StaggerContainer className="contact-grid" staggerChildren={0.1}>
                 <StaggerItem>
                   <MagneticElement>

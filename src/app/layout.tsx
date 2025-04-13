@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
 import { AdvancedPageTransition } from "@/components/ui/page-transition";
 import { ScrollProgressBar } from "@/components/ui/interactive-motion";
 import { DeviceContextProvider } from "@/components/device-provider";
@@ -19,8 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
-        <ThemeProvider defaultTheme="system">
-          <DeviceContextProvider>
+        <DeviceContextProvider>
             <ScrollProgressBar height={3} color="var(--primary)" />
             <Navbar />
             <main className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0">
@@ -29,7 +27,6 @@ export default function RootLayout({
               </AdvancedPageTransition>
             </main>
           </DeviceContextProvider>
-        </ThemeProvider>
       </body>
     </html>
   );

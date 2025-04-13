@@ -1,23 +1,57 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function LanguageSwitcher({ variant = 'desktop' }: { variant?: 'desktop' | 'mobile' }) {
   const [language, setLanguage] = useState<'EN' | 'AR' | 'ES'>('EN');
+  const router = useRouter();
+  const pathname = usePathname();
 
-  const toggleLanguage = () => {
-    if (language === 'EN') {
+  // Initialize language based on HTML lang attribute
+  useEffect(() => {
+    const htmlLang = document.documentElement.lang.toLowerCase();
+    if (htmlLang === 'ar') {
       setLanguage('AR');
-      document.documentElement.setAttribute('lang', 'ar');
-    } else if (language === 'AR') {
+    } else if (htmlLang === 'es') {
       setLanguage('ES');
-      document.documentElement.setAttribute('lang', 'es');
     } else {
       setLanguage('EN');
-      document.documentElement.setAttribute('lang', 'en');
     }
+  }, []);
+
+  const toggleLanguage = () => {
+    let newLang: 'en' | 'ar' | 'es';
+    let newDisplay: 'EN' | 'AR' | 'ES';
+
+    if (language === 'EN') {
+      newLang = 'ar';
+      newDisplay = 'AR';
+    } else if (language === 'AR') {
+      newLang = 'es';
+      newDisplay = 'ES';
+    } else {
+      newLang = 'en';
+      newDisplay = 'EN';
+    }
+
+    // Update the display state
+    setLanguage(newDisplay);
+
+    // Update HTML lang attribute
+    document.documentElement.setAttribute('lang', newLang);
+
+    // Update direction attribute for RTL support
+    if (newLang === 'ar') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+    }
+
+    // Force a page reload to apply the language change
+    window.location.reload();
   };
 
   return (
