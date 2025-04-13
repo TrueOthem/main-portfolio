@@ -11,10 +11,8 @@ export default defineConfig({
     ['list']
   ],
 
-  // Maximum time one test can run
   timeout: 30 * 1000,
 
-  // Increase slowMo for debugging
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',
@@ -22,48 +20,42 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
 
-  /* Test against multiple browsers */
   projects: [
-    // Default desktop browser tests
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-
-    // Mobile viewports
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
-    },
-    {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
-    },
-    {
-      name: 'Tablet',
-      use: { ...devices['iPad Pro 11'] },
-    },
-
-    // Accessibility tests - use the reduced motion preference
-    {
-      name: 'reduced-motion',
-      use: {
-        ...devices['Desktop Chrome'],
-        reducedMotion: 'reduce',
-        viewport: { width: 1280, height: 720 }
-      },
-    },
+    // Comment out other browsers to focus on Chromium only
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: { ...devices['iPhone 12'] },
+    // },
+    // {
+    //   name: 'Tablet',
+    //   use: { ...devices['iPad Pro 11'] },
+    // },
+    // {
+    //   name: 'reduced-motion',
+    //   use: {
+    //     ...devices['Desktop Chrome'],
+    //     reducedMotion: 'reduce',
+    //     viewport: { width: 1280, height: 720 }
+    //   },
+    // },
   ],
 
-  // Run local dev server before starting the tests
   webServer: {
     command: 'bun run dev',
     url: 'http://localhost:3000',
