@@ -31,8 +31,8 @@ export default function Home() {
             <Image
               src="/uploads/profile-photo.jpg"
               alt="Mohamed Adil Al Sabri"
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               className="profile-image"
               priority
             />

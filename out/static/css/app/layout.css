@@ -781,24 +781,24 @@ video {
 .logo-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 @media (min-width: 640px) {
 
   .logo-grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 @media (min-width: 768px) {
 
   .logo-grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 @media (min-width: 1024px) {
 
   .logo-grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 .logo-container {
@@ -1152,9 +1152,6 @@ main > div:first-child {
 .h-4 {
   height: 1rem;
 }
-.h-6 {
-  height: 1.5rem;
-}
 .h-8 {
   height: 2rem;
 }
@@ -1181,9 +1178,6 @@ main > div:first-child {
 }
 .w-4 {
   width: 1rem;
-}
-.w-6 {
-  width: 1.5rem;
 }
 .w-9 {
   width: 2.25rem;
@@ -1339,6 +1333,9 @@ main > div:first-child {
 .border-b {
   border-bottom-width: 1px;
 }
+.border-b-0 {
+  border-bottom-width: 0px;
+}
 .border-l {
   border-left-width: 1px;
 }
@@ -1469,10 +1466,12 @@ main > div:first-child {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+  padding: 4rem;
 }
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+  padding: 4rem;
 }
 .text-\[0\.8rem\] {
   font-size: 0.8rem;
@@ -1484,6 +1483,7 @@ main > div:first-child {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+  padding: 4rem;
 }
 .text-sm {
   font-size: 0.875rem;
@@ -1944,21 +1944,25 @@ main > div:first-child {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+    padding: 4rem;
   }
 
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+    padding: 4rem;
   }
 
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+    padding: 4rem;
   }
 
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+    padding: 4rem;
   }
 
   .md\:text-sm {
@@ -1998,6 +2002,7 @@ main > div:first-child {
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+    padding: 4rem;
   }
 }
 

@@ -15,22 +15,11 @@ export default function Navbar() {
   return (
     <FadeIn duration={0.6} direction="down">
       <header>
-        <nav className="border-b border-[#d1d1c7] bg-background">
+        <nav className="border-b-0 border-[#d1d1c7] bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 justify-between items-center">
             <div className="flex items-center">
-              <Link href="/" className="flex items-center">
-                <HoverScale scale={1.05}>
-                  <div className="flex items-center">
-                    <motion.div
-                      className="w-6 h-6 bg-primary mr-2"
-                      whileHover={{ rotate: 90 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                    <span className="text-lg font-medium">Mohamed Al Sabri</span>
-                  </div>
-                </HoverScale>
-              </Link>
+              
             </div>
 
             {/* Desktop navigation */}
