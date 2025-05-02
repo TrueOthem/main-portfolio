@@ -8,40 +8,40 @@ export default function AboutPage() {
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7] about-section"
         data-testid="about-section"
-        data-oid="2_ufn6c"
+        data-oid="sws_gge"
       >
         <div
           className="col-span-1 border-r border-[#d1d1c7] flex flex-col justify-center p-8"
-          data-oid="zuazf-p"
+          data-oid="qtsy5h8"
         >
-          <h3 className="text-lg mb-2" data-oid="qc0a01b">
+          <h3 className="text-lg mb-2" data-oid="_sdk4w_">
             About Me
           </h3>
           <h1
             className="text-3xl md:text-4xl font-medium mb-6"
-            data-oid="0hrpv:."
+            data-oid=":pnx-uy"
           >
             Mohamed Adil Al Sabri
           </h1>
-          <p className="text-lg mb-8" data-oid="sg6xejm">
+          <p className="text-lg mb-8" data-oid="lf-vf6p">
             Process Development Engineer
           </p>
 
-          <Link href="/contact" data-oid="jvxsu23">
-            <Button className="main-button rounded-full" data-oid="5avl6w4">
+          <Link href="/contact" data-oid="k3bpgw4">
+            <Button className="main-button rounded-full" data-oid=":q_k8te">
               Get in Touch
             </Button>
           </Link>
         </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="l51vmj7">
-          <p className="text-lg mb-6" data-oid="1e9y50v">
+        <div className="col-span-2 p-8 md:p-12" data-oid="f2ptvzu">
+          <p className="text-lg mb-6" data-oid="t5mu46p">
             I'm a passionate Process Development Engineer with expertise in
             green hydrogen production and manufacturing optimization. My journey
             in engineering combines technical knowledge, hands-on experience,
             and data-driven problem-solving to create efficient, scalable
             manufacturing processes.
           </p>
-          <p className="text-lg mb-6" data-oid=":enw4c8">
+          <p className="text-lg mb-6" data-oid="5ormp:5">
             With a background in Mechanical Engineering and experience across
             multiple industries, I focus on enhancing process capabilities
             through statistical tools and innovative approaches. My goal is to
@@ -54,80 +54,80 @@ export default function AboutPage() {
       {/* Career Path Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="zg:q.0_"
+        data-oid="narwa08"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="n-cyw6i"
+          data-oid="66g1.g3"
         >
-          <div className="flex items-center mb-6" data-oid="pvr6nw7">
-            <span className="mr-2 text-sm" data-oid="q5.s235">
+          <div className="flex items-center mb-6" data-oid="crirl7f">
+            <span className="mr-2 text-sm" data-oid="7vnm8.w">
               +
             </span>
-            <h3 className="text-sm" data-oid="glu4921">
+            <h3 className="text-sm" data-oid="8gajand">
               Work Experience
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8" data-oid="9qgr7x2">
-          <h2 className="text-3xl md:text-4xl mb-6" data-oid="wrat06i">
+        <div className="col-span-2 p-8" data-oid="c8ot192">
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="2p3qhb_">
             My Career Path
           </h2>
-          <p className="text-muted-foreground mb-12" data-oid="_hy.lf4">
+          <p className="text-muted-foreground mb-12" data-oid="j6shbp4">
             With experience spanning multiple companies and roles, I've
             developed expertise in process development, manufacturing
             engineering, and project management across various industries.
           </p>
 
-          <div className="space-y-12" data-oid="c9ihl07">
+          <div className="space-y-12" data-oid="gn70_rf">
             <div
               className="border-l-4 border-[#d1d1c7] pl-6 relative"
-              data-oid="_h171jg"
+              data-oid="jl-sgq8"
             >
               <div
                 className="absolute top-0 left-[-10px] w-4 h-4 rounded-full bg-[#0f0f0f]"
-                data-oid="nepn4_e"
+                data-oid="6j8n5r2"
               ></div>
-              <h3 className="text-xl font-medium mb-1" data-oid="hc18kfh">
+              <h3 className="text-xl font-medium mb-1" data-oid="s7pv02j">
                 Process Development Engineer
               </h3>
               <p
                 className="text-sm text-muted-foreground mb-1"
-                data-oid="we1a:t:"
+                data-oid="rp:d1sy"
               >
                 Electric Hydrogen - Boston, MA, USA
               </p>
               <p
                 className="text-sm text-muted-foreground mb-4"
-                data-oid="njigf0j"
+                data-oid="0dm-l73"
               >
                 January 2023 - Present
               </p>
               <ul
                 className="text-sm mb-6 list-disc pl-5 space-y-2"
-                data-oid="r058agn"
+                data-oid="kero6::"
               >
-                <li data-oid="b550bak">
+                <li data-oid="-9lhybs">
                   Led the development of scalable manufacturing processes for
                   next-generation green hydrogen production technologies.
                 </li>
-                <li data-oid="dcc:i2_">
+                <li data-oid="1z3zi3i">
                   Enhanced process capability by 20% through statistical
                   analysis and optimization of key production parameters.
                 </li>
-                <li data-oid="orffo1q">
+                <li data-oid="dlo1e2k">
                   Integrated cutting-edge technology into production processes
                   by collaborating with suppliers and vendors.
                 </li>
-                <li data-oid="939saly">
+                <li data-oid="vb9ti1d">
                   Improved decision-making and stakeholder communication through
                   detailed data analysis and actionable recommendations.
                 </li>
-                <li data-oid="voszn8o">
+                <li data-oid="z8z8d3f">
                   Developed robust data architectures for real-time data storage
                   and visualization to enhance project tracking.
                 </li>
-                <li data-oid="93u5xc.">
+                <li data-oid="-bt3o3q">
                   Increased production efficiency by 15% through implementing
                   continuous improvement methodologies.
                 </li>
@@ -136,48 +136,48 @@ export default function AboutPage() {
 
             <div
               className="border-l-4 border-[#d1d1c7] pl-6 relative"
-              data-oid="ywpbbc2"
+              data-oid="3hibqgd"
             >
               <div
                 className="absolute top-0 left-[-10px] w-4 h-4 rounded-full bg-[#0f0f0f]"
-                data-oid="m6hybkn"
+                data-oid="03_ir0-"
               ></div>
-              <h3 className="text-xl font-medium mb-1" data-oid="uzxw5ve">
+              <h3 className="text-xl font-medium mb-1" data-oid="5rf9y3u">
                 Manufacturing Engineer
               </h3>
               <p
                 className="text-sm text-muted-foreground mb-1"
-                data-oid="x11y2ts"
+                data-oid="y0ldk6."
               >
                 Advanced Power Conversion - Colorado, USA
               </p>
               <p
                 className="text-sm text-muted-foreground mb-4"
-                data-oid="xryrtia"
+                data-oid=":u.glmj"
               >
                 January 2022 - December 2023
               </p>
               <ul
                 className="text-sm mb-6 list-disc pl-5 space-y-2"
-                data-oid="0c8rhvt"
+                data-oid="ggu9fqw"
               >
-                <li data-oid="3odrt8e">
+                <li data-oid="yvk1wtk">
                   Enhanced product lifecycle management by 20% utilizing
                   hands-on machining and efficient feedback mechanisms.
                 </li>
-                <li data-oid="5al5an7">
+                <li data-oid="-o_xhh0">
                   Reduced development iterations by 30% through collaboration
                   with the R&D team on design improvements.
                 </li>
-                <li data-oid="lbxx3rj">
+                <li data-oid="f:par03">
                   Achieved 95% quality control compliance by analyzing
                   production units against established standards.
                 </li>
-                <li data-oid="2:fxc6z">
+                <li data-oid="wj_4r83">
                   Facilitated cross-functional transformation in manufacturing
                   processes to increase team efficiency.
                 </li>
-                <li data-oid="2tcurtb">
+                <li data-oid="cfs14s:">
                   Managed diverse engineering projects from conception to
                   production, ensuring alignment with business goals.
                 </li>
@@ -186,44 +186,44 @@ export default function AboutPage() {
 
             <div
               className="border-l-4 border-[#d1d1c7] pl-6 relative"
-              data-oid="t:4weg:"
+              data-oid="0b0_5p0"
             >
               <div
                 className="absolute top-0 left-[-10px] w-4 h-4 rounded-full bg-[#0f0f0f]"
-                data-oid="e-006sk"
+                data-oid="lt.52w1"
               ></div>
-              <h3 className="text-xl font-medium mb-1" data-oid="2._g471">
+              <h3 className="text-xl font-medium mb-1" data-oid="76prias">
                 Application Engineer
               </h3>
               <p
                 className="text-sm text-muted-foreground mb-1"
-                data-oid="4:w8t6x"
+                data-oid="ao:.03w"
               >
                 Advanced Power Conversion - Barre, VT, USA
               </p>
               <p
                 className="text-sm text-muted-foreground mb-4"
-                data-oid="gl.6w-i"
+                data-oid="-i_quzd"
               >
                 June 2021 - December 2021
               </p>
               <ul
                 className="text-sm mb-6 list-disc pl-5 space-y-2"
-                data-oid="x-hxg-a"
+                data-oid="4zrzjcs"
               >
-                <li data-oid="l:5_yld">
+                <li data-oid="j4k6d0_">
                   Provided engineering support for customer applications,
                   resolving technical issues and enhancing product performance.
                 </li>
-                <li data-oid="raqdoy2">
+                <li data-oid="88ahkah">
                   Conducted field testing and validation of new products in
                   real-world environments.
                 </li>
-                <li data-oid="2v9ia_e">
+                <li data-oid="ptln4gd">
                   Collaborated with sales teams to communicate technical
                   specifications to customers.
                 </li>
-                <li data-oid="0z8.yht">
+                <li data-oid="em:x_t7">
                   Documented application requirements and created user manuals
                   for new product releases.
                 </li>
@@ -232,40 +232,40 @@ export default function AboutPage() {
 
             <div
               className="border-l-4 border-[#d1d1c7] pl-6 relative"
-              data-oid="h.py.k_"
+              data-oid="cia2kdr"
             >
               <div
                 className="absolute top-0 left-[-10px] w-4 h-4 rounded-full bg-[#0f0f0f]"
-                data-oid="ro-goy6"
+                data-oid="y4lsned"
               ></div>
-              <h3 className="text-xl font-medium mb-1" data-oid="jx.a2ro">
+              <h3 className="text-xl font-medium mb-1" data-oid="wzfatd8">
                 Engineering Staff
               </h3>
               <p
                 className="text-sm text-muted-foreground mb-1"
-                data-oid="d2h4zlu"
+                data-oid="2_xj.6u"
               >
                 CU BOULDER - Boulder, CO, USA
               </p>
               <p
                 className="text-sm text-muted-foreground mb-4"
-                data-oid="uvqsl0s"
+                data-oid="h.c6c6z"
               >
                 January 2020 - May 2021
               </p>
               <ul
                 className="text-sm mb-6 list-disc pl-5 space-y-2"
-                data-oid="r5ngl25"
+                data-oid="qq6o2k-"
               >
-                <li data-oid="_l:blww">
+                <li data-oid="wr3z82m">
                   Assisted faculty with research projects focused on renewable
                   energy technologies.
                 </li>
-                <li data-oid="t8lsv5x">
+                <li data-oid="kbjm8t_">
                   Developed lab procedures for engineering students and provided
                   technical guidance.
                 </li>
-                <li data-oid="siksjno">
+                <li data-oid="f4vqt7i">
                   Maintained laboratory equipment and ensured safety protocols
                   were followed.
                 </li>
@@ -274,40 +274,40 @@ export default function AboutPage() {
 
             <div
               className="border-l-4 border-[#d1d1c7] pl-6 relative"
-              data-oid="xo_k.yg"
+              data-oid="-sjt:.k"
             >
               <div
                 className="absolute top-0 left-[-10px] w-4 h-4 rounded-full bg-[#0f0f0f]"
-                data-oid="n4hbxrm"
+                data-oid="5woo7ks"
               ></div>
-              <h3 className="text-xl font-medium mb-1" data-oid="vm9zqec">
+              <h3 className="text-xl font-medium mb-1" data-oid="u9pu5:p">
                 R&D Engineering Intern
               </h3>
               <p
                 className="text-sm text-muted-foreground mb-1"
-                data-oid="a-s1y:m"
+                data-oid="qfc4jb."
               >
                 NIST - Boulder, CO, USA
               </p>
               <p
                 className="text-sm text-muted-foreground mb-4"
-                data-oid="l8gyfk5"
+                data-oid="ccnqu51"
               >
                 May 2019 - August 2019
               </p>
               <ul
                 className="text-sm mb-6 list-disc pl-5 space-y-2"
-                data-oid="zeru-tk"
+                data-oid="2q5g079"
               >
-                <li data-oid="r6x3wbf">
+                <li data-oid="s6x4ddk">
                   Participated in research projects focused on materials testing
                   for renewable energy applications.
                 </li>
-                <li data-oid="zo26jhm">
+                <li data-oid="4t371-l">
                   Conducted laboratory experiments and collected data for
                   analysis.
                 </li>
-                <li data-oid="1.-1uyc">
+                <li data-oid="od4lv3u">
                   Assisted senior engineers with documentation and reporting of
                   research findings.
                 </li>
@@ -315,9 +315,9 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="mt-12" data-oid="gt85gow">
-            <Link href="/contact" data-oid="an.d-lr">
-              <Button className="main-button rounded-full" data-oid="nlc6fi9">
+          <div className="mt-12" data-oid="l68ou83">
+            <Link href="/contact" data-oid="rgbby67">
+              <Button className="main-button rounded-full" data-oid="mpu6a83">
                 Contact Me
               </Button>
             </Link>
@@ -328,35 +328,35 @@ export default function AboutPage() {
       {/* Skills Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid=":32ngg1"
+        data-oid="yisfzln"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="-ivobcu"
+          data-oid="jafwj.y"
         >
-          <div className="flex items-center mb-6" data-oid="b-6jycs">
-            <span className="mr-2 text-sm" data-oid="1njhic7">
+          <div className="flex items-center mb-6" data-oid="wpi31ck">
+            <span className="mr-2 text-sm" data-oid="948eatb">
               +
             </span>
-            <h3 className="text-sm" data-oid="8q6uivi">
+            <h3 className="text-sm" data-oid="5l.7wt8">
               Skills
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8" data-oid="97cigj.">
-          <h2 className="text-3xl md:text-4xl mb-12" data-oid="mo9sk8p">
+        <div className="col-span-2 p-8" data-oid="z7zlsp0">
+          <h2 className="text-3xl md:text-4xl mb-12" data-oid="6sxq3hu">
             Technical Skills
           </h2>
 
-          <div className="grid grid-cols-1 gap-12" data-oid="l86lsjh">
-            <div data-oid="vozp3:_">
+          <div className="grid grid-cols-1 gap-12" data-oid="ults3bd">
+            <div data-oid="mqp:z5b">
               <h3
                 className="text-xl font-medium mb-6 pb-2 border-b border-[#d1d1c7]"
-                data-oid="-zu31dc"
+                data-oid="ltjf_-a"
               >
                 Engineering
               </h3>
-              <div className="flex flex-wrap gap-3" data-oid="q_gnqoz">
+              <div className="flex flex-wrap gap-3" data-oid="-8xc6.7">
                 {[
                   "CAD",
                   "SolidWorks",
@@ -367,7 +367,7 @@ export default function AboutPage() {
                   <span
                     key={skill}
                     className="px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="eqo1.3c"
+                    data-oid="tg8aq:f"
                   >
                     {skill}
                   </span>
@@ -375,14 +375,14 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div data-oid="wd9fa3j">
+            <div data-oid="c0782t7">
               <h3
                 className="text-xl font-medium mb-6 pb-2 border-b border-[#d1d1c7]"
-                data-oid="ytvzdp4"
+                data-oid="ujddkr9"
               >
                 Data & Technology
               </h3>
-              <div className="flex flex-wrap gap-3" data-oid="r-m4dm-">
+              <div className="flex flex-wrap gap-3" data-oid="e3j0so1">
                 {[
                   "SQL",
                   "Python",
@@ -393,7 +393,7 @@ export default function AboutPage() {
                   <span
                     key={skill}
                     className="px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="z_v24r8"
+                    data-oid="25gahhu"
                   >
                     {skill}
                   </span>
@@ -401,14 +401,14 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div data-oid="y32ugcz">
+            <div data-oid="33ufzv5">
               <h3
                 className="text-xl font-medium mb-6 pb-2 border-b border-[#d1d1c7]"
-                data-oid="bfmr1zr"
+                data-oid="q3s.0og"
               >
                 Project Management
               </h3>
-              <div className="flex flex-wrap gap-3" data-oid="ykzk_9s">
+              <div className="flex flex-wrap gap-3" data-oid="35cc3ht">
                 {[
                   "SCRUM",
                   "JIRA",
@@ -419,7 +419,7 @@ export default function AboutPage() {
                   <span
                     key={skill}
                     className="px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="6oxoai5"
+                    data-oid="ehctw_3"
                   >
                     {skill}
                   </span>

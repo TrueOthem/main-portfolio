@@ -85,35 +85,35 @@ export default function WorksPage() {
       {/* Resume Download Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="48yjqa0"
+        data-oid=".v_.wz6"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="5v8ryp."
+          data-oid="gcfqd3a"
         >
-          <div className="flex items-center mb-6" data-oid="989:pv-">
-            <span className="mr-2 text-sm" data-oid="11ludjt">
+          <div className="flex items-center mb-6" data-oid="wgvyxuh">
+            <span className="mr-2 text-sm" data-oid="7kn6n26">
               +
             </span>
-            <h3 className="text-sm" data-oid="qq12tdf">
+            <h3 className="text-sm" data-oid="qx4c5r2">
               Resume
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="a2khtp7">
-          <h2 className="text-3xl md:text-4xl mb-6" data-oid=":6h1_f8">
+        <div className="col-span-2 p-8 md:p-12" data-oid="9aq.hkd">
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="9rsdg_w">
             My Resume
           </h2>
-          <p className="text-muted-foreground mb-8" data-oid="5fugsjc">
+          <p className="text-muted-foreground mb-8" data-oid="2wjk4lh">
             Download my full resume to learn more about my professional
             experience, skills, and educational background.
           </p>
           <a
             href="/uploads/Mohamed-adil-resume-PSE.pdf"
             download
-            data-oid="insf_8i"
+            data-oid="ssi_1ci"
           >
-            <Button className="main-button rounded-full" data-oid="16b-nky">
+            <Button className="main-button rounded-full" data-oid="arhloln">
               Download Resume (PDF)
             </Button>
           </a>
@@ -123,36 +123,36 @@ export default function WorksPage() {
       {/* Skills Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="skbiz08"
+        data-oid="z_0l4f-"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="_-svmuc"
+          data-oid="zjr9ygv"
         >
-          <div className="flex items-center mb-6" data-oid="7n0iiw-">
-            <span className="mr-2 text-sm" data-oid="pnjx1e8">
+          <div className="flex items-center mb-6" data-oid="k5:9jls">
+            <span className="mr-2 text-sm" data-oid="deeizqo">
               +
             </span>
-            <h3 className="text-sm" data-oid="5kc1_ph">
+            <h3 className="text-sm" data-oid="qu7h59-">
               Skills
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="8ka.vwx">
-          <h2 className="text-3xl md:text-4xl mb-6" data-oid="dxx1z-_">
+        <div className="col-span-2 p-8 md:p-12" data-oid="kf7c2:-">
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="zt3828g">
             Technical Expertise
           </h2>
-          <p className="text-muted-foreground mb-8" data-oid="46yuu56">
+          <p className="text-muted-foreground mb-8" data-oid="zlmhh1e">
             My core technical skills and competencies that I bring to every
             project.
           </p>
 
-          <div className="grid grid-cols-1 gap-8" data-oid="yp19-3o">
-            <div data-oid="odpgf54">
-              <h3 className="text-xl font-medium mb-4" data-oid="-.p4p-s">
+          <div className="grid grid-cols-1 gap-8" data-oid="rxe:9k7">
+            <div data-oid=".oyi9.a">
+              <h3 className="text-xl font-medium mb-4" data-oid="tp2h-t2">
                 Engineering
               </h3>
-              <div className="flex flex-wrap gap-2" data-oid="-r16d1k">
+              <div className="flex flex-wrap gap-2" data-oid="1-7tb9v">
                 {[
                   "CAD & SolidWorks",
                   "Operations Research",
@@ -163,7 +163,7 @@ export default function WorksPage() {
                   <span
                     key={skill}
                     className="inline-block px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="7gvub4x"
+                    data-oid="rtjdr8r"
                   >
                     {skill}
                   </span>
@@ -171,11 +171,11 @@ export default function WorksPage() {
               </div>
             </div>
 
-            <div data-oid="yaz86f-">
-              <h3 className="text-xl font-medium mb-4" data-oid="hzmm._r">
+            <div data-oid="fej8yi0">
+              <h3 className="text-xl font-medium mb-4" data-oid="9:41s.o">
                 Data & Programming
               </h3>
-              <div className="flex flex-wrap gap-2" data-oid="rfxur8i">
+              <div className="flex flex-wrap gap-2" data-oid="8myl7yh">
                 {[
                   "SQL & Database Design",
                   "Python Development",
@@ -186,7 +186,7 @@ export default function WorksPage() {
                   <span
                     key={skill}
                     className="inline-block px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="w6x6x7f"
+                    data-oid="qfrw4:z"
                   >
                     {skill}
                   </span>
@@ -194,11 +194,11 @@ export default function WorksPage() {
               </div>
             </div>
 
-            <div data-oid="3::0vft">
-              <h3 className="text-xl font-medium mb-4" data-oid="f42e0n:">
+            <div data-oid="vma5xrg">
+              <h3 className="text-xl font-medium mb-4" data-oid="tvbgno3">
                 Management
               </h3>
-              <div className="flex flex-wrap gap-2" data-oid="i5di94l">
+              <div className="flex flex-wrap gap-2" data-oid="jv2yh4-">
                 {[
                   "Project Management",
                   "SCRUM & Agile Methodologies",
@@ -209,7 +209,7 @@ export default function WorksPage() {
                   <span
                     key={skill}
                     className="inline-block px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="a83o3vv"
+                    data-oid="il_lqp_"
                   >
                     {skill}
                   </span>

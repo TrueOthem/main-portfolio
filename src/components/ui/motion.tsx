@@ -78,7 +78,7 @@ export const FadeIn = ({
       }}
       className={className}
       style={fullWidth ? { width: "100%" } : {}}
-      data-oid="589pp_4"
+      data-oid="q1qz7fb"
     >
       {children}
     </motion.div>
@@ -138,7 +138,7 @@ export const StaggerContainer = ({
         },
       }}
       className={className}
-      data-oid="rr0k.yr"
+      data-oid="o03fadx"
     >
       {children}
     </motion.div>
@@ -204,7 +204,7 @@ export const StaggerItem = ({
         },
       }}
       className={className}
-      data-oid="2_0wzuo"
+      data-oid="-k52tso"
     >
       {children}
     </motion.div>
@@ -262,7 +262,7 @@ export const ScaleIn = ({
         ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
-      data-oid="x.f94ig"
+      data-oid="c5xbst8"
     >
       {children}
     </motion.div>
@@ -313,7 +313,7 @@ export const HoverScale = ({
       whileHover={{ scale: hoverScale }}
       transition={{ duration: optimizedDuration }}
       className={className}
-      data-oid="tqbgpkt"
+      data-oid="jxbs2sw"
     >
       {children}
     </motion.div>
@@ -360,7 +360,7 @@ export const RevealText = ({
   }, [delay]);
 
   return (
-    <div className={`relative overflow-hidden ${className}`} data-oid="a.7amd4">
+    <div className={`relative overflow-hidden ${className}`} data-oid="lyaidha">
       <motion.div
         initial={{ y: yOffset }}
         animate={{ y: 0 }}
@@ -369,7 +369,7 @@ export const RevealText = ({
           delay: animDelay,
           ease: [0.22, 1, 0.36, 1],
         }}
-        data-oid="6w2_k4u"
+        data-oid="cahuv.m"
       >
         {children}
       </motion.div>
@@ -420,13 +420,13 @@ export const DrawSVG = ({
       animate={{ opacity: 1 }}
       transition={{ delay: animDelay, duration: 0.01 }}
       className={className}
-      data-oid="hrv:mke"
+      data-oid="h:_fir1"
     >
       <motion.svg
         initial="hidden"
         animate="visible"
         className="w-full h-full"
-        data-oid="u31r03w"
+        data-oid="x0eztel"
       >
         {children}
       </motion.svg>
@@ -492,7 +492,7 @@ export const SVGPath = ({
           },
         },
       }}
-      data-oid="m01qjb."
+      data-oid="9899ng."
     />
   );
 };
@@ -543,9 +543,50 @@ export const ScrollReveal = ({
       viewport={{ once: true, threshold: viewportThreshold }}
       transition={{ duration: animDuration, ease: [0.22, 1, 0.36, 1] }}
       className={className}
-      data-oid="avu6:.4"
+      data-oid="ig04w3d"
     >
       {children}
+      <section
+        className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
+        data-oid="ltvdfq6"
+        key="olk-VYzR"
+      >
+        <div
+          className="col-span-1 p-8 border-r border-[#d1d1c7]"
+          data-oid="_3v3iot"
+          key="olk-uwOf"
+        >
+          <div className="flex items-center mb-6" data-oid="gkcaveu">
+            <span className="mr-2 text-sm" data-oid="c3rr21e">
+              +
+            </span>
+            <h3 className="text-sm" data-oid=".dbnnok">
+              Resume
+            </h3>
+          </div>
+        </div>
+        <div
+          className="col-span-2 p-8 md:p-12"
+          data-oid="fb9lu_p"
+          key="olk-O60m"
+        >
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="hlprdek">
+            My Resume
+          </h2>
+          <p className="text-muted-foreground mb-8" data-oid="jcsocry">
+            Download my full resume to learn more about my professional
+            experience, skills, and educational background.
+          </p>
+          <a className="" data-oid="zruss:w">
+            <button
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 main-button rounded-full"
+              data-oid="y_f3w6_"
+            >
+              Download Resume (PDF)
+            </button>
+          </a>
+        </div>
+      </section>
     </motion.div>
   );
 };

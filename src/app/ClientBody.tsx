@@ -26,19 +26,9 @@ export default function ClientBody({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="w-full"
-      data-oid="._b_avv"
+      data-oid="9ku.n7y"
     >
       {children}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: duration * 0.6 }}
-        data-oid="h:kp17t"
-        key="olk-I7AA"
-      >
-        {children}
-      </motion.div>
     </motion.div>
   );
 }
