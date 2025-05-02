@@ -41,7 +41,7 @@ export default function Home() {
         <div className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full">
           <ParallaxScroll speed={0.1} direction="up">
             <RevealText>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium p-10 md:p-10 lg:p-10">
                 Mohamed Adil<br />Al Sabri
               </h1>
             </RevealText>
