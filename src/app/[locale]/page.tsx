@@ -15,5 +15,5 @@ export default async function Home({
 }) {
   // Await params if it's a promise
   const resolvedParams = await params;
-  return <HomeClient locale={resolvedParams.locale} data-oid="h1qk1.." />;
+  return <HomeClient locale={resolvedParams.locale} />;
 }

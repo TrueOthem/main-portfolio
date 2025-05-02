@@ -66,10 +66,7 @@ export const LoadingSpinner = ({
   switch (optimizedType) {
     case "circular":
       return (
-        <div
-          className={`flex items-center justify-center ${className}`}
-          data-oid="c7kyd60"
-        >
+        <div className={`flex items-center justify-center ${className}`}>
           <motion.div
             className="rounded-full border-t-transparent"
             style={{
@@ -85,7 +82,6 @@ export const LoadingSpinner = ({
               repeat: Infinity,
               ease: "linear",
             }}
-            data-oid="bu3vb03"
           />
         </div>
       );
@@ -94,7 +90,6 @@ export const LoadingSpinner = ({
       return (
         <div
           className={`flex items-center justify-center space-x-2 ${className}`}
-          data-oid="4et:5j0"
         >
           {[0, 1, 2].map((index) => (
             <motion.div
@@ -115,7 +110,6 @@ export const LoadingSpinner = ({
                 delay: index * pulseDelay,
                 ease: "easeInOut",
               }}
-              data-oid="naqt--1"
             />
           ))}
         </div>
@@ -126,7 +120,6 @@ export const LoadingSpinner = ({
         <div
           className={`grid grid-cols-3 gap-1 ${className}`}
           style={{ width: optimizedSize, height: optimizedSize }}
-          data-oid="c3p6edc"
         >
           {[...Array(9)].map((_, index) => (
             <motion.div
@@ -145,7 +138,6 @@ export const LoadingSpinner = ({
                 delay: (index * 0.1 * pulseDelay * 5) % (0.8 * pulseDelay * 5),
                 ease: "easeInOut",
               }}
-              data-oid="w8nq0sd"
             />
           ))}
         </div>
@@ -161,7 +153,6 @@ export const LoadingSpinner = ({
             backgroundColor: `${color}30`,
             borderRadius: optimizedSize / 8,
           }}
-          data-oid="ocz:hv0"
         >
           <motion.div
             style={{
@@ -178,7 +169,6 @@ export const LoadingSpinner = ({
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            data-oid=":upxa_z"
           />
         </div>
       );
@@ -227,21 +217,14 @@ export const LoadingOverlay = ({ message = "Loading..." }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      data-oid="_a908pr"
     >
-      <LoadingSpinner
-        size={60}
-        type={optimizedSpinnerType}
-        className="mb-4"
-        data-oid="cdwp81o"
-      />
+      <LoadingSpinner size={60} type={optimizedSpinnerType} className="mb-4" />
 
       <motion.p
         className="text-primary text-lg"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        data-oid="fx18suf"
       >
         {message}
       </motion.p>
@@ -297,7 +280,6 @@ export const ProgressBar = ({ isLoading = false, progress = 0 }) => {
         },
       }}
       exit={{ opacity: 0, transition: { duration: 0.3, delay: 0.5 } }}
-      data-oid="odti7lt"
     />
   );
 };

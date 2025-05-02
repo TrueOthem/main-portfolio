@@ -26,7 +26,7 @@ export default function ClientBody({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="w-full rounded-none border-[#D1D1C7] border-0"
-      data-oid="-9_mz9v"
+      data-oid=":9h8o_m"
     >
       {children}
     </motion.div>
