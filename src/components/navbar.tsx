@@ -18,103 +18,103 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <FadeIn duration={0.6} direction="down" data-oid="ag5f_qw">
-      <header data-oid="7zewca.">
+    <FadeIn duration={0.6} direction="down" data-oid="kcu5lo.">
+      <header data-oid="t.un6ju">
         <nav
           className="border-b-0 border-[#d1d1c7] bg-background"
-          data-oid=".l_4mlf"
+          data-oid="dmyngy3"
         >
           <div
             className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-            data-oid="j.q-rhg"
+            data-oid="m8h6:10"
           >
             <div
               className="flex h-16 justify-between items-center"
-              data-oid="qy2:bmw"
+              data-oid="mhk33_1"
             >
-              <div className="flex items-center" data-oid=".mcpvv8"></div>
+              <div className="flex items-center" data-oid="662bvq-"></div>
 
               {/* Desktop navigation */}
               <div
                 className="hidden md:flex items-center space-x-6"
-                data-oid="_g.zq00"
+                data-oid="4-nfypj"
               >
                 <StaggerContainer
                   staggerChildren={0.05}
                   className="flex items-center space-x-6"
-                  data-oid="cd:p2i_"
+                  data-oid="q0u_za6"
                 >
-                  <StaggerItem data-oid="ay_t1b_">
+                  <StaggerItem data-oid="t79j11g">
                     <Link
                       href="/"
                       className="nav-link text-sm desktop-nav-link"
                       data-nav-type="desktop"
-                      data-oid="r40wgnr"
+                      data-oid=".o6_6_7"
                     >
                       <motion.span
                         className={pathname === "/" ? "text-primary" : ""}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.2 }}
-                        data-oid="ug_f7j1"
+                        data-oid="z7ntdun"
                       >
                         Home
                       </motion.span>
                     </Link>
                   </StaggerItem>
-                  <StaggerItem data-oid="5zodgs9">
+                  <StaggerItem data-oid="03yq26m">
                     <Link
                       href="/about"
                       className="nav-link text-sm desktop-nav-link"
                       data-nav-type="desktop"
-                      data-oid="5-:_nlv"
+                      data-oid=":8mb0tl"
                     >
                       <motion.span
                         className={pathname === "/about" ? "text-primary" : ""}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.2 }}
-                        data-oid="bvr2wnx"
+                        data-oid="dy:13ir"
                       >
                         About
                       </motion.span>
                     </Link>
                   </StaggerItem>
-                  <StaggerItem data-oid="l1_hl0:">
+                  <StaggerItem data-oid="usf9io2">
                     <Link
                       href="/works"
                       className="nav-link text-sm desktop-nav-link"
                       data-nav-type="desktop"
-                      data-oid="japsy1x"
+                      data-oid="6o8d7r_"
                     >
                       <motion.span
                         className={pathname === "/works" ? "text-primary" : ""}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.2 }}
-                        data-oid="4puwt6."
+                        data-oid="jhmx0gt"
                       >
                         Works
                       </motion.span>
                     </Link>
                   </StaggerItem>
-                  <StaggerItem data-oid="ueerinh">
+                  <StaggerItem data-oid="d:gak_m">
                     <Link
                       href="/blog"
                       className="nav-link text-sm desktop-nav-link"
                       data-nav-type="desktop"
-                      data-oid="c6bkwn6"
+                      data-oid="gn73tq3"
                     >
                       <motion.span
                         className={pathname === "/blog" ? "text-primary" : ""}
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.2 }}
-                        data-oid="eoojhk3"
+                        data-oid="yjtmjj8"
                       >
                         Blog
                       </motion.span>
                     </Link>
                   </StaggerItem>
 
-                  <StaggerItem data-oid="r.ugsh4">
-                    <LanguageSwitcher variant="desktop" data-oid="_a.j3vq" />
+                  <StaggerItem data-oid="ovp0wpm">
+                    <LanguageSwitcher variant="desktop" data-oid="jy6d9uw" />
                   </StaggerItem>
                 </StaggerContainer>
               </div>
@@ -122,22 +122,22 @@ export default function Navbar() {
               {/* Mobile navigation */}
               <div
                 className="flex md:hidden items-center space-x-2"
-                data-oid="99pp64h"
+                data-oid="jwm55m8"
               >
-                <Sheet data-oid="5ou8cza">
-                  <SheetTrigger asChild data-oid=".shy6nf">
+                <Sheet data-oid="4ew3gzn">
+                  <SheetTrigger asChild data-oid="b5nss5-">
                     <Button
                       variant="ghost"
                       size="icon"
                       aria-label="Menu"
-                      data-oid=":_-8teb"
+                      data-oid="_zyeb0k"
                     >
                       <motion.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        data-oid="_1mojo4"
+                        data-oid="csb.ew2"
                       >
-                        <Menu data-testid="menu-icon" data-oid="bsxt6fk" />
+                        <Menu data-testid="menu-icon" data-oid="e:373.5" />
                       </motion.div>
                     </Button>
                   </SheetTrigger>
@@ -159,36 +159,36 @@ export default function Navbar() {
                         }
                       });
                     }}
-                    data-oid="-8at:-u"
+                    data-oid="1zo98hc"
                   >
                     <StaggerContainer
                       className="flex flex-col space-y-6 mt-10"
                       delay={0.2}
-                      data-oid="a_35lae"
+                      data-oid="yfkpu7t"
                     >
-                      <StaggerItem direction="down" data-oid="o6hdwhx">
+                      <StaggerItem direction="down" data-oid="qns_b-x">
                         <Link
                           href="/"
                           className="nav-link text-lg mobile-nav-link"
                           data-nav-type="mobile"
-                          data-oid="xtd.3nj"
+                          data-oid="ybw:.vw"
                         >
                           <motion.span
                             className={pathname === "/" ? "text-primary" : ""}
                             whileHover={{ x: 5 }}
                             transition={{ duration: 0.2 }}
-                            data-oid="w_mff.v"
+                            data-oid="snome3w"
                           >
                             Home
                           </motion.span>
                         </Link>
                       </StaggerItem>
-                      <StaggerItem direction="down" data-oid="4.smxul">
+                      <StaggerItem direction="down" data-oid="h_war3:">
                         <Link
                           href="/about"
                           className="nav-link text-lg mobile-nav-link"
                           data-nav-type="mobile"
-                          data-oid="vk72jd5"
+                          data-oid="4bawzz2"
                         >
                           <motion.span
                             className={
@@ -196,18 +196,18 @@ export default function Navbar() {
                             }
                             whileHover={{ x: 5 }}
                             transition={{ duration: 0.2 }}
-                            data-oid="nvndkfh"
+                            data-oid="xwqvzgo"
                           >
                             About
                           </motion.span>
                         </Link>
                       </StaggerItem>
-                      <StaggerItem direction="down" data-oid="9nspre-">
+                      <StaggerItem direction="down" data-oid="1792px3">
                         <Link
                           href="/works"
                           className="nav-link text-lg mobile-nav-link"
                           data-nav-type="mobile"
-                          data-oid="5f-fn8d"
+                          data-oid="sw:3av8"
                         >
                           <motion.span
                             className={
@@ -215,18 +215,18 @@ export default function Navbar() {
                             }
                             whileHover={{ x: 5 }}
                             transition={{ duration: 0.2 }}
-                            data-oid="uj-j9wf"
+                            data-oid="htdrrzl"
                           >
                             Works
                           </motion.span>
                         </Link>
                       </StaggerItem>
-                      <StaggerItem direction="down" data-oid="7lb2so4">
+                      <StaggerItem direction="down" data-oid="-jcxya0">
                         <Link
                           href="/blog"
                           className="nav-link text-lg mobile-nav-link"
                           data-nav-type="mobile"
-                          data-oid="1pxadje"
+                          data-oid="5lkqv-s"
                         >
                           <motion.span
                             className={
@@ -234,15 +234,15 @@ export default function Navbar() {
                             }
                             whileHover={{ x: 5 }}
                             transition={{ duration: 0.2 }}
-                            data-oid="iq2d4su"
+                            data-oid="675xp__"
                           >
                             Blog
                           </motion.span>
                         </Link>
                       </StaggerItem>
 
-                      <StaggerItem direction="down" data-oid="5d2wbaz">
-                        <LanguageSwitcher variant="mobile" data-oid="ge9riwz" />
+                      <StaggerItem direction="down" data-oid=":w.o:rw">
+                        <LanguageSwitcher variant="mobile" data-oid="mbwuigr" />
                       </StaggerItem>
                     </StaggerContainer>
                   </SheetContent>
