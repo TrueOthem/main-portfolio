@@ -138,22 +138,19 @@ export const AdvancedPageTransition = ({
       <AnimatePresence mode="wait" data-oid="g8a-a5m">
         <motion.div key={pathname} className="relative" data-oid="fduet2a">
           {/* Page content */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: duration * 0.6 }}
+            data-oid="jpz2h-j"
+          >
+            {children}
+          </motion.div>
 
           {/* Overlay that slides in and out */}
 
           {/* Secondary overlay for a layered effect */}
-          <div data-oid="808mc:9" key="olk-KByx">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: duration * 0.6 }}
-              data-oid="jpz2h-j"
-              key="olk-HtPd"
-            >
-              {children}
-            </motion.div>
-          </div>
         </motion.div>
       </AnimatePresence>
     </div>
