@@ -19,4 +19,736 @@ import {
   TiltCard,
   RippleButton,
   MagneticElement,
-} from "@/components/ui/interactive-motion"; // Define logo data with unique IDs and image paths const logoData = [ { id: "logo1", company: "Electric Hydrogen", imgSrc: "/uploads/ehydrogen-logo2.png", }, { id: "logo2", company: "Advanced Power Conversion", imgSrc: "/uploads/Apc-logo.png", }, { id: "logo3", company: "CU Boulder", imgSrc: "/uploads/cuboulderlogo.png" }, { id: "logo4", company: "NIST", imgSrc: "/uploads/NIST-Logo-Brand-White.png", }, { id: "logo5", company: "University of Pennsylvania", imgSrc: "/uploads/UniversityofPennsylvania_FullLogo_RGB-4_0.png", }, ]; // Define skill icons const skillIcons = [ { skill: "Python", icon: "/uploads/python-logo-only.png" }, { skill: "SQL", icon: "/uploads/SQL.webp" }, ]; export default function Home() { return ( <ClientBody data-oid="arft460"> {/* Hero Section with Parallax */} <section id="hero-section" className="section-container hero-section relative w-full" data-testid="hero-section" data-oid="-jvymp4" > <div className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-0 md:p-0 lg:p-0 relative overflow-visible" data-oid="xg_ogr_" > <div className="profile-image-container" data-oid="hk9k80d"> <Image src="/uploads/profile-photo.jpg" alt="Mohamed Adil Al Sabri" width={500} height={500} className="profile-image" priority data-oid="wuggaxx" /> </div> </div> <div className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full" data-oid="5rn0pza" > <ParallaxScroll speed={0.1} direction="up" data-oid="95vftx2" key="olk-BYEc" > <RevealText data-oid="fgrzoda"> <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium p-48 md:p-48 lg:p-48" data-oid="w3nu9sp" > Mohamed Adil <br data-oid="mn9zmjv" /> Al Sabri </h1> </RevealText> </ParallaxScroll> {/* Abstract decorative elements with parallax */} <div className="absolute top-10 right-20 w-10 h-10 opacity-10" data-oid="c3_xx27" key="olk-851t" > <ParallaxScroll speed={0.4} direction="right" data-oid="39dgs4f"> <div className="w-full h-full bg-primary rounded-full" data-oid="g.loo.6" ></div> </ParallaxScroll> </div> </div> </section> {/* About Section */} <ScrollReveal data-oid="a.77din"> <section className="section-container" data-oid="yjki2_e"> <div className="section-sidebar" data-oid="amf1c-2"> <div className="section-header" data-oid="q6:6:bk"> <span className="mr-2 text-sm" data-oid="cpq.1k:"> + </span> <h3 className="text-sm" data-oid="phraors"> About </h3> </div> </div> <div className="section-content" data-oid="_6d2sz:"> <FadeIn direction="up" data-oid="wpkxma2"> <h2 className="section-title" data-oid="5s6.820"> Process Development Engineer </h2> <p className="section-description" data-oid="p.m93xu"> Process Development Engineer specializing in green hydrogen production. I enhance process capability by developing scalable manufacturing processes, integrating cutting-edge technology, and applying data analysis to optimize production efficiency. </p> <div className="stats-container" data-oid="p7pcawy"> <StaggerContainer staggerChildren={0.1} className="stats-container" data-oid="33x24-3" > <StaggerItem data-oid="p9s9s7q"> <MagneticElement distanceThreshold={100} magnetStrength={0.3} data-oid="7j_wjni" > <div className="stat-item" data-oid="4fle7pa"> <h3 className="stat-value" data-oid="x7j59jn"> 5+ </h3> <p className="stat-label" data-oid="v:c817e"> Years of Experience </p> </div> </MagneticElement> </StaggerItem> <StaggerItem data-oid="pk-jvx6"> <MagneticElement distanceThreshold={100} magnetStrength={0.3} data-oid="bj-b16h" > <div className="stat-item" data-oid="foq2kp_"> <h3 className="stat-value" data-oid="0qr.4-b"> 20+ </h3> <p className="stat-label" data-oid="r07uca:"> Projects Completed </p> </div> </MagneticElement> </StaggerItem> <StaggerItem data-oid="3p6ahyz"> <MagneticElement distanceThreshold={100} magnetStrength={0.3} data-oid="szy6wyt" > <div className="stat-item" data-oid="s.e0n-9"> <h3 className="stat-value" data-oid="zywqiz2"> 4+ </h3> <p className="stat-label" data-oid="i7grkzl"> Companies Worked With </p> </div> </MagneticElement> </StaggerItem> </StaggerContainer> </div> </FadeIn> </div> </section> </ScrollReveal> {/* Company Logos Section */} <ScrollReveal data-oid="pai0kln"> <section className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8 border-b border-[#d1d1c7] overflow-hidden" data-oid="vy__d5f" > <StaggerContainer staggerChildren={0.1} className="logo-grid" data-oid="uze61u1" > {logoData.map((logo) => ( <StaggerItem key={logo.id} data-oid="szr06g."> <div className="logo-container" data-oid="bp8ta87"> <MagneticElement distanceThreshold={100} magnetStrength={0.2} data-oid="oybf8d7" > <div className="logo-item" data-oid="fia48kz"> {logo.imgSrc ? ( <div className="logo-image-container" data-oid="v2zmwv-" > <Image src={logo.imgSrc} alt={logo.company} priority width={200} height={100} className="logo-image" data-oid="fs9b1s6" /> </div> ) : ( <div className="logo-placeholder" data-oid="vrxl_kz"> {logo.company} </div> )} </div> </MagneticElement> </div> </StaggerItem> ))} </StaggerContainer> </section> </ScrollReveal> {/* Expertise Section */} <ScrollReveal data-oid="r9i5-id"> <section className="section-container" data-oid=".betuy."> <div className="section-sidebar" data-oid="vgtfgmz"> <div className="section-header" data-oid="hnw95_t"> <span className="mr-2 text-sm" data-oid="maf1mmd"> + </span> <h3 className="text-sm" data-oid="b6623vu"> Skills </h3> </div> </div> <div className="section-content" data-oid="-oyzyro"> <FadeIn direction="up" data-oid="-n1g91w"> <h2 className="section-subtitle" data-oid="rq239ay"> My Technical Expertise </h2> <p className="section-description mb-12" data-oid="t0vh-wc"> With a background in Mechanical Engineering and years of experience in process development, I bring a diverse skill set that combines engineering principles with data-driven approaches to optimize manufacturing processes. </p> <StaggerContainer staggerChildren={0.1} className="skills-grid" data-oid="4elrtd5" > <StaggerItem data-oid="o4ll.yz"> <TiltCard glareEffect={true} className="h-full" data-oid="dllp.cl" > <div className="content-card" data-oid="6bv4.7_"> <h3 className="card-title" data-oid="u4ndzff"> Process Development </h3> <p className="card-text" data-oid="tp86l3d"> Developing scalable manufacturing processes for green hydrogen production using statistical tools like DOE and SPC. </p> </div> </TiltCard> </StaggerItem> <StaggerItem data-oid="q6_gi3:"> <TiltCard glareEffect={true} className="h-full" data-oid="9sg_2ga" > <div className="content-card" data-oid="_ru72i7"> <h3 className="card-title" data-oid="ohc-8jn"> Data Analysis </h3> <p className="card-text" data-oid="3vlel_d"> Applying large-data analysis in SaaS environments to optimize process efficiency and support continuous improvement initiatives. </p> </div> </TiltCard> </StaggerItem> <StaggerItem data-oid="350tmh8"> <TiltCard glareEffect={true} className="h-full" data-oid=".cu54ru" > <div className="content-card" data-oid="qjcrk:k"> <h3 className="card-title" data-oid="ah4cdc:"> Manufacturing Systems </h3> <p className="card-text" data-oid="brl8yl6"> Building robust data architectures for real-time data storage and visualization to enhance project management capabilities. </p> </div> </TiltCard> </StaggerItem> <StaggerItem data-oid="1hxhd7q"> <TiltCard glareEffect={true} className="h-full" data-oid="x0v:pqo" > <div className="content-card" data-oid="37f_i_s"> <h3 className="card-title" data-oid="ydl23zc"> CAD & Engineering Design </h3> <p className="card-text" data-oid="unarzpj"> Generating structured CAD designs and quality-focused drawings using PDM systems for improved design accuracy and efficiency. </p> </div> </TiltCard> </StaggerItem> <StaggerItem className="md:col-span-2" data-oid="vaeab-u"> <TiltCard glareEffect={true} tiltFactor={5} className="h-full" data-oid="vsokrw8" > <div className="content-card" data-oid="_.f3jwt"> <h3 className="card-title" data-oid=".-y3i-2"> Technical Skills </h3> <p className="card-text mb-4" data-oid="uhejo4w"> Proficient in CAD, SolidWorks, Python, SQL, Data Analysis, Machine Learning, Product Design, and Project Management. </p> <div className="flex items-center space-x-4 mt-2" data-oid="onclvay" > <StaggerContainer staggerChildren={0.2} className="flex items-center space-x-4" data-oid="3r_x8vg" > {skillIcons.map((skillIcon, index) => ( <StaggerItem key={index} data-oid="r4_.k7h"> <div className="skill-icon-container" data-oid="m2omshy" > <MagneticElement distanceThreshold={80} magnetStrength={0.4} data-oid="wp_3omr" > <div className="skill-icon-wrapper" data-oid="xjhh-fy" > <Image src={skillIcon.icon} alt={skillIcon.skill} width={50} height={50} className="skill-icon" data-oid="i7p0l96" /> </div> </MagneticElement> <span className="skill-name" data-oid="e-l49mw"> {skillIcon.skill} </span> </div> </StaggerItem> ))} </StaggerContainer> </div> </div> </TiltCard> </StaggerItem> </StaggerContainer> </FadeIn> </div> </section> </ScrollReveal> {/* Experience Section */} <ScrollReveal data-oid="t7ylotw"> <section className="section-container" data-oid=".y0xau3"> <div className="section-sidebar" data-oid="_4kjvfr"> <div className="section-header" data-oid="b7::r0m"> <span className="mr-2 text-sm" data-oid="e3qp.hx"> + </span> <h3 className="text-sm" data-oid="vp39dnz"> Experience </h3> </div> </div> <div className="section-content" data-oid="ppfd-yn"> <FadeIn direction="up" data-oid="yg47nfu"> <h2 className="section-subtitle" data-oid="i:h2u27"> Professional Experience </h2> <StaggerContainer staggerChildren={0.15} className="experience-list" data-oid="ig3vp2w" > <StaggerItem data-oid=".zy1thy"> <TiltCard tiltFactor={3} glareEffect={true} data-oid="_hvcuve" > <div className="experience-card" data-oid="su.gtgv"> <div className="experience-header" data-oid="m7ndry4"> <div data-oid="u-p-uij"> <h3 className="experience-title" data-oid="h0-g:tr"> Process Development Engineer </h3> <p className="experience-company" data-oid="10w8len"> Electric Hydrogen - Boston, MA </p> <p className="experience-date" data-oid="sblf.8e"> January 2023 - Present </p> </div> <div className="experience-logo" data-oid=":lo8nf3"> <Image src="/uploads/ehydrogen-logo2.png" alt="Electric Hydrogen" width={120} height={50} className="object-contain" data-oid="kzan2c8" /> </div> </div> <ul className="experience-details" data-oid="-:4gn.r"> <li data-oid="mg_3lvj"> Enhanced process capability by 20% for green hydrogen production by developing scalable manufacturing processes. </li> <li data-oid="658rxpv"> Integrated cutting-edge technology into production processes by working with suppliers and vendors. </li> <li data-oid="f_chzvn"> Improved decision-making and stakeholder communication by providing actionable recommendations. </li> <li data-oid="57iiwpj"> Developed robust data architectures for real-time data storage and visualization. </li> </ul> </div> </TiltCard> </StaggerItem> <StaggerItem data-oid="mo:j7cm"> <TiltCard tiltFactor={3} glareEffect={true} data-oid="qdpkfjg" > <div className="experience-card" data-oid=":4tv178"> <div className="experience-header" data-oid="mp4.si3"> <div data-oid="m1esfuw"> <h3 className="experience-title" data-oid="rjd5gnf"> Manufacturing Engineer </h3> <p className="experience-company" data-oid=":a4qnkr"> Advanced Power Conversion - Colorado, USA </p> <p className="experience-date" data-oid="czkb7ek"> January 2022 - December 2023 </p> </div> <div className="experience-logo" data-oid="zlspq.6"> <Image src="/uploads/Apc-logo.png" alt="Advanced Power Conversion" width={120} height={50} className="object-contain" data-oid="5bu1i6-" /> </div> </div> <ul className="experience-details" data-oid="b3o65m6"> <li data-oid="d6reu4f"> Enhanced product lifecycle management by 20% utilizing hands-on machining and efficient feedback mechanisms. </li> <li data-oid="bf_dr2u"> Reduced development iterations by 30% through collaboration with the R&D team. </li> <li data-oid=".j2rnxx"> Achieved 95% quality control compliance by analyzing production units against standards. </li> <li data-oid="saz7e:z"> Facilitated cross-functional transformation in manufacturing processes. </li> </ul> </div> </TiltCard> </StaggerItem> </StaggerContainer> <div className="flex justify-end mt-8" data-oid="vgb_cyo"> <Link href="/about" data-oid="3-xeo0_"> <RippleButton className="secondary-button" data-oid="enbeytz"> <span data-oid="q1brdel">View Full Experience</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-oid="oer--nl" > <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-oid="95d93js" /> </svg> </RippleButton> </Link> </div> </FadeIn> </div> </section> </ScrollReveal> {/* Education Section */} <ScrollReveal data-oid="rphwmc7"> <section className="section-container" data-oid="-yy_6fx"> <div className="section-sidebar" data-oid="rf::3mi"> <div className="section-header" data-oid="bvzt:.t"> <span className="mr-2 text-sm" data-oid="cng8hn4"> + </span> <h3 className="text-sm" data-oid="66nqw:2"> Education </h3> </div> </div> <div className="section-content" data-oid="lq9mjn5"> <FadeIn direction="up" data-oid="xnndp53"> <h2 className="section-subtitle" data-oid="6tzx1ia"> Academic Background </h2> <StaggerContainer staggerChildren={0.15} className="experience-list" data-oid="mwo638-" > <StaggerItem data-oid="q-huhsy"> <TiltCard tiltFactor={3} glareEffect={false} data-oid="jl8_:a:" > <div className="experience-card" data-oid="gvy0r_3"> <div className="experience-header" data-oid="axjg.dj"> <div data-oid="jcez4op"> <h3 className="experience-title" data-oid="y__0cdz"> University of Colorado - Boulder </h3> <p className="experience-date" data-oid=":6g71e4"> Bachelor's, Mechanical Engineering (August 2016 - May 2021) </p> </div> <div className="experience-logo" data-oid=":35up-x"> <Image src="/uploads/cuboulderlogo.png" alt="University of Colorado Boulder" width={120} height={50} className="object-contain" data-oid="g33pwh4" /> </div> </div> </div> </TiltCard> </StaggerItem> <StaggerItem data-oid="tddrlx4"> <TiltCard tiltFactor={3} glareEffect={false} data-oid="3acyz96" > <div className="experience-card" data-oid="tflnfye"> <div className="experience-header" data-oid="-76d.q_"> <div data-oid="1ghuf82"> <h3 className="experience-title" data-oid="fbh9sal"> University of Pennsylvania </h3> <p className="experience-date" data-oid="x:mx18z"> Certification, Mechanical Engineering (January 2015 - December 2016) </p> </div> <div className="experience-logo" data-oid="vv67ouc"> <Image src="/uploads/UniversityofPennsylvania_FullLogo_RGB-4_0.png" alt="University of Pennsylvania" width={120} height={50} className="object-contain" data-oid="1fnprn2" /> </div> </div> </div> </TiltCard> </StaggerItem> </StaggerContainer> </FadeIn> </div> </section> </ScrollReveal> {/* Contact Section */} <ScrollReveal data-oid="2edotj3"> <section className="section-container" data-oid="6s0v_pc"> <div className="section-sidebar" data-oid="_6ukp00"> <div className="section-header" data-oid="qcico2p"> <span className="mr-2 text-sm" data-oid="n4g5gu1"> + </span> <h3 className="text-sm" data-oid="9xfj:sv"> Contact </h3> </div> </div> <div className="section-content" data-oid="1uw.g3y"> <FadeIn direction="up" data-oid="u1oapg_"> <h2 className="section-subtitle" data-oid=":_:.bcs"> Get in Touch </h2> <p className="section-description mb-12" data-oid="5zpwtbw"> Interested in discussing process development, manufacturing efficiency, or potential opportunities? I'd love to connect. </p> <StaggerContainer className="contact-grid" staggerChildren={0.1} data-oid="78op-k8" > <StaggerItem data-oid="b9.vk6l"> <MagneticElement data-oid="l1fakw:"> <div className="contact-item" data-oid="::kw4lp"> <h3 className="contact-title" data-oid="u4c61d-"> Email </h3> <a href="mailto:trueothem@gmail.com" className="contact-link" data-oid="3wznsw_" > trueothem@gmail.com </a> </div> </MagneticElement> </StaggerItem> <StaggerItem data-oid="mf.dql6"> <MagneticElement data-oid="zkv6qre"> <div className="contact-item" data-oid="pkmk5ir"> <h3 className="contact-title" data-oid="i1dqk9k"> Phone </h3> <a href="tel:+16172333948" className="contact-link" data-oid="kcvf2rn" > +1 (617) 233-3948 </a> </div> </MagneticElement> </StaggerItem> <StaggerItem data-oid="5x5t__e"> <MagneticElement data-oid="nkz:dz0"> <div className="contact-item" data-oid="fky:a0-"> <h3 className="contact-title" data-oid="4aphk-5"> Location </h3> <p className="text-muted-foreground" data-oid="w:nmuph"> Cambridge, MA, USA </p> </div> </MagneticElement> </StaggerItem> </StaggerContainer> </FadeIn> </div> </section> </ScrollReveal> </ClientBody> ); }
+} from "@/components/ui/interactive-motion";
+
+// Define logo data with unique IDs and image paths
+const logoData = [
+  {
+    id: "logo1",
+    company: "Electric Hydrogen",
+    imgSrc: "/uploads/ehydrogen-logo2.png",
+  },
+  {
+    id: "logo2",
+    company: "Advanced Power Conversion",
+    imgSrc: "/uploads/Apc-logo.png",
+  },
+  { id: "logo3", company: "CU Boulder", imgSrc: "/uploads/cuboulderlogo.png" },
+  {
+    id: "logo4",
+    company: "NIST",
+    imgSrc: "/uploads/NIST-Logo-Brand-White.png",
+  },
+  {
+    id: "logo5",
+    company: "University of Pennsylvania",
+    imgSrc: "/uploads/UniversityofPennsylvania_FullLogo_RGB-4_0.png",
+  },
+];
+
+// Define skill icons
+const skillIcons = [
+  { skill: "Python", icon: "/uploads/python-logo-only.png" },
+  { skill: "SQL", icon: "/uploads/SQL.webp" },
+];
+
+export default function Home() {
+  return (
+    <ClientBody data-oid="arft460">
+      {/* Hero Section with Parallax */}
+      <section
+        id="hero-section"
+        className="section-container hero-section relative w-full"
+        data-testid="hero-section"
+        data-oid="-jvymp4"
+      >
+        <div
+          className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-0 md:p-0 lg:p-0 relative overflow-visible"
+          data-oid="xg_ogr_"
+        >
+          <div className="profile-image-container" data-oid="hk9k80d">
+            <Image
+              src="/uploads/profile-photo.jpg"
+              alt="Mohamed Adil Al Sabri"
+              width={500}
+              height={500}
+              className="profile-image"
+              priority
+              data-oid="wuggaxx"
+            />
+          </div>
+        </div>
+        <div
+          className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full"
+          data-oid="5rn0pza"
+        >
+          <ParallaxScroll
+            speed={0.1}
+            direction="up"
+            data-oid="95vftx2"
+            key="olk-BYEc"
+          >
+            <RevealText data-oid="fgrzoda">
+              <h1
+                className="text-5xl md:text-6xl lg:text-7xl font-medium p-10 md:p-10 lg:p-10"
+                data-oid="w3nu9sp"
+              >
+                Mohamed Adil
+                <br data-oid="mn9zmjv" />
+                Al Sabri
+              </h1>
+            </RevealText>
+          </ParallaxScroll>
+
+          {/* Abstract decorative elements with parallax */}
+
+          <div
+            className="absolute top-10 right-20 w-10 h-10 opacity-10"
+            data-oid="c3_xx27"
+            key="olk-851t"
+          >
+            <ParallaxScroll speed={0.4} direction="right" data-oid="39dgs4f">
+              <div
+                className="w-full h-full bg-primary rounded-full"
+                data-oid="g.loo.6"
+              ></div>
+            </ParallaxScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <ScrollReveal data-oid="a.77din">
+        <section className="section-container" data-oid="yjki2_e">
+          <div className="section-sidebar" data-oid="amf1c-2">
+            <div className="section-header" data-oid="q6:6:bk">
+              <span className="mr-2 text-sm" data-oid="cpq.1k:">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="phraors">
+                About
+              </h3>
+            </div>
+          </div>
+          <div className="section-content" data-oid="_6d2sz:">
+            <FadeIn direction="up" data-oid="wpkxma2">
+              <h2 className="section-title" data-oid="5s6.820">
+                Process Development Engineer
+              </h2>
+              <p className="section-description" data-oid="p.m93xu">
+                Process Development Engineer specializing in green hydrogen
+                production. I enhance process capability by developing scalable
+                manufacturing processes, integrating cutting-edge technology,
+                and applying data analysis to optimize production efficiency.
+              </p>
+              <div className="stats-container" data-oid="p7pcawy">
+                <StaggerContainer
+                  staggerChildren={0.1}
+                  className="stats-container"
+                  data-oid="33x24-3"
+                >
+                  <StaggerItem data-oid="p9s9s7q">
+                    <MagneticElement
+                      distanceThreshold={100}
+                      magnetStrength={0.3}
+                      data-oid="7j_wjni"
+                    >
+                      <div className="stat-item" data-oid="4fle7pa">
+                        <h3 className="stat-value" data-oid="x7j59jn">
+                          5+
+                        </h3>
+                        <p className="stat-label" data-oid="v:c817e">
+                          Years of Experience
+                        </p>
+                      </div>
+                    </MagneticElement>
+                  </StaggerItem>
+                  <StaggerItem data-oid="pk-jvx6">
+                    <MagneticElement
+                      distanceThreshold={100}
+                      magnetStrength={0.3}
+                      data-oid="bj-b16h"
+                    >
+                      <div className="stat-item" data-oid="foq2kp_">
+                        <h3 className="stat-value" data-oid="0qr.4-b">
+                          20+
+                        </h3>
+                        <p className="stat-label" data-oid="r07uca:">
+                          Projects Completed
+                        </p>
+                      </div>
+                    </MagneticElement>
+                  </StaggerItem>
+                  <StaggerItem data-oid="3p6ahyz">
+                    <MagneticElement
+                      distanceThreshold={100}
+                      magnetStrength={0.3}
+                      data-oid="szy6wyt"
+                    >
+                      <div className="stat-item" data-oid="s.e0n-9">
+                        <h3 className="stat-value" data-oid="zywqiz2">
+                          4+
+                        </h3>
+                        <p className="stat-label" data-oid="i7grkzl">
+                          Companies Worked With
+                        </p>
+                      </div>
+                    </MagneticElement>
+                  </StaggerItem>
+                </StaggerContainer>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Company Logos Section */}
+      <ScrollReveal data-oid="pai0kln">
+        <section
+          className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8 border-b border-[#d1d1c7] overflow-hidden"
+          data-oid="vy__d5f"
+        >
+          <StaggerContainer
+            staggerChildren={0.1}
+            className="logo-grid"
+            data-oid="uze61u1"
+          >
+            {logoData.map((logo) => (
+              <StaggerItem key={logo.id} data-oid="szr06g.">
+                <div className="logo-container" data-oid="bp8ta87">
+                  <MagneticElement
+                    distanceThreshold={100}
+                    magnetStrength={0.2}
+                    data-oid="oybf8d7"
+                  >
+                    <div className="logo-item" data-oid="fia48kz">
+                      {logo.imgSrc ? (
+                        <div
+                          className="logo-image-container"
+                          data-oid="v2zmwv-"
+                        >
+                          <Image
+                            src={logo.imgSrc}
+                            alt={logo.company}
+                            priority
+                            width={200}
+                            height={100}
+                            className="logo-image"
+                            data-oid="fs9b1s6"
+                          />
+                        </div>
+                      ) : (
+                        <div className="logo-placeholder" data-oid="vrxl_kz">
+                          {logo.company}
+                        </div>
+                      )}
+                    </div>
+                  </MagneticElement>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </section>
+      </ScrollReveal>
+
+      {/* Expertise Section */}
+      <ScrollReveal data-oid="r9i5-id">
+        <section className="section-container" data-oid=".betuy.">
+          <div className="section-sidebar" data-oid="vgtfgmz">
+            <div className="section-header" data-oid="hnw95_t">
+              <span className="mr-2 text-sm" data-oid="maf1mmd">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="b6623vu">
+                Skills
+              </h3>
+            </div>
+          </div>
+          <div className="section-content" data-oid="-oyzyro">
+            <FadeIn direction="up" data-oid="-n1g91w">
+              <h2 className="section-subtitle" data-oid="rq239ay">
+                My Technical Expertise
+              </h2>
+              <p className="section-description mb-12" data-oid="t0vh-wc">
+                With a background in Mechanical Engineering and years of
+                experience in process development, I bring a diverse skill set
+                that combines engineering principles with data-driven approaches
+                to optimize manufacturing processes.
+              </p>
+
+              <StaggerContainer
+                staggerChildren={0.1}
+                className="skills-grid"
+                data-oid="4elrtd5"
+              >
+                <StaggerItem data-oid="o4ll.yz">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid="dllp.cl"
+                  >
+                    <div className="content-card" data-oid="6bv4.7_">
+                      <h3 className="card-title" data-oid="u4ndzff">
+                        Process Development
+                      </h3>
+                      <p className="card-text" data-oid="tp86l3d">
+                        Developing scalable manufacturing processes for green
+                        hydrogen production using statistical tools like DOE and
+                        SPC.
+                      </p>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+                <StaggerItem data-oid="q6_gi3:">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid="9sg_2ga"
+                  >
+                    <div className="content-card" data-oid="_ru72i7">
+                      <h3 className="card-title" data-oid="ohc-8jn">
+                        Data Analysis
+                      </h3>
+                      <p className="card-text" data-oid="3vlel_d">
+                        Applying large-data analysis in SaaS environments to
+                        optimize process efficiency and support continuous
+                        improvement initiatives.
+                      </p>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+                <StaggerItem data-oid="350tmh8">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid=".cu54ru"
+                  >
+                    <div className="content-card" data-oid="qjcrk:k">
+                      <h3 className="card-title" data-oid="ah4cdc:">
+                        Manufacturing Systems
+                      </h3>
+                      <p className="card-text" data-oid="brl8yl6">
+                        Building robust data architectures for real-time data
+                        storage and visualization to enhance project management
+                        capabilities.
+                      </p>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+                <StaggerItem data-oid="1hxhd7q">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid="x0v:pqo"
+                  >
+                    <div className="content-card" data-oid="37f_i_s">
+                      <h3 className="card-title" data-oid="ydl23zc">
+                        CAD & Engineering Design
+                      </h3>
+                      <p className="card-text" data-oid="unarzpj">
+                        Generating structured CAD designs and quality-focused
+                        drawings using PDM systems for improved design accuracy
+                        and efficiency.
+                      </p>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+                <StaggerItem className="md:col-span-2" data-oid="vaeab-u">
+                  <TiltCard
+                    glareEffect={true}
+                    tiltFactor={5}
+                    className="h-full"
+                    data-oid="vsokrw8"
+                  >
+                    <div className="content-card" data-oid="_.f3jwt">
+                      <h3 className="card-title" data-oid=".-y3i-2">
+                        Technical Skills
+                      </h3>
+                      <p className="card-text mb-4" data-oid="uhejo4w">
+                        Proficient in CAD, SolidWorks, Python, SQL, Data
+                        Analysis, Machine Learning, Product Design, and Project
+                        Management.
+                      </p>
+                      <div
+                        className="flex items-center space-x-4 mt-2"
+                        data-oid="onclvay"
+                      >
+                        <StaggerContainer
+                          staggerChildren={0.2}
+                          className="flex items-center space-x-4"
+                          data-oid="3r_x8vg"
+                        >
+                          {skillIcons.map((skillIcon, index) => (
+                            <StaggerItem key={index} data-oid="r4_.k7h">
+                              <div
+                                className="skill-icon-container"
+                                data-oid="m2omshy"
+                              >
+                                <MagneticElement
+                                  distanceThreshold={80}
+                                  magnetStrength={0.4}
+                                  data-oid="wp_3omr"
+                                >
+                                  <div
+                                    className="skill-icon-wrapper"
+                                    data-oid="xjhh-fy"
+                                  >
+                                    <Image
+                                      src={skillIcon.icon}
+                                      alt={skillIcon.skill}
+                                      width={50}
+                                      height={50}
+                                      className="skill-icon"
+                                      data-oid="i7p0l96"
+                                    />
+                                  </div>
+                                </MagneticElement>
+                                <span className="skill-name" data-oid="e-l49mw">
+                                  {skillIcon.skill}
+                                </span>
+                              </div>
+                            </StaggerItem>
+                          ))}
+                        </StaggerContainer>
+                      </div>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+              </StaggerContainer>
+            </FadeIn>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Experience Section */}
+      <ScrollReveal data-oid="t7ylotw">
+        <section className="section-container" data-oid=".y0xau3">
+          <div className="section-sidebar" data-oid="_4kjvfr">
+            <div className="section-header" data-oid="b7::r0m">
+              <span className="mr-2 text-sm" data-oid="e3qp.hx">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="vp39dnz">
+                Experience
+              </h3>
+            </div>
+          </div>
+          <div className="section-content" data-oid="ppfd-yn">
+            <FadeIn direction="up" data-oid="yg47nfu">
+              <h2 className="section-subtitle" data-oid="i:h2u27">
+                Professional Experience
+              </h2>
+
+              <StaggerContainer
+                staggerChildren={0.15}
+                className="experience-list"
+                data-oid="ig3vp2w"
+              >
+                <StaggerItem data-oid=".zy1thy">
+                  <TiltCard
+                    tiltFactor={3}
+                    glareEffect={true}
+                    data-oid="_hvcuve"
+                  >
+                    <div className="experience-card" data-oid="su.gtgv">
+                      <div className="experience-header" data-oid="m7ndry4">
+                        <div data-oid="u-p-uij">
+                          <h3 className="experience-title" data-oid="h0-g:tr">
+                            Process Development Engineer
+                          </h3>
+                          <p className="experience-company" data-oid="10w8len">
+                            Electric Hydrogen - Boston, MA
+                          </p>
+                          <p className="experience-date" data-oid="sblf.8e">
+                            January 2023 - Present
+                          </p>
+                        </div>
+                        <div className="experience-logo" data-oid=":lo8nf3">
+                          <Image
+                            src="/uploads/ehydrogen-logo2.png"
+                            alt="Electric Hydrogen"
+                            width={120}
+                            height={50}
+                            className="object-contain"
+                            data-oid="kzan2c8"
+                          />
+                        </div>
+                      </div>
+                      <ul className="experience-details" data-oid="-:4gn.r">
+                        <li data-oid="mg_3lvj">
+                          Enhanced process capability by 20% for green hydrogen
+                          production by developing scalable manufacturing
+                          processes.
+                        </li>
+                        <li data-oid="658rxpv">
+                          Integrated cutting-edge technology into production
+                          processes by working with suppliers and vendors.
+                        </li>
+                        <li data-oid="f_chzvn">
+                          Improved decision-making and stakeholder communication
+                          by providing actionable recommendations.
+                        </li>
+                        <li data-oid="57iiwpj">
+                          Developed robust data architectures for real-time data
+                          storage and visualization.
+                        </li>
+                      </ul>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+
+                <StaggerItem data-oid="mo:j7cm">
+                  <TiltCard
+                    tiltFactor={3}
+                    glareEffect={true}
+                    data-oid="qdpkfjg"
+                  >
+                    <div className="experience-card" data-oid=":4tv178">
+                      <div className="experience-header" data-oid="mp4.si3">
+                        <div data-oid="m1esfuw">
+                          <h3 className="experience-title" data-oid="rjd5gnf">
+                            Manufacturing Engineer
+                          </h3>
+                          <p className="experience-company" data-oid=":a4qnkr">
+                            Advanced Power Conversion - Colorado, USA
+                          </p>
+                          <p className="experience-date" data-oid="czkb7ek">
+                            January 2022 - December 2023
+                          </p>
+                        </div>
+                        <div className="experience-logo" data-oid="zlspq.6">
+                          <Image
+                            src="/uploads/Apc-logo.png"
+                            alt="Advanced Power Conversion"
+                            width={120}
+                            height={50}
+                            className="object-contain"
+                            data-oid="5bu1i6-"
+                          />
+                        </div>
+                      </div>
+                      <ul className="experience-details" data-oid="b3o65m6">
+                        <li data-oid="d6reu4f">
+                          Enhanced product lifecycle management by 20% utilizing
+                          hands-on machining and efficient feedback mechanisms.
+                        </li>
+                        <li data-oid="bf_dr2u">
+                          Reduced development iterations by 30% through
+                          collaboration with the R&D team.
+                        </li>
+                        <li data-oid=".j2rnxx">
+                          Achieved 95% quality control compliance by analyzing
+                          production units against standards.
+                        </li>
+                        <li data-oid="saz7e:z">
+                          Facilitated cross-functional transformation in
+                          manufacturing processes.
+                        </li>
+                      </ul>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+              </StaggerContainer>
+
+              <div className="flex justify-end mt-8" data-oid="vgb_cyo">
+                <Link href="/about" data-oid="3-xeo0_">
+                  <RippleButton className="secondary-button" data-oid="enbeytz">
+                    <span data-oid="q1brdel">View Full Experience</span>
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-oid="oer--nl"
+                    >
+                      <path
+                        d="M5 12H19M19 12L12 5M19 12L12 19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        data-oid="95d93js"
+                      />
+                    </svg>
+                  </RippleButton>
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Education Section */}
+      <ScrollReveal data-oid="rphwmc7">
+        <section className="section-container" data-oid="-yy_6fx">
+          <div className="section-sidebar" data-oid="rf::3mi">
+            <div className="section-header" data-oid="bvzt:.t">
+              <span className="mr-2 text-sm" data-oid="cng8hn4">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="66nqw:2">
+                Education
+              </h3>
+            </div>
+          </div>
+          <div className="section-content" data-oid="lq9mjn5">
+            <FadeIn direction="up" data-oid="xnndp53">
+              <h2 className="section-subtitle" data-oid="6tzx1ia">
+                Academic Background
+              </h2>
+
+              <StaggerContainer
+                staggerChildren={0.15}
+                className="experience-list"
+                data-oid="mwo638-"
+              >
+                <StaggerItem data-oid="q-huhsy">
+                  <TiltCard
+                    tiltFactor={3}
+                    glareEffect={false}
+                    data-oid="jl8_:a:"
+                  >
+                    <div className="experience-card" data-oid="gvy0r_3">
+                      <div className="experience-header" data-oid="axjg.dj">
+                        <div data-oid="jcez4op">
+                          <h3 className="experience-title" data-oid="y__0cdz">
+                            University of Colorado - Boulder
+                          </h3>
+                          <p className="experience-date" data-oid=":6g71e4">
+                            Bachelor's, Mechanical Engineering (August 2016 -
+                            May 2021)
+                          </p>
+                        </div>
+                        <div className="experience-logo" data-oid=":35up-x">
+                          <Image
+                            src="/uploads/cuboulderlogo.png"
+                            alt="University of Colorado Boulder"
+                            width={120}
+                            height={50}
+                            className="object-contain"
+                            data-oid="g33pwh4"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+
+                <StaggerItem data-oid="tddrlx4">
+                  <TiltCard
+                    tiltFactor={3}
+                    glareEffect={false}
+                    data-oid="3acyz96"
+                  >
+                    <div className="experience-card" data-oid="tflnfye">
+                      <div className="experience-header" data-oid="-76d.q_">
+                        <div data-oid="1ghuf82">
+                          <h3 className="experience-title" data-oid="fbh9sal">
+                            University of Pennsylvania
+                          </h3>
+                          <p className="experience-date" data-oid="x:mx18z">
+                            Certification, Mechanical Engineering (January 2015
+                            - December 2016)
+                          </p>
+                        </div>
+                        <div className="experience-logo" data-oid="vv67ouc">
+                          <Image
+                            src="/uploads/UniversityofPennsylvania_FullLogo_RGB-4_0.png"
+                            alt="University of Pennsylvania"
+                            width={120}
+                            height={50}
+                            className="object-contain"
+                            data-oid="1fnprn2"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </TiltCard>
+                </StaggerItem>
+              </StaggerContainer>
+            </FadeIn>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Contact Section */}
+      <ScrollReveal data-oid="2edotj3">
+        <section className="section-container" data-oid="6s0v_pc">
+          <div className="section-sidebar" data-oid="_6ukp00">
+            <div className="section-header" data-oid="qcico2p">
+              <span className="mr-2 text-sm" data-oid="n4g5gu1">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="9xfj:sv">
+                Contact
+              </h3>
+            </div>
+          </div>
+          <div className="section-content" data-oid="1uw.g3y">
+            <FadeIn direction="up" data-oid="u1oapg_">
+              <h2 className="section-subtitle" data-oid=":_:.bcs">
+                Get in Touch
+              </h2>
+              <p className="section-description mb-12" data-oid="5zpwtbw">
+                Interested in discussing process development, manufacturing
+                efficiency, or potential opportunities? I'd love to connect.
+              </p>
+
+              <StaggerContainer
+                className="contact-grid"
+                staggerChildren={0.1}
+                data-oid="78op-k8"
+              >
+                <StaggerItem data-oid="b9.vk6l">
+                  <MagneticElement data-oid="l1fakw:">
+                    <div className="contact-item" data-oid="::kw4lp">
+                      <h3 className="contact-title" data-oid="u4c61d-">
+                        Email
+                      </h3>
+                      <a
+                        href="mailto:trueothem@gmail.com"
+                        className="contact-link"
+                        data-oid="3wznsw_"
+                      >
+                        trueothem@gmail.com
+                      </a>
+                    </div>
+                  </MagneticElement>
+                </StaggerItem>
+                <StaggerItem data-oid="mf.dql6">
+                  <MagneticElement data-oid="zkv6qre">
+                    <div className="contact-item" data-oid="pkmk5ir">
+                      <h3 className="contact-title" data-oid="i1dqk9k">
+                        Phone
+                      </h3>
+                      <a
+                        href="tel:+16172333948"
+                        className="contact-link"
+                        data-oid="kcvf2rn"
+                      >
+                        +1 (617) 233-3948
+                      </a>
+                    </div>
+                  </MagneticElement>
+                </StaggerItem>
+                <StaggerItem data-oid="5x5t__e">
+                  <MagneticElement data-oid="nkz:dz0">
+                    <div className="contact-item" data-oid="fky:a0-">
+                      <h3 className="contact-title" data-oid="4aphk-5">
+                        Location
+                      </h3>
+                      <p className="text-muted-foreground" data-oid="w:nmuph">
+                        Cambridge, MA, USA
+                      </p>
+                    </div>
+                  </MagneticElement>
+                </StaggerItem>
+              </StaggerContainer>
+            </FadeIn>
+          </div>
+        </section>
+      </ScrollReveal>
+    </ClientBody>
+  );
+}

@@ -235,7 +235,6 @@ export const LoadingOverlay = ({ message = "Loading..." }) => {
         className="mb-4"
         data-oid="ta:38kf"
       />
-
       <motion.p
         className="text-primary text-lg"
         initial={{ opacity: 0, y: 10 }}

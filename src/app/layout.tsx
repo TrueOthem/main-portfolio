@@ -27,7 +27,6 @@ export default function RootLayout({
             color="var(--primary)"
             data-oid="04-iyli"
           />
-
           <Navbar data-oid="g9.qdk-" />
           <main
             className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0"
