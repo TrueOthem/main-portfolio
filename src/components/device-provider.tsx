@@ -145,7 +145,7 @@ export function DeviceContextProvider({
   }, [hasInitialized]);
 
   return (
-    <DeviceContext.Provider value={deviceInfo}>
+    <DeviceContext.Provider value={deviceInfo} data-oid="tyj-.-r">
       {children}
     </DeviceContext.Provider>
   );

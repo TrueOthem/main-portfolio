@@ -17,196 +17,65 @@ import { motion } from "framer-motion";
 export default function Navbar() {
   const pathname = usePathname();
 
-  return (
-    <FadeIn duration={0.6} direction="down">
-      <header>
-        <nav className="border-b-0 border-[#d1d1c7] bg-background">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-16 justify-between items-center">
-              <div className="flex items-center"></div>
+  // Simple translation function
+  const t = (key: string) => {
+    // Extract locale from pathname
+    const locale = pathname.startsWith("/ar") ? "ar" : "en";
 
+    // Simple translations for navigation items
+    const translations: Record<string, Record<string, string>> = {
+      en: {
+        "navigation.home": "Home",
+        "navigation.about": "About",
+        "navigation.works": "Works",
+      },
+      ar: {
+        "navigation.home": "الرئيسية",
+        "navigation.about": "عني",
+        "navigation.works": "أعمالي",
+      },
+    };
+
+    return translations[locale]?.[key] || key;
+  };
+
+  return (
+    <FadeIn duration={0.6} direction="down" data-oid="16boc2m">
+      <header data-oid="ptdadh9">
+        <nav
+          className="border-b-0 border-[#d1d1c7] bg-background"
+          data-oid="2d08u14"
+        >
+          <div
+            className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+            data-oid="twkeph7"
+          >
+            <div
+              className="flex h-16 justify-center items-center"
+              data-oid="jlzb12h"
+            >
               {/* Desktop navigation */}
-              <div className="hidden md:flex items-center space-x-6">
+              <div
+                className="hidden md:flex items-center justify-center space-x-6"
+                data-oid="df2q3fb"
+              >
                 <StaggerContainer
                   staggerChildren={0.05}
-                  className="flex items-center space-x-6"
+                  className="flex items-center justify-center space-x-6"
+                  data-oid="1x6k7b-"
                 >
-                  <StaggerItem>
-                    <Link
-                      href="/"
-                      className="nav-link text-sm desktop-nav-link"
-                      data-nav-type="desktop"
-                    >
-                      <motion.span
-                        className={pathname === "/" ? "text-primary" : ""}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        Home
-                      </motion.span>
-                    </Link>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <Link
-                      href="/about"
-                      className="nav-link text-sm desktop-nav-link"
-                      data-nav-type="desktop"
-                    >
-                      <motion.span
-                        className={pathname === "/about" ? "text-primary" : ""}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        About
-                      </motion.span>
-                    </Link>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <Link
-                      href="/works"
-                      className="nav-link text-sm desktop-nav-link"
-                      data-nav-type="desktop"
-                    >
-                      <motion.span
-                        className={pathname === "/works" ? "text-primary" : ""}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        Works
-                      </motion.span>
-                    </Link>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <Link
-                      href="/blog"
-                      className="nav-link text-sm desktop-nav-link"
-                      data-nav-type="desktop"
-                    >
-                      <motion.span
-                        className={pathname === "/blog" ? "text-primary" : ""}
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        Blog
-                      </motion.span>
-                    </Link>
-                  </StaggerItem>
-
-                  <StaggerItem>
-                    <LanguageSwitcher variant="desktop" />
+                  <StaggerItem data-oid="_y:sy2_">
+                    <LanguageSwitcher variant="desktop" data-oid="26sj._8" />
                   </StaggerItem>
                 </StaggerContainer>
               </div>
 
-              {/* Mobile navigation */}
-              <div className="flex md:hidden items-center space-x-2">
-                <Sheet>
-                  <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon" aria-label="Menu">
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                      >
-                        <Menu data-testid="menu-icon" />
-                      </motion.div>
-                    </Button>
-                  </SheetTrigger>
-                  <SheetContent
-                    onCloseAutoFocus={() => {
-                      // This ensures the mobile menu closes properly
-                      const mobileLinks = document.querySelectorAll(
-                        '[data-nav-type="mobile"]',
-                      );
-                      mobileLinks.forEach((link) => {
-                        if (link instanceof HTMLElement) {
-                          link.style.display = "none";
-                          // Reset display after animation completes
-                          setTimeout(() => {
-                            if (link instanceof HTMLElement) {
-                              link.style.display = "";
-                            }
-                          }, 500);
-                        }
-                      });
-                    }}
-                  >
-                    <StaggerContainer
-                      className="flex flex-col space-y-6 mt-10"
-                      delay={0.2}
-                    >
-                      <StaggerItem direction="down">
-                        <Link
-                          href="/"
-                          className="nav-link text-lg mobile-nav-link"
-                          data-nav-type="mobile"
-                        >
-                          <motion.span
-                            className={pathname === "/" ? "text-primary" : ""}
-                            whileHover={{ x: 5 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            Home
-                          </motion.span>
-                        </Link>
-                      </StaggerItem>
-                      <StaggerItem direction="down">
-                        <Link
-                          href="/about"
-                          className="nav-link text-lg mobile-nav-link"
-                          data-nav-type="mobile"
-                        >
-                          <motion.span
-                            className={
-                              pathname === "/about" ? "text-primary" : ""
-                            }
-                            whileHover={{ x: 5 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            About
-                          </motion.span>
-                        </Link>
-                      </StaggerItem>
-                      <StaggerItem direction="down">
-                        <Link
-                          href="/works"
-                          className="nav-link text-lg mobile-nav-link"
-                          data-nav-type="mobile"
-                        >
-                          <motion.span
-                            className={
-                              pathname === "/works" ? "text-primary" : ""
-                            }
-                            whileHover={{ x: 5 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            Works
-                          </motion.span>
-                        </Link>
-                      </StaggerItem>
-                      <StaggerItem direction="down">
-                        <Link
-                          href="/blog"
-                          className="nav-link text-lg mobile-nav-link"
-                          data-nav-type="mobile"
-                        >
-                          <motion.span
-                            className={
-                              pathname === "/blog" ? "text-primary" : ""
-                            }
-                            whileHover={{ x: 5 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            Blog
-                          </motion.span>
-                        </Link>
-                      </StaggerItem>
-
-                      <StaggerItem direction="down">
-                        <LanguageSwitcher variant="mobile" />
-                      </StaggerItem>
-                    </StaggerContainer>
-                  </SheetContent>
-                </Sheet>
+              {/* Mobile language switcher */}
+              <div
+                className="flex md:hidden items-center justify-center"
+                data-oid="91xs96a"
+              >
+                <LanguageSwitcher variant="mobile" data-oid="kdbyod:" />
               </div>
             </div>
           </div>

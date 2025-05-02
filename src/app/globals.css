@@ -63,10 +63,81 @@
   h3 {
     font-size: 1.75rem;
   }
-  
+
 }
 
 @layer components {
+  /* RTL Support */
+  html[dir="rtl"] {
+    /* Flip padding and margins */
+    .section-sidebar {
+      @apply border-r-0 border-l border-[#d1d1c7];
+    }
+
+    /* Flip text alignment */
+    .text-left {
+      text-align: right;
+    }
+
+    .text-right {
+      text-align: left;
+    }
+
+    /* Flip flexbox directions */
+    .flex-row {
+      flex-direction: row-reverse;
+    }
+
+    /* Flip margins */
+    .mr-2 {
+      margin-right: 0;
+      margin-left: 0.5rem;
+    }
+
+    .ml-2 {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+
+    /* Flip transforms for hover effects */
+    .motion-span:hover {
+      transform: translateX(-5px) !important;
+    }
+
+    /* Flip list styles */
+    .experience-details {
+      padding-left: 0;
+      padding-right: 1.25rem;
+    }
+
+    /* Flip SVG icons in buttons */
+    svg {
+      transform: scaleX(-1);
+    }
+
+    /* Adjust spacing for RTL */
+    .space-x-4 > * + * {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+
+    .space-x-2 > * + * {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+
+    /* Adjust grid layout for RTL */
+    .grid-container {
+      background-image: linear-gradient(to left, var(--border) 1px, transparent 1px),
+                        linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    }
+
+    /* Adjust experience card layout */
+    .experience-header {
+      flex-direction: row-reverse;
+    }
+  }
+
   /* Layout Components */
   .grid-container {
     display: grid;

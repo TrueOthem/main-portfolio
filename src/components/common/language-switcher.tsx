@@ -1,81 +1,96 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { localeConfig } from "../../../navigation";
+import { Globe } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function LanguageSwitcher({
   variant = "desktop",
 }: {
   variant?: "desktop" | "mobile";
 }) {
-  const [language, setLanguage] = useState<"EN" | "AR" | "ES">("EN");
   const router = useRouter();
   const pathname = usePathname();
 
-  // Initialize language based on HTML lang attribute
-  useEffect(() => {
-    const htmlLang = document.documentElement.lang.toLowerCase();
-    if (htmlLang === "ar") {
-      setLanguage("AR");
-    } else if (htmlLang === "es") {
-      setLanguage("ES");
-    } else {
-      setLanguage("EN");
-    }
-  }, []);
+  // Extract locale from pathname
+  const currentLocale = pathname.startsWith("/ar") ? "ar" : "en";
 
-  const toggleLanguage = () => {
-    let newLang: "en" | "ar" | "es";
-    let newDisplay: "EN" | "AR" | "ES";
+  // Get the current display label from the locale config
+  const currentLabel =
+    localeConfig[currentLocale as keyof typeof localeConfig]?.label || "EN";
 
-    if (language === "EN") {
-      newLang = "ar";
-      newDisplay = "AR";
-    } else if (language === "AR") {
-      newLang = "es";
-      newDisplay = "ES";
-    } else {
-      newLang = "en";
-      newDisplay = "EN";
+  const switchLanguage = (locale: string) => {
+    // Get the path without the locale prefix
+    let newPath = pathname;
+    if (pathname.startsWith("/ar/") || pathname.startsWith("/en/")) {
+      newPath = pathname.substring(3); // Remove the locale prefix and slash
+    } else if (pathname === "/ar" || pathname === "/en") {
+      newPath = "/"; // Root path
     }
 
-    // Update the display state
-    setLanguage(newDisplay);
-
-    // Update HTML lang attribute
-    document.documentElement.setAttribute("lang", newLang);
-
-    // Update direction attribute for RTL support
-    if (newLang === "ar") {
-      document.documentElement.setAttribute("dir", "rtl");
-    } else {
-      document.documentElement.setAttribute("dir", "ltr");
-    }
-
-    // Force a page reload to apply the language change
-    window.location.reload();
+    // Navigate to the new locale
+    router.push(`/${locale}${newPath === "/" ? "" : newPath}`);
   };
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={toggleLanguage}
-      className="text-sm font-medium"
-      data-testid="language-switcher"
-      data-variant={variant}
-    >
-      <motion.span
-        key={language}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -10 }}
-        transition={{ duration: 0.2 }}
+    <DropdownMenu data-oid="cc3k0.g">
+      <DropdownMenuTrigger asChild data-oid="gqzm4hw">
+        <Button
+          variant="outline"
+          size="sm"
+          className="text-sm font-medium px-4 py-2 rounded-full border border-[#d1d1c7] hover:bg-[#f4f4f0]"
+          data-testid="language-switcher"
+          data-variant={variant}
+          data-oid=":rgzun-"
+        >
+          <Globe className="h-4 w-4 mr-2" data-oid="vcxl306" />
+          <motion.span
+            key={currentLabel}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            data-oid="tg_oaey"
+          >
+            {currentLabel}
+          </motion.span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align={variant === "desktop" ? "end" : "start"}
+        data-oid="eunx59d"
       >
-        {language}
-      </motion.span>
-    </Button>
+        <DropdownMenuItem
+          onClick={() => switchLanguage("en")}
+          data-oid=":ocdawi"
+        >
+          <span
+            className={currentLocale === "en" ? "font-bold" : ""}
+            data-oid="znq98db"
+          >
+            English
+          </span>
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => switchLanguage("ar")}
+          data-oid="q72d-x0"
+        >
+          <span
+            className={currentLocale === "ar" ? "font-bold" : ""}
+            data-oid=".ya3m8."
+          >
+            العربية
+          </span>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

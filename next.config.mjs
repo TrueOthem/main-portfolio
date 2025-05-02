@@ -1,9 +1,5 @@
-import withNextIntl from 'next-intl/plugin';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'out',
   images: {
     domains: ['ext.same-assets.com'],
     remotePatterns: [
@@ -13,7 +9,6 @@ const nextConfig = {
         pathname: '**',
       },
     ],
-    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -21,6 +16,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+
 };
 
-export default withNextIntl('./src/app/i18n.ts')(nextConfig);
+export default nextConfig;
