@@ -1,10 +1,14 @@
 [build]
-  command = "bun run build"
-  publish = ".next"
+  command = "bun run build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/"
+  publish = ".next/standalone"
 
 [build.environment]
   NEXT_PUBLIC_BASE_URL = "https://same-4h9hy38yrn1-latest.netlify.app"
   NODE_VERSION = "20"
+  NEXT_RUNTIME = "nodejs"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [images]
   remote_images = ["https://ext.same-assets.com/*"]
