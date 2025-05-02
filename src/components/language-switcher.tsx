@@ -31,7 +31,6 @@ export function LanguageSwitcher({
       className="text-sm font-medium"
       data-testid="language-switcher"
       data-variant={variant}
-      data-oid="j:7g3au"
     >
       <motion.span
         key={language}
@@ -39,7 +38,6 @@ export function LanguageSwitcher({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
-        data-oid="-894yr3"
       >
         {language}
       </motion.span>

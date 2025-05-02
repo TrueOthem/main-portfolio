@@ -40,42 +40,26 @@ export default function Navbar() {
   };
 
   return (
-    <FadeIn duration={0.6} direction="down" data-oid="16boc2m">
-      <header data-oid="ptdadh9">
-        <nav
-          className="border-b-0 border-[#d1d1c7] bg-background"
-          data-oid="2d08u14"
-        >
-          <div
-            className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-            data-oid="twkeph7"
-          >
-            <div
-              className="flex h-16 justify-center items-center"
-              data-oid="jlzb12h"
-            >
+    <FadeIn duration={0.6} direction="down">
+      <header>
+        <nav className="border-b-0 border-[#d1d1c7] bg-background">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 justify-center items-center">
               {/* Desktop navigation */}
-              <div
-                className="hidden md:flex items-center justify-center space-x-6"
-                data-oid="df2q3fb"
-              >
+              <div className="hidden md:flex items-center justify-center space-x-6">
                 <StaggerContainer
                   staggerChildren={0.05}
                   className="flex items-center justify-center space-x-6"
-                  data-oid="1x6k7b-"
                 >
-                  <StaggerItem data-oid="_y:sy2_">
-                    <LanguageSwitcher variant="desktop" data-oid="26sj._8" />
+                  <StaggerItem>
+                    <LanguageSwitcher variant="desktop" />
                   </StaggerItem>
                 </StaggerContainer>
               </div>
 
               {/* Mobile language switcher */}
-              <div
-                className="flex md:hidden items-center justify-center"
-                data-oid="91xs96a"
-              >
-                <LanguageSwitcher variant="mobile" data-oid="kdbyod:" />
+              <div className="flex md:hidden items-center justify-center">
+                <LanguageSwitcher variant="mobile" />
               </div>
             </div>
           </div>
