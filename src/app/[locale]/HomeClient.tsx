@@ -356,15 +356,19 @@ export default function HomeClient({ locale }: HomeClientProps) {
   ];
 
   return (
-    <ClientBody>
+    <ClientBody data-oid="gg.zcz2">
       {/* Hero Section with Parallax */}
       <section
         id="hero-section"
         className="section-container hero-section relative w-full"
         data-testid="hero-section"
+        data-oid="s6y-lyi"
       >
-        <div className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-0 md:p-0 lg:p-0 relative overflow-visible">
-          <div className="profile-image-container">
+        <div
+          className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-0 md:p-0 lg:p-0 relative overflow-visible"
+          data-oid="htrospk"
+        >
+          <div className="profile-image-container" data-oid="_n0kg-v">
             <Image
               src="/uploads/profile-photo.jpg"
               alt="Mohamed Adil Al Sabri"
@@ -372,77 +376,118 @@ export default function HomeClient({ locale }: HomeClientProps) {
               height={500}
               className="profile-image rounded-[370px]"
               priority
+              data-oid="t63_fu1"
             />
           </div>
         </div>
-        <div className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full">
-          <ParallaxScroll speed={0.1} direction="up">
-            <RevealText>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12">
+        <div
+          className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full"
+          data-oid="wj14g_0"
+        >
+          <ParallaxScroll speed={0.1} direction="up" data-oid="0jao1i4">
+            <RevealText data-oid=":.b2r0:">
+              <h1
+                className="text-5xl md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12"
+                data-oid=":7h60z1"
+              >
                 {t("hero.name")}
-                <br />
+                <br data-oid="qo3.ax0" />
                 {t("hero.surname")}
               </h1>
             </RevealText>
           </ParallaxScroll>
 
           {/* Abstract decorative elements with parallax */}
-          <div className="absolute top-10 right-20 w-10 h-10 opacity-10">
-            <ParallaxScroll speed={0.4} direction="right">
-              <div className="w-full h-full bg-primary rounded-full"></div>
+          <div
+            className="absolute top-10 right-20 w-10 h-10 opacity-10"
+            data-oid="4t63ku8"
+          >
+            <ParallaxScroll speed={0.4} direction="right" data-oid="d4i_jqk">
+              <div
+                className="w-full h-full bg-primary rounded-full"
+                data-oid="2_dp-h5"
+              ></div>
             </ParallaxScroll>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <ScrollReveal>
-        <section id="about-section" className="section-container">
-          <div className="section-sidebar">
-            <div className="section-header">
-              <span className="mr-2 text-sm">+</span>
-              <h3 className="text-sm">{t("about.section")}</h3>
+      <ScrollReveal data-oid="q8vkty9">
+        <section
+          id="about-section"
+          className="section-container"
+          data-oid="yr3fl_p"
+        >
+          <div className="section-sidebar" data-oid="2m7bd6m">
+            <div className="section-header" data-oid="1kg_hwd">
+              <span className="mr-2 text-sm" data-oid="xr6arlg">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="q5kcaq6">
+                {t("about.section")}
+              </h3>
             </div>
           </div>
-          <div className="section-content">
-            <FadeIn direction="up">
-              <h2 className="section-title">{t("about.title")}</h2>
-              <p className="section-description">{t("about.description")}</p>
-              <div className="stats-container">
+          <div className="section-content" data-oid="x_6:o39">
+            <FadeIn direction="up" data-oid="ygp_lkr">
+              <h2 className="section-title" data-oid="gdxxfpi">
+                {t("about.title")}
+              </h2>
+              <p className="section-description" data-oid="a99d8xt">
+                {t("about.description")}
+              </p>
+              <div className="stats-container" data-oid="tv_t5x6">
                 <StaggerContainer
                   staggerChildren={0.1}
                   className="stats-container"
+                  data-oid="pyago4k"
                 >
-                  <StaggerItem>
+                  <StaggerItem data-oid=".rj:u_r">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
+                      data-oid="8za9wod"
                     >
-                      <div className="stat-item">
-                        <h3 className="stat-value">5+</h3>
-                        <p className="stat-label">{t("about.experience")}</p>
+                      <div className="stat-item" data-oid="qz2k27v">
+                        <h3 className="stat-value" data-oid="h079gj_">
+                          5+
+                        </h3>
+                        <p className="stat-label" data-oid="7ll7v69">
+                          {t("about.experience")}
+                        </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem>
+                  <StaggerItem data-oid="1eaor2e">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
+                      data-oid="27:s79g"
                     >
-                      <div className="stat-item">
-                        <h3 className="stat-value">20+</h3>
-                        <p className="stat-label">{t("about.projects")}</p>
+                      <div className="stat-item" data-oid="xwnk4va">
+                        <h3 className="stat-value" data-oid="adkv2--">
+                          20+
+                        </h3>
+                        <p className="stat-label" data-oid="l78mscd">
+                          {t("about.projects")}
+                        </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem>
+                  <StaggerItem data-oid="2qi6f7e">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
+                      data-oid="7zz3fp-"
                     >
-                      <div className="stat-item">
-                        <h3 className="stat-value">4+</h3>
-                        <p className="stat-label">{t("about.companies")}</p>
+                      <div className="stat-item" data-oid="hlwmxrz">
+                        <h3 className="stat-value" data-oid="-brsid7">
+                          4+
+                        </h3>
+                        <p className="stat-label" data-oid="-znx3ro">
+                          {t("about.companies")}
+                        </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
@@ -454,16 +499,30 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Company Logos Section */}
-      <ScrollReveal>
-        <section className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8 border-b border-[#d1d1c7] overflow-hidden">
-          <StaggerContainer staggerChildren={0.1} className="logo-grid">
+      <ScrollReveal data-oid="czyp6p1">
+        <section
+          className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8 border-b border-[#d1d1c7] overflow-hidden"
+          data-oid="kl_u14y"
+        >
+          <StaggerContainer
+            staggerChildren={0.1}
+            className="logo-grid"
+            data-oid="oov:oj3"
+          >
             {logoData.map((logo) => (
-              <StaggerItem key={logo.id}>
-                <div className="logo-container">
-                  <MagneticElement distanceThreshold={100} magnetStrength={0.2}>
-                    <div className="logo-item">
+              <StaggerItem key={logo.id} data-oid="j2r:ftx">
+                <div className="logo-container" data-oid="6k5kd1o">
+                  <MagneticElement
+                    distanceThreshold={100}
+                    magnetStrength={0.2}
+                    data-oid="nx4zele"
+                  >
+                    <div className="logo-item" data-oid="_7j0zfu">
                       {logo.imgSrc ? (
-                        <div className="logo-image-container">
+                        <div
+                          className="logo-image-container"
+                          data-oid="y__lh9c"
+                        >
                           <Image
                             src={logo.imgSrc}
                             alt={logo.company}
@@ -471,10 +530,13 @@ export default function HomeClient({ locale }: HomeClientProps) {
                             width={200}
                             height={100}
                             className="logo-image"
+                            data-oid="v.v396c"
                           />
                         </div>
                       ) : (
-                        <div className="logo-placeholder">{logo.company}</div>
+                        <div className="logo-placeholder" data-oid="ibmt3x3">
+                          {logo.company}
+                        </div>
                       )}
                     </div>
                   </MagneticElement>
@@ -486,81 +548,111 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Expertise Section */}
-      <ScrollReveal>
-        <section className="section-container">
-          <div className="section-sidebar">
-            <div className="section-header">
-              <span className="mr-2 text-sm">+</span>
-              <h3 className="text-sm">{t("skills.section")}</h3>
+      <ScrollReveal data-oid="imthurg">
+        <section className="section-container" data-oid=".7t67e5">
+          <div className="section-sidebar" data-oid="693:38e">
+            <div className="section-header" data-oid="tl.8o92">
+              <span className="mr-2 text-sm" data-oid="gg4-o2.">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="138l:o7">
+                {t("skills.section")}
+              </h3>
             </div>
           </div>
-          <div className="section-content">
-            <FadeIn direction="up">
-              <h2 className="section-subtitle">{t("skills.title")}</h2>
-              <p className="section-description mb-12">
+          <div className="section-content" data-oid="frz2s9:">
+            <FadeIn direction="up" data-oid="-595x.z">
+              <h2 className="section-subtitle" data-oid="l..606o">
+                {t("skills.title")}
+              </h2>
+              <p className="section-description mb-12" data-oid="3l2luen">
                 {t("skills.description")}
               </p>
 
-              <StaggerContainer staggerChildren={0.1} className="skills-grid">
-                <StaggerItem>
-                  <TiltCard glareEffect={true} className="h-full">
-                    <div className="content-card">
-                      <h3 className="card-title">
+              <StaggerContainer
+                staggerChildren={0.1}
+                className="skills-grid"
+                data-oid="r6nws6l"
+              >
+                <StaggerItem data-oid="rlz5x7b">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid="xgeitd9"
+                  >
+                    <div className="content-card" data-oid="5gh7jn1">
+                      <h3 className="card-title" data-oid="gl1t2m1">
                         {t("skills.processDevelopment.title")}
                       </h3>
-                      <p className="card-text">
+                      <p className="card-text" data-oid="78nxfu2">
                         {t("skills.processDevelopment.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem>
-                  <TiltCard glareEffect={true} className="h-full">
-                    <div className="content-card">
-                      <h3 className="card-title">
+                <StaggerItem data-oid="j.eqdl7">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid="jb6nh::"
+                  >
+                    <div className="content-card" data-oid="ohextin">
+                      <h3 className="card-title" data-oid="asl1p.6">
                         {t("skills.dataAnalysis.title")}
                       </h3>
-                      <p className="card-text">
+                      <p className="card-text" data-oid="yz_k1rw">
                         {t("skills.dataAnalysis.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem>
-                  <TiltCard glareEffect={true} className="h-full">
-                    <div className="content-card">
-                      <h3 className="card-title">
+                <StaggerItem data-oid="wz9_ph2">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid="c-svahu"
+                  >
+                    <div className="content-card" data-oid="2z7lzaq">
+                      <h3 className="card-title" data-oid="ikw1ou.">
                         {t("skills.manufacturingSystems.title")}
                       </h3>
-                      <p className="card-text">
+                      <p className="card-text" data-oid="2:g7j59">
                         {t("skills.manufacturingSystems.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem>
-                  <TiltCard glareEffect={true} className="h-full">
-                    <div className="content-card">
-                      <h3 className="card-title">
+                <StaggerItem data-oid="3z81xbc">
+                  <TiltCard
+                    glareEffect={true}
+                    className="h-full"
+                    data-oid="vfd5do2"
+                  >
+                    <div className="content-card" data-oid="cl9_2rf">
+                      <h3 className="card-title" data-oid="i_:7eyy">
                         {t("skills.cadDesign.title")}
                       </h3>
-                      <p className="card-text">
+                      <p className="card-text" data-oid="k6m9bto">
                         {t("skills.cadDesign.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem className="md:col-span-2">
+                <StaggerItem className="md:col-span-2" data-oid="8eoau_d">
                   <TiltCard
                     glareEffect={true}
                     tiltFactor={5}
                     className="h-full"
+                    data-oid="x.5o:gv"
                   >
-                    <div className="content-card">
-                      <h3 className="card-title">
+                    <div className="content-card" data-oid="fv5uasm">
+                      <h3 className="card-title" data-oid="ejb7w1h">
                         {t("skills.technicalSkills.title")}
                       </h3>
-                      <p className="card-text mb-4 rounded-none">
+                      <p
+                        className="card-text mb-4 rounded-none"
+                        data-oid="6p32gr9"
+                      >
                         Python, SQL, LabVIEW, C++, CAD, SolidWorks, Adobe
                         Programs, Office Suites
                       </p>
@@ -574,55 +666,75 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Works Section */}
-      <ScrollReveal></ScrollReveal>
+      <ScrollReveal data-oid="84041rm"></ScrollReveal>
 
       {/* Projects Grid */}
-      <ScrollReveal></ScrollReveal>
+      <ScrollReveal data-oid="i9fcsjm"></ScrollReveal>
 
       {/* Professional Experience Section */}
-      <ScrollReveal>
-        <section id="experience-section" className="section-container">
-          <div className="section-sidebar">
-            <div className="section-header">
-              <span className="mr-2 text-sm">+</span>
-              <h3 className="text-sm">{t("experience.section")}</h3>
+      <ScrollReveal data-oid="o4sw3r7">
+        <section
+          id="experience-section"
+          className="section-container"
+          data-oid="zz3zg-b"
+        >
+          <div className="section-sidebar" data-oid="0wm2yhs">
+            <div className="section-header" data-oid="q79rl64">
+              <span className="mr-2 text-sm" data-oid="8n:z8f0">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="5ui-h.g">
+                {t("experience.section")}
+              </h3>
             </div>
           </div>
-          <div className="section-content">
-            <FadeIn direction="up">
-              <h2 className="section-title">{t("experience.title")}</h2>
+          <div className="section-content" data-oid="2x04qn6">
+            <FadeIn direction="up" data-oid="_.7_11f">
+              <h2 className="section-title" data-oid="unw.orh">
+                {t("experience.title")}
+              </h2>
 
-              <div className="space-y-8 mt-8">
+              <div className="space-y-8 mt-8" data-oid=".9l2z.9">
                 {professionalExperience.map((exp) => (
                   <div
                     key={exp.id}
                     className="rounded-lg p-6 border border-[#d1d1c7] bg-[#00000000]"
+                    data-oid="dnd-6.0"
                   >
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                      <div>
-                        <h3 className="text-xl font-medium">{exp.title}</h3>
-                        <p className="text-muted-foreground">
+                    <div
+                      className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
+                      data-oid="4hwv8da"
+                    >
+                      <div data-oid="q-s1fp8">
+                        <h3 className="text-xl font-medium" data-oid="5ed5:61">
+                          {exp.title}
+                        </h3>
+                        <p className="text-muted-foreground" data-oid="d2gpxni">
                           {exp.company} · {exp.location}
                         </p>
-                        <p className="text-sm text-muted-foreground">
+                        <p
+                          className="text-sm text-muted-foreground"
+                          data-oid="6_w6s19"
+                        >
                           {exp.period}
                         </p>
                       </div>
                       {exp.logo && (
-                        <div className="mt-4 md:mt-0">
+                        <div className="mt-4 md:mt-0" data-oid="57qv-6l">
                           <Image
                             src={exp.logo}
                             alt={exp.company}
                             width={120}
                             height={60}
                             className="object-contain"
+                            data-oid="lse56h:"
                           />
                         </div>
                       )}
                     </div>
-                    <ul className="list-disc pl-5 space-y-2">
+                    <ul className="list-disc pl-5 space-y-2" data-oid="4q0muac">
                       {exp.achievements.map((achievement, index) => (
-                        <li key={index} className="text-sm">
+                        <li key={index} className="text-sm" data-oid="x.0sbzt">
                           {achievement}
                         </li>
                       ))}
@@ -636,42 +748,62 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Education Section */}
-      <ScrollReveal>
-        <section id="education-section" className="section-container">
-          <div className="section-sidebar">
-            <div className="section-header">
-              <span className="mr-2 text-sm">+</span>
-              <h3 className="text-sm">{t("education.section")}</h3>
+      <ScrollReveal data-oid="937ezqn">
+        <section
+          id="education-section"
+          className="section-container"
+          data-oid="0n1e4j."
+        >
+          <div className="section-sidebar" data-oid="mcam6ao">
+            <div className="section-header" data-oid="rj138w7">
+              <span className="mr-2 text-sm" data-oid="-6x4pz-">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="5.j-vn1">
+                {t("education.section")}
+              </h3>
             </div>
           </div>
-          <div className="section-content">
-            <FadeIn direction="up">
-              <h2 className="section-title">{t("education.title")}</h2>
+          <div className="section-content" data-oid="bzth6:_">
+            <FadeIn direction="up" data-oid="9er8q.g">
+              <h2 className="section-title" data-oid="at0x8ln">
+                {t("education.title")}
+              </h2>
 
-              <div className="space-y-6 mt-8">
+              <div className="space-y-6 mt-8" data-oid="elqmgd4">
                 {education.map((edu) => (
                   <div
                     key={edu.id}
                     className="rounded-lg p-6 border border-[#d1d1c7] bg-[#00000000]"
+                    data-oid="jvuh27u"
                   >
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-                      <div>
-                        <h3 className="text-xl font-medium">
+                    <div
+                      className="flex flex-col md:flex-row justify-between items-start md:items-center"
+                      data-oid="..so3lg"
+                    >
+                      <div data-oid="m61xqhk">
+                        <h3 className="text-xl font-medium" data-oid="tgk1vmn">
                           {edu.institution}
                         </h3>
-                        <p className="text-muted-foreground">{edu.degree}</p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-muted-foreground" data-oid="f9cd1u5">
+                          {edu.degree}
+                        </p>
+                        <p
+                          className="text-sm text-muted-foreground"
+                          data-oid="qc:zcw7"
+                        >
                           {edu.period}
                         </p>
                       </div>
                       {edu.logo && (
-                        <div className="mt-4 md:mt-0">
+                        <div className="mt-4 md:mt-0" data-oid="h_za87e">
                           <Image
                             src={edu.logo}
                             alt={edu.institution}
                             width={120}
                             height={60}
                             className="object-contain"
+                            data-oid="e1mo1y4"
                           />
                         </div>
                       )}
@@ -685,22 +817,36 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Resume Download Section */}
-      <ScrollReveal>
-        <section id="resume-section" className="section-container">
-          <div className="section-sidebar">
-            <div className="section-header">
-              <span className="mr-2 text-sm">+</span>
-              <h3 className="text-sm">{t("resume.section")}</h3>
+      <ScrollReveal data-oid="_q61fbs">
+        <section
+          id="resume-section"
+          className="section-container"
+          data-oid="ckf-k-b"
+        >
+          <div className="section-sidebar" data-oid=".92f4x9">
+            <div className="section-header" data-oid="sl5pwno">
+              <span className="mr-2 text-sm" data-oid="scly-.n">
+                +
+              </span>
+              <h3 className="text-sm" data-oid=":48a677">
+                {t("resume.section")}
+              </h3>
             </div>
           </div>
-          <div className="section-content">
-            <FadeIn direction="up">
-              <h2 className="section-title">{t("resume.title")}</h2>
-              <p className="section-description mb-8">
+          <div className="section-content" data-oid="7_45rq1">
+            <FadeIn direction="up" data-oid="rdjwuim">
+              <h2 className="section-title" data-oid=":z:f-h:">
+                {t("resume.title")}
+              </h2>
+              <p className="section-description mb-8" data-oid="10rdmkh">
                 {t("resume.description")}
               </p>
-              <a href="/uploads/Mohamed-adil-resume-PSE.pdf" download>
-                <Button className="main-button rounded-full">
+              <a
+                href="/uploads/Mohamed-adil-resume-PSE.pdf"
+                download
+                data-oid="71-javi"
+              >
+                <Button className="main-button rounded-full" data-oid="tj7vsd0">
                   Download Resume (PDF)
                 </Button>
               </a>
@@ -710,26 +856,34 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Technical Skills Section */}
-      <ScrollReveal>
-        <section className="section-container">
-          <div className="section-sidebar">
-            <div className="section-header">
-              <span className="mr-2 text-sm">+</span>
-              <h3 className="text-sm">Technical Skills</h3>
+      <ScrollReveal data-oid="h0ws-em">
+        <section className="section-container" data-oid="2k72iks">
+          <div className="section-sidebar" data-oid="82da7f2">
+            <div className="section-header" data-oid="7pkdw7m">
+              <span className="mr-2 text-sm" data-oid="ogwkwi-">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="8_3yhhf">
+                Technical Skills
+              </h3>
             </div>
           </div>
-          <div className="section-content">
-            <FadeIn direction="up">
-              <h2 className="section-subtitle">Technical Expertise</h2>
-              <p className="section-description mb-8">
+          <div className="section-content" data-oid="t-irbu_">
+            <FadeIn direction="up" data-oid="36zwutp">
+              <h2 className="section-subtitle" data-oid="waa95ee">
+                Technical Expertise
+              </h2>
+              <p className="section-description mb-8" data-oid="3_q3p1y">
                 My core technical skills and competencies that I bring to every
                 project.
               </p>
 
-              <div className="grid grid-cols-1 gap-8">
-                <div>
-                  <h3 className="text-xl font-medium mb-4">Engineering</h3>
-                  <div className="flex flex-wrap gap-2">
+              <div className="grid grid-cols-1 gap-8" data-oid="b1ok.-c">
+                <div data-oid="emga29x">
+                  <h3 className="text-xl font-medium mb-4" data-oid="x2ria:1">
+                    Engineering
+                  </h3>
+                  <div className="flex flex-wrap gap-2" data-oid="ls.mjf7">
                     {[
                       "CAD & SolidWorks",
                       "Operations Research",
@@ -740,6 +894,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-4 py-2 rounded-full text-sm bg-[#00000000] border"
+                        data-oid="rg91317"
                       >
                         {skill}
                       </span>
@@ -747,11 +902,11 @@ export default function HomeClient({ locale }: HomeClientProps) {
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-medium mb-4">
+                <div data-oid="-a.9a9t">
+                  <h3 className="text-xl font-medium mb-4" data-oid="wbjpv0j">
                     Data & Programming
                   </h3>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2" data-oid="sr11u6r">
                     {[
                       "SQL & Database Design",
                       "Python Development",
@@ -762,6 +917,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-4 py-2 rounded-full text-sm bg-[#00000000] border"
+                        data-oid="38-.ccu"
                       >
                         {skill}
                       </span>
@@ -769,9 +925,11 @@ export default function HomeClient({ locale }: HomeClientProps) {
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-medium mb-4">Management</h3>
-                  <div className="flex flex-wrap gap-2">
+                <div data-oid="1-ukq.7">
+                  <h3 className="text-xl font-medium mb-4" data-oid="q3jiw1y">
+                    Management
+                  </h3>
+                  <div className="flex flex-wrap gap-2" data-oid="dx70ck0">
                     {[
                       "Project Management",
                       "SCRUM & Agile Methodologies",
@@ -782,6 +940,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-4 py-2 rounded-full text-sm bg-[#00000000] border"
+                        data-oid="mkikvn0"
                       >
                         {skill}
                       </span>
@@ -795,23 +954,33 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Blog Section */}
-      <ScrollReveal>
-        <section id="blog-section" className="section-container">
-          <div className="section-sidebar">
-            <div className="section-header">
-              <span className="mr-2 text-sm">+</span>
-              <h3 className="text-sm">{t("blog.section")}</h3>
+      <ScrollReveal data-oid="7vdcyw2">
+        <section
+          id="blog-section"
+          className="section-container"
+          data-oid="3da6it:"
+        >
+          <div className="section-sidebar" data-oid="xlqef4.">
+            <div className="section-header" data-oid="ejhgxkd">
+              <span className="mr-2 text-sm" data-oid="wphp8xr">
+                +
+              </span>
+              <h3 className="text-sm" data-oid="szzqaun">
+                {t("blog.section")}
+              </h3>
             </div>
           </div>
-          <div className="section-content">
-            <FadeIn direction="up">
-              <h2 className="section-title">{t("blog.title")}</h2>
-              <p className="section-description mb-8">
+          <div className="section-content" data-oid="1iv-azv">
+            <FadeIn direction="up" data-oid="w18:xnm">
+              <h2 className="section-title" data-oid="vnprc.k">
+                {t("blog.title")}
+              </h2>
+              <p className="section-description mb-8" data-oid="8mwdccv">
                 {t("blog.description")}
               </p>
 
               {/* Blog Categories Navigation */}
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2 mb-8" data-oid="lmk.rfd">
                 {blogCategories.map((category) => (
                   <button
                     key={category.id}
@@ -820,6 +989,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                         ? "bg-[#0f0f0f] text-white"
                         : "hover:bg-[#f4f4f0]"
                     }`}
+                    data-oid="07..dis"
                   >
                     {category.label}
                   </button>
@@ -831,10 +1001,10 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Blog Posts Grid */}
-      <ScrollReveal></ScrollReveal>
+      <ScrollReveal data-oid="qaq782f"></ScrollReveal>
 
       {/* Newsletter Section */}
-      <ScrollReveal></ScrollReveal>
+      <ScrollReveal data-oid="2odbr1r"></ScrollReveal>
     </ClientBody>
   );
 }
