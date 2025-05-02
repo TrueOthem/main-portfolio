@@ -29,6 +29,16 @@ export default function ClientBody({
       data-oid="._b_avv"
     >
       {children}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: duration * 0.6 }}
+        data-oid="h:kp17t"
+        key="olk-I7AA"
+      >
+        {children}
+      </motion.div>
     </motion.div>
   );
 }

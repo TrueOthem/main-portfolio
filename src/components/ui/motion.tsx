@@ -546,43 +546,6 @@ export const ScrollReveal = ({
       data-oid="avu6:.4"
     >
       {children}
-      <section
-        className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="48yjqa0"
-        key="olk-UMRY"
-      >
-        <div
-          className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="0m2w36u"
-        >
-          <div className="flex items-center mb-6" data-oid="32i1guy">
-            <span className="mr-2 text-sm" data-oid="07ptc93">
-              +
-            </span>
-            <h3 className="text-sm" data-oid="p7ggyle">
-              Resume
-            </h3>
-          </div>
-        </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="kolpe1b">
-          <h2 className="text-3xl md:text-4xl mb-6" data-oid="-2c2i8p">
-            My Resume
-          </h2>
-          <p className="text-muted-foreground mb-8" data-oid="7s10bqm">
-            Download my full resume to learn more about my professional
-            experience, skills, and educational background.
-          </p>
-          <a
-            href="/uploads/Mohamed-adil-resume-PSE.pdf"
-            download
-            data-oid="d5ho58i"
-          >
-            <Button className="main-button rounded-full" data-oid="b5zqe.3">
-              Download Resume (PDF)
-            </Button>
-          </a>
-        </div>
-      </section>
     </motion.div>
   );
 };

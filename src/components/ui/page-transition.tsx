@@ -150,49 +150,8 @@ export const AdvancedPageTransition = ({
           </motion.div>
 
           {/* Overlay that slides in and out */}
-          <motion.div
-            className="fixed inset-0 z-50 bg-background pointer-events-none"
-            initial={{ scaleX: 0 }}
-            animate={{
-              scaleX: 0,
-              transition: { duration: duration, ease: [0.22, 1, 0.36, 1] },
-            }}
-            exit={{
-              scaleX: 1,
-              transition: {
-                duration: duration * 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              },
-            }}
-            style={{ transformOrigin: "right" }}
-            data-oid="m.o1mcp"
-            key="olk-05hR"
-          />
 
           {/* Secondary overlay for a layered effect */}
-          <motion.div
-            className="fixed inset-0 z-40 bg-primary/20 pointer-events-none"
-            initial={{ scaleX: 0 }}
-            animate={{
-              scaleX: 0,
-              transition: {
-                duration: duration,
-                ease: [0.22, 1, 0.36, 1],
-                delay: overlayDelay,
-              },
-            }}
-            exit={{
-              scaleX: 1,
-              transition: {
-                duration: duration * 0.8,
-                ease: [0.22, 1, 0.36, 1],
-                delay: overlayDelay * 0.5,
-              },
-            }}
-            style={{ transformOrigin: "right" }}
-            data-oid="h0:mi6v"
-            key="olk-3998"
-          />
         </motion.div>
       </AnimatePresence>
     </div>
