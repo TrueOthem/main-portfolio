@@ -1,6 +1,2 @@
 # These redirects are handled by the Next.js plugin
-/* /_next/static/* 200
-/* /_next/image* 200
-/* /_next/* 200
-/* /api/* 200
-/* /* 200
+# The plugin will handle all redirects automatically
