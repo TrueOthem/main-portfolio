@@ -1,23 +1,25 @@
 "use client";
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 type LanguageSwitcherProps = {
-  variant?: 'desktop' | 'mobile';
+  variant?: "desktop" | "mobile";
 };
 
-export function LanguageSwitcher({ variant = 'desktop' }: LanguageSwitcherProps) {
-  const [language, setLanguage] = useState<'EN' | 'AR' | 'ES'>('EN');
+export function LanguageSwitcher({
+  variant = "desktop",
+}: LanguageSwitcherProps) {
+  const [language, setLanguage] = useState<"EN" | "AR" | "ES">("EN");
 
   const toggleLanguage = () => {
-    if (language === 'EN') {
-      setLanguage('AR');
-    } else if (language === 'AR') {
-      setLanguage('ES');
+    if (language === "EN") {
+      setLanguage("AR");
+    } else if (language === "AR") {
+      setLanguage("ES");
     } else {
-      setLanguage('EN');
+      setLanguage("EN");
     }
   };
 
@@ -29,6 +31,7 @@ export function LanguageSwitcher({ variant = 'desktop' }: LanguageSwitcherProps)
       className="text-sm font-medium"
       data-testid="language-switcher"
       data-variant={variant}
+      data-oid="9ffy:dn"
     >
       <motion.span
         key={language}
@@ -36,6 +39,7 @@ export function LanguageSwitcher({ variant = 'desktop' }: LanguageSwitcherProps)
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
+        data-oid=":it.pw4"
       >
         {language}
       </motion.span>

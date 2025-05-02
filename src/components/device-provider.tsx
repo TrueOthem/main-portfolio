@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { shouldReduceMotion } from '@/lib/utils';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { shouldReduceMotion } from "@/lib/utils";
 
 type DeviceContextType = {
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
   isReducedMotion: boolean;
-  deviceType: 'mobile' | 'tablet' | 'desktop';
-  performanceLevel: 'low' | 'medium' | 'high';
+  deviceType: "mobile" | "tablet" | "desktop";
+  performanceLevel: "low" | "medium" | "high";
 };
 
 const DeviceContext = createContext<DeviceContextType>({
@@ -17,8 +17,8 @@ const DeviceContext = createContext<DeviceContextType>({
   isTablet: false,
   isDesktop: true,
   isReducedMotion: false,
-  deviceType: 'desktop',
-  performanceLevel: 'high',
+  deviceType: "desktop",
+  performanceLevel: "high",
 });
 
 export const useDevice = () => useContext(DeviceContext);
@@ -33,8 +33,8 @@ export function DeviceContextProvider({
     isTablet: false,
     isDesktop: true,
     isReducedMotion: false,
-    deviceType: 'desktop',
-    performanceLevel: 'high',
+    deviceType: "desktop",
+    performanceLevel: "high",
   });
 
   const [hasInitialized, setHasInitialized] = useState(false);
@@ -52,48 +52,50 @@ export function DeviceContextProvider({
     const isDesktop = viewportWidth >= 1024;
 
     // Check for reduced motion preference
-    const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     // Determine device type
-    let deviceType: 'mobile' | 'tablet' | 'desktop' = 'desktop';
-    if (isMobile) deviceType = 'mobile';
-    else if (isTablet) deviceType = 'tablet';
+    let deviceType: "mobile" | "tablet" | "desktop" = "desktop";
+    if (isMobile) deviceType = "mobile";
+    else if (isTablet) deviceType = "tablet";
 
     // Determine performance level based on device characteristics
-    let performanceLevel: 'low' | 'medium' | 'high' = 'high';
+    let performanceLevel: "low" | "medium" | "high" = "high";
 
     // Check hardware concurrency (CPU cores) if available
     if (window.navigator.hardwareConcurrency) {
       if (window.navigator.hardwareConcurrency <= 2) {
-        performanceLevel = 'low';
+        performanceLevel = "low";
       } else if (window.navigator.hardwareConcurrency <= 4) {
-        performanceLevel = 'medium';
+        performanceLevel = "medium";
       }
     }
 
     // Check device memory if available
-    if ('deviceMemory' in navigator) {
+    if ("deviceMemory" in navigator) {
       // @ts-ignore - deviceMemory is not in standard navigator type
       const memory = navigator.deviceMemory as number;
       if (memory && memory <= 2) {
-        performanceLevel = 'low';
+        performanceLevel = "low";
       } else if (memory && memory <= 4) {
-        performanceLevel = 'medium';
+        performanceLevel = "medium";
       }
     }
 
     // On mobile, downgrade performance estimate
-    if (isMobile && performanceLevel === 'high') {
-      performanceLevel = 'medium';
+    if (isMobile && performanceLevel === "high") {
+      performanceLevel = "medium";
     }
 
     // If reduced motion is requested, assume performance concerns
     if (isReducedMotion || shouldReduceMotion()) {
-      performanceLevel = 'low';
+      performanceLevel = "low";
     }
 
     // Expose device info to window for testing purposes
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       (window as any).__DEVICE_INFO__ = {
         isMobile,
         isTablet,
@@ -104,8 +106,11 @@ export function DeviceContextProvider({
       };
 
       // Add data attributes to document for testing
-      document.documentElement.setAttribute('data-device-type', deviceType);
-      document.documentElement.setAttribute('data-reduced-motion', isReducedMotion.toString());
+      document.documentElement.setAttribute("data-device-type", deviceType);
+      document.documentElement.setAttribute(
+        "data-reduced-motion",
+        isReducedMotion.toString(),
+      );
     }
 
     setDeviceInfo({
@@ -120,7 +125,7 @@ export function DeviceContextProvider({
 
   useEffect(() => {
     // Only execute once on client side
-    if (typeof window === 'undefined' || hasInitialized) return;
+    if (typeof window === "undefined" || hasInitialized) return;
 
     // Initial detection
     updateDeviceInfo();
@@ -131,16 +136,16 @@ export function DeviceContextProvider({
       updateDeviceInfo();
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [hasInitialized]);
 
   return (
-    <DeviceContext.Provider value={deviceInfo}>
+    <DeviceContext.Provider value={deviceInfo} data-oid="0tdv-q3">
       {children}
     </DeviceContext.Provider>
   );

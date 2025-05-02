@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import { useDeviceDetection, shouldReduceMotion } from '@/lib/utils';
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { useDeviceDetection, shouldReduceMotion } from "@/lib/utils";
 
 interface LoadingSpinnerProps {
   size?: number;
   color?: string;
   thickness?: number;
-  type?: 'circular' | 'dotPulse' | 'gridLoader' | 'barProgress';
+  type?: "circular" | "dotPulse" | "gridLoader" | "barProgress";
   className?: string;
 }
 
 export const LoadingSpinner = ({
   size = 40,
-  color = 'currentColor',
+  color = "currentColor",
   thickness = 4,
-  type = 'circular',
-  className = '',
+  type = "circular",
+  className = "",
 }: LoadingSpinnerProps) => {
   const [isMounted, setIsMounted] = useState(false);
   const [optimizedSize, setOptimizedSize] = useState(size);
@@ -42,8 +42,11 @@ export const LoadingSpinner = ({
         setPulseDelay(0.15);
 
         // Use simpler spinner types on low-end devices
-        if (window.navigator.hardwareConcurrency && window.navigator.hardwareConcurrency < 4) {
-          if (type === 'gridLoader') setOptimizedType('dotPulse');
+        if (
+          window.navigator.hardwareConcurrency &&
+          window.navigator.hardwareConcurrency < 4
+        ) {
+          if (type === "gridLoader") setOptimizedType("dotPulse");
         }
       } else if (isTablet) {
         setOptimizedSize(size * 0.9);
@@ -55,15 +58,18 @@ export const LoadingSpinner = ({
       if (isReducedMotion) {
         setAnimationDuration(0.5);
         // Use simplest spinner type
-        if (type === 'gridLoader') setOptimizedType('circular');
+        if (type === "gridLoader") setOptimizedType("circular");
       }
     }
   }, [isMounted, size, thickness, type]);
 
   switch (optimizedType) {
-    case 'circular':
+    case "circular":
       return (
-        <div className={`flex items-center justify-center ${className}`}>
+        <div
+          className={`flex items-center justify-center ${className}`}
+          data-oid="496p3e6"
+        >
           <motion.div
             className="rounded-full border-t-transparent"
             style={{
@@ -71,21 +77,25 @@ export const LoadingSpinner = ({
               height: optimizedSize,
               borderWidth: optimizedThickness,
               borderColor: color,
-              borderTopColor: 'transparent',
+              borderTopColor: "transparent",
             }}
             animate={{ rotate: 360 }}
             transition={{
               duration: animationDuration,
               repeat: Infinity,
-              ease: 'linear',
+              ease: "linear",
             }}
+            data-oid="3jutfkw"
           />
         </div>
       );
 
-    case 'dotPulse':
+    case "dotPulse":
       return (
-        <div className={`flex items-center justify-center space-x-2 ${className}`}>
+        <div
+          className={`flex items-center justify-center space-x-2 ${className}`}
+          data-oid="9wmxxff"
+        >
           {[0, 1, 2].map((index) => (
             <motion.div
               key={index}
@@ -93,7 +103,7 @@ export const LoadingSpinner = ({
                 width: optimizedSize / 3,
                 height: optimizedSize / 3,
                 backgroundColor: color,
-                borderRadius: '50%',
+                borderRadius: "50%",
               }}
               animate={{
                 scale: [1, 1.3, 1],
@@ -103,25 +113,27 @@ export const LoadingSpinner = ({
                 duration: animationDuration * 0.8,
                 repeat: Infinity,
                 delay: index * pulseDelay,
-                ease: 'easeInOut',
+                ease: "easeInOut",
               }}
+              data-oid="vfjzl.j"
             />
           ))}
         </div>
       );
 
-    case 'gridLoader':
+    case "gridLoader":
       return (
         <div
           className={`grid grid-cols-3 gap-1 ${className}`}
           style={{ width: optimizedSize, height: optimizedSize }}
+          data-oid="cr4-dos"
         >
           {[...Array(9)].map((_, index) => (
             <motion.div
               key={index}
               style={{
                 backgroundColor: color,
-                borderRadius: '2px',
+                borderRadius: "2px",
               }}
               animate={{
                 scale: [1, 0.7, 1],
@@ -131,14 +143,15 @@ export const LoadingSpinner = ({
                 duration: animationDuration * 0.8,
                 repeat: Infinity,
                 delay: (index * 0.1 * pulseDelay * 5) % (0.8 * pulseDelay * 5),
-                ease: 'easeInOut',
+                ease: "easeInOut",
               }}
+              data-oid="cxsd7:y"
             />
           ))}
         </div>
       );
 
-    case 'barProgress':
+    case "barProgress":
       return (
         <div
           className={`relative overflow-hidden ${className}`}
@@ -148,22 +161,24 @@ export const LoadingSpinner = ({
             backgroundColor: `${color}30`,
             borderRadius: optimizedSize / 8,
           }}
+          data-oid="fwyj_3o"
         >
           <motion.div
             style={{
-              height: '100%',
+              height: "100%",
               backgroundColor: color,
               borderRadius: optimizedSize / 8,
             }}
             animate={{
-              width: ['0%', '100%', '0%'],
-              x: ['-100%', '0%', '100%'],
+              width: ["0%", "100%", "0%"],
+              x: ["-100%", "0%", "100%"],
             }}
             transition={{
               duration: animationDuration * 2,
               repeat: Infinity,
-              ease: 'easeInOut',
+              ease: "easeInOut",
             }}
+            data-oid="ue3gzr8"
           />
         </div>
       );
@@ -174,10 +189,12 @@ export const LoadingSpinner = ({
 };
 
 // A full-screen loading overlay component
-export const LoadingOverlay = ({ message = 'Loading...' }) => {
+export const LoadingOverlay = ({ message = "Loading..." }) => {
   const [isMounted, setIsMounted] = useState(false);
-  const [blurAmount, setBlurAmount] = useState('backdrop-blur-sm');
-  const [optimizedSpinnerType, setOptimizedSpinnerType] = useState<'dotPulse' | 'circular'>('dotPulse');
+  const [blurAmount, setBlurAmount] = useState("backdrop-blur-sm");
+  const [optimizedSpinnerType, setOptimizedSpinnerType] = useState<
+    "dotPulse" | "circular"
+  >("dotPulse");
 
   useEffect(() => {
     setIsMounted(true);
@@ -187,16 +204,19 @@ export const LoadingOverlay = ({ message = 'Loading...' }) => {
 
       // Reduce blur for better performance on mobile
       if (isMobile) {
-        setBlurAmount('backdrop-blur-[2px]');
+        setBlurAmount("backdrop-blur-[2px]");
         // Simple spinner for lower-end devices
-        if (window.navigator.hardwareConcurrency && window.navigator.hardwareConcurrency < 4) {
-          setOptimizedSpinnerType('circular');
+        if (
+          window.navigator.hardwareConcurrency &&
+          window.navigator.hardwareConcurrency < 4
+        ) {
+          setOptimizedSpinnerType("circular");
         }
       }
 
       // Simple spinner for reduced motion
       if (isReducedMotion) {
-        setOptimizedSpinnerType('circular');
+        setOptimizedSpinnerType("circular");
       }
     }
   }, [isMounted]);
@@ -207,13 +227,20 @@ export const LoadingOverlay = ({ message = 'Loading...' }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      data-oid="z8f9hq5"
     >
-      <LoadingSpinner size={60} type={optimizedSpinnerType} className="mb-4" />
+      <LoadingSpinner
+        size={60}
+        type={optimizedSpinnerType}
+        className="mb-4"
+        data-oid="ta:38kf"
+      />
       <motion.p
         className="text-primary text-lg"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
+        data-oid="sokzkal"
       >
         {message}
       </motion.p>
@@ -227,7 +254,7 @@ export const ProgressBar = ({ isLoading = false, progress = 0 }) => {
   const [barHeight, setBarHeight] = useState(0.5);
   const [animationDuration, setAnimationDuration] = useState({
     loading: 0.3,
-    complete: 0.8
+    complete: 0.8,
   });
 
   useEffect(() => {
@@ -242,13 +269,13 @@ export const ProgressBar = ({ isLoading = false, progress = 0 }) => {
         // Faster animations on mobile
         setAnimationDuration({
           loading: 0.2,
-          complete: 0.6
+          complete: 0.6,
         });
       } else if (isTablet) {
         setBarHeight(0.6);
         setAnimationDuration({
           loading: 0.25,
-          complete: 0.7
+          complete: 0.7,
         });
       }
     }
@@ -258,15 +285,18 @@ export const ProgressBar = ({ isLoading = false, progress = 0 }) => {
     <motion.div
       className="fixed top-0 left-0 right-0 bg-primary z-50"
       style={{ height: `${barHeight}rem` }}
-      initial={{ width: '0%', opacity: 0 }}
+      initial={{ width: "0%", opacity: 0 }}
       animate={{
-        width: isLoading ? `${progress}%` : '100%',
+        width: isLoading ? `${progress}%` : "100%",
         opacity: isLoading || progress > 0 ? 1 : 0,
         transition: {
-          duration: isLoading ? animationDuration.loading : animationDuration.complete,
+          duration: isLoading
+            ? animationDuration.loading
+            : animationDuration.complete,
         },
       }}
       exit={{ opacity: 0, transition: { duration: 0.3, delay: 0.5 } }}
+      data-oid="e06n87t"
     />
   );
 };

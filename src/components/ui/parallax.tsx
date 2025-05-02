@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
-import { useRef, ReactNode, useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useDeviceDetection, shouldReduceMotion } from '@/lib/utils';
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import { useRef, ReactNode, useEffect, useState } from "react";
+import Image from "next/image";
+import { useDeviceDetection, shouldReduceMotion } from "@/lib/utils";
 
 interface ParallaxProps {
   children?: ReactNode;
@@ -14,7 +14,7 @@ interface ParallaxProps {
 export const ParallaxText = ({
   children,
   baseVelocity = 100,
-  className = '',
+  className = "",
 }: ParallaxProps) => {
   const baseX = useRef<MotionValue<number>>(motion.useMotionValue(0));
   const [optimizedVelocity, setOptimizedVelocity] = useState(baseVelocity);
@@ -47,17 +47,27 @@ export const ParallaxText = ({
   // Static render for reduced motion or SSR
   if (shouldDisable) {
     return (
-      <div className={`whitespace-nowrap flex flex-nowrap ${className}`}>
-        <div className="flex whitespace-nowrap flex-nowrap">
-          <span className="block mr-4">{children}</span>
-          <span className="block mr-4">{children}</span>
+      <div
+        className={`whitespace-nowrap flex flex-nowrap ${className}`}
+        data-oid="qva1v-q"
+      >
+        <div className="flex whitespace-nowrap flex-nowrap" data-oid="zeu1bx_">
+          <span className="block mr-4" data-oid="31t:t5c">
+            {children}
+          </span>
+          <span className="block mr-4" data-oid="x4x61or">
+            {children}
+          </span>
         </div>
       </div>
     );
   }
 
   return (
-    <div className={`overflow-hidden whitespace-nowrap flex flex-nowrap ${className}`}>
+    <div
+      className={`overflow-hidden whitespace-nowrap flex flex-nowrap ${className}`}
+      data-oid="l0ppcfa"
+    >
       <motion.div
         className="flex whitespace-nowrap flex-nowrap"
         style={{ x: baseX.current }}
@@ -68,11 +78,20 @@ export const ParallaxText = ({
           ease: "linear",
           repeatType: "loop",
         }}
+        data-oid="gd8:vjr"
       >
-        <span className="block mr-4">{children}</span>
-        <span className="block mr-4">{children}</span>
-        <span className="block mr-4">{children}</span>
-        <span className="block mr-4">{children}</span>
+        <span className="block mr-4" data-oid="ews3rh1">
+          {children}
+        </span>
+        <span className="block mr-4" data-oid="1zoplm-">
+          {children}
+        </span>
+        <span className="block mr-4" data-oid="frbic5_">
+          {children}
+        </span>
+        <span className="block mr-4" data-oid="qzq2..1">
+          {children}
+        </span>
       </motion.div>
     </div>
   );
@@ -82,7 +101,7 @@ interface ParallaxScrollProps {
   children: ReactNode;
   speed?: number;
   className?: string;
-  direction?: 'up' | 'down' | 'left' | 'right';
+  direction?: "up" | "down" | "left" | "right";
 }
 
 // Create a separate component for the parallax effect to avoid conditional hook calls
@@ -95,7 +114,7 @@ const ParallaxScrollEffect = ({
 }: {
   children: ReactNode;
   speed: number;
-  direction: 'up' | 'down' | 'left' | 'right';
+  direction: "up" | "down" | "left" | "right";
   className: string;
   disabled: boolean;
 }) => {
@@ -103,46 +122,62 @@ const ParallaxScrollEffect = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   // Create transform values for all directions
-  const upTransform = useTransform(scrollYProgress, [0, 1], ['0%', `-${speed * 100}%`]);
-  const downTransform = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 100}%`]);
-  const leftTransform = useTransform(scrollYProgress, [0, 1], ['0%', `-${speed * 100}%`]);
-  const rightTransform = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 100}%`]);
+  const upTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `-${speed * 100}%`],
+  );
+  const downTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `${speed * 100}%`],
+  );
+  const leftTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `-${speed * 100}%`],
+  );
+  const rightTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `${speed * 100}%`],
+  );
 
   // Select the appropriate transform based on direction
   let transformValue;
   let transformProperty;
 
   switch (direction) {
-    case 'up':
+    case "up":
       transformValue = upTransform;
-      transformProperty = 'y';
+      transformProperty = "y";
       break;
-    case 'down':
+    case "down":
       transformValue = downTransform;
-      transformProperty = 'y';
+      transformProperty = "y";
       break;
-    case 'left':
+    case "left":
       transformValue = leftTransform;
-      transformProperty = 'x';
+      transformProperty = "x";
       break;
-    case 'right':
+    case "right":
       transformValue = rightTransform;
-      transformProperty = 'x';
+      transformProperty = "x";
       break;
     default:
       transformValue = upTransform;
-      transformProperty = 'y';
+      transformProperty = "y";
   }
 
   // If disabled, render static version
   if (disabled) {
     return (
-      <div className={`relative ${className}`}>
-        <div className="relative">
+      <div className={`relative ${className}`} data-oid="p30kird">
+        <div className="relative" data-oid="4cdwupa">
           {children}
         </div>
       </div>
@@ -151,10 +186,15 @@ const ParallaxScrollEffect = ({
 
   // Otherwise render with parallax effect
   return (
-    <div ref={ref} className={`relative overflow-hidden ${className}`}>
+    <div
+      ref={ref}
+      className={`relative overflow-hidden ${className}`}
+      data-oid="19cb.zw"
+    >
       <motion.div
         style={{ [transformProperty]: transformValue }}
         className="relative"
+        data-oid="gtux3xe"
       >
         {children}
       </motion.div>
@@ -166,8 +206,8 @@ const ParallaxScrollEffect = ({
 export const ParallaxScroll = ({
   children,
   speed = 0.5,
-  className = '',
-  direction = 'up',
+  className = "",
+  direction = "up",
 }: ParallaxScrollProps) => {
   const [optimizedSpeed, setOptimizedSpeed] = useState(speed);
   const [isMounted, setIsMounted] = useState(false);
@@ -178,7 +218,7 @@ export const ParallaxScroll = ({
     setIsMounted(true);
 
     // Only run client-side code after mounting
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const { isMobile, isTablet, isReducedMotion } = useDeviceDetection();
 
       // Reduce parallax effect on mobile
@@ -198,8 +238,8 @@ export const ParallaxScroll = ({
   // For SSR or when not mounted yet, render static version
   if (!isMounted) {
     return (
-      <div className={`relative ${className}`}>
-        <div className="relative">
+      <div className={`relative ${className}`} data-oid="o6xmql2">
+        <div className="relative" data-oid="o_q5al_">
           {children}
         </div>
       </div>
@@ -213,6 +253,7 @@ export const ParallaxScroll = ({
       direction={direction}
       className={className}
       disabled={shouldDisable}
+      data-oid="zyf06x1"
     >
       {children}
     </ParallaxScrollEffect>
@@ -227,7 +268,7 @@ interface ParallaxImageProps {
   speed?: number;
   className?: string;
   priority?: boolean;
-  direction?: 'up' | 'down';
+  direction?: "up" | "down";
 }
 
 // Create a separate component for the parallax image effect
@@ -247,7 +288,7 @@ const ParallaxImageEffect = ({
   width: number;
   height: number;
   speed: number;
-  direction: 'up' | 'down';
+  direction: "up" | "down";
   className: string;
   priority: boolean;
   disabled: boolean;
@@ -256,21 +297,32 @@ const ParallaxImageEffect = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   // Create transform values for both directions
-  const upTransform = useTransform(scrollYProgress, [0, 1], ['0%', `-${speed * 50}%`]);
-  const downTransform = useTransform(scrollYProgress, [0, 1], ['0%', `${speed * 50}%`]);
+  const upTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `-${speed * 50}%`],
+  );
+  const downTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `${speed * 50}%`],
+  );
 
   // Select the appropriate transform based on direction
-  const y = direction === 'up' ? upTransform : downTransform;
+  const y = direction === "up" ? upTransform : downTransform;
 
   // If disabled, render static version
   if (disabled) {
     return (
-      <div className={`relative overflow-hidden ${className}`}>
-        <div className="relative h-full w-full">
+      <div
+        className={`relative overflow-hidden ${className}`}
+        data-oid="11krtb5"
+      >
+        <div className="relative h-full w-full" data-oid="j-n0z_d">
           <Image
             src={src}
             alt={alt}
@@ -278,6 +330,7 @@ const ParallaxImageEffect = ({
             height={height}
             className="object-cover h-full w-full"
             priority={priority}
+            data-oid="0-kpiqp"
           />
         </div>
       </div>
@@ -286,8 +339,16 @@ const ParallaxImageEffect = ({
 
   // Otherwise render with parallax effect
   return (
-    <div ref={ref} className={`relative overflow-hidden ${className}`}>
-      <motion.div style={{ y }} className="relative h-full w-full">
+    <div
+      ref={ref}
+      className={`relative overflow-hidden ${className}`}
+      data-oid="jf310w3"
+    >
+      <motion.div
+        style={{ y }}
+        className="relative h-full w-full"
+        data-oid="9pxv2o0"
+      >
         <Image
           src={src}
           alt={alt}
@@ -295,6 +356,7 @@ const ParallaxImageEffect = ({
           height={height}
           className="object-cover h-full w-full"
           priority={priority}
+          data-oid="qbtfh1_"
         />
       </motion.div>
     </div>
@@ -308,9 +370,9 @@ export const ParallaxImage = ({
   width,
   height,
   speed = 0.5,
-  className = '',
+  className = "",
   priority = false,
-  direction = 'up',
+  direction = "up",
 }: ParallaxImageProps) => {
   const [optimizedSpeed, setOptimizedSpeed] = useState(speed);
   const [isMounted, setIsMounted] = useState(false);
@@ -321,7 +383,7 @@ export const ParallaxImage = ({
     setIsMounted(true);
 
     // Only run client-side code after mounting
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const { isMobile, isTablet, isReducedMotion } = useDeviceDetection();
 
       // Reduce parallax effect on mobile
@@ -341,8 +403,11 @@ export const ParallaxImage = ({
   // For SSR or when not mounted yet, render static version
   if (!isMounted) {
     return (
-      <div className={`relative overflow-hidden ${className}`}>
-        <div className="relative h-full w-full">
+      <div
+        className={`relative overflow-hidden ${className}`}
+        data-oid="xyd-c-o"
+      >
+        <div className="relative h-full w-full" data-oid="noi4sm8">
           <Image
             src={src}
             alt={alt}
@@ -350,6 +415,7 @@ export const ParallaxImage = ({
             height={height}
             className="object-cover h-full w-full"
             priority={priority}
+            data-oid="h9y43xx"
           />
         </div>
       </div>
@@ -368,6 +434,7 @@ export const ParallaxImage = ({
       className={className}
       priority={priority}
       disabled={shouldDisable}
+      data-oid="owy9u-1"
     />
   );
 };
@@ -388,7 +455,7 @@ const ParallaxRotateEffect = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   // Create transform value for rotation
@@ -397,8 +464,8 @@ const ParallaxRotateEffect = ({
   // If disabled, render static version
   if (disabled) {
     return (
-      <div className={className}>
-        <div className="w-full h-full">
+      <div className={className} data-oid="m7cp7_.">
+        <div className="w-full h-full" data-oid="eomuub6">
           {children}
         </div>
       </div>
@@ -406,23 +473,14 @@ const ParallaxRotateEffect = ({
   }
 
   // Otherwise render with rotation effect
-  return (
-    <div ref={ref} className={className}>
-      <motion.div
-        style={{ rotate }}
-        className="w-full h-full"
-      >
-        {children}
-      </motion.div>
-    </div>
-  );
+  return <div ref={ref} className={className} data-oid="pm04zdq"></div>;
 };
 
 // Main component that handles device detection and mounting logic
 export const ParallaxRotate = ({
   children,
-  className = '',
-  maxRotation = 180
+  className = "",
+  maxRotation = 180,
 }: {
   children: ReactNode;
   className?: string;
@@ -437,7 +495,7 @@ export const ParallaxRotate = ({
     setIsMounted(true);
 
     // Only run client-side code after mounting
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const { isMobile, isTablet, isReducedMotion } = useDeviceDetection();
 
       // Reduce rotation intensity on mobile
@@ -457,8 +515,8 @@ export const ParallaxRotate = ({
   // For SSR or when not mounted yet, render static version
   if (!isMounted) {
     return (
-      <div className={className}>
-        <div className="w-full h-full">
+      <div className={className} data-oid="cq4d:yv">
+        <div className="w-full h-full" data-oid="8-s6oce">
           {children}
         </div>
       </div>
@@ -471,6 +529,7 @@ export const ParallaxRotate = ({
       rotation={optimizedRotation}
       className={className}
       disabled={shouldDisable}
+      data-oid="6jpxodz"
     >
       {children}
     </ParallaxRotateEffect>

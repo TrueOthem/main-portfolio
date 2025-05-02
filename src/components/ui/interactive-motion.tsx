@@ -1,13 +1,20 @@
-'use client';
+"use client";
 
-import { motion, useMotionValue, useTransform, useInView, useSpring, useScroll } from 'framer-motion';
-import { useRef, ReactNode, useState, useEffect } from 'react';
-import { useDeviceDetection, shouldReduceMotion } from '@/lib/utils';
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  useInView,
+  useSpring,
+  useScroll,
+} from "framer-motion";
+import { useRef, ReactNode, useState, useEffect } from "react";
+import { useDeviceDetection, shouldReduceMotion } from "@/lib/utils";
 
 // Card that tilts in the direction of the mouse hover
 export const TiltCard = ({
   children,
-  className = '',
+  className = "",
   tiltFactor = 7, // Higher value = more tilt
   scale = 1.05,
   perspective = 800,
@@ -31,7 +38,8 @@ export const TiltCard = ({
   const [isMounted, setIsMounted] = useState(false);
   const [optimizedTiltFactor, setOptimizedTiltFactor] = useState(tiltFactor);
   const [optimizedScale, setOptimizedScale] = useState(scale);
-  const [optimizedDuration, setOptimizedDuration] = useState(transitionDuration);
+  const [optimizedDuration, setOptimizedDuration] =
+    useState(transitionDuration);
   const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
@@ -88,28 +96,32 @@ export const TiltCard = ({
   };
 
   // Use lighter spring config on mobile
-  const springConfig = isMounted && useDeviceDetection().isMobile
-    ? { stiffness: 300, damping: 20 }
-    : { stiffness: 400, damping: 25 };
+  const springConfig =
+    isMounted && useDeviceDetection().isMobile
+      ? { stiffness: 300, damping: 20 }
+      : { stiffness: 400, damping: 25 };
 
   const xSpring = useSpring(rotateX, springConfig);
   const ySpring = useSpring(rotateY, springConfig);
 
   // Create motion values for glare effect regardless of whether it's used
-  const glareIntensity = useMotionValue(Math.sqrt(rotateX * rotateX + rotateY * rotateY));
+  const glareIntensity = useMotionValue(
+    Math.sqrt(rotateX * rotateX + rotateY * rotateY),
+  );
   const glareOpacity = useTransform(glareIntensity, [0, 10], [0, 0.15]);
 
   // If reduced motion is enabled, render without effects
   if (isDisabled) {
     return (
-      <div className={className}>
+      <div className={className} data-oid="-j7ypbc">
         {children}
       </div>
     );
   }
 
   // Check if glare effect should be shown
-  const showGlareEffect = glareEffect && mouseOver && isMounted && !useDeviceDetection().isMobile;
+  const showGlareEffect =
+    glareEffect && mouseOver && isMounted && !useDeviceDetection().isMobile;
 
   return (
     <motion.div
@@ -119,13 +131,14 @@ export const TiltCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
-        transformStyle: 'preserve-3d',
+        transformStyle: "preserve-3d",
         perspective,
         rotateX: xSpring,
         rotateY: ySpring,
         scale: mouseOver ? optimizedScale : 1,
         transition: `transform ${optimizedDuration}s ease-out`,
       }}
+      data-oid="ak5wwl5"
     >
       {children}
 
@@ -134,11 +147,13 @@ export const TiltCard = ({
         <motion.div
           className="absolute inset-0 rounded-[inherit] pointer-events-none"
           style={{
-            backgroundImage: 'radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%)',
-            mixBlendMode: 'overlay',
-            transform: 'translateZ(1px)', // Place slightly above content
+            backgroundImage:
+              "radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%)",
+            mixBlendMode: "overlay",
+            transform: "translateZ(1px)", // Place slightly above content
             opacity: glareOpacity,
           }}
+          data-oid="6-lzh:h"
         />
       )}
     </motion.div>
@@ -149,15 +164,17 @@ export const TiltCard = ({
 export const RippleButton = ({
   children,
   onClick,
-  className = '',
-  rippleColor = 'rgba(255, 255, 255, 0.4)',
+  className = "",
+  rippleColor = "rgba(255, 255, 255, 0.4)",
 }: {
   children: ReactNode;
   onClick?: () => void;
   className?: string;
   rippleColor?: string;
 }) => {
-  const [ripples, setRipples] = useState<{ x: number; y: number; id: number }[]>([]);
+  const [ripples, setRipples] = useState<
+    { x: number; y: number; id: number }[]
+  >([]);
   const nextId = useRef(0);
   const [isMounted, setIsMounted] = useState(false);
   const [isOptimized, setIsOptimized] = useState(false);
@@ -204,7 +221,7 @@ export const RippleButton = ({
 
     // Remove the ripple after animation
     setTimeout(() => {
-      setRipples(ripples => ripples.filter(ripple => ripple.id !== id));
+      setRipples((ripples) => ripples.filter((ripple) => ripple.id !== id));
     }, rippleDuration * 1000);
 
     if (onClick) onClick();
@@ -218,9 +235,10 @@ export const RippleButton = ({
       className={`relative overflow-hidden ${className}`}
       onClick={handleClick}
       whileTap={{ scale: isOptimized ? 0.99 : 0.98 }}
+      data-oid="2:wdtpx"
     >
       {/* The ripple elements */}
-      {displayRipples.map(ripple => (
+      {displayRipples.map((ripple) => (
         <motion.span
           key={ripple.id}
           className="absolute rounded-full pointer-events-none"
@@ -228,7 +246,7 @@ export const RippleButton = ({
             left: ripple.x,
             top: ripple.y,
             backgroundColor: rippleColor,
-            transform: 'translate(-50%, -50%)',
+            transform: "translate(-50%, -50%)",
           }}
           initial={{ width: 0, height: 0, opacity: 0.5 }}
           animate={{
@@ -236,7 +254,8 @@ export const RippleButton = ({
             height: rippleSize,
             opacity: 0,
           }}
-          transition={{ duration: rippleDuration, ease: 'easeOut' }}
+          transition={{ duration: rippleDuration, ease: "easeOut" }}
+          data-oid="t:bz7qj"
         />
       ))}
       {children}
@@ -247,7 +266,7 @@ export const RippleButton = ({
 // Magnetic element that attracts to cursor
 export const MagneticElement = ({
   children,
-  className = '',
+  className = "",
   distanceThreshold = 100, // Distance at which element starts to be affected
   magnetStrength = 0.5, // Higher = stronger magnetic effect
 }: {
@@ -259,7 +278,8 @@ export const MagneticElement = ({
   const ref = useRef<HTMLDivElement>(null);
   const [elementCenter, setElementCenter] = useState({ x: 0, y: 0 });
   const [isMounted, setIsMounted] = useState(false);
-  const [optimizedThreshold, setOptimizedThreshold] = useState(distanceThreshold);
+  const [optimizedThreshold, setOptimizedThreshold] =
+    useState(distanceThreshold);
   const [optimizedStrength, setOptimizedStrength] = useState(magnetStrength);
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -289,14 +309,20 @@ export const MagneticElement = ({
   }, [distanceThreshold, isMounted, magnetStrength]);
 
   // Use lighter spring config on mobile
-  const springConfig = isMounted && useDeviceDetection().isMobile
-    ? { damping: 15, stiffness: 200 }
-    : { damping: 20, stiffness: 300 };
+  const springConfig =
+    isMounted && useDeviceDetection().isMobile
+      ? { damping: 15, stiffness: 200 }
+      : { damping: 20, stiffness: 300 };
 
   const springX = useSpring(x, springConfig);
   const springY = useSpring(y, springConfig);
 
-  const calculateDistance = (x1: number, y1: number, x2: number, y2: number) => {
+  const calculateDistance = (
+    x1: number,
+    y1: number,
+    x2: number,
+    y2: number,
+  ) => {
     return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
   };
 
@@ -311,8 +337,10 @@ export const MagneticElement = ({
 
     if (distance < optimizedThreshold) {
       const distancePercentage = 1 - Math.max(0, distance / optimizedThreshold);
-      const moveX = (e.clientX - centerX) * optimizedStrength * distancePercentage;
-      const moveY = (e.clientY - centerY) * optimizedStrength * distancePercentage;
+      const moveX =
+        (e.clientX - centerX) * optimizedStrength * distancePercentage;
+      const moveY =
+        (e.clientY - centerY) * optimizedStrength * distancePercentage;
 
       x.set(moveX);
       y.set(moveY);
@@ -330,14 +358,19 @@ export const MagneticElement = ({
   // Disable effect for reduced motion
   if (isDisabled) {
     return (
-      <div className={className}>
+      <div className={className} data-oid="dgdoao7">
         {children}
       </div>
     );
   }
 
   return (
-    <div className="relative" onMouseMove={handleMouseMove} onMouseLeave={resetPosition}>
+    <div
+      className="relative"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={resetPosition}
+      data-oid="6vac1gp"
+    >
       <motion.div
         ref={ref}
         className={className}
@@ -345,6 +378,7 @@ export const MagneticElement = ({
           x: springX,
           y: springY,
         }}
+        data-oid="vex-xyl"
       >
         {children}
       </motion.div>
@@ -353,11 +387,15 @@ export const MagneticElement = ({
 };
 
 // A progress bar that fills up as you scroll down
-export const ScrollProgressBar = ({ height = 4, color = '#000' }) => {
+export const ScrollProgressBar = ({ height = 4, color = "#000" }) => {
   const ref = useRef(null);
   const [isMounted, setIsMounted] = useState(false);
   const [optimizedHeight, setOptimizedHeight] = useState(height);
-  const [optimizedConfig, setOptimizedConfig] = useState({ stiffness: 100, damping: 30, restDelta: 0.001 });
+  const [optimizedConfig, setOptimizedConfig] = useState({
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     setIsMounted(true);
@@ -389,8 +427,9 @@ export const ScrollProgressBar = ({ height = 4, color = '#000' }) => {
         style={{
           scaleX,
           height: optimizedHeight,
-          backgroundColor: color
+          backgroundColor: color,
         }}
+        data-oid="6v6_wzy"
       />
     );
   } catch (error) {
@@ -401,9 +440,10 @@ export const ScrollProgressBar = ({ height = 4, color = '#000' }) => {
         style={{
           height: optimizedHeight,
           backgroundColor: color,
-          transform: 'scaleX(0)',
-          transformOrigin: 'left'
+          transform: "scaleX(0)",
+          transformOrigin: "left",
         }}
+        data-oid="sl6id1w"
       />
     );
   }
@@ -415,8 +455,8 @@ export const CountUp = ({
   to,
   duration = 2,
   delay = 0,
-  className = '',
-  formatter = (value: number) => Math.round(value).toString()
+  className = "",
+  formatter = (value: number) => Math.round(value).toString(),
 }: {
   from?: number;
   to: number;
@@ -443,7 +483,10 @@ export const CountUp = ({
         setOptimizedDelay(delay * 0.7);
 
         // On low-end devices, use simplified animation
-        if (window.navigator.hardwareConcurrency && window.navigator.hardwareConcurrency < 4) {
+        if (
+          window.navigator.hardwareConcurrency &&
+          window.navigator.hardwareConcurrency < 4
+        ) {
           setIsSimplified(true);
         }
       } else if (isTablet) {
@@ -461,7 +504,7 @@ export const CountUp = ({
 
   const isInView = useInView(ref, { once: true, amount: 0.5 });
   const count = useMotionValue(from);
-  const roundedCount = useTransform(count, value => formatter(value));
+  const roundedCount = useTransform(count, (value) => formatter(value));
 
   // Simplified version for mobile or reduced motion
   if (isSimplified) {
@@ -472,6 +515,7 @@ export const CountUp = ({
         initial={{ opacity: 0.7 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.3, delay: optimizedDelay }}
+        data-oid="b2f1rai"
       >
         {isInView ? formatter(to) : formatter(from)}
       </motion.span>
@@ -479,10 +523,7 @@ export const CountUp = ({
   }
 
   return (
-    <motion.span
-      ref={ref}
-      className={className}
-    >
+    <motion.span ref={ref} className={className} data-oid="f0aohv3">
       {isInView ? (
         <motion.span
           onAnimationComplete={() => {
@@ -490,43 +531,49 @@ export const CountUp = ({
           }}
           animate={{
             transitionEnd: {
-              opacity: 1
-            }
+              opacity: 1,
+            },
           }}
+          data-oid="k5g94c9"
         >
           {/* Show final number directly if animation is complete */}
           <motion.span
             animate={{
-              opacity: 1
+              opacity: 1,
             }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.2, delay: optimizedDuration }}
+            data-oid="z5.5hcy"
           >
             {formatter(to)}
           </motion.span>
 
           {/* Show animated number during the transition */}
           <motion.span
-            style={{ position: 'absolute', opacity: 1 }}
+            style={{ position: "absolute", opacity: 1 }}
             animate={{
-              opacity: 0
+              opacity: 0,
             }}
             transition={{ duration: 0.2, delay: optimizedDuration }}
+            data-oid="voob3wn"
           >
             <motion.span
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               transition={{ duration: 0.1 }}
+              data-oid="h2r4e49"
             >
               {isInView && (
                 <motion.span
                   style={{ opacity: 1 }}
                   animate={{ opacity: 0 }}
                   transition={{ delay: optimizedDuration }}
+                  data-oid="m6blnd5"
                 >
                   <motion.span
                     animate={{ y: 0 }}
                     initial={{ y: 0 }}
+                    data-oid="tbku0rb"
                   >
                     {roundedCount}
                   </motion.span>

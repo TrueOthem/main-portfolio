@@ -1,8 +1,12 @@
-'use client';
+"use client";
 
-import { motion, useAnimationControls } from 'framer-motion';
-import { ReactNode, useEffect, useState } from 'react';
-import { getAnimationConfig, shouldReduceMotion, useDeviceDetection } from '@/lib/utils';
+import { motion, useAnimationControls } from "framer-motion";
+import { ReactNode, useEffect, useState } from "react";
+import {
+  getAnimationConfig,
+  shouldReduceMotion,
+  useDeviceDetection,
+} from "@/lib/utils";
 
 // Fade in animation
 export const FadeIn = ({
@@ -10,12 +14,12 @@ export const FadeIn = ({
   delay = 0,
   direction = null,
   duration = 0.5,
-  className = '',
+  className = "",
   fullWidth = false,
 }: {
   children: ReactNode;
   delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right' | null;
+  direction?: "up" | "down" | "left" | "right" | null;
   duration?: number;
   className?: string;
   fullWidth?: boolean;
@@ -73,7 +77,8 @@ export const FadeIn = ({
         ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
-      style={fullWidth ? { width: '100%' } : {}}
+      style={fullWidth ? { width: "100%" } : {}}
+      data-oid="u1utymq"
     >
       {children}
     </motion.div>
@@ -84,7 +89,7 @@ export const FadeIn = ({
 export const StaggerContainer = ({
   children,
   delay = 0,
-  className = '',
+  className = "",
   staggerChildren = 0.1,
 }: {
   children: ReactNode;
@@ -133,6 +138,7 @@ export const StaggerContainer = ({
         },
       }}
       className={className}
+      data-oid="7gndho5"
     >
       {children}
     </motion.div>
@@ -143,10 +149,10 @@ export const StaggerContainer = ({
 export const StaggerItem = ({
   children,
   direction = null,
-  className = '',
+  className = "",
 }: {
   children: ReactNode;
-  direction?: 'up' | 'down' | 'left' | 'right' | null;
+  direction?: "up" | "down" | "left" | "right" | null;
   className?: string;
 }) => {
   // Use device detection to optimize animations
@@ -198,6 +204,7 @@ export const StaggerItem = ({
         },
       }}
       className={className}
+      data-oid="4:zof6k"
     >
       {children}
     </motion.div>
@@ -209,7 +216,7 @@ export const ScaleIn = ({
   children,
   delay = 0,
   duration = 0.5,
-  className = '',
+  className = "",
 }: {
   children: ReactNode;
   delay?: number;
@@ -255,6 +262,7 @@ export const ScaleIn = ({
         ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
+      data-oid="q-wrpzm"
     >
       {children}
     </motion.div>
@@ -265,7 +273,7 @@ export const ScaleIn = ({
 export const HoverScale = ({
   children,
   scale = 1.05,
-  className = '',
+  className = "",
 }: {
   children: ReactNode;
   scale?: number;
@@ -305,6 +313,7 @@ export const HoverScale = ({
       whileHover={{ scale: hoverScale }}
       transition={{ duration: optimizedDuration }}
       className={className}
+      data-oid="-cf9b.2"
     >
       {children}
     </motion.div>
@@ -315,7 +324,7 @@ export const HoverScale = ({
 export const RevealText = ({
   children,
   delay = 0,
-  className = '',
+  className = "",
 }: {
   children: ReactNode;
   delay?: number;
@@ -324,7 +333,7 @@ export const RevealText = ({
   const [isMounted, setIsMounted] = useState(false);
   const [animDuration, setAnimDuration] = useState(0.8);
   const [animDelay, setAnimDelay] = useState(delay);
-  const [yOffset, setYOffset] = useState('100%');
+  const [yOffset, setYOffset] = useState("100%");
 
   useEffect(() => {
     setIsMounted(true);
@@ -335,23 +344,23 @@ export const RevealText = ({
     if (isMobile) {
       setAnimDuration(0.6);
       setAnimDelay(delay * 0.7);
-      setYOffset('70%');
+      setYOffset("70%");
     } else if (isTablet) {
       setAnimDuration(0.7);
       setAnimDelay(delay * 0.85);
-      setYOffset('85%');
+      setYOffset("85%");
     }
 
     // Minimal animation for reduced motion
     if (isReducedMotion) {
       setAnimDuration(0.4);
       setAnimDelay(delay * 0.5);
-      setYOffset('50%');
+      setYOffset("50%");
     }
   }, [delay]);
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden ${className}`} data-oid="c2e7w9_">
       <motion.div
         initial={{ y: yOffset }}
         animate={{ y: 0 }}
@@ -360,6 +369,7 @@ export const RevealText = ({
           delay: animDelay,
           ease: [0.22, 1, 0.36, 1],
         }}
+        data-oid="to7.ex5"
       >
         {children}
       </motion.div>
@@ -372,7 +382,7 @@ export const DrawSVG = ({
   children,
   delay = 0,
   duration = 1.5,
-  className = '',
+  className = "",
 }: {
   children: ReactNode;
   delay?: number;
@@ -410,11 +420,13 @@ export const DrawSVG = ({
       animate={{ opacity: 1 }}
       transition={{ delay: animDelay, duration: 0.01 }}
       className={className}
+      data-oid="0x5.ppo"
     >
       <motion.svg
         initial="hidden"
         animate="visible"
         className="w-full h-full"
+        data-oid="qqley44"
       >
         {children}
       </motion.svg>
@@ -425,7 +437,7 @@ export const DrawSVG = ({
 // SVG path for drawing animation
 export const SVGPath = ({
   d,
-  stroke = 'currentColor',
+  stroke = "currentColor",
   strokeWidth = 2,
   delay = 0,
   duration = 1.5,
@@ -476,10 +488,11 @@ export const SVGPath = ({
           transition: {
             delay: animDelay,
             duration: animDuration,
-            ease: "easeInOut"
-          }
-        }
+            ease: "easeInOut",
+          },
+        },
       }}
+      data-oid="xi86klh"
     />
   );
 };
@@ -488,7 +501,7 @@ export const SVGPath = ({
 export const ScrollReveal = ({
   children,
   threshold = 0.1,
-  className = '',
+  className = "",
 }: {
   children: ReactNode;
   threshold?: number;
@@ -530,6 +543,7 @@ export const ScrollReveal = ({
       viewport={{ once: true, threshold: viewportThreshold }}
       transition={{ duration: animDuration, ease: [0.22, 1, 0.36, 1] }}
       className={className}
+      data-oid="3gbo46q"
     >
       {children}
     </motion.div>

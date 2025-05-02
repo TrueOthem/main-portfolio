@@ -1,53 +1,57 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
-import { useRouter, usePathname } from 'next/navigation';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { useRouter, usePathname } from "next/navigation";
 
-export default function LanguageSwitcher({ variant = 'desktop' }: { variant?: 'desktop' | 'mobile' }) {
-  const [language, setLanguage] = useState<'EN' | 'AR' | 'ES'>('EN');
+export default function LanguageSwitcher({
+  variant = "desktop",
+}: {
+  variant?: "desktop" | "mobile";
+}) {
+  const [language, setLanguage] = useState<"EN" | "AR" | "ES">("EN");
   const router = useRouter();
   const pathname = usePathname();
 
   // Initialize language based on HTML lang attribute
   useEffect(() => {
     const htmlLang = document.documentElement.lang.toLowerCase();
-    if (htmlLang === 'ar') {
-      setLanguage('AR');
-    } else if (htmlLang === 'es') {
-      setLanguage('ES');
+    if (htmlLang === "ar") {
+      setLanguage("AR");
+    } else if (htmlLang === "es") {
+      setLanguage("ES");
     } else {
-      setLanguage('EN');
+      setLanguage("EN");
     }
   }, []);
 
   const toggleLanguage = () => {
-    let newLang: 'en' | 'ar' | 'es';
-    let newDisplay: 'EN' | 'AR' | 'ES';
+    let newLang: "en" | "ar" | "es";
+    let newDisplay: "EN" | "AR" | "ES";
 
-    if (language === 'EN') {
-      newLang = 'ar';
-      newDisplay = 'AR';
-    } else if (language === 'AR') {
-      newLang = 'es';
-      newDisplay = 'ES';
+    if (language === "EN") {
+      newLang = "ar";
+      newDisplay = "AR";
+    } else if (language === "AR") {
+      newLang = "es";
+      newDisplay = "ES";
     } else {
-      newLang = 'en';
-      newDisplay = 'EN';
+      newLang = "en";
+      newDisplay = "EN";
     }
 
     // Update the display state
     setLanguage(newDisplay);
 
     // Update HTML lang attribute
-    document.documentElement.setAttribute('lang', newLang);
+    document.documentElement.setAttribute("lang", newLang);
 
     // Update direction attribute for RTL support
-    if (newLang === 'ar') {
-      document.documentElement.setAttribute('dir', 'rtl');
+    if (newLang === "ar") {
+      document.documentElement.setAttribute("dir", "rtl");
     } else {
-      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute("dir", "ltr");
     }
 
     // Force a page reload to apply the language change
@@ -62,6 +66,7 @@ export default function LanguageSwitcher({ variant = 'desktop' }: { variant?: 'd
       className="text-sm font-medium"
       data-testid="language-switcher"
       data-variant={variant}
+      data-oid="t44l__o"
     >
       <motion.span
         key={language}
@@ -69,6 +74,7 @@ export default function LanguageSwitcher({ variant = 'desktop' }: { variant?: 'd
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
+        data-oid="k-objra"
       >
         {language}
       </motion.span>
