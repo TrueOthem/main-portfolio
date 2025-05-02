@@ -546,6 +546,47 @@ export const ScrollReveal = ({
       data-oid="ig04w3d"
     >
       {children}
+      <section
+        className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
+        data-oid="ltvdfq6"
+        key="olk-VYzR"
+      >
+        <div
+          className="col-span-1 p-8 border-r border-[#d1d1c7]"
+          data-oid="_3v3iot"
+          key="olk-uwOf"
+        >
+          <div className="flex items-center mb-6" data-oid="gkcaveu">
+            <span className="mr-2 text-sm" data-oid="c3rr21e">
+              +
+            </span>
+            <h3 className="text-sm" data-oid=".dbnnok">
+              Resume
+            </h3>
+          </div>
+        </div>
+        <div
+          className="col-span-2 p-8 md:p-12"
+          data-oid="fb9lu_p"
+          key="olk-O60m"
+        >
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="hlprdek">
+            My Resume
+          </h2>
+          <p className="text-muted-foreground mb-8" data-oid="jcsocry">
+            Download my full resume to learn more about my professional
+            experience, skills, and educational background.
+          </p>
+          <a className="" data-oid="zruss:w">
+            <button
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 main-button rounded-full"
+              data-oid="y_f3w6_"
+            >
+              Download Resume (PDF)
+            </button>
+          </a>
+        </div>
+      </section>
     </motion.div>
   );
 };

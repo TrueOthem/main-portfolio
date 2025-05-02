@@ -26,22 +26,22 @@ export default function ClientBody({
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="w-full"
-      data-oid="9ku.n7y"
+      data-oid="8o5tp_i"
     >
       {children}
-      <motion.div key={pathname} className="relative" data-oid="fduet2a">
+      <motion.div key={pathname} className="relative" data-oid="690vpqp">
         {/* Page content */}
 
         {/* Overlay that slides in and out */}
 
         {/* Secondary overlay for a layered effect */}
-        <div data-oid="_29a28d">
+        <div data-oid="7r4hspb">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: duration * 0.6 }}
-            data-oid="t18i_qs"
+            data-oid="wkgop7l"
           >
             {children}
           </motion.div>

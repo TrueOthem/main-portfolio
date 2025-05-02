@@ -113,7 +113,7 @@ export const TiltCard = ({
   // If reduced motion is enabled, render without effects
   if (isDisabled) {
     return (
-      <div className={className} data-oid="w1a-jwf">
+      <div className={className} data-oid="goe41n-">
         {children}
       </div>
     );
@@ -138,7 +138,7 @@ export const TiltCard = ({
         scale: mouseOver ? optimizedScale : 1,
         transition: `transform ${optimizedDuration}s ease-out`,
       }}
-      data-oid="35haz6y"
+      data-oid="-h4-hq5"
     >
       {children}
 
@@ -153,7 +153,7 @@ export const TiltCard = ({
             transform: "translateZ(1px)", // Place slightly above content
             opacity: glareOpacity,
           }}
-          data-oid="oi45:i6"
+          data-oid="2w7pacp"
         />
       )}
     </motion.div>
@@ -235,7 +235,7 @@ export const RippleButton = ({
       className={`relative overflow-hidden ${className}`}
       onClick={handleClick}
       whileTap={{ scale: isOptimized ? 0.99 : 0.98 }}
-      data-oid="9c_3f-n"
+      data-oid="23qjnlh"
     >
       {/* The ripple elements */}
       {displayRipples.map((ripple) => (
@@ -255,7 +255,7 @@ export const RippleButton = ({
             opacity: 0,
           }}
           transition={{ duration: rippleDuration, ease: "easeOut" }}
-          data-oid="-u7zwu6"
+          data-oid="25s0jcy"
         />
       ))}
       {children}
@@ -358,7 +358,7 @@ export const MagneticElement = ({
   // Disable effect for reduced motion
   if (isDisabled) {
     return (
-      <div className={className} data-oid="t1ksh65">
+      <div className={className} data-oid=":9zaxh5">
         {children}
       </div>
     );
@@ -369,7 +369,7 @@ export const MagneticElement = ({
       className="relative"
       onMouseMove={handleMouseMove}
       onMouseLeave={resetPosition}
-      data-oid="mba0ut."
+      data-oid="eepkkd5"
     >
       <motion.div
         ref={ref}
@@ -378,7 +378,7 @@ export const MagneticElement = ({
           x: springX,
           y: springY,
         }}
-        data-oid="pt-hllv"
+        data-oid="-nswuci"
       >
         {children}
       </motion.div>
@@ -429,7 +429,7 @@ export const ScrollProgressBar = ({ height = 4, color = "#000" }) => {
           height: optimizedHeight,
           backgroundColor: color,
         }}
-        data-oid="w54_mn_"
+        data-oid="wpffeyg"
       />
     );
   } catch (error) {
@@ -443,7 +443,7 @@ export const ScrollProgressBar = ({ height = 4, color = "#000" }) => {
           transform: "scaleX(0)",
           transformOrigin: "left",
         }}
-        data-oid="x48htcj"
+        data-oid="aszidjj"
       />
     );
   }
@@ -515,7 +515,7 @@ export const CountUp = ({
         initial={{ opacity: 0.7 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.3, delay: optimizedDelay }}
-        data-oid="xhuetzq"
+        data-oid="n-smm4f"
       >
         {isInView ? formatter(to) : formatter(from)}
       </motion.span>
@@ -523,7 +523,7 @@ export const CountUp = ({
   }
 
   return (
-    <motion.span ref={ref} className={className} data-oid="6knic0l">
+    <motion.span ref={ref} className={className} data-oid="orbzmo4">
       {isInView ? (
         <motion.span
           onAnimationComplete={() => {
@@ -534,7 +534,7 @@ export const CountUp = ({
               opacity: 1,
             },
           }}
-          data-oid="6b7ktjl"
+          data-oid="-ynlwik"
         >
           {/* Show final number directly if animation is complete */}
           <motion.span
@@ -543,7 +543,7 @@ export const CountUp = ({
             }}
             initial={{ opacity: 0 }}
             transition={{ duration: 0.2, delay: optimizedDuration }}
-            data-oid="a9asm0l"
+            data-oid=":qpra0m"
           >
             {formatter(to)}
           </motion.span>
@@ -555,25 +555,25 @@ export const CountUp = ({
               opacity: 0,
             }}
             transition={{ duration: 0.2, delay: optimizedDuration }}
-            data-oid="f:9web6"
+            data-oid="w76n_d8"
           >
             <motion.span
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
               transition={{ duration: 0.1 }}
-              data-oid="0vse-_k"
+              data-oid="s8g-akb"
             >
               {isInView && (
                 <motion.span
                   style={{ opacity: 1 }}
                   animate={{ opacity: 0 }}
                   transition={{ delay: optimizedDuration }}
-                  data-oid="90sv:wp"
+                  data-oid="lwj9c49"
                 >
                   <motion.span
                     animate={{ y: 0 }}
                     initial={{ y: 0 }}
-                    data-oid="ptbm773"
+                    data-oid="j2frq21"
                   >
                     {roundedCount}
                   </motion.span>
