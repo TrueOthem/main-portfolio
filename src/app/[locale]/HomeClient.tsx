@@ -654,11 +654,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
                         {t("skills.technicalSkills.title")}
                       </h3>
                       <p
-                        className="card-text mb-4"
+                        className="card-text mb-4 rounded-none"
                         data-oid="2-.fc.v"
                         key="olk-kjFP"
                       >
-                        {t("skills.technicalSkills.description")}
+                        Python, SQL, LabVIEW, C++, CAD, SolidWorks, Adobe
+                        Programs, Office Suites
                       </p>
                     </div>
                   </TiltCard>
