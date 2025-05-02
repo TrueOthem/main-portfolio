@@ -1,6 +1,6 @@
 [build]
   command = "bun run build"
-  publish = "out"
+  publish = ".next"
 
 [build.environment]
   NEXT_PUBLIC_BASE_URL = "https://same-4h9hy38yrn1-latest.netlify.app"
