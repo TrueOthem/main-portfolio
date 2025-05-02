@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 justify-between items-center">
             <div className="flex items-center">
-
+              
             </div>
 
             {/* Desktop navigation */}
@@ -66,30 +66,6 @@ export default function Navbar() {
                       transition={{ duration: 0.2 }}
                     >
                       Blog
-                    </motion.span>
-                  </Link>
-                </StaggerItem>
-
-                <StaggerItem>
-                  <Link href="/editor" className="nav-link text-sm desktop-nav-link" data-nav-type="desktop">
-                    <motion.span
-                      className={pathname === '/editor' ? 'text-primary' : ''}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      Editor
-                    </motion.span>
-                  </Link>
-                </StaggerItem>
-
-                <StaggerItem>
-                  <Link href="/puck-home" className="nav-link text-sm desktop-nav-link" data-nav-type="desktop">
-                    <motion.span
-                      className={pathname === '/puck-home' ? 'text-primary' : ''}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      Puck Home
                     </motion.span>
                   </Link>
                 </StaggerItem>
@@ -172,30 +148,6 @@ export default function Navbar() {
                           transition={{ duration: 0.2 }}
                         >
                           Blog
-                        </motion.span>
-                      </Link>
-                    </StaggerItem>
-
-                    <StaggerItem direction="down">
-                      <Link href="/editor" className="nav-link text-lg mobile-nav-link" data-nav-type="mobile">
-                        <motion.span
-                          className={pathname === '/editor' ? 'text-primary' : ''}
-                          whileHover={{ x: 5 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          Editor
-                        </motion.span>
-                      </Link>
-                    </StaggerItem>
-
-                    <StaggerItem direction="down">
-                      <Link href="/puck-home" className="nav-link text-lg mobile-nav-link" data-nav-type="mobile">
-                        <motion.span
-                          className={pathname === '/puck-home' ? 'text-primary' : ''}
-                          whileHover={{ x: 5 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          Puck Home
                         </motion.span>
                       </Link>
                     </StaggerItem>

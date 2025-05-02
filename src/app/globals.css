@@ -63,30 +63,10 @@
   h3 {
     font-size: 1.75rem;
   }
-
+  
 }
 
 @layer components {
-  /* Puck Editor Styles */
-  .puck-editor-container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .editor-layout {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .editor-layout main {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
   /* Layout Components */
   .grid-container {
     display: grid;
