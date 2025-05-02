@@ -78,10 +78,9 @@ export const FadeIn = ({
       }}
       className={className}
       style={fullWidth ? { width: "100%" } : {}}
-      data-oid="7.j8jhy"
+      data-oid="u1utymq"
     >
       {children}
-      <Navbar data-oid="cnthyu3" key="olk-w1_5" />
     </motion.div>
   );
 };
@@ -139,7 +138,7 @@ export const StaggerContainer = ({
         },
       }}
       className={className}
-      data-oid="f6l5xfj"
+      data-oid="7gndho5"
     >
       {children}
     </motion.div>
@@ -205,7 +204,7 @@ export const StaggerItem = ({
         },
       }}
       className={className}
-      data-oid="8z:92qh"
+      data-oid="4:zof6k"
     >
       {children}
     </motion.div>
@@ -263,7 +262,7 @@ export const ScaleIn = ({
         ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
-      data-oid=":exd88a"
+      data-oid="q-wrpzm"
     >
       {children}
     </motion.div>
@@ -314,7 +313,7 @@ export const HoverScale = ({
       whileHover={{ scale: hoverScale }}
       transition={{ duration: optimizedDuration }}
       className={className}
-      data-oid="s2xd94h"
+      data-oid="-cf9b.2"
     >
       {children}
     </motion.div>
@@ -361,7 +360,7 @@ export const RevealText = ({
   }, [delay]);
 
   return (
-    <div className={`relative overflow-hidden ${className}`} data-oid="o84zv-8">
+    <div className={`relative overflow-hidden ${className}`} data-oid="c2e7w9_">
       <motion.div
         initial={{ y: yOffset }}
         animate={{ y: 0 }}
@@ -370,7 +369,7 @@ export const RevealText = ({
           delay: animDelay,
           ease: [0.22, 1, 0.36, 1],
         }}
-        data-oid="w9c3yub"
+        data-oid="to7.ex5"
       >
         {children}
       </motion.div>
@@ -421,13 +420,13 @@ export const DrawSVG = ({
       animate={{ opacity: 1 }}
       transition={{ delay: animDelay, duration: 0.01 }}
       className={className}
-      data-oid="jgy-yki"
+      data-oid="0x5.ppo"
     >
       <motion.svg
         initial="hidden"
         animate="visible"
         className="w-full h-full"
-        data-oid="zyc8yhi"
+        data-oid="qqley44"
       >
         {children}
       </motion.svg>
@@ -493,7 +492,7 @@ export const SVGPath = ({
           },
         },
       }}
-      data-oid="ty7s0y_"
+      data-oid="xi86klh"
     />
   );
 };
@@ -544,7 +543,7 @@ export const ScrollReveal = ({
       viewport={{ once: true, threshold: viewportThreshold }}
       transition={{ duration: animDuration, ease: [0.22, 1, 0.36, 1] }}
       className={className}
-      data-oid="yb6n:50"
+      data-oid="3gbo46q"
     >
       {children}
     </motion.div>
