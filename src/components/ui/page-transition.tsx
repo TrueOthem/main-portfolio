@@ -52,14 +52,14 @@ export const PageTransition = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <AnimatePresence mode="wait" data-oid="d95btf7">
+    <AnimatePresence mode="wait" data-oid="inyo._2">
       <motion.div
         key={pathname}
         initial={{ opacity: 0, y: transitionY }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -transitionY }}
         transition={{ duration, ease: "easeInOut" }}
-        data-oid="v8.bkq5"
+        data-oid="xz6xhz7"
       >
         {children}
       </motion.div>
@@ -118,14 +118,14 @@ export const AdvancedPageTransition = ({
   // Use simplified transition for mobile or reduced motion preference
   if (useSimplifiedTransition) {
     return (
-      <AnimatePresence mode="wait" data-oid="avm6lmv">
+      <AnimatePresence mode="wait" data-oid=".vqqoup">
         <motion.div
           key={pathname}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: duration * 0.8 }}
-          data-oid="d:ddpij"
+          data-oid="7.8guty"
         >
           {children}
         </motion.div>
@@ -134,16 +134,17 @@ export const AdvancedPageTransition = ({
   }
 
   return (
-    <div className="overflow-hidden" data-oid="afyor7w">
-      <AnimatePresence mode="wait" data-oid="2ru:lbc">
-        <motion.div key={pathname} className="relative" data-oid="p:23csq">
+    <div className="overflow-hidden" data-oid="qb8e2om">
+      <AnimatePresence mode="wait" data-oid="b64ga--">
+        <motion.div key={pathname} className="relative" data-oid="qloohik">
           {/* Page content */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: duration * 0.6 }}
-            data-oid=".9cdkus"
+            data-oid="h:kp17t"
+            key="olk-2DK7"
           >
             {children}
           </motion.div>
@@ -164,7 +165,8 @@ export const AdvancedPageTransition = ({
               },
             }}
             style={{ transformOrigin: "right" }}
-            data-oid="rr:z2b_"
+            data-oid="m.o1mcp"
+            key="olk-05hR"
           />
 
           {/* Secondary overlay for a layered effect */}
@@ -188,7 +190,8 @@ export const AdvancedPageTransition = ({
               },
             }}
             style={{ transformOrigin: "right" }}
-            data-oid="gmiob4t"
+            data-oid="h0:mi6v"
+            key="olk-3998"
           />
         </motion.div>
       </AnimatePresence>
@@ -232,14 +235,14 @@ export const ModalPageTransition = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <AnimatePresence mode="wait" data-oid="6qtcohr">
+    <AnimatePresence mode="wait" data-oid="deabqm_">
       <motion.div
         key={pathname}
         initial={{ opacity: 0, scale: scale.initial }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: scale.exit }}
         transition={{ duration, ease: "easeInOut" }}
-        data-oid="7ioyrtb"
+        data-oid="-wnfq85"
       >
         {children}
       </motion.div>

@@ -79,137 +79,41 @@ export default function WorksPage() {
   return (
     <>
       {/* Hero Section */}
-      <section
-        className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="u.880qy"
-      >
-        <div
-          className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="rc6x-1r"
-        >
-          <div className="flex items-center mb-6" data-oid="3spm6t4">
-            <span className="mr-2 text-sm" data-oid="-k0zgp5">
-              +
-            </span>
-            <h3 className="text-sm" data-oid="utuyett">
-              Professional Work
-            </h3>
-          </div>
-        </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="tfbzkd4">
-          <h1
-            className="text-3xl md:text-5xl font-medium mb-6"
-            data-oid="t6ybnzw"
-          >
-            My Creative Works
-          </h1>
-          <p className="text-muted-foreground mb-8" data-oid="rro_57d">
-            A selection of my professional work and projects across different
-            industries, focusing on process development, manufacturing
-            optimization, and engineering design.
-          </p>
-
-          {/* Project Categories Navigation - Client side filtering will be added in a future version */}
-          <div className="flex flex-wrap gap-2 mb-8" data-oid="csv._ux">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                className={`px-4 py-2 text-sm rounded-full border border-[#d1d1c7] ${
-                  category.id === "all"
-                    ? "bg-[#0f0f0f] text-white"
-                    : "hover:bg-[#f4f4f0]"
-                }`}
-                data-oid="rdxz6g8"
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Projects Grid */}
-      <section
-        className="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-[#d1d1c7] works-grid"
-        data-testid="works-grid"
-        data-oid="xp9cbnl"
-      >
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="work-item border-r border-b border-[#d1d1c7] p-6 flex flex-col"
-            data-testid="work-item"
-            data-oid="r7nz68o"
-          >
-            <div
-              className={`${project.image} w-full aspect-video flex items-center justify-center mb-6`}
-              data-oid="8zo1u77"
-            >
-              <span className="text-lg font-medium" data-oid="26ms-w:">
-                {project.title.substring(0, 2)}
-              </span>
-            </div>
-            <h3 className="text-xl font-medium mb-2" data-oid="4l6b-uh">
-              {project.title}
-            </h3>
-            <div
-              className="flex justify-between mb-4 text-sm text-muted-foreground"
-              data-oid="rlqm_qf"
-            >
-              <span data-oid="x:c2vqd">{project.company}</span>
-              <span data-oid="bl6ex8t">{project.year}</span>
-            </div>
-            <p
-              className="text-sm text-muted-foreground mb-6 flex-grow"
-              data-oid="5m30h7d"
-            >
-              {project.description}
-            </p>
-            <div data-oid="7d:l8a9">
-              <Button
-                variant="outline"
-                className="text-sm w-full"
-                data-oid="rpl1arc"
-              >
-                View Details
-              </Button>
-            </div>
-          </div>
-        ))}
-      </section>
 
       {/* Resume Download Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="ax8l1ud"
+        data-oid="48yjqa0"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="895mmq4"
+          data-oid="5v8ryp."
         >
-          <div className="flex items-center mb-6" data-oid="8tg_git">
-            <span className="mr-2 text-sm" data-oid="-6t4utv">
+          <div className="flex items-center mb-6" data-oid="989:pv-">
+            <span className="mr-2 text-sm" data-oid="11ludjt">
               +
             </span>
-            <h3 className="text-sm" data-oid="k_4fie8">
+            <h3 className="text-sm" data-oid="qq12tdf">
               Resume
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="y7zhnz:">
-          <h2 className="text-3xl md:text-4xl mb-6" data-oid="8:izy:d">
+        <div className="col-span-2 p-8 md:p-12" data-oid="a2khtp7">
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid=":6h1_f8">
             My Resume
           </h2>
-          <p className="text-muted-foreground mb-8" data-oid="ka12n_b">
+          <p className="text-muted-foreground mb-8" data-oid="5fugsjc">
             Download my full resume to learn more about my professional
             experience, skills, and educational background.
           </p>
           <a
             href="/uploads/Mohamed-adil-resume-PSE.pdf"
             download
-            data-oid=":duxb9v"
+            data-oid="insf_8i"
           >
-            <Button className="main-button rounded-full" data-oid="r0_9tln">
+            <Button className="main-button rounded-full" data-oid="16b-nky">
               Download Resume (PDF)
             </Button>
           </a>
@@ -219,36 +123,36 @@ export default function WorksPage() {
       {/* Skills Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="k1-yzda"
+        data-oid="skbiz08"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="unzr-qq"
+          data-oid="_-svmuc"
         >
-          <div className="flex items-center mb-6" data-oid="l8ujkhp">
-            <span className="mr-2 text-sm" data-oid="zykpe7q">
+          <div className="flex items-center mb-6" data-oid="7n0iiw-">
+            <span className="mr-2 text-sm" data-oid="pnjx1e8">
               +
             </span>
-            <h3 className="text-sm" data-oid="f6hs168">
+            <h3 className="text-sm" data-oid="5kc1_ph">
               Skills
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="b3fg7eq">
-          <h2 className="text-3xl md:text-4xl mb-6" data-oid="jbcn72o">
+        <div className="col-span-2 p-8 md:p-12" data-oid="8ka.vwx">
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="dxx1z-_">
             Technical Expertise
           </h2>
-          <p className="text-muted-foreground mb-8" data-oid="x0casdj">
+          <p className="text-muted-foreground mb-8" data-oid="46yuu56">
             My core technical skills and competencies that I bring to every
             project.
           </p>
 
-          <div className="grid grid-cols-1 gap-8" data-oid="zhopusz">
-            <div data-oid="ruf7fj8">
-              <h3 className="text-xl font-medium mb-4" data-oid="tn3z7gl">
+          <div className="grid grid-cols-1 gap-8" data-oid="yp19-3o">
+            <div data-oid="odpgf54">
+              <h3 className="text-xl font-medium mb-4" data-oid="-.p4p-s">
                 Engineering
               </h3>
-              <div className="flex flex-wrap gap-2" data-oid=":bdanxl">
+              <div className="flex flex-wrap gap-2" data-oid="-r16d1k">
                 {[
                   "CAD & SolidWorks",
                   "Operations Research",
@@ -259,7 +163,7 @@ export default function WorksPage() {
                   <span
                     key={skill}
                     className="inline-block px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="oskip32"
+                    data-oid="7gvub4x"
                   >
                     {skill}
                   </span>
@@ -267,11 +171,11 @@ export default function WorksPage() {
               </div>
             </div>
 
-            <div data-oid="5zjlksu">
-              <h3 className="text-xl font-medium mb-4" data-oid="258m5au">
+            <div data-oid="yaz86f-">
+              <h3 className="text-xl font-medium mb-4" data-oid="hzmm._r">
                 Data & Programming
               </h3>
-              <div className="flex flex-wrap gap-2" data-oid="7glux:h">
+              <div className="flex flex-wrap gap-2" data-oid="rfxur8i">
                 {[
                   "SQL & Database Design",
                   "Python Development",
@@ -282,7 +186,7 @@ export default function WorksPage() {
                   <span
                     key={skill}
                     className="inline-block px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="m:h13.v"
+                    data-oid="w6x6x7f"
                   >
                     {skill}
                   </span>
@@ -290,11 +194,11 @@ export default function WorksPage() {
               </div>
             </div>
 
-            <div data-oid="t5q8ldw">
-              <h3 className="text-xl font-medium mb-4" data-oid="0d1eyzk">
+            <div data-oid="3::0vft">
+              <h3 className="text-xl font-medium mb-4" data-oid="f42e0n:">
                 Management
               </h3>
-              <div className="flex flex-wrap gap-2" data-oid="9hvecdg">
+              <div className="flex flex-wrap gap-2" data-oid="i5di94l">
                 {[
                   "Project Management",
                   "SCRUM & Agile Methodologies",
@@ -305,7 +209,7 @@ export default function WorksPage() {
                   <span
                     key={skill}
                     className="inline-block px-4 py-2 bg-[#f4f4f0] rounded-full text-sm"
-                    data-oid="w75noyc"
+                    data-oid="a83o3vv"
                   >
                     {skill}
                   </span>

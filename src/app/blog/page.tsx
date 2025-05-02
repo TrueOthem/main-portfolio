@@ -77,36 +77,36 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="1zp34lx"
+        data-oid="povknss"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="4reqpbm"
+          data-oid="asn6pmd"
         >
-          <div className="flex items-center mb-6" data-oid="-bz:gbo">
-            <span className="mr-2 text-sm" data-oid="854aaxf">
+          <div className="flex items-center mb-6" data-oid="73aj3h3">
+            <span className="mr-2 text-sm" data-oid="dn8vl4q">
               +
             </span>
-            <h3 className="text-sm" data-oid="ri6fde4">
+            <h3 className="text-sm" data-oid="46zo6yq">
               Technical Articles
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="on0dy7b">
+        <div className="col-span-2 p-8 md:p-12" data-oid="a4u-rho">
           <h1
             className="text-3xl md:text-5xl font-medium mb-6"
-            data-oid="8c0oo0:"
+            data-oid="vt3-1ja"
           >
             Explore Design
           </h1>
-          <p className="text-muted-foreground mb-8" data-oid="1v4a:ix">
+          <p className="text-muted-foreground mb-8" data-oid="41z93cp">
             Articles about engineering challenges, process development, and
             technical insights from my experience in manufacturing and renewable
             energy production.
           </p>
 
           {/* Blog Categories Navigation - Client side filtering will be added in a future version */}
-          <div className="flex flex-wrap gap-2 mb-8" data-oid="zteqm62">
+          <div className="flex flex-wrap gap-2 mb-8" data-oid="0udnq-8">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -115,7 +115,7 @@ export default function BlogPage() {
                     ? "bg-[#0f0f0f] text-white"
                     : "hover:bg-[#f4f4f0]"
                 }`}
-                data-oid="3jqxspj"
+                data-oid="vq:81fn"
               >
                 {category.label}
               </button>
@@ -127,30 +127,30 @@ export default function BlogPage() {
       {/* Blog Posts Grid */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-2 border-b border-[#d1d1c7]"
-        data-oid="-0p--5e"
+        data-oid="6jjsftm"
       >
         {blogPosts.map((post) => (
           <article
             key={post.id}
             className="border-b border-r border-[#d1d1c7] p-8"
-            data-oid="hvqass7"
+            data-oid="5zr.v14"
           >
-            <span className="text-sm text-muted-foreground" data-oid="_k2ch5f">
+            <span className="text-sm text-muted-foreground" data-oid="e5v4:f6">
               {post.date} · {post.readTime}
             </span>
             <h2
               className="text-xl md:text-2xl font-medium mt-2 mb-4"
-              data-oid="lzdj2vz"
+              data-oid="krx1s.f"
             >
               {post.title}
             </h2>
-            <p className="text-muted-foreground mb-6" data-oid=":1imeko">
+            <p className="text-muted-foreground mb-6" data-oid="aa0er0r">
               {post.summary}
             </p>
             <Button
               variant="outline"
               className="rounded-full text-sm"
-              data-oid="ap2uz9b"
+              data-oid="dm5ewqs"
             >
               Read More
             </Button>
@@ -161,26 +161,26 @@ export default function BlogPage() {
       {/* Newsletter Section */}
       <section
         className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
-        data-oid="-7iyg:j"
+        data-oid="03mwc-y"
       >
         <div
           className="col-span-1 p-8 border-r border-[#d1d1c7]"
-          data-oid="u6ok7hl"
+          data-oid=":ya8jpc"
         >
-          <div className="flex items-center mb-6" data-oid="ohv-r27">
-            <span className="mr-2 text-sm" data-oid="ybkz5h:">
+          <div className="flex items-center mb-6" data-oid="due5imi">
+            <span className="mr-2 text-sm" data-oid="1m5vy-3">
               +
             </span>
-            <h3 className="text-sm" data-oid="0lbt5g_">
+            <h3 className="text-sm" data-oid="j378j:6">
               Stay Updated
             </h3>
           </div>
         </div>
-        <div className="col-span-2 p-8 md:p-12" data-oid="zewa7_p">
-          <h2 className="text-3xl md:text-4xl mb-6" data-oid="..-a7do">
+        <div className="col-span-2 p-8 md:p-12" data-oid="xlwqb.h">
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="k_sa2rv">
             Subscribe to My Newsletter
           </h2>
-          <p className="text-muted-foreground mb-8" data-oid="lp:k94_">
+          <p className="text-muted-foreground mb-8" data-oid="l8t3g-7">
             Receive updates on the latest engineering advancements, process
             development techniques, and technical insights directly to your
             inbox.
@@ -188,16 +188,16 @@ export default function BlogPage() {
 
           <form
             className="flex flex-col md:flex-row gap-4 max-w-2xl"
-            data-oid="q9c-5.r"
+            data-oid="hmlohar"
           >
             <input
               type="email"
               placeholder="Your Email Address"
               className="flex-grow border border-[#d1d1c7] bg-transparent px-4 py-3 rounded-full focus:outline-none focus:border-black"
-              data-oid="yrqpy-e"
+              data-oid="89pggw0"
             />
 
-            <Button className="main-button rounded-full" data-oid="qkyui53">
+            <Button className="main-button rounded-full" data-oid="hs_4.ri">
               Subscribe
             </Button>
           </form>

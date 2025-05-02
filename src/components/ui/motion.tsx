@@ -78,7 +78,7 @@ export const FadeIn = ({
       }}
       className={className}
       style={fullWidth ? { width: "100%" } : {}}
-      data-oid="u1utymq"
+      data-oid="589pp_4"
     >
       {children}
     </motion.div>
@@ -138,7 +138,7 @@ export const StaggerContainer = ({
         },
       }}
       className={className}
-      data-oid="7gndho5"
+      data-oid="rr0k.yr"
     >
       {children}
     </motion.div>
@@ -204,7 +204,7 @@ export const StaggerItem = ({
         },
       }}
       className={className}
-      data-oid="4:zof6k"
+      data-oid="2_0wzuo"
     >
       {children}
     </motion.div>
@@ -262,7 +262,7 @@ export const ScaleIn = ({
         ease: [0.22, 1, 0.36, 1],
       }}
       className={className}
-      data-oid="q-wrpzm"
+      data-oid="x.f94ig"
     >
       {children}
     </motion.div>
@@ -313,7 +313,7 @@ export const HoverScale = ({
       whileHover={{ scale: hoverScale }}
       transition={{ duration: optimizedDuration }}
       className={className}
-      data-oid="-cf9b.2"
+      data-oid="tqbgpkt"
     >
       {children}
     </motion.div>
@@ -360,7 +360,7 @@ export const RevealText = ({
   }, [delay]);
 
   return (
-    <div className={`relative overflow-hidden ${className}`} data-oid="c2e7w9_">
+    <div className={`relative overflow-hidden ${className}`} data-oid="a.7amd4">
       <motion.div
         initial={{ y: yOffset }}
         animate={{ y: 0 }}
@@ -369,7 +369,7 @@ export const RevealText = ({
           delay: animDelay,
           ease: [0.22, 1, 0.36, 1],
         }}
-        data-oid="to7.ex5"
+        data-oid="6w2_k4u"
       >
         {children}
       </motion.div>
@@ -420,13 +420,13 @@ export const DrawSVG = ({
       animate={{ opacity: 1 }}
       transition={{ delay: animDelay, duration: 0.01 }}
       className={className}
-      data-oid="0x5.ppo"
+      data-oid="hrv:mke"
     >
       <motion.svg
         initial="hidden"
         animate="visible"
         className="w-full h-full"
-        data-oid="qqley44"
+        data-oid="u31r03w"
       >
         {children}
       </motion.svg>
@@ -492,7 +492,7 @@ export const SVGPath = ({
           },
         },
       }}
-      data-oid="xi86klh"
+      data-oid="m01qjb."
     />
   );
 };
@@ -543,9 +543,46 @@ export const ScrollReveal = ({
       viewport={{ once: true, threshold: viewportThreshold }}
       transition={{ duration: animDuration, ease: [0.22, 1, 0.36, 1] }}
       className={className}
-      data-oid="3gbo46q"
+      data-oid="avu6:.4"
     >
       {children}
+      <section
+        className="col-span-3 grid grid-cols-1 md:grid-cols-3 border-b border-[#d1d1c7]"
+        data-oid="48yjqa0"
+        key="olk-UMRY"
+      >
+        <div
+          className="col-span-1 p-8 border-r border-[#d1d1c7]"
+          data-oid="0m2w36u"
+        >
+          <div className="flex items-center mb-6" data-oid="32i1guy">
+            <span className="mr-2 text-sm" data-oid="07ptc93">
+              +
+            </span>
+            <h3 className="text-sm" data-oid="p7ggyle">
+              Resume
+            </h3>
+          </div>
+        </div>
+        <div className="col-span-2 p-8 md:p-12" data-oid="kolpe1b">
+          <h2 className="text-3xl md:text-4xl mb-6" data-oid="-2c2i8p">
+            My Resume
+          </h2>
+          <p className="text-muted-foreground mb-8" data-oid="7s10bqm">
+            Download my full resume to learn more about my professional
+            experience, skills, and educational background.
+          </p>
+          <a
+            href="/uploads/Mohamed-adil-resume-PSE.pdf"
+            download
+            data-oid="d5ho58i"
+          >
+            <Button className="main-button rounded-full" data-oid="b5zqe.3">
+              Download Resume (PDF)
+            </Button>
+          </a>
+        </div>
+      </section>
     </motion.div>
   );
 };
