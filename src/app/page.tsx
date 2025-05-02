@@ -54,42 +54,47 @@ const skillIcons = [
 
 export default function Home() {
   return (
-    <ClientBody data-oid="g:wz2n8">
+    <ClientBody data-oid="arft460">
       {/* Hero Section with Parallax */}
       <section
         id="hero-section"
         className="section-container hero-section relative w-full"
         data-testid="hero-section"
-        data-oid="5g.ldv6"
+        data-oid="-jvymp4"
       >
         <div
           className="col-span-1 md:border-r border-[#d1d1c7] flex items-center justify-center p-0 md:p-0 lg:p-0 relative overflow-visible"
-          data-oid="9yvw-qc"
+          data-oid="xg_ogr_"
         >
-          <div className="profile-image-container" data-oid="rcw6qku">
+          <div className="profile-image-container" data-oid="hk9k80d">
             <Image
               src="/uploads/profile-photo.jpg"
               alt="Mohamed Adil Al Sabri"
               width={500}
               height={500}
-              className="profile-image rounded-[470px]"
+              className="profile-image"
               priority
-              data-oid="6w:j--9"
+              data-oid="wuggaxx"
             />
           </div>
         </div>
         <div
           className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full"
-          data-oid="b.m6w9u"
+          data-oid="5rn0pza"
         >
-          <ParallaxScroll speed={0.1} direction="up" data-oid="odm_g9g">
-            <RevealText data-oid="d5p.9b-">
+          <ParallaxScroll
+            speed={0.1}
+            direction="up"
+            data-oid="95vftx2"
+            key="olk-BYEc"
+          >
+            <RevealText data-oid="fgrzoda">
               <h1
-                className="text-5xl md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12"
-                data-oid="1f_ifd0"
+                className="text-5xl md:text-6xl lg:text-7xl font-medium p-10 md:p-10 lg:p-10"
+                data-oid="w3nu9sp"
               >
                 Mohamed Adil
-                <br data-oid="-sbo96c" />
+                <br data-oid="mn9zmjv" />
                 Al Sabri
               </h1>
             </RevealText>
@@ -99,12 +104,13 @@ export default function Home() {
 
           <div
             className="absolute top-10 right-20 w-10 h-10 opacity-10"
-            data-oid="7h0dvz."
+            data-oid="c3_xx27"
+            key="olk-851t"
           >
-            <ParallaxScroll speed={0.4} direction="right" data-oid="_5rhvzk">
+            <ParallaxScroll speed={0.4} direction="right" data-oid="39dgs4f">
               <div
                 className="w-full h-full bg-primary rounded-full"
-                data-oid="0l88vpg"
+                data-oid="g.loo.6"
               ></div>
             </ParallaxScroll>
           </div>
@@ -112,78 +118,78 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <ScrollReveal data-oid="2:vgilp">
-        <section className="section-container" data-oid="lgsw:zj">
-          <div className="section-sidebar" data-oid="ed_e-a-">
-            <div className="section-header" data-oid="1r_9qhd">
-              <span className="mr-2 text-sm" data-oid="js3g4m6">
+      <ScrollReveal data-oid="a.77din">
+        <section className="section-container" data-oid="yjki2_e">
+          <div className="section-sidebar" data-oid="amf1c-2">
+            <div className="section-header" data-oid="q6:6:bk">
+              <span className="mr-2 text-sm" data-oid="cpq.1k:">
                 +
               </span>
-              <h3 className="text-sm" data-oid="ioz1bx3">
+              <h3 className="text-sm" data-oid="phraors">
                 About
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="5rphr.p">
-            <FadeIn direction="up" data-oid="5uq331u">
-              <h2 className="section-title" data-oid="m6ze:v-">
+          <div className="section-content" data-oid="_6d2sz:">
+            <FadeIn direction="up" data-oid="wpkxma2">
+              <h2 className="section-title" data-oid="5s6.820">
                 Process Development Engineer
               </h2>
-              <p className="section-description" data-oid="o-jjd15">
+              <p className="section-description" data-oid="p.m93xu">
                 Process Development Engineer specializing in green hydrogen
                 production. I enhance process capability by developing scalable
                 manufacturing processes, integrating cutting-edge technology,
                 and applying data analysis to optimize production efficiency.
               </p>
-              <div className="stats-container" data-oid="ydixld:">
+              <div className="stats-container" data-oid="p7pcawy">
                 <StaggerContainer
                   staggerChildren={0.1}
                   className="stats-container"
-                  data-oid="kja-kfy"
+                  data-oid="33x24-3"
                 >
-                  <StaggerItem data-oid="f51x6ch">
+                  <StaggerItem data-oid="p9s9s7q">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="0dv8.vb"
+                      data-oid="7j_wjni"
                     >
-                      <div className="stat-item" data-oid="rs_.-s_">
-                        <h3 className="stat-value" data-oid="t:mrnc5">
+                      <div className="stat-item" data-oid="4fle7pa">
+                        <h3 className="stat-value" data-oid="x7j59jn">
                           5+
                         </h3>
-                        <p className="stat-label" data-oid="pfjd_to">
+                        <p className="stat-label" data-oid="v:c817e">
                           Years of Experience
                         </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem data-oid="r8.30z2">
+                  <StaggerItem data-oid="pk-jvx6">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="x8iusg5"
+                      data-oid="bj-b16h"
                     >
-                      <div className="stat-item" data-oid="yfj8dqn">
-                        <h3 className="stat-value" data-oid="5x4az31">
+                      <div className="stat-item" data-oid="foq2kp_">
+                        <h3 className="stat-value" data-oid="0qr.4-b">
                           20+
                         </h3>
-                        <p className="stat-label" data-oid="h068es_">
+                        <p className="stat-label" data-oid="r07uca:">
                           Projects Completed
                         </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem data-oid="xd7m-38">
+                  <StaggerItem data-oid="3p6ahyz">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="rgxvz:v"
+                      data-oid="szy6wyt"
                     >
-                      <div className="stat-item" data-oid="nhiugb8">
-                        <h3 className="stat-value" data-oid="ish_bl6">
+                      <div className="stat-item" data-oid="s.e0n-9">
+                        <h3 className="stat-value" data-oid="zywqiz2">
                           4+
                         </h3>
-                        <p className="stat-label" data-oid="zjsmvjn">
+                        <p className="stat-label" data-oid="i7grkzl">
                           Companies Worked With
                         </p>
                       </div>
@@ -197,29 +203,29 @@ export default function Home() {
       </ScrollReveal>
 
       {/* Company Logos Section */}
-      <ScrollReveal data-oid="7.13de4">
+      <ScrollReveal data-oid="pai0kln">
         <section
           className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8 border-b border-[#d1d1c7] overflow-hidden"
-          data-oid=".2itvqk"
+          data-oid="vy__d5f"
         >
           <StaggerContainer
             staggerChildren={0.1}
             className="logo-grid"
-            data-oid="z59pw8:"
+            data-oid="uze61u1"
           >
             {logoData.map((logo) => (
-              <StaggerItem key={logo.id} data-oid="tjexaew">
-                <div className="logo-container" data-oid="xd_t6u7">
+              <StaggerItem key={logo.id} data-oid="szr06g.">
+                <div className="logo-container" data-oid="bp8ta87">
                   <MagneticElement
                     distanceThreshold={100}
                     magnetStrength={0.2}
-                    data-oid="ljpdaaf"
+                    data-oid="oybf8d7"
                   >
-                    <div className="logo-item" data-oid="o2ud2gc">
+                    <div className="logo-item" data-oid="fia48kz">
                       {logo.imgSrc ? (
                         <div
                           className="logo-image-container"
-                          data-oid="i5c7k:w"
+                          data-oid="v2zmwv-"
                         >
                           <Image
                             src={logo.imgSrc}
@@ -228,11 +234,11 @@ export default function Home() {
                             width={200}
                             height={100}
                             className="logo-image"
-                            data-oid="l9pp9c5"
+                            data-oid="fs9b1s6"
                           />
                         </div>
                       ) : (
-                        <div className="logo-placeholder" data-oid="k2.9vt7">
+                        <div className="logo-placeholder" data-oid="vrxl_kz">
                           {logo.company}
                         </div>
                       )}
@@ -246,24 +252,24 @@ export default function Home() {
       </ScrollReveal>
 
       {/* Expertise Section */}
-      <ScrollReveal data-oid="_pfb3qv">
-        <section className="section-container" data-oid="3lftybq">
-          <div className="section-sidebar" data-oid="ibxdpqi">
-            <div className="section-header" data-oid="jgtpfrk">
-              <span className="mr-2 text-sm" data-oid="2u-fp5g">
+      <ScrollReveal data-oid="r9i5-id">
+        <section className="section-container" data-oid=".betuy.">
+          <div className="section-sidebar" data-oid="vgtfgmz">
+            <div className="section-header" data-oid="hnw95_t">
+              <span className="mr-2 text-sm" data-oid="maf1mmd">
                 +
               </span>
-              <h3 className="text-sm" data-oid="l:y-a-a">
+              <h3 className="text-sm" data-oid="b6623vu">
                 Skills
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="k1ug.7b">
-            <FadeIn direction="up" data-oid="28tlj31">
-              <h2 className="section-subtitle" data-oid="oj4fa1p">
+          <div className="section-content" data-oid="-oyzyro">
+            <FadeIn direction="up" data-oid="-n1g91w">
+              <h2 className="section-subtitle" data-oid="rq239ay">
                 My Technical Expertise
               </h2>
-              <p className="section-description mb-12" data-oid="v9b4ujy">
+              <p className="section-description mb-12" data-oid="t0vh-wc">
                 With a background in Mechanical Engineering and years of
                 experience in process development, I bring a diverse skill set
                 that combines engineering principles with data-driven approaches
@@ -273,19 +279,19 @@ export default function Home() {
               <StaggerContainer
                 staggerChildren={0.1}
                 className="skills-grid"
-                data-oid="0bomw9b"
+                data-oid="4elrtd5"
               >
-                <StaggerItem data-oid="g27m.xo">
+                <StaggerItem data-oid="o4ll.yz">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="hg6b8j_"
+                    data-oid="dllp.cl"
                   >
-                    <div className="content-card" data-oid="-zkm422">
-                      <h3 className="card-title" data-oid="qptpqeu">
+                    <div className="content-card" data-oid="6bv4.7_">
+                      <h3 className="card-title" data-oid="u4ndzff">
                         Process Development
                       </h3>
-                      <p className="card-text" data-oid="f0t-l.i">
+                      <p className="card-text" data-oid="tp86l3d">
                         Developing scalable manufacturing processes for green
                         hydrogen production using statistical tools like DOE and
                         SPC.
@@ -293,17 +299,17 @@ export default function Home() {
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="l_:uax1">
+                <StaggerItem data-oid="q6_gi3:">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="srj.ppd"
+                    data-oid="9sg_2ga"
                   >
-                    <div className="content-card" data-oid="fqm.jk:">
-                      <h3 className="card-title" data-oid="d9nhbdn">
+                    <div className="content-card" data-oid="_ru72i7">
+                      <h3 className="card-title" data-oid="ohc-8jn">
                         Data Analysis
                       </h3>
-                      <p className="card-text" data-oid="x23865b">
+                      <p className="card-text" data-oid="3vlel_d">
                         Applying large-data analysis in SaaS environments to
                         optimize process efficiency and support continuous
                         improvement initiatives.
@@ -311,17 +317,17 @@ export default function Home() {
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="zs.:-7-">
+                <StaggerItem data-oid="350tmh8">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="hlfpn4v"
+                    data-oid=".cu54ru"
                   >
-                    <div className="content-card" data-oid="5kgbre.">
-                      <h3 className="card-title" data-oid="uw-0zwc">
+                    <div className="content-card" data-oid="qjcrk:k">
+                      <h3 className="card-title" data-oid="ah4cdc:">
                         Manufacturing Systems
                       </h3>
-                      <p className="card-text" data-oid="94ps3rv">
+                      <p className="card-text" data-oid="brl8yl6">
                         Building robust data architectures for real-time data
                         storage and visualization to enhance project management
                         capabilities.
@@ -329,17 +335,17 @@ export default function Home() {
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="lgzehpx">
+                <StaggerItem data-oid="1hxhd7q">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="a.y.we-"
+                    data-oid="x0v:pqo"
                   >
-                    <div className="content-card" data-oid="x229d9u">
-                      <h3 className="card-title" data-oid="22w3eb0">
+                    <div className="content-card" data-oid="37f_i_s">
+                      <h3 className="card-title" data-oid="ydl23zc">
                         CAD & Engineering Design
                       </h3>
-                      <p className="card-text" data-oid="i2t1xtt">
+                      <p className="card-text" data-oid="unarzpj">
                         Generating structured CAD designs and quality-focused
                         drawings using PDM systems for improved design accuracy
                         and efficiency.
@@ -347,45 +353,45 @@ export default function Home() {
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem className="md:col-span-2" data-oid="cv4ef.1">
+                <StaggerItem className="md:col-span-2" data-oid="vaeab-u">
                   <TiltCard
                     glareEffect={true}
                     tiltFactor={5}
                     className="h-full"
-                    data-oid="vn3ddr9"
+                    data-oid="vsokrw8"
                   >
-                    <div className="content-card" data-oid="j52j2ji">
-                      <h3 className="card-title" data-oid="yjgt2_3">
+                    <div className="content-card" data-oid="_.f3jwt">
+                      <h3 className="card-title" data-oid=".-y3i-2">
                         Technical Skills
                       </h3>
-                      <p className="card-text mb-4" data-oid="qqctocw">
+                      <p className="card-text mb-4" data-oid="uhejo4w">
                         Proficient in CAD, SolidWorks, Python, SQL, Data
                         Analysis, Machine Learning, Product Design, and Project
                         Management.
                       </p>
                       <div
                         className="flex items-center space-x-4 mt-2"
-                        data-oid="d9rzh.c"
+                        data-oid="onclvay"
                       >
                         <StaggerContainer
                           staggerChildren={0.2}
                           className="flex items-center space-x-4"
-                          data-oid="fkzbvp-"
+                          data-oid="3r_x8vg"
                         >
                           {skillIcons.map((skillIcon, index) => (
-                            <StaggerItem key={index} data-oid="-aj2aji">
+                            <StaggerItem key={index} data-oid="r4_.k7h">
                               <div
                                 className="skill-icon-container"
-                                data-oid=":281rug"
+                                data-oid="m2omshy"
                               >
                                 <MagneticElement
                                   distanceThreshold={80}
                                   magnetStrength={0.4}
-                                  data-oid="ncxc-3b"
+                                  data-oid="wp_3omr"
                                 >
                                   <div
                                     className="skill-icon-wrapper"
-                                    data-oid="y03q2:3"
+                                    data-oid="xjhh-fy"
                                   >
                                     <Image
                                       src={skillIcon.icon}
@@ -393,11 +399,11 @@ export default function Home() {
                                       width={50}
                                       height={50}
                                       className="skill-icon"
-                                      data-oid="tvf03_5"
+                                      data-oid="i7p0l96"
                                     />
                                   </div>
                                 </MagneticElement>
-                                <span className="skill-name" data-oid="q7.c1po">
+                                <span className="skill-name" data-oid="e-l49mw">
                                   {skillIcon.skill}
                                 </span>
                               </div>
@@ -415,74 +421,74 @@ export default function Home() {
       </ScrollReveal>
 
       {/* Experience Section */}
-      <ScrollReveal data-oid="uhvggog">
-        <section className="section-container" data-oid="m4.gx:7">
-          <div className="section-sidebar" data-oid="dzklj88">
-            <div className="section-header" data-oid="kbzg4r0">
-              <span className="mr-2 text-sm" data-oid="x37eum2">
+      <ScrollReveal data-oid="t7ylotw">
+        <section className="section-container" data-oid=".y0xau3">
+          <div className="section-sidebar" data-oid="_4kjvfr">
+            <div className="section-header" data-oid="b7::r0m">
+              <span className="mr-2 text-sm" data-oid="e3qp.hx">
                 +
               </span>
-              <h3 className="text-sm" data-oid="jxuq1j.">
+              <h3 className="text-sm" data-oid="vp39dnz">
                 Experience
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="q3.fgna">
-            <FadeIn direction="up" data-oid="dlzp8y3">
-              <h2 className="section-subtitle" data-oid="nj5cc9k">
+          <div className="section-content" data-oid="ppfd-yn">
+            <FadeIn direction="up" data-oid="yg47nfu">
+              <h2 className="section-subtitle" data-oid="i:h2u27">
                 Professional Experience
               </h2>
 
               <StaggerContainer
                 staggerChildren={0.15}
                 className="experience-list"
-                data-oid="lq0ov44"
+                data-oid="ig3vp2w"
               >
-                <StaggerItem data-oid="17qw5yj">
+                <StaggerItem data-oid=".zy1thy">
                   <TiltCard
                     tiltFactor={3}
                     glareEffect={true}
-                    data-oid="6vg65un"
+                    data-oid="_hvcuve"
                   >
-                    <div className="experience-card" data-oid="9y0vxbd">
-                      <div className="experience-header" data-oid="7748sx-">
-                        <div data-oid="zbj.sa:">
-                          <h3 className="experience-title" data-oid="_5r4fnv">
+                    <div className="experience-card" data-oid="su.gtgv">
+                      <div className="experience-header" data-oid="m7ndry4">
+                        <div data-oid="u-p-uij">
+                          <h3 className="experience-title" data-oid="h0-g:tr">
                             Process Development Engineer
                           </h3>
-                          <p className="experience-company" data-oid="usuxb.z">
+                          <p className="experience-company" data-oid="10w8len">
                             Electric Hydrogen - Boston, MA
                           </p>
-                          <p className="experience-date" data-oid="i0nmofx">
+                          <p className="experience-date" data-oid="sblf.8e">
                             January 2023 - Present
                           </p>
                         </div>
-                        <div className="experience-logo" data-oid="dmmdiav">
+                        <div className="experience-logo" data-oid=":lo8nf3">
                           <Image
                             src="/uploads/ehydrogen-logo2.png"
                             alt="Electric Hydrogen"
                             width={120}
                             height={50}
                             className="object-contain"
-                            data-oid="7jt1s60"
+                            data-oid="kzan2c8"
                           />
                         </div>
                       </div>
-                      <ul className="experience-details" data-oid="kqxrl.3">
-                        <li data-oid="b:0.zwh">
+                      <ul className="experience-details" data-oid="-:4gn.r">
+                        <li data-oid="mg_3lvj">
                           Enhanced process capability by 20% for green hydrogen
                           production by developing scalable manufacturing
                           processes.
                         </li>
-                        <li data-oid="6is_022">
+                        <li data-oid="658rxpv">
                           Integrated cutting-edge technology into production
                           processes by working with suppliers and vendors.
                         </li>
-                        <li data-oid="xfm2f69">
+                        <li data-oid="f_chzvn">
                           Improved decision-making and stakeholder communication
                           by providing actionable recommendations.
                         </li>
-                        <li data-oid="li035wv">
+                        <li data-oid="57iiwpj">
                           Developed robust data architectures for real-time data
                           storage and visualization.
                         </li>
@@ -491,50 +497,50 @@ export default function Home() {
                   </TiltCard>
                 </StaggerItem>
 
-                <StaggerItem data-oid="hlbuwi-">
+                <StaggerItem data-oid="mo:j7cm">
                   <TiltCard
                     tiltFactor={3}
                     glareEffect={true}
-                    data-oid="wx8o31v"
+                    data-oid="qdpkfjg"
                   >
-                    <div className="experience-card" data-oid="ayew7nv">
-                      <div className="experience-header" data-oid="4y3cu2r">
-                        <div data-oid="185uvhn">
-                          <h3 className="experience-title" data-oid="-nto63j">
+                    <div className="experience-card" data-oid=":4tv178">
+                      <div className="experience-header" data-oid="mp4.si3">
+                        <div data-oid="m1esfuw">
+                          <h3 className="experience-title" data-oid="rjd5gnf">
                             Manufacturing Engineer
                           </h3>
-                          <p className="experience-company" data-oid="s5za0au">
+                          <p className="experience-company" data-oid=":a4qnkr">
                             Advanced Power Conversion - Colorado, USA
                           </p>
-                          <p className="experience-date" data-oid="m9tiul9">
+                          <p className="experience-date" data-oid="czkb7ek">
                             January 2022 - December 2023
                           </p>
                         </div>
-                        <div className="experience-logo" data-oid="208gnrx">
+                        <div className="experience-logo" data-oid="zlspq.6">
                           <Image
                             src="/uploads/Apc-logo.png"
                             alt="Advanced Power Conversion"
                             width={120}
                             height={50}
                             className="object-contain"
-                            data-oid="zv8ziwp"
+                            data-oid="5bu1i6-"
                           />
                         </div>
                       </div>
-                      <ul className="experience-details" data-oid="czd_l:r">
-                        <li data-oid="ming1q5">
+                      <ul className="experience-details" data-oid="b3o65m6">
+                        <li data-oid="d6reu4f">
                           Enhanced product lifecycle management by 20% utilizing
                           hands-on machining and efficient feedback mechanisms.
                         </li>
-                        <li data-oid="muubls:">
+                        <li data-oid="bf_dr2u">
                           Reduced development iterations by 30% through
                           collaboration with the R&D team.
                         </li>
-                        <li data-oid="q_w2tmi">
+                        <li data-oid=".j2rnxx">
                           Achieved 95% quality control compliance by analyzing
                           production units against standards.
                         </li>
-                        <li data-oid="9swuu3y">
+                        <li data-oid="saz7e:z">
                           Facilitated cross-functional transformation in
                           manufacturing processes.
                         </li>
@@ -544,17 +550,17 @@ export default function Home() {
                 </StaggerItem>
               </StaggerContainer>
 
-              <div className="flex justify-end mt-8" data-oid="4p87k3o">
-                <Link href="/about" data-oid="4zr5h2h">
-                  <RippleButton className="secondary-button" data-oid="b.4-erd">
-                    <span data-oid="1wx4wis">View Full Experience</span>
+              <div className="flex justify-end mt-8" data-oid="vgb_cyo">
+                <Link href="/about" data-oid="3-xeo0_">
+                  <RippleButton className="secondary-button" data-oid="enbeytz">
+                    <span data-oid="q1brdel">View Full Experience</span>
                     <svg
                       width="12"
                       height="12"
                       viewBox="0 0 24 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      data-oid="jd1_-nu"
+                      data-oid="oer--nl"
                     >
                       <path
                         d="M5 12H19M19 12L12 5M19 12L12 19"
@@ -562,7 +568,7 @@ export default function Home() {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        data-oid="r9ag5hk"
+                        data-oid="95d93js"
                       />
                     </svg>
                   </RippleButton>
@@ -574,54 +580,54 @@ export default function Home() {
       </ScrollReveal>
 
       {/* Education Section */}
-      <ScrollReveal data-oid="z8hb56j">
-        <section className="section-container" data-oid="-1ctc5t">
-          <div className="section-sidebar" data-oid="uelzkk5">
-            <div className="section-header" data-oid=":psi4oy">
-              <span className="mr-2 text-sm" data-oid="ikj-sd5">
+      <ScrollReveal data-oid="rphwmc7">
+        <section className="section-container" data-oid="-yy_6fx">
+          <div className="section-sidebar" data-oid="rf::3mi">
+            <div className="section-header" data-oid="bvzt:.t">
+              <span className="mr-2 text-sm" data-oid="cng8hn4">
                 +
               </span>
-              <h3 className="text-sm" data-oid="cb4yynu">
+              <h3 className="text-sm" data-oid="66nqw:2">
                 Education
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="mcp..xl">
-            <FadeIn direction="up" data-oid="alwwtgk">
-              <h2 className="section-subtitle" data-oid="3e3ty41">
+          <div className="section-content" data-oid="lq9mjn5">
+            <FadeIn direction="up" data-oid="xnndp53">
+              <h2 className="section-subtitle" data-oid="6tzx1ia">
                 Academic Background
               </h2>
 
               <StaggerContainer
                 staggerChildren={0.15}
                 className="experience-list"
-                data-oid="5-lcpwd"
+                data-oid="mwo638-"
               >
-                <StaggerItem data-oid="1kvju3:">
+                <StaggerItem data-oid="q-huhsy">
                   <TiltCard
                     tiltFactor={3}
                     glareEffect={false}
-                    data-oid="i001mrw"
+                    data-oid="jl8_:a:"
                   >
-                    <div className="experience-card" data-oid="zjpbw56">
-                      <div className="experience-header" data-oid="vwa2wan">
-                        <div data-oid="pl1-bjg">
-                          <h3 className="experience-title" data-oid="90qkgkq">
+                    <div className="experience-card" data-oid="gvy0r_3">
+                      <div className="experience-header" data-oid="axjg.dj">
+                        <div data-oid="jcez4op">
+                          <h3 className="experience-title" data-oid="y__0cdz">
                             University of Colorado - Boulder
                           </h3>
-                          <p className="experience-date" data-oid="35gutm4">
+                          <p className="experience-date" data-oid=":6g71e4">
                             Bachelor's, Mechanical Engineering (August 2016 -
                             May 2021)
                           </p>
                         </div>
-                        <div className="experience-logo" data-oid="x9afnaz">
+                        <div className="experience-logo" data-oid=":35up-x">
                           <Image
                             src="/uploads/cuboulderlogo.png"
                             alt="University of Colorado Boulder"
                             width={120}
                             height={50}
                             className="object-contain"
-                            data-oid="nhautm7"
+                            data-oid="g33pwh4"
                           />
                         </div>
                       </div>
@@ -629,31 +635,31 @@ export default function Home() {
                   </TiltCard>
                 </StaggerItem>
 
-                <StaggerItem data-oid="t33sdbd">
+                <StaggerItem data-oid="tddrlx4">
                   <TiltCard
                     tiltFactor={3}
                     glareEffect={false}
-                    data-oid="4:g0ye0"
+                    data-oid="3acyz96"
                   >
-                    <div className="experience-card" data-oid="dfswdl0">
-                      <div className="experience-header" data-oid="_m5n2a.">
-                        <div data-oid="ol0yhfd">
-                          <h3 className="experience-title" data-oid="u69t465">
+                    <div className="experience-card" data-oid="tflnfye">
+                      <div className="experience-header" data-oid="-76d.q_">
+                        <div data-oid="1ghuf82">
+                          <h3 className="experience-title" data-oid="fbh9sal">
                             University of Pennsylvania
                           </h3>
-                          <p className="experience-date" data-oid="sxo410z">
+                          <p className="experience-date" data-oid="x:mx18z">
                             Certification, Mechanical Engineering (January 2015
                             - December 2016)
                           </p>
                         </div>
-                        <div className="experience-logo" data-oid="p1lcq35">
+                        <div className="experience-logo" data-oid="vv67ouc">
                           <Image
                             src="/uploads/UniversityofPennsylvania_FullLogo_RGB-4_0.png"
                             alt="University of Pennsylvania"
                             width={120}
                             height={50}
                             className="object-contain"
-                            data-oid="1r:0f5o"
+                            data-oid="1fnprn2"
                           />
                         </div>
                       </div>
@@ -667,24 +673,24 @@ export default function Home() {
       </ScrollReveal>
 
       {/* Contact Section */}
-      <ScrollReveal data-oid="n4xny82">
-        <section className="section-container" data-oid="uw3-1fo">
-          <div className="section-sidebar" data-oid="4cubcg.">
-            <div className="section-header" data-oid="07r076x">
-              <span className="mr-2 text-sm" data-oid="7550t3a">
+      <ScrollReveal data-oid="2edotj3">
+        <section className="section-container" data-oid="6s0v_pc">
+          <div className="section-sidebar" data-oid="_6ukp00">
+            <div className="section-header" data-oid="qcico2p">
+              <span className="mr-2 text-sm" data-oid="n4g5gu1">
                 +
               </span>
-              <h3 className="text-sm" data-oid="y6-5npl">
+              <h3 className="text-sm" data-oid="9xfj:sv">
                 Contact
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="f09:0ri">
-            <FadeIn direction="up" data-oid="-ynks7s">
-              <h2 className="section-subtitle" data-oid=".0is7e3">
+          <div className="section-content" data-oid="1uw.g3y">
+            <FadeIn direction="up" data-oid="u1oapg_">
+              <h2 className="section-subtitle" data-oid=":_:.bcs">
                 Get in Touch
               </h2>
-              <p className="section-description mb-12" data-oid="_wm1aw:">
+              <p className="section-description mb-12" data-oid="5zpwtbw">
                 Interested in discussing process development, manufacturing
                 efficiency, or potential opportunities? I'd love to connect.
               </p>
@@ -692,47 +698,47 @@ export default function Home() {
               <StaggerContainer
                 className="contact-grid"
                 staggerChildren={0.1}
-                data-oid="eki3ohc"
+                data-oid="78op-k8"
               >
-                <StaggerItem data-oid="0.juiae">
-                  <MagneticElement data-oid="wfw-239">
-                    <div className="contact-item" data-oid="k.50u32">
-                      <h3 className="contact-title" data-oid="c2sp8os">
+                <StaggerItem data-oid="b9.vk6l">
+                  <MagneticElement data-oid="l1fakw:">
+                    <div className="contact-item" data-oid="::kw4lp">
+                      <h3 className="contact-title" data-oid="u4c61d-">
                         Email
                       </h3>
                       <a
                         href="mailto:trueothem@gmail.com"
                         className="contact-link"
-                        data-oid="v4wbu::"
+                        data-oid="3wznsw_"
                       >
                         trueothem@gmail.com
                       </a>
                     </div>
                   </MagneticElement>
                 </StaggerItem>
-                <StaggerItem data-oid="zbwkn_x">
-                  <MagneticElement data-oid=":2ubbg1">
-                    <div className="contact-item" data-oid="x7g:.c_">
-                      <h3 className="contact-title" data-oid="uof..k9">
+                <StaggerItem data-oid="mf.dql6">
+                  <MagneticElement data-oid="zkv6qre">
+                    <div className="contact-item" data-oid="pkmk5ir">
+                      <h3 className="contact-title" data-oid="i1dqk9k">
                         Phone
                       </h3>
                       <a
                         href="tel:+16172333948"
                         className="contact-link"
-                        data-oid="zkj940f"
+                        data-oid="kcvf2rn"
                       >
                         +1 (617) 233-3948
                       </a>
                     </div>
                   </MagneticElement>
                 </StaggerItem>
-                <StaggerItem data-oid="dr1op9z">
-                  <MagneticElement data-oid="71_14hz">
-                    <div className="contact-item" data-oid="qbx9h87">
-                      <h3 className="contact-title" data-oid="iwdedia">
+                <StaggerItem data-oid="5x5t__e">
+                  <MagneticElement data-oid="nkz:dz0">
+                    <div className="contact-item" data-oid="fky:a0-">
+                      <h3 className="contact-title" data-oid="4aphk-5">
                         Location
                       </h3>
-                      <p className="text-muted-foreground" data-oid="2xi:grk">
+                      <p className="text-muted-foreground" data-oid="w:nmuph">
                         Cambridge, MA, USA
                       </p>
                     </div>

@@ -49,13 +49,13 @@ export const ParallaxText = ({
     return (
       <div
         className={`whitespace-nowrap flex flex-nowrap ${className}`}
-        data-oid="xbhyv8l"
+        data-oid="qva1v-q"
       >
-        <div className="flex whitespace-nowrap flex-nowrap" data-oid="28xllkw">
-          <span className="block mr-4" data-oid="vs62f_q">
+        <div className="flex whitespace-nowrap flex-nowrap" data-oid="zeu1bx_">
+          <span className="block mr-4" data-oid="31t:t5c">
             {children}
           </span>
-          <span className="block mr-4" data-oid="8shtz0a">
+          <span className="block mr-4" data-oid="x4x61or">
             {children}
           </span>
         </div>
@@ -66,7 +66,7 @@ export const ParallaxText = ({
   return (
     <div
       className={`overflow-hidden whitespace-nowrap flex flex-nowrap ${className}`}
-      data-oid=".xov0a."
+      data-oid="l0ppcfa"
     >
       <motion.div
         className="flex whitespace-nowrap flex-nowrap"
@@ -78,18 +78,18 @@ export const ParallaxText = ({
           ease: "linear",
           repeatType: "loop",
         }}
-        data-oid="njsp.p8"
+        data-oid="gd8:vjr"
       >
-        <span className="block mr-4" data-oid="olvm17.">
+        <span className="block mr-4" data-oid="ews3rh1">
           {children}
         </span>
-        <span className="block mr-4" data-oid="92mgj3t">
+        <span className="block mr-4" data-oid="1zoplm-">
           {children}
         </span>
-        <span className="block mr-4" data-oid="l9jqrde">
+        <span className="block mr-4" data-oid="frbic5_">
           {children}
         </span>
-        <span className="block mr-4" data-oid="rd9liib">
+        <span className="block mr-4" data-oid="qzq2..1">
           {children}
         </span>
       </motion.div>
@@ -176,8 +176,8 @@ const ParallaxScrollEffect = ({
   // If disabled, render static version
   if (disabled) {
     return (
-      <div className={`relative ${className}`} data-oid="s6bo.iv">
-        <div className="relative" data-oid="h.j2hnm">
+      <div className={`relative ${className}`} data-oid="p30kird">
+        <div className="relative" data-oid="4cdwupa">
           {children}
         </div>
       </div>
@@ -189,12 +189,12 @@ const ParallaxScrollEffect = ({
     <div
       ref={ref}
       className={`relative overflow-hidden ${className}`}
-      data-oid="6x-29ad"
+      data-oid="19cb.zw"
     >
       <motion.div
         style={{ [transformProperty]: transformValue }}
         className="relative"
-        data-oid="jofdh9."
+        data-oid="gtux3xe"
       >
         {children}
       </motion.div>
@@ -238,8 +238,8 @@ export const ParallaxScroll = ({
   // For SSR or when not mounted yet, render static version
   if (!isMounted) {
     return (
-      <div className={`relative ${className}`} data-oid="2iu.i67">
-        <div className="relative" data-oid="pyn7ewm">
+      <div className={`relative ${className}`} data-oid="o6xmql2">
+        <div className="relative" data-oid="o_q5al_">
           {children}
         </div>
       </div>
@@ -253,7 +253,7 @@ export const ParallaxScroll = ({
       direction={direction}
       className={className}
       disabled={shouldDisable}
-      data-oid="jwo0_jn"
+      data-oid="zyf06x1"
     >
       {children}
     </ParallaxScrollEffect>
@@ -320,9 +320,9 @@ const ParallaxImageEffect = ({
     return (
       <div
         className={`relative overflow-hidden ${className}`}
-        data-oid="rb5ah9d"
+        data-oid="11krtb5"
       >
-        <div className="relative h-full w-full" data-oid="gjynrn8">
+        <div className="relative h-full w-full" data-oid="j-n0z_d">
           <Image
             src={src}
             alt={alt}
@@ -330,7 +330,7 @@ const ParallaxImageEffect = ({
             height={height}
             className="object-cover h-full w-full"
             priority={priority}
-            data-oid="8m:aa4o"
+            data-oid="0-kpiqp"
           />
         </div>
       </div>
@@ -342,12 +342,12 @@ const ParallaxImageEffect = ({
     <div
       ref={ref}
       className={`relative overflow-hidden ${className}`}
-      data-oid="aovvorq"
+      data-oid="jf310w3"
     >
       <motion.div
         style={{ y }}
         className="relative h-full w-full"
-        data-oid="ipa5_y2"
+        data-oid="9pxv2o0"
       >
         <Image
           src={src}
@@ -356,7 +356,7 @@ const ParallaxImageEffect = ({
           height={height}
           className="object-cover h-full w-full"
           priority={priority}
-          data-oid="uybsod7"
+          data-oid="qbtfh1_"
         />
       </motion.div>
     </div>
@@ -405,9 +405,9 @@ export const ParallaxImage = ({
     return (
       <div
         className={`relative overflow-hidden ${className}`}
-        data-oid=":hl4d47"
+        data-oid="xyd-c-o"
       >
-        <div className="relative h-full w-full" data-oid="943g5f8">
+        <div className="relative h-full w-full" data-oid="noi4sm8">
           <Image
             src={src}
             alt={alt}
@@ -415,7 +415,7 @@ export const ParallaxImage = ({
             height={height}
             className="object-cover h-full w-full"
             priority={priority}
-            data-oid="km3utxi"
+            data-oid="h9y43xx"
           />
         </div>
       </div>
@@ -434,7 +434,7 @@ export const ParallaxImage = ({
       className={className}
       priority={priority}
       disabled={shouldDisable}
-      data-oid="v.pri7t"
+      data-oid="owy9u-1"
     />
   );
 };
@@ -464,8 +464,8 @@ const ParallaxRotateEffect = ({
   // If disabled, render static version
   if (disabled) {
     return (
-      <div className={className} data-oid="x_y3k45">
-        <div className="w-full h-full" data-oid="cj199_f">
+      <div className={className} data-oid="m7cp7_.">
+        <div className="w-full h-full" data-oid="eomuub6">
           {children}
         </div>
       </div>
@@ -473,7 +473,7 @@ const ParallaxRotateEffect = ({
   }
 
   // Otherwise render with rotation effect
-  return <div ref={ref} className={className} data-oid="rf4sbbz"></div>;
+  return <div ref={ref} className={className} data-oid="pm04zdq"></div>;
 };
 
 // Main component that handles device detection and mounting logic
@@ -515,8 +515,8 @@ export const ParallaxRotate = ({
   // For SSR or when not mounted yet, render static version
   if (!isMounted) {
     return (
-      <div className={className} data-oid="ll:nm-5">
-        <div className="w-full h-full" data-oid="li8-.w0">
+      <div className={className} data-oid="cq4d:yv">
+        <div className="w-full h-full" data-oid="8-s6oce">
           {children}
         </div>
       </div>
@@ -529,7 +529,7 @@ export const ParallaxRotate = ({
       rotation={optimizedRotation}
       className={className}
       disabled={shouldDisable}
-      data-oid="ynw8h12"
+      data-oid="6jpxodz"
     >
       {children}
     </ParallaxRotateEffect>
