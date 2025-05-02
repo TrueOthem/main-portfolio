@@ -15,25 +15,25 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning data-oid="w7xfsoo">
+    <html lang="en" suppressHydrationWarning data-oid="bznxvnl">
       <body
         className="min-h-screen flex flex-col"
         suppressHydrationWarning
-        data-oid="_eqt5xu"
+        data-oid="2zx_3vi"
       >
-        <DeviceContextProvider data-oid="u9e1djh">
+        <DeviceContextProvider data-oid="eu_l7kh">
           <ScrollProgressBar
             height={3}
             color="var(--primary)"
-            data-oid="3wuh_ne"
+            data-oid="9j7d745"
           />
 
-          <Navbar data-oid="dj0yht4" />
+          <Navbar data-oid="nph6tjt" />
           <main
             className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0"
-            data-oid="5ybx0.z"
+            data-oid="rm1kv5t"
           >
-            <AdvancedPageTransition data-oid="10wij6x">
+            <AdvancedPageTransition data-oid="wqaf-3f">
               {children}
             </AdvancedPageTransition>
           </main>

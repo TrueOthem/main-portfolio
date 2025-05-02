@@ -13,62 +13,62 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <FadeIn data-oid="85zhsyq">
+    <FadeIn data-oid="6gl01c_">
       <footer
         className="border-t border-[#d1d1c7] bg-background"
-        data-oid="u3s.8nf"
+        data-oid="y8onjx6"
       >
         {/* Social links */}
-        <div className="border-b border-[#d1d1c7]" data-oid="k3cybh.">
+        <div className="border-b border-[#d1d1c7]" data-oid=":8l6f6r">
           <div
             className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4"
-            data-oid="t-.j3x_"
+            data-oid="-uuqzf1"
           >
             <StaggerContainer
               className="flex items-center space-x-6"
-              data-oid="i19_:sr"
+              data-oid="ooidlj2"
             >
-              <StaggerItem data-oid="dxf_.u5">
+              <StaggerItem data-oid="a2dxg3z">
                 <Link
                   href="https://linkedin.com/in/mohamed-adil-al-sabri/"
                   target="_blank"
                   className="text-sm nav-link"
-                  data-oid="il-qvx4"
+                  data-oid="c7k9t-0"
                 >
                   <motion.span
                     whileHover={{ y: -3 }}
                     transition={{ duration: 0.2 }}
-                    data-oid="lqjg8q8"
+                    data-oid="q1gr5tk"
                   >
                     LinkedIn
                   </motion.span>
                 </Link>
               </StaggerItem>
-              <StaggerItem data-oid="hdgpvp_">
+              <StaggerItem data-oid="b22azkk">
                 <Link
                   href="mailto:trueothem@gmail.com"
                   className="text-sm nav-link"
-                  data-oid="d5rw:_y"
+                  data-oid="i9i9bib"
                 >
                   <motion.span
                     whileHover={{ y: -3 }}
                     transition={{ duration: 0.2 }}
-                    data-oid="a1yha.:"
+                    data-oid="np94hre"
                   >
                     Email
                   </motion.span>
                 </Link>
               </StaggerItem>
-              <StaggerItem data-oid="kh_--53">
+              <StaggerItem data-oid="psdk4t4">
                 <Link
                   href="tel:+16172333948"
                   className="text-sm nav-link"
-                  data-oid="0k5rhos"
+                  data-oid="5cf2e:5"
                 >
                   <motion.span
                     whileHover={{ y: -3 }}
                     transition={{ duration: 0.2 }}
-                    data-oid="058s0ih"
+                    data-oid="b9iq.wm"
                   >
                     Phone
                   </motion.span>
@@ -79,58 +79,58 @@ export default function Footer() {
         </div>
 
         {/* Additional footer content */}
-        <div className="border-b border-[#d1d1c7]" data-oid="n5w67e.">
+        <div className="border-b border-[#d1d1c7]" data-oid="n16-i4h">
           <div
             className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4"
-            data-oid="a2sq_k4"
+            data-oid="kazedgy"
           >
             <StaggerContainer
               className="flex justify-end items-center space-x-6"
-              data-oid="ifdbizc"
+              data-oid="s2wid:h"
             >
-              <StaggerItem data-oid="t_1qyum">
+              <StaggerItem data-oid="klgfd64">
                 <Link
                   href="/privacy"
                   className="text-sm footer-link"
                   data-footer-link="true"
-                  data-oid=":p8ga0f"
+                  data-oid="hl2uvae"
                 >
                   <motion.span
                     whileHover={{ y: -3 }}
                     transition={{ duration: 0.2 }}
-                    data-oid="9iigtci"
+                    data-oid="u1y:7ok"
                   >
                     Privacy Policy
                   </motion.span>
                 </Link>
               </StaggerItem>
-              <StaggerItem data-oid=".r5e5_s">
+              <StaggerItem data-oid="y0esvfz">
                 <Link
                   href="/terms"
                   className="text-sm footer-link"
                   data-footer-link="true"
-                  data-oid=".5xzlas"
+                  data-oid=":rw-euf"
                 >
                   <motion.span
                     whileHover={{ y: -3 }}
                     transition={{ duration: 0.2 }}
-                    data-oid="rc-a2ov"
+                    data-oid="dt4.es2"
                   >
                     Terms of Service
                   </motion.span>
                 </Link>
               </StaggerItem>
-              <StaggerItem data-oid="tunf1y1">
+              <StaggerItem data-oid="hvyg_ds">
                 <Link
                   href="/sitemap"
                   className="text-sm footer-link"
                   data-footer-link="true"
-                  data-oid="2.9b2c8"
+                  data-oid="9wtl_tf"
                 >
                   <motion.span
                     whileHover={{ y: -3 }}
                     transition={{ duration: 0.2 }}
-                    data-oid="rhotiyb"
+                    data-oid="bb836fg"
                   >
                     Sitemap
                   </motion.span>
@@ -143,18 +143,18 @@ export default function Footer() {
         {/* Credits */}
         <div
           className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4"
-          data-oid="zgi6oak"
+          data-oid="nubphpn"
         >
-          <FadeIn delay={0.3} data-oid="rmuar99">
+          <FadeIn delay={0.3} data-oid="jdy41_h">
             <div
               className="flex justify-center items-center"
-              data-oid="ujzk224"
+              data-oid="gc4.0-f"
             >
               <motion.p
                 className="text-sm text-muted-foreground"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.2 }}
-                data-oid="lezhewp"
+                data-oid="-8n-wwx"
               >
                 &copy; {currentYear} Mohamed Adil Al Sabri. All rights reserved.
               </motion.p>
