@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import ClientBody from "../ClientBody";
+import { motion } from "framer-motion";
 import {
   ScrollReveal,
   FadeIn,
@@ -11,6 +12,7 @@ import {
   StaggerContainer,
   StaggerItem,
   HoverScale,
+  ScaleIn,
 } from "@/components/ui/motion";
 import {
   ParallaxImage,
@@ -356,139 +358,274 @@ export default function HomeClient({ locale }: HomeClientProps) {
   ];
 
   return (
-    <ClientBody data-oid="mb6ahyc">
-      {/* Hero Section with Parallax */}
+    <ClientBody data-oid="1rokiz_">
+      {/* Hero Section with Enhanced Animations */}
       <section
         id="hero-section"
-        className="section-container hero-section relative w-full flex flex-col md:grid md:grid-cols-[repeat(3,_1fr)] justify-center md:grid-rows-[repeat(2,_1fr)]"
+        className="section-container hero-section relative w-full min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] flex flex-col md:flex-row justify-between items-center py-10 sm:py-14 md:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden"
         data-testid="hero-section"
-        data-oid="l5k326a"
+        data-oid="hakiw.4"
       >
-        <div
-          className="col-span-1 md:border-r border-[#d1d1c7] flex p-0 md:p-0 lg:p-0 w-full items-center overflow-visible static top-auto right-auto bottom-auto left-auto rounded-none justify-start"
-          data-oid=".bmnva8"
-        >
-          <div
-            className="profile-image-container flex justify-center items-center w-[339px] h-[451px]"
-            data-oid="0pn6-v4"
-          >
-            <Image
-              src="/uploads/profile-photo.jpg"
-              alt="Mohamed Adil Al Sabri"
-              width={500}
-              height={500}
-              className="profile-image rounded-[370px] relative top-auto right-auto bottom-auto left-auto h-[370px] w-[272px]"
-              priority
-              data-oid="stqs0a1"
-            />
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {/* Top left circle */}
+          <div className="absolute top-[8%] sm:top-[10%] left-[5%] sm:left-[8%] w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 opacity-[0.07]">
+            <ParallaxScroll speed={0.2} direction="down">
+              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"></div>
+            </ParallaxScroll>
           </div>
-        </div>
-        <div
-          className="col-span-2 items-center p-1 md:p-1 lg:p-1 w-full relative top-auto right-auto bottom-auto left-auto flex-row grid grid-cols-[repeat(1,_1fr)] grid-rows-[repeat(1,_1fr)]"
-          data-oid="2-2y.du"
-        >
-          <ParallaxScroll speed={0.1} direction="up" data-oid="g_1:ra-">
-            <RevealText data-oid="5y65q5w">
-              <h1
-                className="md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12 text-[60px] md:text-[102px] md:h-[237px] static top-auto right-auto bottom-auto left-auto"
-                data-oid="ogbb-:q"
-              >
-                {t("hero.name")}
-                <br data-oid="j0jjp_g" />
-                {t("hero.surname")}
-              </h1>
-            </RevealText>
-          </ParallaxScroll>
 
-          {/* Abstract decorative elements with parallax */}
-          <div
-            className="absolute top-10 right-10 md:right-20 w-8 h-8 md:w-10 md:h-10 opacity-10 hidden md:block"
-            data-oid="_okunza"
-          >
-            <ParallaxScroll speed={0.4} direction="right" data-oid="4d-o7f6">
-              <div
-                className="w-full h-full bg-primary rounded-full"
-                data-oid="me4yiz4"
-              ></div>
+          {/* Bottom right large circle */}
+          <div className="absolute bottom-[12%] sm:bottom-[15%] right-[5%] sm:right-[8%] w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 opacity-[0.06]">
+            <ParallaxScroll speed={0.3} direction="up">
+              <div className="w-full h-full bg-gradient-to-tl from-primary to-primary/70 rounded-full"></div>
+            </ParallaxScroll>
+          </div>
+
+          {/* Middle right small circle */}
+          <div className="absolute top-[38%] sm:top-[42%] right-[12%] sm:right-[18%] w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 opacity-[0.08]">
+            <ParallaxScroll speed={0.15} direction="left">
+              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"></div>
+            </ParallaxScroll>
+          </div>
+
+          {/* Additional small decorative element */}
+          <div className="absolute top-[65%] left-[18%] w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 opacity-[0.05] hidden sm:block">
+            <ParallaxScroll speed={0.25} direction="right">
+              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"></div>
+            </ParallaxScroll>
+          </div>
+
+          {/* Extra small decorative dot */}
+          <div className="absolute top-[25%] left-[35%] w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-[0.04]">
+            <ParallaxScroll speed={0.1} direction="up">
+              <div className="w-full h-full bg-primary rounded-full"></div>
             </ParallaxScroll>
           </div>
         </div>
+
+        {/* Left side - Profile Image with animations */}
+        <div className="w-full md:w-2/5 flex justify-center items-center mb-12 sm:mb-10 md:mb-0 z-10 px-4 mt-4 sm:mt-0">
+          <div className="relative">
+            {/* Outer animated ring */}
+            <motion.div
+              className="absolute -inset-4 sm:-inset-5 md:-inset-6 lg:-inset-8 rounded-full border border-primary/10"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1.05, opacity: 1 }}
+              transition={{
+                duration: 1.8,
+                ease: "easeOut",
+                delay: 0.6
+              }}
+            />
+
+            {/* Inner animated ring */}
+            <motion.div
+              className="absolute -inset-2 sm:-inset-3 md:-inset-4 lg:-inset-5 rounded-full border border-primary/20"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1.03, opacity: 1 }}
+              transition={{
+                duration: 1.5,
+                ease: "easeOut",
+                delay: 0.4
+              }}
+            />
+
+            {/* Profile image with subtle hover effect */}
+            <MagneticElement distanceThreshold={100} magnetStrength={0.15}>
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative z-10"
+              >
+                <div className="rounded-full overflow-hidden h-[220px] w-[220px] sm:h-[260px] sm:w-[260px] md:h-[300px] md:w-[300px] lg:h-[340px] lg:w-[340px] shadow-lg">
+                  <Image
+                    src="/uploads/profile-photo.jpg"
+                    alt="Mohamed Adil Al Sabri"
+                    width={500}
+                    height={500}
+                    className="profile-image object-cover h-full w-full"
+                    priority
+                    data-oid="bhp.au0"
+                  />
+                </div>
+              </motion.div>
+            </MagneticElement>
+
+            {/* Decorative element bottom right */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 opacity-[0.12] z-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 0.12, y: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/50 rounded-full" />
+            </motion.div>
+
+            {/* Decorative element top left */}
+            <motion.div
+              className="absolute -top-4 -left-4 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 opacity-[0.08] z-0"
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 0.08, y: 0 }}
+              transition={{ duration: 1, delay: 1 }}
+            >
+              <div className="w-full h-full bg-gradient-to-tr from-primary to-primary/50 rounded-full" />
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Right side - Name and title with animations */}
+        <div className="w-full md:w-3/5 z-10 px-4 md:px-8 lg:px-10 text-center md:text-left">
+          <div className="max-w-xl sm:max-w-2xl mx-auto md:mx-0 md:ml-4 lg:ml-8">
+            {/* Name with staggered reveal */}
+            <div className="overflow-hidden mb-1 sm:mb-2 md:mb-3">
+              <RevealText delay={0.2}>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]">
+                  {t("hero.name")}
+                </h1>
+              </RevealText>
+            </div>
+
+            <div className="overflow-hidden mb-5 sm:mb-6 md:mb-8 lg:mb-10">
+              <RevealText delay={0.4}>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]">
+                  {t("hero.surname")}
+                </h1>
+              </RevealText>
+            </div>
+
+            {/* Role/title with fade in */}
+            <FadeIn direction="up" delay={0.6}>
+              <div className="h-[2px] w-16 sm:w-20 md:w-24 lg:w-28 bg-gradient-to-r from-primary/40 to-primary/10 mb-5 sm:mb-6 md:mb-7 lg:mb-8 mx-auto md:mx-0"></div>
+
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-muted-foreground mb-4 sm:mb-5 md:mb-6 lg:mb-7 font-medium tracking-wide">
+                Process Development Engineer
+              </h2>
+
+              {/* Brief intro text */}
+              <p className="text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg text-muted-foreground mb-6 sm:mb-7 md:mb-8 lg:mb-10 mx-auto md:mx-0 leading-relaxed">
+                Specialized in renewable energy production and manufacturing processes optimization, with expertise in data analysis and system design.
+              </p>
+
+              {/* CTA buttons with ripple effect */}
+              <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-5">
+                <RippleButton
+                  className="px-7 sm:px-8 py-3 bg-primary text-white rounded-full text-sm md:text-base font-medium hover:bg-primary/90 transition-colors shadow-sm"
+                >
+                  View My Work
+                </RippleButton>
+
+                <RippleButton
+                  className="px-7 sm:px-8 py-3 bg-transparent border border-primary/20 text-primary rounded-full text-sm md:text-base font-medium hover:bg-primary/5 transition-colors"
+                >
+                  Download Resume
+                </RippleButton>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center hidden sm:flex"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            delay: 1.5
+          }}
+        >
+          <motion.div
+            className="flex flex-col items-center"
+            animate={{ y: [0, 8, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut"
+            }}
+          >
+            <div className="w-[1px] h-10 md:h-12 bg-gradient-to-b from-primary/10 to-primary/40"></div>
+            <div className="mt-2 text-[10px] md:text-xs text-muted-foreground tracking-wider font-medium">SCROLL</div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* About Section */}
-      <ScrollReveal data-oid="3ex2w-_">
+      <ScrollReveal data-oid="zs60ke.">
         <section
           id="about-section"
           className="section-container min-h-[355px]"
-          data-oid="w8o2e.s"
+          data-oid="_4769:s"
         >
-          <div className="section-sidebar" data-oid="_ij2k33">
-            <div className="section-header" data-oid="g4qonb_">
-              <span className="mr-2 text-sm" data-oid="krpu1cx">
+          <div className="section-sidebar" data-oid="s62:avw">
+            <div className="section-header" data-oid="62m1daw">
+              <span className="mr-2 text-sm" data-oid="n_hhlel">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="pqff.x4">
+              <h3 className="text-[16px]" data-oid="o1knvq_">
                 {t("about.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="u:zit1v">
-            <FadeIn direction="up" data-oid="u53tzj4">
-              <h2 className="section-title" data-oid="vi3jx6h">
+          <div className="section-content" data-oid="fmindga">
+            <FadeIn direction="up" data-oid="spxix1t">
+              <h2 className="section-title" data-oid="gw75n28">
                 {t("about.title")}
               </h2>
-              <p className="section-description" data-oid="p6lkof4">
+              <p className="section-description" data-oid="n.qnuz-">
                 {t("about.description")}
               </p>
-              <div className="stats-container" data-oid="kfu1b:1">
+              <div className="stats-container" data-oid="_a3n8mn">
                 <StaggerContainer
                   staggerChildren={0.1}
                   className="stats-container"
-                  data-oid="za5ilhg"
+                  data-oid="iteha9d"
                 >
-                  <StaggerItem data-oid="x8f1a.t">
+                  <StaggerItem data-oid="siz_653">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="lswow0j"
+                      data-oid="_qzvyxg"
                     >
-                      <div className="stat-item" data-oid="jetc-rv">
-                        <h3 className="stat-value" data-oid=":p0rrzz">
+                      <div className="stat-item" data-oid="lu-:v:c">
+                        <h3 className="stat-value" data-oid="ebc.v53">
                           5+
                         </h3>
-                        <p className="stat-label" data-oid="xtk0qgd">
+                        <p className="stat-label" data-oid="or8r2qp">
                           {t("about.experience")}
                         </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem data-oid="4dtr9.8">
+                  <StaggerItem data-oid=".yg-hu2">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="157h-rr"
+                      data-oid="h6u956w"
                     >
-                      <div className="stat-item" data-oid="x.n0hq-">
-                        <h3 className="stat-value" data-oid="wj3ttu6">
+                      <div className="stat-item" data-oid="7_7wd_a">
+                        <h3 className="stat-value" data-oid="jo26rl2">
                           20+
                         </h3>
-                        <p className="stat-label" data-oid="yxa4g91">
+                        <p className="stat-label" data-oid="t2d5-b9">
                           {t("about.projects")}
                         </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem data-oid="lg_e.7g">
+                  <StaggerItem data-oid="tuavgul">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="eidftk3"
+                      data-oid="_e5a-7k"
                     >
-                      <div className="stat-item" data-oid="w337rcx">
-                        <h3 className="stat-value" data-oid="4m16_45">
+                      <div className="stat-item" data-oid="tnm9.cq">
+                        <h3 className="stat-value" data-oid="bq12fi-">
                           4+
                         </h3>
-                        <p className="stat-label" data-oid="ud1_5sl">
+                        <p className="stat-label" data-oid="61yo6_4">
                           {t("about.companies")}
                         </p>
                       </div>
@@ -502,35 +639,35 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Company Logos Section */}
-      <ScrollReveal data-oid="jkqvqfv">
+      <ScrollReveal data-oid="6u85cbi">
         <section
           className="col-span-3 border-b border-[#d1d1c7] overflow-hidden py-8 md:py-12 px-6 md:px-8"
-          data-oid="hxjjk_u"
+          data-oid="u0k9dgw"
         >
           <StaggerContainer
             staggerChildren={0.1}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
-            data-oid="-5i92-1"
+            data-oid="7qdqn80"
           >
             {logoData.map((logo) => (
-              <StaggerItem key={logo.id} data-oid="5yzug07">
+              <StaggerItem key={logo.id} data-oid="3j149.3">
                 <div
                   className="flex justify-center items-center"
-                  data-oid="pzhk096"
+                  data-oid="r6_u7wx"
                 >
                   <MagneticElement
                     distanceThreshold={100}
                     magnetStrength={0.2}
-                    data-oid="12bm3lv"
+                    data-oid="3ur995k"
                   >
                     <div
                       className="h-20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-                      data-oid="ho7pk1o"
+                      data-oid="jpvg-te"
                     >
                       {logo.imgSrc ? (
                         <div
                           className="h-full flex items-center justify-center"
-                          data-oid="kwtru0i"
+                          data-oid="80q3e-q"
                         >
                           <Image
                             src={logo.imgSrc}
@@ -539,13 +676,13 @@ export default function HomeClient({ locale }: HomeClientProps) {
                             width={120}
                             height={60}
                             className="max-h-16 object-contain"
-                            data-oid="7_0hgaa"
+                            data-oid="a-qy5ji"
                           />
                         </div>
                       ) : (
                         <div
                           className="h-16 w-full flex items-center justify-center text-sm text-center"
-                          data-oid="t.iqpih"
+                          data-oid="o4gnkf9"
                         >
                           {logo.company}
                         </div>
@@ -560,152 +697,152 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Expertise Section */}
-      <ScrollReveal data-oid="8thp7v3">
-        <section className="section-container" data-oid="bqtmwdf">
-          <div className="section-sidebar" data-oid="tz-.da5">
-            <div className="section-header" data-oid=".1f6omh">
-              <span className="mr-2 text-sm" data-oid="p8-.cw-">
+      <ScrollReveal data-oid="rne1phj">
+        <section className="section-container" data-oid="ka1t_u6">
+          <div className="section-sidebar" data-oid="8f.23gq">
+            <div className="section-header" data-oid="xmcdiwr">
+              <span className="mr-2 text-sm" data-oid="vf_pxjg">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="qs65i8y">
+              <h3 className="text-[16px]" data-oid="3pjg-fj">
                 {t("skills.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="x:zvbvc">
-            <FadeIn direction="up" data-oid="xi61u0t">
-              <h2 className="section-subtitle" data-oid=".j.x5ow">
+          <div className="section-content" data-oid="ovadlth">
+            <FadeIn direction="up" data-oid="5odpdze">
+              <h2 className="section-subtitle" data-oid="f5x8ghn">
                 {t("skills.title")}
               </h2>
-              <p className="section-description mb-12" data-oid="ooi50h-">
+              <p className="section-description mb-12" data-oid="05bgwx0">
                 {t("skills.description")}
               </p>
 
               <StaggerContainer
                 staggerChildren={0.1}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                data-oid="kobn-jm"
+                data-oid="qnssnyq"
               >
-                <StaggerItem data-oid="uc7kcj3">
+                <StaggerItem data-oid="93estma">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="arup8nt"
+                    data-oid="84p50gs"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="yz_-dmx"
+                      data-oid="t-4k:1-"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="r2868-y"
+                        data-oid=":6m16m-"
                       >
                         {t("skills.processDevelopment.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="5t.gqri"
+                        data-oid="3jss2px"
                       >
                         {t("skills.processDevelopment.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="ya3xx87">
+                <StaggerItem data-oid="cpvo4w1">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="m5n39qd"
+                    data-oid="anaz5u6"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="q.c27:q"
+                      data-oid="647ls.w"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="-p4hm55"
+                        data-oid="_udlwd3"
                       >
                         {t("skills.dataAnalysis.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="k5.pltd"
+                        data-oid="ryck4m9"
                       >
                         {t("skills.dataAnalysis.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="gx:cyfv">
+                <StaggerItem data-oid="1rk_sr8">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="isj2oq9"
+                    data-oid="p-zhz5."
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="xo1de0z"
+                      data-oid="9hlm3ld"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="efsbyfb"
+                        data-oid="e4ap2x:"
                       >
                         {t("skills.manufacturingSystems.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid=":vokspi"
+                        data-oid="g:ftg7m"
                       >
                         {t("skills.manufacturingSystems.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="0qhm3xm">
+                <StaggerItem data-oid="odry-zt">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid=".bo.f.5"
+                    data-oid="fkhipv."
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="8ekrsdw"
+                      data-oid="996fg0m"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="1bmn0tr"
+                        data-oid="9c.-9l."
                       >
                         {t("skills.cadDesign.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="jthafii"
+                        data-oid="5o32n:_"
                       >
                         {t("skills.cadDesign.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem className="md:col-span-2" data-oid="gn1grqp">
+                <StaggerItem className="md:col-span-2" data-oid="-q.8yt2">
                   <TiltCard
                     glareEffect={true}
                     tiltFactor={5}
                     className="h-full"
-                    data-oid="tdmhmi6"
+                    data-oid="w-snf0x"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="z1dxnav"
+                      data-oid="wgfxr1l"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="wf719t:"
+                        data-oid="i2pjynj"
                       >
                         {t("skills.technicalSkills.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="l3ag2fq"
+                        data-oid="jchh6fg"
                       >
                         Python, SQL, LabVIEW, C++, CAD, SolidWorks, Adobe
                         Programs, Office Suites
@@ -720,61 +857,65 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Works Section */}
-      <ScrollReveal data-oid="l8e_tmi"></ScrollReveal>
+      <ScrollReveal data-oid="wt5di8d">
+        <div className="hidden">Works section placeholder</div>
+      </ScrollReveal>
 
       {/* Projects Grid */}
-      <ScrollReveal data-oid="2fjjzlv"></ScrollReveal>
+      <ScrollReveal data-oid="6l0jfvd">
+        <div className="hidden">Projects grid placeholder</div>
+      </ScrollReveal>
 
       {/* Professional Experience Section */}
-      <ScrollReveal data-oid="4dy.mj1">
+      <ScrollReveal data-oid="opu69p7">
         <section
           id="experience-section"
           className="section-container"
-          data-oid="a6-5ro:"
+          data-oid="c:cn69o"
         >
-          <div className="section-sidebar" data-oid="t5bmuec">
-            <div className="section-header" data-oid="al5cb5f">
-              <span className="mr-2 text-sm" data-oid="nm:53k3">
+          <div className="section-sidebar" data-oid="epz9kjj">
+            <div className="section-header" data-oid="3gr5k_f">
+              <span className="mr-2 text-sm" data-oid="pnt0g_r">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="px-m6sy">
+              <h3 className="text-[16px]" data-oid=":xv5l0i">
                 {t("experience.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="f9o:0j.">
-            <FadeIn direction="up" data-oid="o-etegi">
-              <h2 className="section-title" data-oid="v1jg90z">
+          <div className="section-content" data-oid="c-d:kdr">
+            <FadeIn direction="up" data-oid="yaq.-ye">
+              <h2 className="section-title" data-oid="i92y-fg">
                 {t("experience.title")}
               </h2>
 
-              <div className="space-y-8 mt-8" data-oid="2:pqwzs">
+              <div className="space-y-8 mt-8" data-oid="mhtg0qr">
                 {professionalExperience.map((exp) => (
                   <div
                     key={exp.id}
                     className="rounded-md p-6 border border-[#d1d1c7] transition-all hover:shadow-sm"
-                    data-oid="t7ss..4"
+                    data-oid="kplz35a"
                   >
                     <div
                       className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
-                      data-oid="jplml5s"
+                      data-oid="p-sz8r5"
                     >
-                      <div data-oid="ke2obnr">
+                      <div data-oid="c8dzbfk">
                         <h3
                           className="text-xl font-medium mb-2"
-                          data-oid="kiep0-7"
+                          data-oid="xvn:4j6"
                         >
                           {exp.title}
                         </h3>
                         <p
                           className="text-muted-foreground mb-1"
-                          data-oid="gaw_lbh"
+                          data-oid="hgkwyo9"
                         >
                           {exp.company} · {exp.location}
                         </p>
                         <p
                           className="text-sm text-muted-foreground"
-                          data-oid="im92081"
+                          data-oid="m8lz_21"
                         >
                           {exp.period}
                         </p>
@@ -782,7 +923,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       {exp.logo && (
                         <div
                           className="mt-4 md:mt-0 flex-shrink-0"
-                          data-oid="4:7sedl"
+                          data-oid="z4.9y4."
                         >
                           <Image
                             src={exp.logo}
@@ -790,17 +931,17 @@ export default function HomeClient({ locale }: HomeClientProps) {
                             width={120}
                             height={60}
                             className="object-contain max-h-16"
-                            data-oid="d5yqncd"
+                            data-oid="ct.t3wq"
                           />
                         </div>
                       )}
                     </div>
-                    <ul className="list-disc pl-5 space-y-3" data-oid="_r:8aui">
+                    <ul className="list-disc pl-5 space-y-3" data-oid="k-ney6b">
                       {exp.achievements.map((achievement, index) => (
                         <li
                           key={index}
                           className="text-sm leading-relaxed"
-                          data-oid="r6h.2f4"
+                          data-oid="9fkygxe"
                         >
                           {achievement}
                         </li>
@@ -815,55 +956,55 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Education Section */}
-      <ScrollReveal data-oid="b9k2_r.">
+      <ScrollReveal data-oid="h3958o9">
         <section
           id="education-section"
           className="section-container"
-          data-oid="d8-kbmn"
+          data-oid="58mdh_u"
         >
-          <div className="section-sidebar" data-oid="klkqbnz">
-            <div className="section-header" data-oid=".zm_otv">
-              <span className="mr-2 text-sm" data-oid="0z9ls5n">
+          <div className="section-sidebar" data-oid="mx64068">
+            <div className="section-header" data-oid="4zg:81q">
+              <span className="mr-2 text-sm" data-oid="73l0gg9">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="0qmgi1m">
+              <h3 className="text-[16px]" data-oid="r84qy5_">
                 {t("education.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="1veoqfi">
-            <FadeIn direction="up" data-oid="gbeytv5">
-              <h2 className="section-title" data-oid="079s67b">
+          <div className="section-content" data-oid="in7.:rv">
+            <FadeIn direction="up" data-oid="8ymzlut">
+              <h2 className="section-title" data-oid="3o70fyu">
                 {t("education.title")}
               </h2>
 
-              <div className="space-y-6 mt-8" data-oid="cy-icno">
+              <div className="space-y-6 mt-8" data-oid="rxcx5s_">
                 {education.map((edu) => (
                   <div
                     key={edu.id}
                     className="rounded-md p-6 border border-[#d1d1c7] transition-all hover:shadow-sm"
-                    data-oid="-bszejy"
+                    data-oid="z8xy9-2"
                   >
                     <div
                       className="flex flex-col md:flex-row justify-between items-start md:items-center"
-                      data-oid="x_0ijvb"
+                      data-oid="9.wlpk."
                     >
-                      <div data-oid="bwhpqnw">
+                      <div data-oid="1meiiu5">
                         <h3
                           className="text-xl font-medium mb-2"
-                          data-oid="i5-vnce"
+                          data-oid="dza_q.4"
                         >
                           {edu.institution}
                         </h3>
                         <p
                           className="text-muted-foreground mb-1"
-                          data-oid="9m8n6nx"
+                          data-oid="89301d6"
                         >
                           {edu.degree}
                         </p>
                         <p
                           className="text-sm text-muted-foreground"
-                          data-oid="tzpldgo"
+                          data-oid="_z1-yv2"
                         >
                           {edu.period}
                         </p>
@@ -871,7 +1012,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       {edu.logo && (
                         <div
                           className="mt-4 md:mt-0 flex-shrink-0"
-                          data-oid="zzb_qp:"
+                          data-oid="d8:gaf6"
                         >
                           <Image
                             src={edu.logo}
@@ -879,7 +1020,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                             width={120}
                             height={60}
                             className="object-contain max-h-16"
-                            data-oid="u23mprh"
+                            data-oid="0sqb7j6"
                           />
                         </div>
                       )}
@@ -893,39 +1034,39 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Resume Download Section */}
-      <ScrollReveal data-oid=":ulggzq">
+      <ScrollReveal data-oid="z2:wyvn">
         <section
           id="resume-section"
           className="section-container"
-          data-oid="bqea0wb"
+          data-oid="-i_v2te"
         >
-          <div className="section-sidebar" data-oid="pdlc-ev">
-            <div className="section-header" data-oid="dmhvzsq">
-              <span className="mr-2 text-sm" data-oid="9evgy47">
+          <div className="section-sidebar" data-oid="c-rvly6">
+            <div className="section-header" data-oid="5i-.t-3">
+              <span className="mr-2 text-sm" data-oid="pj9cdjd">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid=":y72dzm">
+              <h3 className="text-[16px]" data-oid="bjuxz1s">
                 {t("resume.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="r4_5m-v">
-            <FadeIn direction="up" data-oid="yln79dc">
-              <h2 className="section-title" data-oid="k63pe8y">
+          <div className="section-content" data-oid="e8k54n4">
+            <FadeIn direction="up" data-oid="hqfrqvd">
+              <h2 className="section-title" data-oid="v415c28">
                 {t("resume.title")}
               </h2>
-              <p className="section-description mb-8" data-oid="aklqpbe">
+              <p className="section-description mb-8" data-oid="lt.7bir">
                 {t("resume.description")}
               </p>
               <a
                 href="/uploads/Mohamed-adil-resume-PSE.pdf"
                 download
                 className="inline-block mt-4"
-                data-oid="s_sz21g"
+                data-oid="2irv3au"
               >
                 <Button
                   className="main-button rounded-full px-8 py-6 text-base"
-                  data-oid="juvmlmt"
+                  data-oid="wtx4iwd"
                 >
                   Download Resume (PDF)
                 </Button>
@@ -936,34 +1077,34 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Technical Skills Section */}
-      <ScrollReveal data-oid="j5bt92r">
-        <section className="section-container" data-oid="pz.sjpt">
-          <div className="section-sidebar" data-oid="1bek5e6">
-            <div className="section-header" data-oid="k36ylv0">
-              <span className="mr-2 text-sm" data-oid="bomvw.7">
+      <ScrollReveal data-oid="-vfa:-n">
+        <section className="section-container" data-oid="xcp5knz">
+          <div className="section-sidebar" data-oid="2x2i2uq">
+            <div className="section-header" data-oid="1dt3b-s">
+              <span className="mr-2 text-sm" data-oid="hbt00g8">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid=".tw12a-">
+              <h3 className="text-[16px]" data-oid="dqng2qc">
                 Technical Skills
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="fv-gn4k">
-            <FadeIn direction="up" data-oid="uw9xfq.">
-              <h2 className="section-subtitle" data-oid="ru7yt67">
+          <div className="section-content" data-oid="5-48gba">
+            <FadeIn direction="up" data-oid="5d9zwbp">
+              <h2 className="section-subtitle" data-oid="6u02wdv">
                 Technical Expertise
               </h2>
-              <p className="section-description mb-8" data-oid="teqt3yq">
+              <p className="section-description mb-8" data-oid="bdt:bdw">
                 My core technical skills and competencies that I bring to every
                 project.
               </p>
 
-              <div className="grid grid-cols-1 gap-10" data-oid="3tvajsd">
-                <div data-oid="gn4686w">
-                  <h3 className="text-xl font-medium mb-5" data-oid="h423dry">
+              <div className="grid grid-cols-1 gap-10" data-oid="ap7gbqq">
+                <div data-oid="7lnqgc3">
+                  <h3 className="text-xl font-medium mb-5" data-oid="60.lt-o">
                     Engineering
                   </h3>
-                  <div className="flex flex-wrap gap-3" data-oid="p-jsjcc">
+                  <div className="flex flex-wrap gap-3" data-oid="dm-9_fq">
                     {[
                       "CAD & SolidWorks",
                       "Operations Research",
@@ -974,7 +1115,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
-                        data-oid="6ha8eip"
+                        data-oid="60rlcz2"
                       >
                         {skill}
                       </span>
@@ -982,11 +1123,11 @@ export default function HomeClient({ locale }: HomeClientProps) {
                   </div>
                 </div>
 
-                <div data-oid="r9s5yih">
-                  <h3 className="text-xl font-medium mb-5" data-oid="pp_:koq">
+                <div data-oid="mh8ee80">
+                  <h3 className="text-xl font-medium mb-5" data-oid="ixu72-i">
                     Data & Programming
                   </h3>
-                  <div className="flex flex-wrap gap-3" data-oid="9d6-:zb">
+                  <div className="flex flex-wrap gap-3" data-oid="y5m1peh">
                     {[
                       "SQL & Database Design",
                       "Python Development",
@@ -997,7 +1138,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
-                        data-oid="nsibt4n"
+                        data-oid="hdwrzan"
                       >
                         {skill}
                       </span>
@@ -1005,11 +1146,11 @@ export default function HomeClient({ locale }: HomeClientProps) {
                   </div>
                 </div>
 
-                <div data-oid="kb7sip9">
-                  <h3 className="text-xl font-medium mb-5" data-oid="y2nxuy7">
+                <div data-oid=":k7poz1">
+                  <h3 className="text-xl font-medium mb-5" data-oid="hf95w7x">
                     Management
                   </h3>
-                  <div className="flex flex-wrap gap-3" data-oid=":qy0e_t">
+                  <div className="flex flex-wrap gap-3" data-oid="sml-h.9">
                     {[
                       "Project Management",
                       "SCRUM & Agile Methodologies",
@@ -1020,7 +1161,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
-                        data-oid="ryg9_8j"
+                        data-oid="u039mjg"
                       >
                         {skill}
                       </span>
@@ -1034,13 +1175,19 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Blog Section */}
-      <ScrollReveal data-oid="vk.lkql"></ScrollReveal>
+      <ScrollReveal data-oid="oqpmkdp">
+        <div className="hidden">Blog section placeholder</div>
+      </ScrollReveal>
 
       {/* Blog Posts Grid */}
-      <ScrollReveal data-oid="s_wc41p"></ScrollReveal>
+      <ScrollReveal data-oid="u.86o_5">
+        <div className="hidden">Blog posts grid placeholder</div>
+      </ScrollReveal>
 
       {/* Newsletter Section */}
-      <ScrollReveal data-oid="e52zlz9"></ScrollReveal>
+      <ScrollReveal data-oid="4p6.oix">
+        <div className="hidden">Newsletter section placeholder</div>
+      </ScrollReveal>
     </ClientBody>
   );
 }

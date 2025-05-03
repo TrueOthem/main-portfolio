@@ -33,26 +33,26 @@ export default async function LocaleLayout({
       lang={locale}
       dir={direction}
       suppressHydrationWarning
-      data-oid="g5p3qwy"
+      data-oid="js_7jfu"
     >
       <body
         className="min-h-screen flex-col flex static top-auto right-auto bottom-auto left-auto"
         suppressHydrationWarning
-        data-oid="68tzorh"
+        data-oid="p.j_idm"
       >
-        <DeviceContextProvider data-oid="pws6vce">
+        <DeviceContextProvider data-oid="hg:7vzb">
           <ScrollProgressBar
             height={3}
             color="var(--primary)"
-            data-oid="fv9270d"
+            data-oid="flx6edk"
           />
 
-          <Navbar data-oid="khyhipi" />
+          <Navbar data-oid="y-ier3m" />
           <main
             className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0 w-[1184px]"
-            data-oid="i5tpiv9"
+            data-oid="6qr5b9m"
           >
-            <AdvancedPageTransition data-oid=":y_rumm">
+            <AdvancedPageTransition data-oid="82c:4q-">
               {children}
             </AdvancedPageTransition>
           </main>
