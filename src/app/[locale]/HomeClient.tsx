@@ -419,10 +419,10 @@ export default function HomeClient({ locale }: HomeClientProps) {
       <ScrollReveal data-oid="3ex2w-_">
         <section
           id="about-section"
-          className="section-container h-[355px]"
+          className="section-container min-h-[355px]"
           data-oid="w8o2e.s"
         >
-          <div className="section-sidebar w-auto h-[355px]" data-oid="_ij2k33">
+          <div className="section-sidebar" data-oid="_ij2k33">
             <div className="section-header" data-oid="g4qonb_">
               <span className="mr-2 text-sm" data-oid="krpu1cx">
                 +
@@ -504,40 +504,49 @@ export default function HomeClient({ locale }: HomeClientProps) {
       {/* Company Logos Section */}
       <ScrollReveal data-oid="jkqvqfv">
         <section
-          className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 border-b border-[#d1d1c7] overflow-hidden p-[32px]"
+          className="col-span-3 border-b border-[#d1d1c7] overflow-hidden py-8 md:py-12 px-6 md:px-8"
           data-oid="hxjjk_u"
         >
           <StaggerContainer
             staggerChildren={0.1}
-            className="logo-grid"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
             data-oid="-5i92-1"
           >
             {logoData.map((logo) => (
               <StaggerItem key={logo.id} data-oid="5yzug07">
-                <div className="logo-container" data-oid="pzhk096">
+                <div
+                  className="flex justify-center items-center"
+                  data-oid="pzhk096"
+                >
                   <MagneticElement
                     distanceThreshold={100}
                     magnetStrength={0.2}
                     data-oid="12bm3lv"
                   >
-                    <div className="logo-item" data-oid="ho7pk1o">
+                    <div
+                      className="h-20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
+                      data-oid="ho7pk1o"
+                    >
                       {logo.imgSrc ? (
                         <div
-                          className="logo-image-container"
+                          className="h-full flex items-center justify-center"
                           data-oid="kwtru0i"
                         >
                           <Image
                             src={logo.imgSrc}
                             alt={logo.company}
                             priority
-                            width={200}
-                            height={100}
-                            className="logo-image"
+                            width={120}
+                            height={60}
+                            className="max-h-16 object-contain"
                             data-oid="7_0hgaa"
                           />
                         </div>
                       ) : (
-                        <div className="logo-placeholder" data-oid="t.iqpih">
+                        <div
+                          className="h-16 w-full flex items-center justify-center text-sm text-center"
+                          data-oid="t.iqpih"
+                        >
                           {logo.company}
                         </div>
                       )}
@@ -574,7 +583,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
               <StaggerContainer
                 staggerChildren={0.1}
-                className="skills-grid"
+                className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 data-oid="kobn-jm"
               >
                 <StaggerItem data-oid="uc7kcj3">
@@ -583,11 +592,20 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     className="h-full"
                     data-oid="arup8nt"
                   >
-                    <div className="content-card" data-oid="yz_-dmx">
-                      <h3 className="card-title" data-oid="r2868-y">
+                    <div
+                      className="border border-[#d1d1c7] p-6 h-full rounded-md"
+                      data-oid="yz_-dmx"
+                    >
+                      <h3
+                        className="text-lg font-medium mb-3"
+                        data-oid="r2868-y"
+                      >
                         {t("skills.processDevelopment.title")}
                       </h3>
-                      <p className="card-text" data-oid="5t.gqri">
+                      <p
+                        className="text-sm text-muted-foreground"
+                        data-oid="5t.gqri"
+                      >
                         {t("skills.processDevelopment.description")}
                       </p>
                     </div>
@@ -599,11 +617,20 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     className="h-full"
                     data-oid="m5n39qd"
                   >
-                    <div className="content-card" data-oid="q.c27:q">
-                      <h3 className="card-title" data-oid="-p4hm55">
+                    <div
+                      className="border border-[#d1d1c7] p-6 h-full rounded-md"
+                      data-oid="q.c27:q"
+                    >
+                      <h3
+                        className="text-lg font-medium mb-3"
+                        data-oid="-p4hm55"
+                      >
                         {t("skills.dataAnalysis.title")}
                       </h3>
-                      <p className="card-text" data-oid="k5.pltd">
+                      <p
+                        className="text-sm text-muted-foreground"
+                        data-oid="k5.pltd"
+                      >
                         {t("skills.dataAnalysis.description")}
                       </p>
                     </div>
@@ -615,11 +642,20 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     className="h-full"
                     data-oid="isj2oq9"
                   >
-                    <div className="content-card" data-oid="xo1de0z">
-                      <h3 className="card-title" data-oid="efsbyfb">
+                    <div
+                      className="border border-[#d1d1c7] p-6 h-full rounded-md"
+                      data-oid="xo1de0z"
+                    >
+                      <h3
+                        className="text-lg font-medium mb-3"
+                        data-oid="efsbyfb"
+                      >
                         {t("skills.manufacturingSystems.title")}
                       </h3>
-                      <p className="card-text" data-oid=":vokspi">
+                      <p
+                        className="text-sm text-muted-foreground"
+                        data-oid=":vokspi"
+                      >
                         {t("skills.manufacturingSystems.description")}
                       </p>
                     </div>
@@ -631,11 +667,20 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     className="h-full"
                     data-oid=".bo.f.5"
                   >
-                    <div className="content-card" data-oid="8ekrsdw">
-                      <h3 className="card-title" data-oid="1bmn0tr">
+                    <div
+                      className="border border-[#d1d1c7] p-6 h-full rounded-md"
+                      data-oid="8ekrsdw"
+                    >
+                      <h3
+                        className="text-lg font-medium mb-3"
+                        data-oid="1bmn0tr"
+                      >
                         {t("skills.cadDesign.title")}
                       </h3>
-                      <p className="card-text" data-oid="jthafii">
+                      <p
+                        className="text-sm text-muted-foreground"
+                        data-oid="jthafii"
+                      >
                         {t("skills.cadDesign.description")}
                       </p>
                     </div>
@@ -648,12 +693,18 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     className="h-full"
                     data-oid="tdmhmi6"
                   >
-                    <div className="content-card" data-oid="z1dxnav">
-                      <h3 className="card-title" data-oid="wf719t:">
+                    <div
+                      className="border border-[#d1d1c7] p-6 h-full rounded-md"
+                      data-oid="z1dxnav"
+                    >
+                      <h3
+                        className="text-lg font-medium mb-3"
+                        data-oid="wf719t:"
+                      >
                         {t("skills.technicalSkills.title")}
                       </h3>
                       <p
-                        className="card-text mb-4 rounded-none"
+                        className="text-sm text-muted-foreground"
                         data-oid="l3ag2fq"
                       >
                         Python, SQL, LabVIEW, C++, CAD, SolidWorks, Adobe
@@ -701,18 +752,24 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 {professionalExperience.map((exp) => (
                   <div
                     key={exp.id}
-                    className="rounded-lg p-6 border border-[#d1d1c7] bg-[#00000000]"
+                    className="rounded-md p-6 border border-[#d1d1c7] transition-all hover:shadow-sm"
                     data-oid="t7ss..4"
                   >
                     <div
-                      className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
+                      className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
                       data-oid="jplml5s"
                     >
                       <div data-oid="ke2obnr">
-                        <h3 className="text-xl font-medium" data-oid="kiep0-7">
+                        <h3
+                          className="text-xl font-medium mb-2"
+                          data-oid="kiep0-7"
+                        >
                           {exp.title}
                         </h3>
-                        <p className="text-muted-foreground" data-oid="gaw_lbh">
+                        <p
+                          className="text-muted-foreground mb-1"
+                          data-oid="gaw_lbh"
+                        >
                           {exp.company} · {exp.location}
                         </p>
                         <p
@@ -723,21 +780,28 @@ export default function HomeClient({ locale }: HomeClientProps) {
                         </p>
                       </div>
                       {exp.logo && (
-                        <div className="mt-4 md:mt-0" data-oid="4:7sedl">
+                        <div
+                          className="mt-4 md:mt-0 flex-shrink-0"
+                          data-oid="4:7sedl"
+                        >
                           <Image
                             src={exp.logo}
                             alt={exp.company}
                             width={120}
                             height={60}
-                            className="object-contain"
+                            className="object-contain max-h-16"
                             data-oid="d5yqncd"
                           />
                         </div>
                       )}
                     </div>
-                    <ul className="list-disc pl-5 space-y-2" data-oid="_r:8aui">
+                    <ul className="list-disc pl-5 space-y-3" data-oid="_r:8aui">
                       {exp.achievements.map((achievement, index) => (
-                        <li key={index} className="text-sm" data-oid="r6h.2f4">
+                        <li
+                          key={index}
+                          className="text-sm leading-relaxed"
+                          data-oid="r6h.2f4"
+                        >
                           {achievement}
                         </li>
                       ))}
@@ -777,7 +841,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 {education.map((edu) => (
                   <div
                     key={edu.id}
-                    className="rounded-lg p-6 border border-[#d1d1c7] bg-[#00000000]"
+                    className="rounded-md p-6 border border-[#d1d1c7] transition-all hover:shadow-sm"
                     data-oid="-bszejy"
                   >
                     <div
@@ -785,10 +849,16 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       data-oid="x_0ijvb"
                     >
                       <div data-oid="bwhpqnw">
-                        <h3 className="text-xl font-medium" data-oid="i5-vnce">
+                        <h3
+                          className="text-xl font-medium mb-2"
+                          data-oid="i5-vnce"
+                        >
                           {edu.institution}
                         </h3>
-                        <p className="text-muted-foreground" data-oid="9m8n6nx">
+                        <p
+                          className="text-muted-foreground mb-1"
+                          data-oid="9m8n6nx"
+                        >
                           {edu.degree}
                         </p>
                         <p
@@ -799,13 +869,16 @@ export default function HomeClient({ locale }: HomeClientProps) {
                         </p>
                       </div>
                       {edu.logo && (
-                        <div className="mt-4 md:mt-0" data-oid="zzb_qp:">
+                        <div
+                          className="mt-4 md:mt-0 flex-shrink-0"
+                          data-oid="zzb_qp:"
+                        >
                           <Image
                             src={edu.logo}
                             alt={edu.institution}
                             width={120}
                             height={60}
-                            className="object-contain"
+                            className="object-contain max-h-16"
                             data-oid="u23mprh"
                           />
                         </div>
@@ -847,9 +920,13 @@ export default function HomeClient({ locale }: HomeClientProps) {
               <a
                 href="/uploads/Mohamed-adil-resume-PSE.pdf"
                 download
+                className="inline-block mt-4"
                 data-oid="s_sz21g"
               >
-                <Button className="main-button rounded-full" data-oid="juvmlmt">
+                <Button
+                  className="main-button rounded-full px-8 py-6 text-base"
+                  data-oid="juvmlmt"
+                >
                   Download Resume (PDF)
                 </Button>
               </a>
@@ -881,12 +958,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 project.
               </p>
 
-              <div className="grid grid-cols-1 gap-8" data-oid="3tvajsd">
+              <div className="grid grid-cols-1 gap-10" data-oid="3tvajsd">
                 <div data-oid="gn4686w">
-                  <h3 className="text-xl font-medium mb-4" data-oid="h423dry">
+                  <h3 className="text-xl font-medium mb-5" data-oid="h423dry">
                     Engineering
                   </h3>
-                  <div className="flex flex-wrap gap-2" data-oid="p-jsjcc">
+                  <div className="flex flex-wrap gap-3" data-oid="p-jsjcc">
                     {[
                       "CAD & SolidWorks",
                       "Operations Research",
@@ -896,7 +973,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     ].map((skill) => (
                       <span
                         key={skill}
-                        className="inline-block px-4 py-2 rounded-full text-sm bg-[#00000000] border"
+                        className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
                         data-oid="6ha8eip"
                       >
                         {skill}
@@ -906,10 +983,10 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 </div>
 
                 <div data-oid="r9s5yih">
-                  <h3 className="text-xl font-medium mb-4" data-oid="pp_:koq">
+                  <h3 className="text-xl font-medium mb-5" data-oid="pp_:koq">
                     Data & Programming
                   </h3>
-                  <div className="flex flex-wrap gap-2" data-oid="9d6-:zb">
+                  <div className="flex flex-wrap gap-3" data-oid="9d6-:zb">
                     {[
                       "SQL & Database Design",
                       "Python Development",
@@ -919,7 +996,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     ].map((skill) => (
                       <span
                         key={skill}
-                        className="inline-block px-4 py-2 rounded-full text-sm bg-[#00000000] border"
+                        className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
                         data-oid="nsibt4n"
                       >
                         {skill}
@@ -929,10 +1006,10 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 </div>
 
                 <div data-oid="kb7sip9">
-                  <h3 className="text-xl font-medium mb-4" data-oid="y2nxuy7">
+                  <h3 className="text-xl font-medium mb-5" data-oid="y2nxuy7">
                     Management
                   </h3>
-                  <div className="flex flex-wrap gap-2" data-oid=":qy0e_t">
+                  <div className="flex flex-wrap gap-3" data-oid=":qy0e_t">
                     {[
                       "Project Management",
                       "SCRUM & Agile Methodologies",
@@ -942,7 +1019,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     ].map((skill) => (
                       <span
                         key={skill}
-                        className="inline-block px-4 py-2 rounded-full text-sm bg-[#00000000] border"
+                        className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
                         data-oid="ryg9_8j"
                       >
                         {skill}
