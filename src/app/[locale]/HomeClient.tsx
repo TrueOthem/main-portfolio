@@ -360,12 +360,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
       {/* Hero Section with Parallax */}
       <section
         id="hero-section"
-        className="section-container hero-section relative w-full grid-cols-[repeat(3,_1fr)] grid flex-row justify-center grid-rows-[repeat(2,_1fr)]"
+        className="section-container hero-section relative w-full flex flex-col md:grid md:grid-cols-[repeat(3,_1fr)] justify-center md:grid-rows-[repeat(2,_1fr)]"
         data-testid="hero-section"
         data-oid="l5k326a"
       >
         <div
-          className="col-span-1 md:border-r border-[#d1d1c7] flex p-0 md:p-0 lg:p-0 w-full justify-center items-center overflow-visible static top-auto right-auto bottom-auto left-auto rounded-none"
+          className="col-span-1 md:border-r border-[#d1d1c7] flex p-0 md:p-0 lg:p-0 w-full items-center overflow-visible static top-auto right-auto bottom-auto left-auto rounded-none justify-start"
           data-oid=".bmnva8"
         >
           <div
@@ -390,7 +390,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
           <ParallaxScroll speed={0.1} direction="up" data-oid="g_1:ra-">
             <RevealText data-oid="5y65q5w">
               <h1
-                className="md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12 text-[102px] h-[237px] static top-auto right-auto bottom-auto left-auto"
+                className="md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12 text-[60px] md:text-[102px] md:h-[237px] static top-auto right-auto bottom-auto left-auto"
                 data-oid="ogbb-:q"
               >
                 {t("hero.name")}
