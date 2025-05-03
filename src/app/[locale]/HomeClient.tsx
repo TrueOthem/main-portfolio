@@ -402,7 +402,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
           {/* Abstract decorative elements with parallax */}
           <div
-            className="absolute top-10 right-20 w-10 h-10 opacity-10"
+            className="absolute top-10 right-10 md:right-20 w-8 h-8 md:w-10 md:h-10 opacity-10 hidden md:block"
             data-oid="_okunza"
           >
             <ParallaxScroll speed={0.4} direction="right" data-oid="4d-o7f6">
