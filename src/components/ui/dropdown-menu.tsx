@@ -32,9 +32,10 @@ const DropdownMenuSubTrigger = React.forwardRef<
       className,
     )}
     {...props}
+    data-oid="uk7dst2"
   >
     {children}
-    <ChevronRight className="ml-auto h-4 w-4" />
+    <ChevronRight className="ml-auto h-4 w-4" data-oid="ihzgarl" />
   </DropdownMenuPrimitive.SubTrigger>
 ));
 DropdownMenuSubTrigger.displayName =
@@ -51,6 +52,7 @@ const DropdownMenuSubContent = React.forwardRef<
       className,
     )}
     {...props}
+    data-oid="tby49d9"
   />
 ));
 DropdownMenuSubContent.displayName =
@@ -60,7 +62,7 @@ const DropdownMenuContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
 >(({ className, sideOffset = 4, ...props }, ref) => (
-  <DropdownMenuPrimitive.Portal>
+  <DropdownMenuPrimitive.Portal data-oid="mr.x-v6">
     <DropdownMenuPrimitive.Content
       ref={ref}
       sideOffset={sideOffset}
@@ -69,6 +71,7 @@ const DropdownMenuContent = React.forwardRef<
         className,
       )}
       {...props}
+      data-oid="wgy1r_z"
     />
   </DropdownMenuPrimitive.Portal>
 ));
@@ -88,6 +91,7 @@ const DropdownMenuItem = React.forwardRef<
       className,
     )}
     {...props}
+    data-oid="u8yi:5h"
   />
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
@@ -104,10 +108,14 @@ const DropdownMenuCheckboxItem = React.forwardRef<
     )}
     checked={checked}
     {...props}
+    data-oid="5ggj3hv"
   >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
+    <span
+      className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center"
+      data-oid="79lm4pe"
+    >
+      <DropdownMenuPrimitive.ItemIndicator data-oid="gkvbsc8">
+        <Check className="h-4 w-4" data-oid="-:rk9b5" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
@@ -127,10 +135,14 @@ const DropdownMenuRadioItem = React.forwardRef<
       className,
     )}
     {...props}
+    data-oid="ixt-bfk"
   >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
-        <Circle className="h-2 w-2 fill-current" />
+    <span
+      className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center"
+      data-oid="7h0:988"
+    >
+      <DropdownMenuPrimitive.ItemIndicator data-oid="sx7:lbg">
+        <Circle className="h-2 w-2 fill-current" data-oid="nc2h31i" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
@@ -152,6 +164,7 @@ const DropdownMenuLabel = React.forwardRef<
       className,
     )}
     {...props}
+    data-oid="ro-hkhh"
   />
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
@@ -164,6 +177,7 @@ const DropdownMenuSeparator = React.forwardRef<
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
     {...props}
+    data-oid="g38--7a"
   />
 ));
 DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName;
@@ -176,6 +190,7 @@ const DropdownMenuShortcut = ({
     <span
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
       {...props}
+      data-oid="j1r7cim"
     />
   );
 };

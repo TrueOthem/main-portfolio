@@ -360,12 +360,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
       {/* Hero Section with Parallax */}
       <section
         id="hero-section"
-        className="section-container hero-section relative w-full grid grid-cols-[repeat(3,_1fr)]"
+        className="section-container hero-section relative w-full grid-cols-[repeat(3,_1fr)] grid flex-row justify-center grid-rows-[repeat(2,_1fr)]"
         data-testid="hero-section"
         data-oid="l5k326a"
       >
         <div
-          className="col-span-1 md:border-r border-[#d1d1c7] flex p-0 md:p-0 lg:p-0 w-full justify-center items-center overflow-visible static top-auto right-auto bottom-auto left-auto"
+          className="col-span-1 md:border-r border-[#d1d1c7] flex p-0 md:p-0 lg:p-0 w-full justify-center items-center overflow-visible static top-auto right-auto bottom-auto left-auto rounded-none"
           data-oid=".bmnva8"
         >
           <div
@@ -377,20 +377,20 @@ export default function HomeClient({ locale }: HomeClientProps) {
               alt="Mohamed Adil Al Sabri"
               width={500}
               height={500}
-              className="profile-image rounded-[370px] relative top-auto right-auto bottom-auto left-auto h-full w-[539px]"
+              className="profile-image rounded-[370px] relative top-auto right-auto bottom-auto left-auto h-[370px] w-[272px]"
               priority
               data-oid="stqs0a1"
             />
           </div>
         </div>
         <div
-          className="col-span-2 flex items-center p-1 md:p-1 lg:p-1 relative w-full"
+          className="col-span-2 items-center p-1 md:p-1 lg:p-1 w-full relative top-auto right-auto bottom-auto left-auto flex-row grid grid-cols-[repeat(1,_1fr)] grid-rows-[repeat(1,_1fr)]"
           data-oid="2-2y.du"
         >
           <ParallaxScroll speed={0.1} direction="up" data-oid="g_1:ra-">
             <RevealText data-oid="5y65q5w">
               <h1
-                className="text-5xl md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12"
+                className="md:text-6xl lg:text-7xl font-medium md:p-10 lg:p-10 p-12 text-[102px] h-[237px] static top-auto right-auto bottom-auto left-auto"
                 data-oid="ogbb-:q"
               >
                 {t("hero.name")}
@@ -419,10 +419,10 @@ export default function HomeClient({ locale }: HomeClientProps) {
       <ScrollReveal data-oid="3ex2w-_">
         <section
           id="about-section"
-          className="section-container"
+          className="section-container h-[355px]"
           data-oid="w8o2e.s"
         >
-          <div className="section-sidebar" data-oid="_ij2k33">
+          <div className="section-sidebar w-auto h-[355px]" data-oid="_ij2k33">
             <div className="section-header" data-oid="g4qonb_">
               <span className="mr-2 text-sm" data-oid="krpu1cx">
                 +
@@ -504,7 +504,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
       {/* Company Logos Section */}
       <ScrollReveal data-oid="jkqvqfv">
         <section
-          className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 py-8 border-b border-[#d1d1c7] overflow-hidden"
+          className="col-span-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 border-b border-[#d1d1c7] overflow-hidden p-[32px]"
           data-oid="hxjjk_u"
         >
           <StaggerContainer

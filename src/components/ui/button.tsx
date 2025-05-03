@@ -53,6 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         ref={ref}
         {...props}
+        data-oid="3f6tq:x"
       />
     );
   },
