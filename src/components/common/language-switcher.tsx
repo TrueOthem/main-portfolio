@@ -41,35 +41,52 @@ export default function LanguageSwitcher({
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <DropdownMenu data-oid="1m.:p05">
+      <DropdownMenuTrigger asChild data-oid="f_56.x5">
         <Button
           variant="outline"
           size="sm"
           className="text-sm font-medium px-4 py-2 rounded-full border border-[#d1d1c7] hover:bg-[#f4f4f0]"
           data-testid="language-switcher"
           data-variant={variant}
+          data-oid="pqztyye"
         >
-          <Globe className="h-4 w-4 mr-2" />
+          <Globe className="h-4 w-4 mr-2" data-oid="x-6beeh" />
           <motion.span
             key={currentLabel}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
+            data-oid="h7q_zmm"
           >
             {currentLabel}
           </motion.span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align={variant === "desktop" ? "end" : "start"}>
-        <DropdownMenuItem onClick={() => switchLanguage("en")}>
-          <span className={currentLocale === "en" ? "font-bold" : ""}>
+      <DropdownMenuContent
+        align={variant === "desktop" ? "end" : "start"}
+        data-oid="cogrppy"
+      >
+        <DropdownMenuItem
+          onClick={() => switchLanguage("en")}
+          data-oid="s6t0r7-"
+        >
+          <span
+            className={currentLocale === "en" ? "font-bold" : ""}
+            data-oid="1c7p0jh"
+          >
             English
           </span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => switchLanguage("ar")}>
-          <span className={currentLocale === "ar" ? "font-bold" : ""}>
+        <DropdownMenuItem
+          onClick={() => switchLanguage("ar")}
+          data-oid=".sx587c"
+        >
+          <span
+            className={currentLocale === "ar" ? "font-bold" : ""}
+            data-oid="g4ks1e_"
+          >
             العربية
           </span>
         </DropdownMenuItem>

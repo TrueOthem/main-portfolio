@@ -5,12 +5,13 @@ import { defaultLocale } from "../../navigation";
 export default function RootPage() {
   // The middleware will handle the redirect
   return (
-    <div>
-      <p>Redirecting to {defaultLocale}...</p>
+    <div data-oid="6c:zs_a">
+      <p data-oid="-1nbety">Redirecting to {defaultLocale}...</p>
       <script
         dangerouslySetInnerHTML={{
           __html: `window.location.href = "/${defaultLocale}";`,
         }}
+        data-oid="u0q_u68"
       />
     </div>
   );

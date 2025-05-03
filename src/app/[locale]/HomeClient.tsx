@@ -362,51 +362,87 @@ export default function HomeClient({ locale }: HomeClientProps) {
       {/* Hero Section with Enhanced Animations */}
       <section
         id="hero-section"
-        className="section-container hero-section relative w-full min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] flex flex-col md:flex-row justify-between items-center py-10 sm:py-14 md:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden"
+        className="section-container hero-section w-full min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] flex-col md:flex-row items-center py-10 sm:py-14 md:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden justify-between flex relative top-auto right-auto bottom-auto left-auto"
         data-testid="hero-section"
         data-oid="hakiw.4"
       >
         {/* Background decorative elements */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div
+          className="inset-0 z-0 overflow-hidden relative top-auto right-auto bottom-auto left-auto"
+          data-oid="01..8ft"
+        >
           {/* Top left circle */}
-          <div className="absolute top-[8%] sm:top-[10%] left-[5%] sm:left-[8%] w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 opacity-[0.07]">
-            <ParallaxScroll speed={0.2} direction="down">
-              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"></div>
+          <div
+            className="absolute top-[8%] sm:top-[10%] left-[5%] sm:left-[8%] w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-36 lg:h-36 opacity-[0.07]"
+            data-oid="abfpo7_"
+          >
+            <ParallaxScroll speed={0.2} direction="down" data-oid="rphh8e1">
+              <div
+                className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"
+                data-oid="cq0_:zk"
+              ></div>
             </ParallaxScroll>
           </div>
 
           {/* Bottom right large circle */}
-          <div className="absolute bottom-[12%] sm:bottom-[15%] right-[5%] sm:right-[8%] w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 opacity-[0.06]">
-            <ParallaxScroll speed={0.3} direction="up">
-              <div className="w-full h-full bg-gradient-to-tl from-primary to-primary/70 rounded-full"></div>
+          <div
+            className="absolute bottom-[12%] sm:bottom-[15%] right-[5%] sm:right-[8%] w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64 opacity-[0.06]"
+            data-oid="xqi2_cs"
+          >
+            <ParallaxScroll speed={0.3} direction="up" data-oid="08b9948">
+              <div
+                className="w-full h-full bg-gradient-to-tl from-primary to-primary/70 rounded-full"
+                data-oid="kc-tlbe"
+              ></div>
             </ParallaxScroll>
           </div>
 
           {/* Middle right small circle */}
-          <div className="absolute top-[38%] sm:top-[42%] right-[12%] sm:right-[18%] w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 opacity-[0.08]">
-            <ParallaxScroll speed={0.15} direction="left">
-              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"></div>
+          <div
+            className="absolute top-[38%] sm:top-[42%] right-[12%] sm:right-[18%] w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-28 lg:h-28 opacity-[0.08]"
+            data-oid="a2ae437"
+          >
+            <ParallaxScroll speed={0.15} direction="left" data-oid="-cu5_hm">
+              <div
+                className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"
+                data-oid="2c43ca2"
+              ></div>
             </ParallaxScroll>
           </div>
 
           {/* Additional small decorative element */}
-          <div className="absolute top-[65%] left-[18%] w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 opacity-[0.05] hidden sm:block">
-            <ParallaxScroll speed={0.25} direction="right">
-              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"></div>
+          <div
+            className="absolute top-[65%] left-[18%] w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 opacity-[0.05] hidden sm:block"
+            data-oid="q.jcmk8"
+          >
+            <ParallaxScroll speed={0.25} direction="right" data-oid="py0_u05">
+              <div
+                className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"
+                data-oid="6okov9b"
+              ></div>
             </ParallaxScroll>
           </div>
 
           {/* Extra small decorative dot */}
-          <div className="absolute top-[25%] left-[35%] w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-[0.04]">
-            <ParallaxScroll speed={0.1} direction="up">
-              <div className="w-full h-full bg-primary rounded-full"></div>
+          <div
+            className="absolute top-[25%] left-[35%] w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-[0.04]"
+            data-oid="75bmr2s"
+          >
+            <ParallaxScroll speed={0.1} direction="up" data-oid="8x8tsmz">
+              <div
+                className="w-full h-full bg-primary rounded-full"
+                data-oid="zdpm-97"
+              ></div>
             </ParallaxScroll>
           </div>
         </div>
 
         {/* Left side - Profile Image with animations */}
-        <div className="w-full md:w-2/5 flex justify-center items-center mb-12 sm:mb-10 md:mb-0 z-10 px-4 mt-4 sm:mt-0">
-          <div className="relative">
+        <div
+          className="w-full md:w-2/5 flex justify-center items-center mb-12 sm:mb-10 md:mb-0 z-10 px-4 mt-4 sm:mt-0"
+          data-oid="-lxdk7t"
+        >
+          <div className="relative" data-oid="xoml:qn">
             {/* Outer animated ring */}
             <motion.div
               className="absolute -inset-4 sm:-inset-5 md:-inset-6 lg:-inset-8 rounded-full border border-primary/10"
@@ -415,8 +451,9 @@ export default function HomeClient({ locale }: HomeClientProps) {
               transition={{
                 duration: 1.8,
                 ease: "easeOut",
-                delay: 0.6
+                delay: 0.6,
               }}
+              data-oid="1ybk_yb"
             />
 
             {/* Inner animated ring */}
@@ -427,19 +464,28 @@ export default function HomeClient({ locale }: HomeClientProps) {
               transition={{
                 duration: 1.5,
                 ease: "easeOut",
-                delay: 0.4
+                delay: 0.4,
               }}
+              data-oid="jj4wndb"
             />
 
             {/* Profile image with subtle hover effect */}
-            <MagneticElement distanceThreshold={100} magnetStrength={0.15}>
+            <MagneticElement
+              distanceThreshold={100}
+              magnetStrength={0.15}
+              data-oid=":euttn9"
+            >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative z-10"
+                data-oid="m1cb.ka"
               >
-                <div className="rounded-full overflow-hidden h-[220px] w-[220px] sm:h-[260px] sm:w-[260px] md:h-[300px] md:w-[300px] lg:h-[340px] lg:w-[340px] shadow-lg">
+                <div
+                  className="rounded-full overflow-hidden h-[220px] w-[220px] sm:h-[260px] sm:w-[260px] md:h-[300px] md:w-[300px] lg:h-[340px] lg:w-[340px] shadow-lg"
+                  data-oid="3_-pnrv"
+                >
                   <Image
                     src="/uploads/profile-photo.jpg"
                     alt="Mohamed Adil Al Sabri"
@@ -459,8 +505,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 0.12, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
+              data-oid=":40.-g7"
             >
-              <div className="w-full h-full bg-gradient-to-br from-primary to-primary/50 rounded-full" />
+              <div
+                className="w-full h-full bg-gradient-to-br from-primary to-primary/50 rounded-full"
+                data-oid="i2sdito"
+              />
             </motion.div>
 
             {/* Decorative element top left */}
@@ -469,55 +519,93 @@ export default function HomeClient({ locale }: HomeClientProps) {
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 0.08, y: 0 }}
               transition={{ duration: 1, delay: 1 }}
+              data-oid="fwn:0qi"
             >
-              <div className="w-full h-full bg-gradient-to-tr from-primary to-primary/50 rounded-full" />
+              <div
+                className="w-full h-full bg-gradient-to-tr from-primary to-primary/50 rounded-full"
+                data-oid="rs1v3al"
+              />
             </motion.div>
           </div>
         </div>
 
         {/* Right side - Name and title with animations */}
-        <div className="w-full md:w-3/5 z-10 px-4 md:px-8 lg:px-10 text-center md:text-left">
-          <div className="max-w-xl sm:max-w-2xl mx-auto md:mx-0 md:ml-4 lg:ml-8">
+        <div
+          className="w-full md:w-3/5 z-10 px-4 md:px-8 lg:px-10 text-center md:text-left"
+          data-oid="0vu774n"
+        >
+          <div
+            className="max-w-xl sm:max-w-2xl mx-auto md:mx-0 md:ml-4 lg:ml-8"
+            data-oid="0fn73:q"
+          >
             {/* Name with staggered reveal */}
-            <div className="overflow-hidden mb-1 sm:mb-2 md:mb-3">
-              <RevealText delay={0.2}>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]">
+            <div
+              className="overflow-hidden mb-1 sm:mb-2 md:mb-3"
+              data-oid="3r:93t9"
+            >
+              <RevealText delay={0.2} data-oid="b9-4a0h">
+                <h1
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]"
+                  data-oid="m3zqai0"
+                >
                   {t("hero.name")}
                 </h1>
               </RevealText>
             </div>
 
-            <div className="overflow-hidden mb-5 sm:mb-6 md:mb-8 lg:mb-10">
-              <RevealText delay={0.4}>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]">
+            <div
+              className="overflow-hidden mb-5 sm:mb-6 md:mb-8 lg:mb-10"
+              data-oid="n-7pixz"
+            >
+              <RevealText delay={0.4} data-oid="h0d:zz-">
+                <h1
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.1]"
+                  data-oid="pmeqz8h"
+                >
                   {t("hero.surname")}
                 </h1>
               </RevealText>
             </div>
 
             {/* Role/title with fade in */}
-            <FadeIn direction="up" delay={0.6}>
-              <div className="h-[2px] w-16 sm:w-20 md:w-24 lg:w-28 bg-gradient-to-r from-primary/40 to-primary/10 mb-5 sm:mb-6 md:mb-7 lg:mb-8 mx-auto md:mx-0"></div>
+            <FadeIn direction="up" delay={0.6} data-oid="drl4o0e">
+              <div
+                className="h-[2px] w-16 sm:w-20 md:w-24 lg:w-28 bg-gradient-to-r from-primary/40 to-primary/10 mb-5 sm:mb-6 md:mb-7 lg:mb-8 mx-auto md:mx-0"
+                data-oid="qbab80l"
+              ></div>
 
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-muted-foreground mb-4 sm:mb-5 md:mb-6 lg:mb-7 font-medium tracking-wide">
+              <h2
+                className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-muted-foreground mb-4 sm:mb-5 md:mb-6 lg:mb-7 font-medium tracking-wide"
+                data-oid="a2raanv"
+              >
                 Process Development Engineer
               </h2>
 
               {/* Brief intro text */}
-              <p className="text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg text-muted-foreground mb-6 sm:mb-7 md:mb-8 lg:mb-10 mx-auto md:mx-0 leading-relaxed">
-                Specialized in renewable energy production and manufacturing processes optimization, with expertise in data analysis and system design.
+              <p
+                className="text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg text-muted-foreground mb-6 sm:mb-7 md:mb-8 lg:mb-10 mx-auto md:mx-0 leading-relaxed"
+                data-oid="v6ws063"
+              >
+                Specialized in renewable energy production and manufacturing
+                processes optimization, with expertise in data analysis and
+                system design.
               </p>
 
               {/* CTA buttons with ripple effect */}
-              <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-5">
+              <div
+                className="flex flex-col sm:flex-row items-center md:items-start gap-4 sm:gap-5"
+                data-oid="vk_5ycl"
+              >
                 <RippleButton
                   className="px-7 sm:px-8 py-3 bg-primary text-white rounded-full text-sm md:text-base font-medium hover:bg-primary/90 transition-colors shadow-sm"
+                  data-oid="-r:k9yw"
                 >
                   View My Work
                 </RippleButton>
 
                 <RippleButton
                   className="px-7 sm:px-8 py-3 bg-transparent border border-primary/20 text-primary rounded-full text-sm md:text-base font-medium hover:bg-primary/5 transition-colors"
+                  data-oid="b2iyu3_"
                 >
                   Download Resume
                 </RippleButton>
@@ -533,8 +621,9 @@ export default function HomeClient({ locale }: HomeClientProps) {
           animate={{ opacity: 1 }}
           transition={{
             duration: 1,
-            delay: 1.5
+            delay: 1.5,
           }}
+          data-oid="fkgr_xr"
         >
           <motion.div
             className="flex flex-col items-center"
@@ -543,11 +632,20 @@ export default function HomeClient({ locale }: HomeClientProps) {
               duration: 2,
               repeat: Infinity,
               repeatType: "loop",
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
+            data-oid="a6lhb_b"
           >
-            <div className="w-[1px] h-10 md:h-12 bg-gradient-to-b from-primary/10 to-primary/40"></div>
-            <div className="mt-2 text-[10px] md:text-xs text-muted-foreground tracking-wider font-medium">SCROLL</div>
+            <div
+              className="w-[1px] h-10 md:h-12 bg-gradient-to-b from-primary/10 to-primary/40"
+              data-oid="8w96r72"
+            ></div>
+            <div
+              className="mt-2 text-[10px] md:text-xs text-muted-foreground tracking-wider font-medium"
+              data-oid="hm.0bx0"
+            >
+              SCROLL
+            </div>
           </motion.div>
         </motion.div>
       </section>
@@ -858,12 +956,16 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
       {/* Works Section */}
       <ScrollReveal data-oid="wt5di8d">
-        <div className="hidden">Works section placeholder</div>
+        <div className="hidden" data-oid="949amd7">
+          Works section placeholder
+        </div>
       </ScrollReveal>
 
       {/* Projects Grid */}
       <ScrollReveal data-oid="6l0jfvd">
-        <div className="hidden">Projects grid placeholder</div>
+        <div className="hidden" data-oid="nvnr3vq">
+          Projects grid placeholder
+        </div>
       </ScrollReveal>
 
       {/* Professional Experience Section */}
@@ -1176,17 +1278,23 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
       {/* Blog Section */}
       <ScrollReveal data-oid="oqpmkdp">
-        <div className="hidden">Blog section placeholder</div>
+        <div className="hidden" data-oid="zff.voj">
+          Blog section placeholder
+        </div>
       </ScrollReveal>
 
       {/* Blog Posts Grid */}
       <ScrollReveal data-oid="u.86o_5">
-        <div className="hidden">Blog posts grid placeholder</div>
+        <div className="hidden" data-oid="seq9mte">
+          Blog posts grid placeholder
+        </div>
       </ScrollReveal>
 
       {/* Newsletter Section */}
       <ScrollReveal data-oid="4p6.oix">
-        <div className="hidden">Newsletter section placeholder</div>
+        <div className="hidden" data-oid="-t251wg">
+          Newsletter section placeholder
+        </div>
       </ScrollReveal>
     </ClientBody>
   );
