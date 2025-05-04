@@ -362,7 +362,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
       {/* Hero Section with Enhanced Animations */}
       <section
         id="hero-section"
-        className="section-container hero-section w-full min-h-[80vh] md:min-h-[85vh] flex flex-col md:flex-row items-center py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden justify-between relative"
+        className="section-container hero-section w-full min-h-[80vh] md:min-h-[85vh] flex flex-col md:flex-row items-center py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden justify-between relative h-[2671px]"
         data-testid="hero-section"
         data-oid="hakiw.4"
       >
@@ -441,6 +441,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 delay: 0.6,
               }}
               data-oid="1ybk_yb"
+              key="olk-JGbZ"
             />
 
             {/* Inner animated ring */}
@@ -454,6 +455,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 delay: 0.4,
               }}
               data-oid="jj4wndb"
+              key="olk-bUl-"
             />
 
             {/* Profile image with subtle hover effect */}
@@ -461,6 +463,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
               distanceThreshold={100}
               magnetStrength={0.15}
               data-oid=":euttn9"
+              key="olk-uHm4"
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -487,32 +490,8 @@ export default function HomeClient({ locale }: HomeClientProps) {
             </MagneticElement>
 
             {/* Decorative element bottom right */}
-            <motion.div
-              className="absolute -bottom-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 opacity-[0.12] z-0"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 0.12, y: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              data-oid=":40.-g7"
-            >
-              <div
-                className="w-full h-full bg-gradient-to-br from-primary to-primary/50 rounded-full"
-                data-oid="i2sdito"
-              />
-            </motion.div>
 
             {/* Decorative element top left */}
-            <motion.div
-              className="absolute -top-3 -left-3 w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 opacity-[0.08] z-0"
-              initial={{ opacity: 0, y: -15 }}
-              animate={{ opacity: 0.08, y: 0 }}
-              transition={{ duration: 1, delay: 1 }}
-              data-oid="fwn:0qi"
-            >
-              <div
-                className="w-full h-full bg-gradient-to-tr from-primary to-primary/50 rounded-full"
-                data-oid="rs1v3al"
-              />
-            </motion.div>
           </div>
         </div>
 
