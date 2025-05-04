@@ -1,0 +1,270 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "works": "Trabajos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "allRightsReserved": "© {{year}} Mohamed Adil Al Sabri. Todos los derechos reservados.",
+    "linkedin": "LinkedIn",
+    "email": "Correo",
+    "phone": "Teléfono"
+  },
+  "home": {
+    "hero": {
+      "name": "Mohamed Adil",
+      "surname": "Al Sabri"
+    },
+    "about": {
+      "section": "Acerca de",
+      "title": "Ingeniero de Desarrollo de Procesos",
+      "description": "Ingeniero de Desarrollo de Procesos especializado en producción de hidrógeno verde. Mejoro la capacidad de proceso desarrollando procesos de fabricación escalables, integrando tecnología de vanguardia y aplicando análisis de datos para optimizar la eficiencia de producción.",
+      "experience": "Años de Experiencia",
+      "projects": "Proyectos Completados",
+      "companies": "Empresas Colaboradoras"
+    },
+    "skills": {
+      "section": "Habilidades",
+      "title": "Mi Experiencia Técnica",
+      "description": "Con formación en Ingeniería Mecánica y años de experiencia en desarrollo de procesos, aporto un conjunto diverso de habilidades que combina principios de ingeniería con enfoques basados en datos para optimizar procesos de fabricación.",
+      "processDevelopment": {
+        "title": "Desarrollo de Procesos",
+        "description": "Desarrollo de procesos de fabricación escalables para la producción de hidrógeno verde utilizando herramientas estadísticas como DOE y SPC."
+      },
+      "dataAnalysis": {
+        "title": "Análisis de Datos",
+        "description": "Aplicación de análisis de big data en entornos SaaS para optimizar la eficiencia de procesos y apoyar iniciativas de mejora continua."
+      },
+      "manufacturingSystems": {
+        "title": "Sistemas de Fabricación",
+        "description": "Construcción de arquitecturas de datos robustas para almacenamiento y visualización de datos en tiempo real para mejorar las capacidades de gestión de proyectos."
+      },
+      "cadDesign": {
+        "title": "Diseño CAD e Ingeniería",
+        "description": "Generación de diseños CAD estructurados y dibujos enfocados en calidad utilizando sistemas PDM para mejorar la precisión y eficiencia del diseño."
+      },
+      "technicalSkills": {
+        "title": "Habilidades Técnicas",
+        "description": "Dominio en CAD, SolidWorks, Python, SQL, Análisis de Datos, Machine Learning, Diseño de Productos y Gestión de Proyectos."
+      }
+    },
+    "experience": {
+      "section": "Experiencia",
+      "title": "Experiencia Profesional",
+      "viewFull": "Ver Experiencia Completa",
+      "position": {
+        "processEngineer": "Ingeniero de Desarrollo de Procesos",
+        "manufacturingEngineer": "Ingeniero de Fabricación"
+      },
+      "company": {
+        "electricHydrogen": "Electric Hydrogen - Boston, MA",
+        "advancedPower": "Advanced Power Conversion - Colorado, USA"
+      },
+      "date": {
+        "present": "Enero 2023 - Presente",
+        "previous": "Enero 2022 - Diciembre 2023"
+      },
+      "description": {
+        "processEngineer1": "Mejoré la capacidad de proceso en un 20% para la producción de hidrógeno verde desarrollando procesos de fabricación escalables.",
+        "processEngineer2": "Integré tecnología de vanguardia en procesos de producción trabajando con proveedores.",
+        "processEngineer3": "Mejoré la toma de decisiones y la comunicación con partes interesadas proporcionando recomendaciones accionables.",
+        "processEngineer4": "Desarrollé arquitecturas de datos robustas para almacenamiento y visualización de datos en tiempo real.",
+        "manufacturingEngineer1": "Mejoré la gestión del ciclo de vida del producto en un 20% utilizando mecanizado práctico y mecanismos de retroalimentación eficientes.",
+        "manufacturingEngineer2": "Reduje las iteraciones de desarrollo en un 30% mediante la colaboración con el equipo de I+D.",
+        "manufacturingEngineer3": "Logré un 95% de cumplimiento de control de calidad analizando unidades de producción según estándares.",
+        "manufacturingEngineer4": "Facilité la transformación multifuncional en procesos de fabricación."
+      }
+    },
+    "education": {
+      "section": "Educación",
+      "title": "Formación Académica",
+      "university": {
+        "colorado": "Universidad de Colorado - Boulder",
+        "pennsylvania": "Universidad de Pennsylvania"
+      },
+      "degree": {
+        "colorado": "Licenciatura, Ingeniería Mecánica (Agosto 2016 - Mayo 2021)",
+        "pennsylvania": "Certificación, Ingeniería Mecánica (Enero 2015 - Diciembre 2016)"
+      }
+    },
+    "contact": {
+      "section": "Contacto",
+      "title": "Ponerse en Contacto",
+      "description": "¿Interesado en discutir desarrollo de procesos, eficiencia de fabricación u oportunidades potenciales? Me encantaría conectar.",
+      "form": {
+        "name": "Su Nombre",
+        "email": "Dirección de Correo",
+        "subject": "Asunto",
+        "message": "Su Mensaje...",
+        "submit": "Enviar"
+      },
+      "info": {
+        "email": "Correo",
+        "phone": "Teléfono",
+        "location": "Ubicación",
+        "address": "Cambridge, MA, USA"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "aboutMe": "Sobre Mí",
+      "title": "Mohamed Adil Al Sabri",
+      "subtitle": "Ingeniero de Desarrollo de Procesos",
+      "getInTouch": "Ponerse en Contacto"
+    },
+    "career": {
+      "section": "Experiencia Laboral",
+      "title": "Mi Trayectoria Profesional",
+      "description": "Con experiencia en múltiples empresas y roles, he desarrollado experiencia en desarrollo de procesos, ingeniería de fabricación y gestión de proyectos en diversas industrias.",
+      "contactMe": "Contáctame",
+      "position": {
+        "processEngineer": "Ingeniero de Desarrollo de Procesos",
+        "manufacturingEngineer": "Ingeniero de Fabricación",
+        "applicationEngineer": "Ingeniero de Aplicaciones",
+        "engineeringStaff": "Personal de Ingeniería",
+        "rdIntern": "Pasante de I+D en Ingeniería"
+      },
+      "company": {
+        "electricHydrogen": "Electric Hydrogen - Boston, MA, USA",
+        "advancedPower": "Advanced Power Conversion - Colorado, USA",
+        "advancedPowerVT": "Advanced Power Conversion - Barre, VT, USA",
+        "cuBoulder": "CU BOULDER - Boulder, CO, USA",
+        "nist": "NIST - Boulder, CO, USA"
+      }
+    },
+    "skills": {
+      "section": "Habilidades",
+      "title": "Habilidades Técnicas",
+      "categories": {
+        "engineering": "Ingeniería",
+        "dataAndTech": "Datos y Tecnología",
+        "projectManagement": "Gestión de Proyectos"
+      },
+      "engineeringSkills": [
+        "CAD",
+        "SolidWorks",
+        "Diseño de Productos",
+        "Investigación de Operaciones",
+        "Desarrollo de Procesos"
+      ],
+      "dataSkills": [
+        "SQL",
+        "Python",
+        "Análisis de Datos",
+        "Ciencia de Datos",
+        "Machine Learning"
+      ],
+      "managementSkills": [
+        "SCRUM",
+        "JIRA",
+        "Gestión de Riesgos",
+        "Comunicación",
+        "Resolución de Problemas"
+      ]
+    }
+  },
+  "works": {
+    "hero": {
+      "section": "Trabajo Profesional",
+      "title": "Proyectos y Logros"
+    },
+    "categories": {
+      "all": "Todos",
+      "processDevelopment": "Desarrollo de Procesos",
+      "manufacturing": "Fabricación",
+      "designEngineering": "Ingeniería de Diseño",
+      "dataArchitecture": "Arquitectura de Datos",
+      "rdEngineering": "Ingeniería de I+D"
+    },
+    "projects": {
+      "company": "Empresa",
+      "year": "Año"
+    },
+    "skills": {
+      "section": "Habilidades",
+      "title": "Experiencia Técnica",
+      "categories": {
+        "engineering": "Ingeniería",
+        "programming": "Datos y Programación",
+        "management": "Gestión"
+      },
+      "engineeringSkills": [
+        "CAD y SolidWorks",
+        "Investigación de Operaciones",
+        "Desarrollo de Procesos",
+        "Sistemas de Fabricación",
+        "Diseño de Productos"
+      ],
+      "programmingSkills": [
+        "SQL y Diseño de Bases de Datos",
+        "Desarrollo en Python",
+        "Análisis y Visualización de Datos",
+        "Programación en C/C++",
+        "Machine Learning"
+      ],
+      "managementSkills": [
+        "Gestión de Proyectos",
+        "SCRUM y Metodologías Ágiles",
+        "Gestión de Riesgos",
+        "Liderazgo de Equipos",
+        "Colaboración Multifuncional"
+      ]
+    }
+  },
+  "blog": {
+    "hero": {
+      "section": "Artículos Técnicos",
+      "title": "Perspectivas de Ingeniería y Técnicas"
+    },
+    "categories": {
+      "all": "Todos",
+      "processDevelopment": "Desarrollo de Procesos",
+      "dataSystems": "Sistemas de Datos",
+      "engineering": "Ingeniería",
+      "qualityAssurance": "Garantía de Calidad",
+      "sustainability": "Sostenibilidad",
+      "leadership": "Liderazgo"
+    },
+    "readMore": "Haga clic para leer más sobre",
+    "newsletter": {
+      "section": "Manténgase Actualizado",
+      "title": "Suscríbase a Mi Boletín",
+      "description": "Reciba actualizaciones sobre los últimos avances en ingeniería, técnicas de desarrollo de procesos y perspectivas técnicas directamente en su bandeja de entrada.",
+      "placeholder": "Su Correo Electrónico",
+      "subscribe": "Suscribirse"
+    }
+  },
+  "contact": {
+    "hero": {
+      "section": "Contacto",
+      "title": "Conectemos"
+    },
+    "form": {
+      "name": "Su Nombre",
+      "email": "Dirección de Correo",
+      "subject": "Asunto",
+      "message": "Su Mensaje...",
+      "submit": "Enviar"
+    },
+    "info": {
+      "email": "Correo",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    },
+    "resume": {
+      "section": "Mi Currículum",
+      "title": "Descargar Mi Currículum",
+      "description": "¿Busca más detalles sobre mi experiencia profesional, educación y habilidades? Descargue mi currículum completo.",
+      "button": "Descargar Currículum"
+    },
+    "connect": {
+      "section": "Conectar",
+      "title": "Conectemos en LinkedIn",
+      "description": "Conéctese conmigo en LinkedIn para mantenerse actualizado sobre mi trayectoria profesional y perspectivas de la industria.",
+      "button": "Perfil de LinkedIn"
+    }
+  }
+}
