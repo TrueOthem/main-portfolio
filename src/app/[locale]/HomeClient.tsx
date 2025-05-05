@@ -358,28 +358,28 @@ export default function HomeClient({ locale }: HomeClientProps) {
   ];
 
   return (
-    <ClientBody data-oid="1rokiz_">
+    <ClientBody data-oid="-d_nh2j">
       {/* Hero Section with Enhanced Animations */}
       <section
         id="hero-section"
-        className="section-container hero-section w-full min-h-[80vh] md:min-h-[85vh] flex flex-col md:flex-row items-center py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden justify-between relative h-[2671px]"
+        className="section-container hero-section w-full min-h-[80vh] md:min-h-[85vh] flex flex-col md:flex-row items-center py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden justify-between relative"
         data-testid="hero-section"
-        data-oid="hakiw.4"
+        data-oid="8zj0jpa"
       >
         {/* Background decorative elements */}
         <div
           className="absolute inset-0 z-0 overflow-hidden pointer-events-none"
-          data-oid="01..8ft"
+          data-oid="mji1hb-"
         >
           {/* Top left circle */}
           <div
             className="absolute top-[8%] left-[5%] w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 opacity-[0.05]"
-            data-oid="abfpo7_"
+            data-oid="p543knj"
           >
-            <ParallaxScroll speed={0.2} direction="down" data-oid="rphh8e1">
+            <ParallaxScroll speed={0.2} direction="down" data-oid="r:86f4m">
               <div
                 className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"
-                data-oid="cq0_:zk"
+                data-oid="o-vu9gf"
               ></div>
             </ParallaxScroll>
           </div>
@@ -387,12 +387,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
           {/* Bottom right large circle */}
           <div
             className="absolute bottom-[12%] right-[5%] w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 opacity-[0.04]"
-            data-oid="xqi2_cs"
+            data-oid="973fk6a"
           >
-            <ParallaxScroll speed={0.3} direction="up" data-oid="08b9948">
+            <ParallaxScroll speed={0.3} direction="up" data-oid="-fhu1es">
               <div
                 className="w-full h-full bg-gradient-to-tl from-primary to-primary/70 rounded-full"
-                data-oid="kc-tlbe"
+                data-oid=":xnsnfb"
               ></div>
             </ParallaxScroll>
           </div>
@@ -400,12 +400,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
           {/* Middle right small circle - hidden on mobile */}
           <div
             className="absolute top-[38%] right-[12%] w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-[0.06] hidden sm:block"
-            data-oid="a2ae437"
+            data-oid="4odnba."
           >
-            <ParallaxScroll speed={0.15} direction="left" data-oid="-cu5_hm">
+            <ParallaxScroll speed={0.15} direction="left" data-oid=".8_t1r_">
               <div
                 className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"
-                data-oid="2c43ca2"
+                data-oid="01.:my2"
               ></div>
             </ParallaxScroll>
           </div>
@@ -413,12 +413,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
           {/* Additional small decorative element - hidden on mobile */}
           <div
             className="absolute top-[65%] left-[18%] w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 opacity-[0.04] hidden sm:block"
-            data-oid="q.jcmk8"
+            data-oid="i3s7e3o"
           >
-            <ParallaxScroll speed={0.25} direction="right" data-oid="py0_u05">
+            <ParallaxScroll speed={0.25} direction="right" data-oid="4in_te-">
               <div
                 className="w-full h-full bg-gradient-to-br from-primary to-primary/70 rounded-full"
-                data-oid="6okov9b"
+                data-oid="o8uj5ma"
               ></div>
             </ParallaxScroll>
           </div>
@@ -427,9 +427,9 @@ export default function HomeClient({ locale }: HomeClientProps) {
         {/* Left side - Profile Image with animations */}
         <div
           className="w-full md:w-2/5 flex justify-center items-center mb-8 md:mb-0 z-10"
-          data-oid="-lxdk7t"
+          data-oid="2.4657z"
         >
-          <div className="relative" data-oid="xoml:qn">
+          <div className="relative" data-oid="bh:r5gj">
             {/* Outer animated ring */}
             <motion.div
               className="absolute -inset-3 sm:-inset-4 md:-inset-5 rounded-full border border-primary/10"
@@ -440,8 +440,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 ease: "easeOut",
                 delay: 0.6,
               }}
-              data-oid="1ybk_yb"
-              key="olk-JGbZ"
+              data-oid="n9c-407"
             />
 
             {/* Inner animated ring */}
@@ -454,27 +453,25 @@ export default function HomeClient({ locale }: HomeClientProps) {
                 ease: "easeOut",
                 delay: 0.4,
               }}
-              data-oid="jj4wndb"
-              key="olk-bUl-"
+              data-oid="r3bxtwl"
             />
 
             {/* Profile image with subtle hover effect */}
             <MagneticElement
               distanceThreshold={100}
               magnetStrength={0.15}
-              data-oid=":euttn9"
-              key="olk-uHm4"
+              data-oid="03.n8ej"
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative z-10"
-                data-oid="m1cb.ka"
+                data-oid="1r24-ei"
               >
                 <div
                   className="rounded-full overflow-hidden h-[180px] w-[180px] sm:h-[220px] sm:w-[220px] md:h-[260px] md:w-[260px] lg:h-[300px] lg:w-[300px] shadow-lg"
-                  data-oid="3_-pnrv"
+                  data-oid="w1uxzp_"
                 >
                   <Image
                     src="/uploads/profile-photo.jpg"
@@ -483,7 +480,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                     height={500}
                     className="profile-image object-cover h-full w-full"
                     priority
-                    data-oid="bhp.au0"
+                    data-oid="u_2qlkv"
                   />
                 </div>
               </motion.div>
@@ -498,18 +495,18 @@ export default function HomeClient({ locale }: HomeClientProps) {
         {/* Right side - Name and title with animations */}
         <div
           className="w-full md:w-3/5 z-10 text-center md:text-left"
-          data-oid="0vu774n"
+          data-oid="s-bey7x"
         >
           <div
             className="max-w-xl mx-auto md:mx-0 md:ml-4 lg:ml-6"
-            data-oid="0fn73:q"
+            data-oid="2xlay::"
           >
             {/* Name with staggered reveal */}
-            <div className="overflow-hidden mb-0" data-oid="3r:93t9">
-              <RevealText delay={0.2} data-oid="b9-4a0h">
+            <div className="overflow-hidden mb-0" data-oid="hn:r6e8">
+              <RevealText delay={0.2} data-oid="lr0qqea">
                 <h1
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]"
-                  data-oid="m3zqai0"
+                  data-oid="tv9oz7b"
                 >
                   {t("hero.name")}
                 </h1>
@@ -518,12 +515,12 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
             <div
               className="overflow-hidden mb-4 sm:mb-5 md:mb-6"
-              data-oid="n-7pixz"
+              data-oid="g6hgnjt"
             >
-              <RevealText delay={0.4} data-oid="h0d:zz-">
+              <RevealText delay={0.4} data-oid="vgcj0l7">
                 <h1
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1]"
-                  data-oid="pmeqz8h"
+                  data-oid=":ermut6"
                 >
                   {t("hero.surname")}
                 </h1>
@@ -531,15 +528,15 @@ export default function HomeClient({ locale }: HomeClientProps) {
             </div>
 
             {/* Role/title with fade in */}
-            <FadeIn direction="up" delay={0.6} data-oid="drl4o0e">
+            <FadeIn direction="up" delay={0.6} data-oid="166i.6t">
               <div
                 className="h-[2px] w-16 sm:w-20 md:w-24 bg-gradient-to-r from-primary/40 to-primary/10 mb-4 mx-auto md:mx-0"
-                data-oid="qbab80l"
+                data-oid="y6lfgig"
               ></div>
 
               <h2
                 className="text-base sm:text-lg md:text-xl text-muted-foreground mb-3 sm:mb-4 font-medium tracking-wide"
-                data-oid="a2raanv"
+                data-oid="hk5vmmx"
               >
                 Process Development Engineer
               </h2>
@@ -547,7 +544,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
               {/* Brief intro text */}
               <p
                 className="text-sm sm:text-base max-w-md text-muted-foreground mb-5 sm:mb-6 mx-auto md:mx-0 leading-relaxed"
-                data-oid="v6ws063"
+                data-oid="-dkv:rx"
               >
                 Specialized in renewable energy production and manufacturing
                 processes optimization, with expertise in data analysis and
@@ -557,22 +554,8 @@ export default function HomeClient({ locale }: HomeClientProps) {
               {/* CTA buttons with ripple effect */}
               <div
                 className="flex flex-col sm:flex-row items-center md:items-start gap-3 sm:gap-4"
-                data-oid="vk_5ycl"
-              >
-                <RippleButton
-                  className="px-6 py-2.5 bg-primary text-white rounded-full text-sm font-medium hover:bg-primary/90 transition-colors shadow-sm"
-                  data-oid="-r:k9yw"
-                >
-                  View My Work
-                </RippleButton>
-
-                <RippleButton
-                  className="px-6 py-2.5 bg-transparent border border-primary/20 text-primary rounded-full text-sm font-medium hover:bg-primary/5 transition-colors"
-                  data-oid="b2iyu3_"
-                >
-                  Download Resume
-                </RippleButton>
-              </div>
+                data-oid="grqdfvu"
+              ></div>
             </FadeIn>
           </div>
         </div>
@@ -586,7 +569,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
             duration: 1,
             delay: 1.5,
           }}
-          data-oid="fkgr_xr"
+          data-oid="p44ldqg"
         >
           <motion.div
             className="flex flex-col items-center"
@@ -597,15 +580,15 @@ export default function HomeClient({ locale }: HomeClientProps) {
               repeatType: "loop",
               ease: "easeInOut",
             }}
-            data-oid="a6lhb_b"
+            data-oid="t4hv76r"
           >
             <div
               className="w-[1px] h-8 bg-gradient-to-b from-primary/10 to-primary/30"
-              data-oid="8w96r72"
+              data-oid="-b.44.f"
             ></div>
             <div
               className="mt-1 text-[9px] text-muted-foreground tracking-wider font-medium"
-              data-oid="hm.0bx0"
+              data-oid="emge1op"
             >
               SCROLL
             </div>
@@ -614,79 +597,79 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </section>
 
       {/* About Section */}
-      <ScrollReveal data-oid="zs60ke.">
+      <ScrollReveal data-oid="pv547hz">
         <section
           id="about-section"
           className="section-container min-h-[355px]"
-          data-oid="_4769:s"
+          data-oid="3gyei-g"
         >
-          <div className="section-sidebar" data-oid="s62:avw">
-            <div className="section-header" data-oid="62m1daw">
-              <span className="mr-2 text-sm" data-oid="n_hhlel">
+          <div className="section-sidebar" data-oid="k47uj1u">
+            <div className="section-header" data-oid="rz6k8_n">
+              <span className="mr-2 text-sm" data-oid="sjnifmh">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="o1knvq_">
+              <h3 className="text-[16px]" data-oid="-i:sv:2">
                 {t("about.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="fmindga">
-            <FadeIn direction="up" data-oid="spxix1t">
-              <h2 className="section-title" data-oid="gw75n28">
+          <div className="section-content" data-oid="s880j15">
+            <FadeIn direction="up" data-oid="p518ds8">
+              <h2 className="section-title" data-oid="r_txzqj">
                 {t("about.title")}
               </h2>
-              <p className="section-description" data-oid="n.qnuz-">
+              <p className="section-description" data-oid="attdy0j">
                 {t("about.description")}
               </p>
-              <div className="stats-container" data-oid="_a3n8mn">
+              <div className="stats-container" data-oid="d_0c70s">
                 <StaggerContainer
                   staggerChildren={0.1}
                   className="stats-container"
-                  data-oid="iteha9d"
+                  data-oid="10vdy-f"
                 >
-                  <StaggerItem data-oid="siz_653">
+                  <StaggerItem data-oid="wkukj5q">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="_qzvyxg"
+                      data-oid="df64re4"
                     >
-                      <div className="stat-item" data-oid="lu-:v:c">
-                        <h3 className="stat-value" data-oid="ebc.v53">
+                      <div className="stat-item" data-oid="sutdnar">
+                        <h3 className="stat-value" data-oid="orpyy:-">
                           5+
                         </h3>
-                        <p className="stat-label" data-oid="or8r2qp">
+                        <p className="stat-label" data-oid="md4b:60">
                           {t("about.experience")}
                         </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem data-oid=".yg-hu2">
+                  <StaggerItem data-oid="v6z9kjy">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="h6u956w"
+                      data-oid="8g4e-ov"
                     >
-                      <div className="stat-item" data-oid="7_7wd_a">
-                        <h3 className="stat-value" data-oid="jo26rl2">
+                      <div className="stat-item" data-oid="sq-6boy">
+                        <h3 className="stat-value" data-oid="1-3g2ut">
                           20+
                         </h3>
-                        <p className="stat-label" data-oid="t2d5-b9">
+                        <p className="stat-label" data-oid="hzo.f.o">
                           {t("about.projects")}
                         </p>
                       </div>
                     </MagneticElement>
                   </StaggerItem>
-                  <StaggerItem data-oid="tuavgul">
+                  <StaggerItem data-oid="u6:xxuz">
                     <MagneticElement
                       distanceThreshold={100}
                       magnetStrength={0.3}
-                      data-oid="_e5a-7k"
+                      data-oid=":.6h5.j"
                     >
-                      <div className="stat-item" data-oid="tnm9.cq">
-                        <h3 className="stat-value" data-oid="bq12fi-">
+                      <div className="stat-item" data-oid="5f2affm">
+                        <h3 className="stat-value" data-oid="pnhha50">
                           4+
                         </h3>
-                        <p className="stat-label" data-oid="61yo6_4">
+                        <p className="stat-label" data-oid="wj3oa33">
                           {t("about.companies")}
                         </p>
                       </div>
@@ -700,35 +683,35 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Company Logos Section */}
-      <ScrollReveal data-oid="6u85cbi">
+      <ScrollReveal data-oid="d8.yndf">
         <section
           className="col-span-3 border-b border-[#d1d1c7] overflow-hidden py-8 md:py-12 px-6 md:px-8"
-          data-oid="u0k9dgw"
+          data-oid="u9ysye8"
         >
           <StaggerContainer
             staggerChildren={0.1}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
-            data-oid="7qdqn80"
+            data-oid="yqqc_nh"
           >
             {logoData.map((logo) => (
-              <StaggerItem key={logo.id} data-oid="3j149.3">
+              <StaggerItem key={logo.id} data-oid="onmethf">
                 <div
                   className="flex justify-center items-center"
-                  data-oid="r6_u7wx"
+                  data-oid="p5j7z4g"
                 >
                   <MagneticElement
                     distanceThreshold={100}
                     magnetStrength={0.2}
-                    data-oid="3ur995k"
+                    data-oid="g328lfq"
                   >
                     <div
                       className="h-20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
-                      data-oid="jpvg-te"
+                      data-oid="xypg2km"
                     >
                       {logo.imgSrc ? (
                         <div
                           className="h-full flex items-center justify-center"
-                          data-oid="80q3e-q"
+                          data-oid="qgn:4i3"
                         >
                           <Image
                             src={logo.imgSrc}
@@ -737,13 +720,13 @@ export default function HomeClient({ locale }: HomeClientProps) {
                             width={120}
                             height={60}
                             className="max-h-16 object-contain"
-                            data-oid="a-qy5ji"
+                            data-oid="k1icy:x"
                           />
                         </div>
                       ) : (
                         <div
                           className="h-16 w-full flex items-center justify-center text-sm text-center"
-                          data-oid="o4gnkf9"
+                          data-oid="l:glu21"
                         >
                           {logo.company}
                         </div>
@@ -758,152 +741,152 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Expertise Section */}
-      <ScrollReveal data-oid="rne1phj">
-        <section className="section-container" data-oid="ka1t_u6">
-          <div className="section-sidebar" data-oid="8f.23gq">
-            <div className="section-header" data-oid="xmcdiwr">
-              <span className="mr-2 text-sm" data-oid="vf_pxjg">
+      <ScrollReveal data-oid="v..cu-f">
+        <section className="section-container" data-oid="tfxdvz6">
+          <div className="section-sidebar" data-oid="q.-ko9x">
+            <div className="section-header" data-oid="sp59wjt">
+              <span className="mr-2 text-sm" data-oid="8prz_dt">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="3pjg-fj">
+              <h3 className="text-[16px]" data-oid="f-15m_0">
                 {t("skills.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="ovadlth">
-            <FadeIn direction="up" data-oid="5odpdze">
-              <h2 className="section-subtitle" data-oid="f5x8ghn">
+          <div className="section-content" data-oid="j.3orzm">
+            <FadeIn direction="up" data-oid=":t7-p69">
+              <h2 className="section-subtitle" data-oid="hqhsg3o">
                 {t("skills.title")}
               </h2>
-              <p className="section-description mb-12" data-oid="05bgwx0">
+              <p className="section-description mb-12" data-oid="d1h2-4m">
                 {t("skills.description")}
               </p>
 
               <StaggerContainer
                 staggerChildren={0.1}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                data-oid="qnssnyq"
+                data-oid="we6tzaz"
               >
-                <StaggerItem data-oid="93estma">
+                <StaggerItem data-oid="frtwx4w">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="84p50gs"
+                    data-oid="_prg0rf"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="t-4k:1-"
+                      data-oid="5rzml5."
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid=":6m16m-"
+                        data-oid="ywys7mn"
                       >
                         {t("skills.processDevelopment.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="3jss2px"
+                        data-oid="ttau2lw"
                       >
                         {t("skills.processDevelopment.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="cpvo4w1">
+                <StaggerItem data-oid="0517j9e">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="anaz5u6"
+                    data-oid="m4gbnmr"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="647ls.w"
+                      data-oid="8-3ugrx"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="_udlwd3"
+                        data-oid="nim:7ay"
                       >
                         {t("skills.dataAnalysis.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="ryck4m9"
+                        data-oid="m3u-gnc"
                       >
                         {t("skills.dataAnalysis.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="1rk_sr8">
+                <StaggerItem data-oid="z5p3um1">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="p-zhz5."
+                    data-oid="s-4_kln"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="9hlm3ld"
+                      data-oid="g_vn3da"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="e4ap2x:"
+                        data-oid="j85f6h0"
                       >
                         {t("skills.manufacturingSystems.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="g:ftg7m"
+                        data-oid="j-a5dma"
                       >
                         {t("skills.manufacturingSystems.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem data-oid="odry-zt">
+                <StaggerItem data-oid="sb-su.q">
                   <TiltCard
                     glareEffect={true}
                     className="h-full"
-                    data-oid="fkhipv."
+                    data-oid="t5nm8mg"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="996fg0m"
+                      data-oid="a:yql-z"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="9c.-9l."
+                        data-oid=":2r1nvf"
                       >
                         {t("skills.cadDesign.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="5o32n:_"
+                        data-oid="5od9cex"
                       >
                         {t("skills.cadDesign.description")}
                       </p>
                     </div>
                   </TiltCard>
                 </StaggerItem>
-                <StaggerItem className="md:col-span-2" data-oid="-q.8yt2">
+                <StaggerItem className="md:col-span-2" data-oid="53r.x23">
                   <TiltCard
                     glareEffect={true}
                     tiltFactor={5}
                     className="h-full"
-                    data-oid="w-snf0x"
+                    data-oid="8i3am6g"
                   >
                     <div
                       className="border border-[#d1d1c7] p-6 h-full rounded-md"
-                      data-oid="wgfxr1l"
+                      data-oid="ol0zp.i"
                     >
                       <h3
                         className="text-lg font-medium mb-3"
-                        data-oid="i2pjynj"
+                        data-oid="wtiqmcg"
                       >
                         {t("skills.technicalSkills.title")}
                       </h3>
                       <p
                         className="text-sm text-muted-foreground"
-                        data-oid="jchh6fg"
+                        data-oid="-9c.2pd"
                       >
                         Python, SQL, LabVIEW, C++, CAD, SolidWorks, Adobe
                         Programs, Office Suites
@@ -918,69 +901,69 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Works Section */}
-      <ScrollReveal data-oid="wt5di8d">
-        <div className="hidden" data-oid="949amd7">
+      <ScrollReveal data-oid="3xyjn7t">
+        <div className="hidden" data-oid=":7iddii">
           Works section placeholder
         </div>
       </ScrollReveal>
 
       {/* Projects Grid */}
-      <ScrollReveal data-oid="6l0jfvd">
-        <div className="hidden" data-oid="nvnr3vq">
+      <ScrollReveal data-oid="9e6yv89">
+        <div className="hidden" data-oid="7etfnaq">
           Projects grid placeholder
         </div>
       </ScrollReveal>
 
       {/* Professional Experience Section */}
-      <ScrollReveal data-oid="opu69p7">
+      <ScrollReveal data-oid="fj30n2d">
         <section
           id="experience-section"
           className="section-container"
-          data-oid="c:cn69o"
+          data-oid="9:o0b5r"
         >
-          <div className="section-sidebar" data-oid="epz9kjj">
-            <div className="section-header" data-oid="3gr5k_f">
-              <span className="mr-2 text-sm" data-oid="pnt0g_r">
+          <div className="section-sidebar" data-oid="7kc2_up">
+            <div className="section-header" data-oid="0:ov4y-">
+              <span className="mr-2 text-sm" data-oid="arryo.1">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid=":xv5l0i">
+              <h3 className="text-[16px]" data-oid=".h.c0ri">
                 {t("experience.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="c-d:kdr">
-            <FadeIn direction="up" data-oid="yaq.-ye">
-              <h2 className="section-title" data-oid="i92y-fg">
+          <div className="section-content" data-oid="9vfuz-.">
+            <FadeIn direction="up" data-oid=".y2vrp0">
+              <h2 className="section-title" data-oid="kvuyifx">
                 {t("experience.title")}
               </h2>
 
-              <div className="space-y-8 mt-8" data-oid="mhtg0qr">
+              <div className="space-y-8 mt-8" data-oid="4vg.a2n">
                 {professionalExperience.map((exp) => (
                   <div
                     key={exp.id}
                     className="rounded-md p-6 border border-[#d1d1c7] transition-all hover:shadow-sm"
-                    data-oid="kplz35a"
+                    data-oid="h_hx1tr"
                   >
                     <div
                       className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
-                      data-oid="p-sz8r5"
+                      data-oid="4naguck"
                     >
-                      <div data-oid="c8dzbfk">
+                      <div data-oid="f5:bc8k">
                         <h3
                           className="text-xl font-medium mb-2"
-                          data-oid="xvn:4j6"
+                          data-oid="riwzv:i"
                         >
                           {exp.title}
                         </h3>
                         <p
                           className="text-muted-foreground mb-1"
-                          data-oid="hgkwyo9"
+                          data-oid="0ty_5ts"
                         >
                           {exp.company} · {exp.location}
                         </p>
                         <p
                           className="text-sm text-muted-foreground"
-                          data-oid="m8lz_21"
+                          data-oid="mrl.re7"
                         >
                           {exp.period}
                         </p>
@@ -988,7 +971,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       {exp.logo && (
                         <div
                           className="mt-4 md:mt-0 flex-shrink-0"
-                          data-oid="z4.9y4."
+                          data-oid="3bml8ul"
                         >
                           <Image
                             src={exp.logo}
@@ -996,17 +979,17 @@ export default function HomeClient({ locale }: HomeClientProps) {
                             width={120}
                             height={60}
                             className="object-contain max-h-16"
-                            data-oid="ct.t3wq"
+                            data-oid="6s5lrpq"
                           />
                         </div>
                       )}
                     </div>
-                    <ul className="list-disc pl-5 space-y-3" data-oid="k-ney6b">
+                    <ul className="list-disc pl-5 space-y-3" data-oid="xzg8-sp">
                       {exp.achievements.map((achievement, index) => (
                         <li
                           key={index}
                           className="text-sm leading-relaxed"
-                          data-oid="9fkygxe"
+                          data-oid="3bn8ssf"
                         >
                           {achievement}
                         </li>
@@ -1021,55 +1004,55 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Education Section */}
-      <ScrollReveal data-oid="h3958o9">
+      <ScrollReveal data-oid="86f880-">
         <section
           id="education-section"
           className="section-container"
-          data-oid="58mdh_u"
+          data-oid="w6uac3r"
         >
-          <div className="section-sidebar" data-oid="mx64068">
-            <div className="section-header" data-oid="4zg:81q">
-              <span className="mr-2 text-sm" data-oid="73l0gg9">
+          <div className="section-sidebar" data-oid="ot6xycg">
+            <div className="section-header" data-oid="u-g1zh9">
+              <span className="mr-2 text-sm" data-oid="z37w90p">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="r84qy5_">
+              <h3 className="text-[16px]" data-oid="n.paunu">
                 {t("education.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="in7.:rv">
-            <FadeIn direction="up" data-oid="8ymzlut">
-              <h2 className="section-title" data-oid="3o70fyu">
+          <div className="section-content" data-oid="oehg_96">
+            <FadeIn direction="up" data-oid="y8d7ihk">
+              <h2 className="section-title" data-oid=".zvti39">
                 {t("education.title")}
               </h2>
 
-              <div className="space-y-6 mt-8" data-oid="rxcx5s_">
+              <div className="space-y-6 mt-8" data-oid="vnv9jbx">
                 {education.map((edu) => (
                   <div
                     key={edu.id}
                     className="rounded-md p-6 border border-[#d1d1c7] transition-all hover:shadow-sm"
-                    data-oid="z8xy9-2"
+                    data-oid="a02w63j"
                   >
                     <div
                       className="flex flex-col md:flex-row justify-between items-start md:items-center"
-                      data-oid="9.wlpk."
+                      data-oid="b38_rw-"
                     >
-                      <div data-oid="1meiiu5">
+                      <div data-oid="mtxm1co">
                         <h3
                           className="text-xl font-medium mb-2"
-                          data-oid="dza_q.4"
+                          data-oid="9__of_i"
                         >
                           {edu.institution}
                         </h3>
                         <p
                           className="text-muted-foreground mb-1"
-                          data-oid="89301d6"
+                          data-oid="_7mh9rt"
                         >
                           {edu.degree}
                         </p>
                         <p
                           className="text-sm text-muted-foreground"
-                          data-oid="_z1-yv2"
+                          data-oid="zo3gx14"
                         >
                           {edu.period}
                         </p>
@@ -1077,7 +1060,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       {edu.logo && (
                         <div
                           className="mt-4 md:mt-0 flex-shrink-0"
-                          data-oid="d8:gaf6"
+                          data-oid="gfsse.c"
                         >
                           <Image
                             src={edu.logo}
@@ -1085,7 +1068,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                             width={120}
                             height={60}
                             className="object-contain max-h-16"
-                            data-oid="0sqb7j6"
+                            data-oid="3igfbxc"
                           />
                         </div>
                       )}
@@ -1099,39 +1082,39 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Resume Download Section */}
-      <ScrollReveal data-oid="z2:wyvn">
+      <ScrollReveal data-oid="p9:iwi4">
         <section
           id="resume-section"
           className="section-container"
-          data-oid="-i_v2te"
+          data-oid="h0mq.mr"
         >
-          <div className="section-sidebar" data-oid="c-rvly6">
-            <div className="section-header" data-oid="5i-.t-3">
-              <span className="mr-2 text-sm" data-oid="pj9cdjd">
+          <div className="section-sidebar" data-oid="8oo01mc">
+            <div className="section-header" data-oid="oxrezmk">
+              <span className="mr-2 text-sm" data-oid=".d7cc5g">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="bjuxz1s">
+              <h3 className="text-[16px]" data-oid="gcg3pi_">
                 {t("resume.section")}
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="e8k54n4">
-            <FadeIn direction="up" data-oid="hqfrqvd">
-              <h2 className="section-title" data-oid="v415c28">
+          <div className="section-content" data-oid="qq777hc">
+            <FadeIn direction="up" data-oid="2t1o3yu">
+              <h2 className="section-title" data-oid="1tx5d37">
                 {t("resume.title")}
               </h2>
-              <p className="section-description mb-8" data-oid="lt.7bir">
+              <p className="section-description mb-8" data-oid="tszl757">
                 {t("resume.description")}
               </p>
               <a
                 href="/uploads/Mohamed-adil-resume-PSE.pdf"
                 download
                 className="inline-block mt-4"
-                data-oid="2irv3au"
+                data-oid="n95zj-_"
               >
                 <Button
                   className="main-button rounded-full px-8 py-6 text-base"
-                  data-oid="wtx4iwd"
+                  data-oid="vr8mfj5"
                 >
                   Download Resume (PDF)
                 </Button>
@@ -1142,34 +1125,34 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Technical Skills Section */}
-      <ScrollReveal data-oid="-vfa:-n">
-        <section className="section-container" data-oid="xcp5knz">
-          <div className="section-sidebar" data-oid="2x2i2uq">
-            <div className="section-header" data-oid="1dt3b-s">
-              <span className="mr-2 text-sm" data-oid="hbt00g8">
+      <ScrollReveal data-oid="9aubh46">
+        <section className="section-container" data-oid="1v1271u">
+          <div className="section-sidebar" data-oid="uxbxy9n">
+            <div className="section-header" data-oid="0uh7b:j">
+              <span className="mr-2 text-sm" data-oid="oijdibv">
                 +
               </span>
-              <h3 className="text-[16px]" data-oid="dqng2qc">
+              <h3 className="text-[16px]" data-oid="0n0_dsc">
                 Technical Skills
               </h3>
             </div>
           </div>
-          <div className="section-content" data-oid="5-48gba">
-            <FadeIn direction="up" data-oid="5d9zwbp">
-              <h2 className="section-subtitle" data-oid="6u02wdv">
+          <div className="section-content" data-oid="t.a81zo">
+            <FadeIn direction="up" data-oid="cacd6tg">
+              <h2 className="section-subtitle" data-oid="35:dxqj">
                 Technical Expertise
               </h2>
-              <p className="section-description mb-8" data-oid="bdt:bdw">
+              <p className="section-description mb-8" data-oid="x2e6y4l">
                 My core technical skills and competencies that I bring to every
                 project.
               </p>
 
-              <div className="grid grid-cols-1 gap-10" data-oid="ap7gbqq">
-                <div data-oid="7lnqgc3">
-                  <h3 className="text-xl font-medium mb-5" data-oid="60.lt-o">
+              <div className="grid grid-cols-1 gap-10" data-oid="w_80m1-">
+                <div data-oid="zspy5hl">
+                  <h3 className="text-xl font-medium mb-5" data-oid="9ahw739">
                     Engineering
                   </h3>
-                  <div className="flex flex-wrap gap-3" data-oid="dm-9_fq">
+                  <div className="flex flex-wrap gap-3" data-oid="z9udr37">
                     {[
                       "CAD & SolidWorks",
                       "Operations Research",
@@ -1180,7 +1163,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
-                        data-oid="60rlcz2"
+                        data-oid="pf0yyu7"
                       >
                         {skill}
                       </span>
@@ -1188,11 +1171,11 @@ export default function HomeClient({ locale }: HomeClientProps) {
                   </div>
                 </div>
 
-                <div data-oid="mh8ee80">
-                  <h3 className="text-xl font-medium mb-5" data-oid="ixu72-i">
+                <div data-oid="5.b:bjb">
+                  <h3 className="text-xl font-medium mb-5" data-oid="3cws12l">
                     Data & Programming
                   </h3>
-                  <div className="flex flex-wrap gap-3" data-oid="y5m1peh">
+                  <div className="flex flex-wrap gap-3" data-oid="d39sqa-">
                     {[
                       "SQL & Database Design",
                       "Python Development",
@@ -1203,7 +1186,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
-                        data-oid="hdwrzan"
+                        data-oid="yaysm_g"
                       >
                         {skill}
                       </span>
@@ -1211,11 +1194,11 @@ export default function HomeClient({ locale }: HomeClientProps) {
                   </div>
                 </div>
 
-                <div data-oid=":k7poz1">
-                  <h3 className="text-xl font-medium mb-5" data-oid="hf95w7x">
+                <div data-oid="j2c2df8">
+                  <h3 className="text-xl font-medium mb-5" data-oid="tzm9smk">
                     Management
                   </h3>
-                  <div className="flex flex-wrap gap-3" data-oid="sml-h.9">
+                  <div className="flex flex-wrap gap-3" data-oid="nd8._zb">
                     {[
                       "Project Management",
                       "SCRUM & Agile Methodologies",
@@ -1226,7 +1209,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
                       <span
                         key={skill}
                         className="inline-block px-5 py-2.5 rounded-full text-sm border border-[#d1d1c7] hover:bg-muted transition-colors"
-                        data-oid="u039mjg"
+                        data-oid="gcj542j"
                       >
                         {skill}
                       </span>
@@ -1240,22 +1223,22 @@ export default function HomeClient({ locale }: HomeClientProps) {
       </ScrollReveal>
 
       {/* Blog Section */}
-      <ScrollReveal data-oid="oqpmkdp">
-        <div className="hidden" data-oid="zff.voj">
+      <ScrollReveal data-oid="r56d937">
+        <div className="hidden" data-oid=".o9rahc">
           Blog section placeholder
         </div>
       </ScrollReveal>
 
       {/* Blog Posts Grid */}
-      <ScrollReveal data-oid="u.86o_5">
-        <div className="hidden" data-oid="seq9mte">
+      <ScrollReveal data-oid="tgh_m8g">
+        <div className="hidden" data-oid="nl87v4l">
           Blog posts grid placeholder
         </div>
       </ScrollReveal>
 
       {/* Newsletter Section */}
-      <ScrollReveal data-oid="4p6.oix">
-        <div className="hidden" data-oid="-t251wg">
+      <ScrollReveal data-oid="3kq1d:w">
+        <div className="hidden" data-oid="emzb1ss">
           Newsletter section placeholder
         </div>
       </ScrollReveal>
