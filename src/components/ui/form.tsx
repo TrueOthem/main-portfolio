@@ -35,8 +35,8 @@ const FormField = <
   ...props
 }: ControllerProps<TFieldValues, TName>) => {
   return (
-    <FormFieldContext.Provider value={{ name: props.name }} data-oid="e41izej">
-      <Controller {...props} data-oid="1s9hlu7" />
+    <FormFieldContext.Provider value={{ name: props.name }}>
+      <Controller {...props} />
     </FormFieldContext.Provider>
   );
 };
@@ -79,13 +79,8 @@ const FormItem = React.forwardRef<
   const id = React.useId();
 
   return (
-    <FormItemContext.Provider value={{ id }} data-oid="jb4ypyo">
-      <div
-        ref={ref}
-        className={cn("space-y-2", className)}
-        {...props}
-        data-oid="._wv1dv"
-      />
+    <FormItemContext.Provider value={{ id }}>
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
   );
 });
@@ -103,7 +98,6 @@ const FormLabel = React.forwardRef<
       className={cn(error && "text-destructive", className)}
       htmlFor={formItemId}
       {...props}
-      data-oid="adb9q2o"
     />
   );
 });
@@ -127,7 +121,6 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
-      data-oid="bzi1y.z"
     />
   );
 });
@@ -145,7 +138,6 @@ const FormDescription = React.forwardRef<
       id={formDescriptionId}
       className={cn("text-[0.8rem] text-muted-foreground", className)}
       {...props}
-      data-oid="u4lpi4h"
     />
   );
 });
@@ -168,7 +160,6 @@ const FormMessage = React.forwardRef<
       id={formMessageId}
       className={cn("text-[0.8rem] font-medium text-destructive", className)}
       {...props}
-      data-oid="tgfyxic"
     >
       {body}
     </p>

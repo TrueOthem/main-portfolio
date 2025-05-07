@@ -29,32 +29,17 @@ export default async function LocaleLayout({
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html
-      lang={locale}
-      dir={direction}
-      suppressHydrationWarning
-      data-oid="v-t1eu_"
-    >
+    <html lang={locale} dir={direction} suppressHydrationWarning>
       <body
         className="min-h-screen flex-col flex static top-auto right-auto bottom-auto left-auto"
         suppressHydrationWarning
-        data-oid="h_e3owc"
       >
-        <DeviceContextProvider data-oid="i0v02kn">
-          <ScrollProgressBar
-            height={3}
-            color="var(--primary)"
-            data-oid="t-.d4qz"
-          />
+        <DeviceContextProvider>
+          <ScrollProgressBar height={3} color="var(--primary)" />
 
-          <Navbar data-oid="3h5kqty" />
-          <main
-            className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0 w-[1184px]"
-            data-oid="q_5dex3"
-          >
-            <AdvancedPageTransition data-oid="ccq6zdn">
-              {children}
-            </AdvancedPageTransition>
+          <Navbar />
+          <main className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0 w-[1184px]">
+            <AdvancedPageTransition>{children}</AdvancedPageTransition>
           </main>
         </DeviceContextProvider>
       </body>
