@@ -1,128 +1,155 @@
 "use client";
 
 import Link from "next/link";
-import {
-  FadeIn,
-  StaggerContainer,
-  StaggerItem,
-  HoverScale,
-} from "@/components/ui/motion";
-import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { FadeIn } from "@/components/ui/motion";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export default function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+  
+  // Simple translation function
+  const t = (key: string) => {
+    // Extract locale from pathname
+    const locale = pathname.startsWith("/ar") ? "ar" : "en";
+
+    // Simple translations for footer
+    const translations: Record<string, Record<string, string>> = {
+      en: {
+        "footer.rights": "All rights reserved",
+        "footer.built": "Built with Next.js and Tailwind CSS",
+        "navigation.home": "Home",
+        "navigation.about": "About",
+        "navigation.works": "Works",
+        "navigation.contact": "Contact",
+      },
+      ar: {
+        "footer.rights": "جميع الحقوق محفوظة",
+        "footer.built": "بُني باستخدام Next.js و Tailwind CSS",
+        "navigation.home": "الرئيسية",
+        "navigation.about": "عني",
+        "navigation.works": "أعمالي",
+        "navigation.contact": "تواصل",
+      },
+    };
+
+    return translations[locale]?.[key] || key;
+  };
+
+  // Navigation links data
+  const navLinks = [
+    { href: "/", label: t("navigation.home") },
+    { href: "/about", label: t("navigation.about") },
+    { href: "/works", label: t("navigation.works") },
+    { href: "/contact", label: t("navigation.contact") },
+  ];
+
+  // Social links data
+  const socialLinks = [
+    { 
+      href: "https://github.com/", 
+      label: "GitHub",
+      icon: <Github className="h-5 w-5" />
+    },
+    { 
+      href: "https://linkedin.com/", 
+      label: "LinkedIn",
+      icon: <Linkedin className="h-5 w-5" />
+    },
+    { 
+      href: "https://twitter.com/", 
+      label: "Twitter",
+      icon: <Twitter className="h-5 w-5" />
+    },
+    { 
+      href: "mailto:contact@example.com", 
+      label: "Email",
+      icon: <Mail className="h-5 w-5" />
+    },
+  ];
 
   return (
-    <FadeIn>
-      <footer className="border-t border-[#d1d1c7] bg-background">
-        {/* Social links */}
-        <div className="border-b border-[#d1d1c7]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-            <StaggerContainer className="flex items-center space-x-6">
-              <StaggerItem>
-                <Link
-                  href="https://linkedin.com/in/mohamed-adil-al-sabri/"
-                  target="_blank"
-                  className="text-sm nav-link"
-                >
-                  <motion.span
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    LinkedIn
-                  </motion.span>
+    <FadeIn direction="up" duration={0.6}>
+      <footer className="border-t border-[#d1d1c7]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="py-12">
+            {/* Footer top section with navigation */}
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {/* Brand/Logo */}
+              <div>
+                <Link href="/" className="text-xl font-medium">
+                  Mohamed Adil
                 </Link>
-              </StaggerItem>
-              <StaggerItem>
-                <Link
-                  href="mailto:trueothem@gmail.com"
-                  className="text-sm nav-link"
-                >
-                  <motion.span
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    Email
-                  </motion.span>
-                </Link>
-              </StaggerItem>
-              <StaggerItem>
-                <Link href="tel:+16172333948" className="text-sm nav-link">
-                  <motion.span
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    Phone
-                  </motion.span>
-                </Link>
-              </StaggerItem>
-            </StaggerContainer>
-          </div>
-        </div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Process Development Engineer
+                </p>
+              </div>
 
-        {/* Additional footer content */}
-        <div className="border-b border-[#d1d1c7]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-            <StaggerContainer className="flex justify-end items-center space-x-6">
-              <StaggerItem>
-                <Link
-                  href="/privacy"
-                  className="text-sm footer-link"
-                  data-footer-link="true"
-                >
-                  <motion.span
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    Privacy Policy
-                  </motion.span>
-                </Link>
-              </StaggerItem>
-              <StaggerItem>
-                <Link
-                  href="/terms"
-                  className="text-sm footer-link"
-                  data-footer-link="true"
-                >
-                  <motion.span
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    Terms of Service
-                  </motion.span>
-                </Link>
-              </StaggerItem>
-              <StaggerItem>
-                <Link
-                  href="/sitemap"
-                  className="text-sm footer-link"
-                  data-footer-link="true"
-                >
-                  <motion.span
-                    whileHover={{ y: -3 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    Sitemap
-                  </motion.span>
-                </Link>
-              </StaggerItem>
-            </StaggerContainer>
-          </div>
-        </div>
+              {/* Navigation */}
+              <div className="mt-6 md:mt-0">
+                <h3 className="text-sm font-medium">Navigation</h3>
+                <ul className="mt-4 space-y-3">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-        {/* Credits */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <FadeIn delay={0.3}>
-            <div className="flex justify-center items-center">
-              <motion.p
-                className="text-sm text-muted-foreground"
-                whileHover={{ scale: 1.03 }}
-                transition={{ duration: 0.2 }}
-              >
-                &copy; {currentYear} Mohamed Adil Al Sabri. All rights reserved.
-              </motion.p>
+              {/* Connect */}
+              <div className="mt-6 md:mt-0">
+                <h3 className="text-sm font-medium">Connect</h3>
+                <ul className="mt-4 space-y-3">
+                  {socialLinks.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.icon}
+                        <span>{link.label}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Newsletter (placeholder) */}
+              <div className="mt-6 md:mt-0">
+                <h3 className="text-sm font-medium">Updates</h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Stay updated with my latest work and research in process development.
+                </p>
+                <div className="mt-4 flex max-w-md">
+                  <a
+                    href="/contact"
+                    className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                  >
+                    Contact Me
+                  </a>
+                </div>
+              </div>
             </div>
-          </FadeIn>
+
+            {/* Footer bottom section */}
+            <div className="mt-12 flex flex-col items-center justify-between border-t border-[#d1d1c7] pt-8 md:flex-row">
+              <p className="text-xs text-muted-foreground">
+                &copy; {currentYear} Mohamed Adil Al Sabri. {t("footer.rights")}.
+              </p>
+              <p className="mt-4 text-xs text-muted-foreground md:mt-0">
+                {t("footer.built")}
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </FadeIn>

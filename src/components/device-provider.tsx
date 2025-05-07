@@ -1,148 +1,109 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { shouldReduceMotion } from "@/lib/utils";
+import { createContext, useContext, useEffect, useState } from "react";
 
+// Define device context type
 type DeviceContextType = {
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
   isReducedMotion: boolean;
-  deviceType: "mobile" | "tablet" | "desktop";
-  performanceLevel: "low" | "medium" | "high";
+  isHighContrastMode: boolean;
 };
 
+// Create context with default values
 const DeviceContext = createContext<DeviceContextType>({
   isMobile: false,
   isTablet: false,
   isDesktop: true,
   isReducedMotion: false,
-  deviceType: "desktop",
-  performanceLevel: "high",
+  isHighContrastMode: false,
 });
 
-export const useDevice = () => useContext(DeviceContext);
-
+// Provider component
 export function DeviceContextProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Default to desktop to avoid hydration mismatch
   const [deviceInfo, setDeviceInfo] = useState<DeviceContextType>({
     isMobile: false,
     isTablet: false,
     isDesktop: true,
     isReducedMotion: false,
-    deviceType: "desktop",
-    performanceLevel: "high",
+    isHighContrastMode: false,
   });
 
-  const [hasInitialized, setHasInitialized] = useState(false);
+  useEffect(() => {
+    // Function to determine device type based on window width
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const isMobile = width < 768;
+      const isTablet = width >= 768 && width < 1024;
+      const isDesktop = width >= 1024;
 
-  const updateDeviceInfo = () => {
-    // For Playwright tests, we need to rely more on viewport size than touch detection
-    // since Playwright emulates different devices primarily through viewport changes
+      // Check for reduced motion preference
+      const isReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
-    // Get the current viewport width
-    const viewportWidth = window.innerWidth;
+      // Check for high contrast mode
+      const isHighContrastMode = window.matchMedia(
+        "(prefers-contrast: more)"
+      ).matches;
 
-    // Determine device type primarily based on viewport width for better test compatibility
-    const isMobile = viewportWidth < 768;
-    const isTablet = viewportWidth >= 768 && viewportWidth < 1024;
-    const isDesktop = viewportWidth >= 1024;
-
-    // Check for reduced motion preference
-    const isReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    // Determine device type
-    let deviceType: "mobile" | "tablet" | "desktop" = "desktop";
-    if (isMobile) deviceType = "mobile";
-    else if (isTablet) deviceType = "tablet";
-
-    // Determine performance level based on device characteristics
-    let performanceLevel: "low" | "medium" | "high" = "high";
-
-    // Check hardware concurrency (CPU cores) if available
-    if (window.navigator.hardwareConcurrency) {
-      if (window.navigator.hardwareConcurrency <= 2) {
-        performanceLevel = "low";
-      } else if (window.navigator.hardwareConcurrency <= 4) {
-        performanceLevel = "medium";
-      }
-    }
-
-    // Check device memory if available
-    if ("deviceMemory" in navigator) {
-      // @ts-ignore - deviceMemory is not in standard navigator type
-      const memory = navigator.deviceMemory as number;
-      if (memory && memory <= 2) {
-        performanceLevel = "low";
-      } else if (memory && memory <= 4) {
-        performanceLevel = "medium";
-      }
-    }
-
-    // On mobile, downgrade performance estimate
-    if (isMobile && performanceLevel === "high") {
-      performanceLevel = "medium";
-    }
-
-    // If reduced motion is requested, assume performance concerns
-    if (isReducedMotion || shouldReduceMotion()) {
-      performanceLevel = "low";
-    }
-
-    // Expose device info to window for testing purposes
-    if (typeof window !== "undefined") {
-      (window as any).__DEVICE_INFO__ = {
+      setDeviceInfo({
         isMobile,
         isTablet,
         isDesktop,
         isReducedMotion,
-        deviceType,
-        performanceLevel,
-      };
+        isHighContrastMode,
+      });
 
-      // Add data attributes to document for testing
-      document.documentElement.setAttribute("data-device-type", deviceType);
-      document.documentElement.setAttribute(
-        "data-reduced-motion",
-        isReducedMotion.toString(),
-      );
-    }
-
-    setDeviceInfo({
-      isMobile,
-      isTablet,
-      isDesktop,
-      isReducedMotion: isReducedMotion || shouldReduceMotion(),
-      deviceType,
-      performanceLevel,
-    });
-  };
-
-  useEffect(() => {
-    // Only execute once on client side
-    if (typeof window === "undefined" || hasInitialized) return;
-
-    // Initial detection
-    updateDeviceInfo();
-    setHasInitialized(true);
-
-    // Update on resize
-    const handleResize = () => {
-      updateDeviceInfo();
+      // Add appropriate data attributes to body for CSS targeting
+      document.body.dataset.device = isMobile
+        ? "mobile"
+        : isTablet
+        ? "tablet"
+        : "desktop";
+        
+      // Apply class for reduced motion if needed
+      if (isReducedMotion) {
+        document.documentElement.classList.add("motion-reduce");
+      } else {
+        document.documentElement.classList.remove("motion-reduce");
+      }
+      
+      // Apply class for high contrast if needed
+      if (isHighContrastMode) {
+        document.documentElement.classList.add("high-contrast");
+      } else {
+        document.documentElement.classList.remove("high-contrast");
+      }
     };
 
+    // Set initial device type
+    handleResize();
+
+    // Listen for window resize events
     window.addEventListener("resize", handleResize);
 
-    // Clean up
+    // Listen for changes in motion preference
+    const motionMediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    motionMediaQuery.addEventListener("change", handleResize);
+
+    // Listen for changes in contrast preference
+    const contrastMediaQuery = window.matchMedia("(prefers-contrast: more)");
+    contrastMediaQuery.addEventListener("change", handleResize);
+
+    // Clean up event listeners
     return () => {
       window.removeEventListener("resize", handleResize);
+      motionMediaQuery.removeEventListener("change", handleResize);
+      contrastMediaQuery.removeEventListener("change", handleResize);
     };
-  }, [hasInitialized]);
+  }, []);
 
   return (
     <DeviceContext.Provider value={deviceInfo}>
@@ -150,3 +111,6 @@ export function DeviceContextProvider({
     </DeviceContext.Provider>
   );
 }
+
+// Custom hook to use device context
+export const useDevice = () => useContext(DeviceContext);

@@ -1,117 +1,145 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+/**
+ * Combines class names using clsx and tailwind-merge
+ */
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function themeClass(theme: string, className: string) {
-  return theme ? `${theme} ${className}` : className;
-}
-
-// Device detection function (client-side only)
+/**
+ * Detect device type and accessibility preferences
+ */
 export function useDeviceDetection() {
-  if (typeof window !== 'undefined') {
-    // Check for touch capability as primary indicator of mobile
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    // Check viewport size for additional context
-    const isSmallScreen = window.innerWidth < 768;
-
-    // Check for mobile specific browser characteristics
-    const isMobileBrowser = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
+  if (typeof window === "undefined") {
     return {
-      isMobile: isTouchDevice && (isSmallScreen || isMobileBrowser),
-      isTablet: isTouchDevice && !isSmallScreen && window.innerWidth < 1024,
-      isDesktop: !isTouchDevice || window.innerWidth >= 1024,
-      isReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      isMobile: false,
+      isTablet: false,
+      isDesktop: true,
+      isReducedMotion: false,
+      isHighContrastMode: false,
     };
   }
 
-  // Default to desktop for SSR
+  const width = window.innerWidth;
   return {
-    isMobile: false,
-    isTablet: false,
-    isDesktop: true,
-    isReducedMotion: false
+    isMobile: width < 768,
+    isTablet: width >= 768 && width < 1024,
+    isDesktop: width >= 1024,
+    isReducedMotion: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    isHighContrastMode: window.matchMedia("(prefers-contrast: more)").matches,
   };
 }
 
-// Animation intensity scaling based on device
-export function getAnimationConfig(baseConfig: any, deviceType: string = 'desktop') {
-  if (deviceType === 'mobile') {
-    // Reduce animation intensity for mobile
-    return {
-      ...baseConfig,
-      // Reduce duration by 30% for mobile
-      duration: baseConfig.duration ? baseConfig.duration * 0.7 : 0.3,
-      // Simplify easing for performance
-      ease: 'easeOut',
-      // Reduce movement distance
-      distance: baseConfig.distance ? baseConfig.distance * 0.6 : 10,
-      // Reduce scale effects
-      scale: baseConfig.scale ?
-        Math.min(1 + (baseConfig.scale - 1) * 0.5, 1.05) :
-        1.02
-    };
+/**
+ * Check if user prefers reduced motion
+ */
+export function shouldReduceMotion(): boolean {
+  if (typeof window === "undefined") {
+    return false;
   }
-
-  if (deviceType === 'tablet') {
-    // Slightly reduce animation intensity for tablets
-    return {
-      ...baseConfig,
-      duration: baseConfig.duration ? baseConfig.duration * 0.85 : 0.4,
-      distance: baseConfig.distance ? baseConfig.distance * 0.8 : 15,
-      scale: baseConfig.scale ?
-        Math.min(1 + (baseConfig.scale - 1) * 0.7, 1.08) :
-        1.03
-    };
-  }
-
-  // Return original config for desktop
-  return baseConfig;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-// Check for reduced motion preference
-export function shouldReduceMotion() {
-  if (typeof window !== 'undefined') {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  }
-  return false;
+/**
+ * Format a number with commas
+ */
+export function formatNumberWithCommas(number: number): string {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// Get optimal animation values based on device and user preferences
-export function getOptimalAnimationValues({
-  property,
-  desktopValue,
-  tabletValue,
-  mobileValue,
-  reducedValue
-}: {
-  property: string;
-  desktopValue: any;
-  tabletValue?: any;
-  mobileValue?: any;
-  reducedValue?: any;
-}) {
-  // Client-side only
-  if (typeof window === 'undefined') return desktopValue;
+/**
+ * Generate a unique ID (useful for accessibility)
+ */
+export function generateUniqueId(prefix = "id"): string {
+  return `${prefix}-${Math.random().toString(36).substring(2, 9)}`;
+}
 
-  // Check reduced motion preference first
-  if (shouldReduceMotion() && reducedValue !== undefined) {
-    return reducedValue;
-  }
+/**
+ * Debounce function to limit how often a function is called
+ */
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout> | null = null;
+  
+  return (...args: Parameters<T>) => {
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+}
 
-  const { isMobile, isTablet } = useDeviceDetection();
+/**
+ * Convert hex color to rgba
+ */
+export function hexToRgba(hex: string, alpha = 1): string {
+  // Remove # if present
+  hex = hex.replace("#", "");
+  
+  // Parse the hex values
+  const r = parseInt(hex.substring(0, 2), 16);
+  const g = parseInt(hex.substring(2, 4), 16);
+  const b = parseInt(hex.substring(4, 6), 16);
+  
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
-  if (isMobile && mobileValue !== undefined) {
-    return mobileValue;
-  }
+/**
+ * Calculate contrast ratio between two colors
+ * Returns a value between 1 and 21
+ * WCAG requires at least 4.5:1 for normal text and 3:1 for large text
+ */
+export function calculateContrastRatio(color1: string, color2: string): number {
+  // Convert colors to RGB if they're hex
+  const rgb1 = color1.startsWith("#") ? hexToRgb(color1) : parseRgb(color1);
+  const rgb2 = color2.startsWith("#") ? hexToRgb(color2) : parseRgb(color2);
+  
+  // Calculate luminance
+  const luminance1 = calculateRelativeLuminance(rgb1);
+  const luminance2 = calculateRelativeLuminance(rgb2);
+  
+  // Calculate contrast ratio
+  const lighter = Math.max(luminance1, luminance2);
+  const darker = Math.min(luminance1, luminance2);
+  
+  return (lighter + 0.05) / (darker + 0.05);
+}
 
-  if (isTablet && tabletValue !== undefined) {
-    return tabletValue;
-  }
+// Helper for contrast calculation
+function hexToRgb(hex: string) {
+  hex = hex.replace("#", "");
+  return {
+    r: parseInt(hex.substring(0, 2), 16),
+    g: parseInt(hex.substring(2, 4), 16),
+    b: parseInt(hex.substring(4, 6), 16),
+  };
+}
 
-  return desktopValue;
+// Helper for contrast calculation
+function parseRgb(rgb: string) {
+  const match = rgb.match(/(\d+),\s*(\d+),\s*(\d+)/);
+  if (!match) return { r: 0, g: 0, b: 0 };
+  return {
+    r: parseInt(match[1], 10),
+    g: parseInt(match[2], 10),
+    b: parseInt(match[3], 10),
+  };
+}
+
+// Helper for contrast calculation
+function calculateRelativeLuminance(rgb: { r: number; g: number; b: number }) {
+  // Normalize RGB values
+  const r = rgb.r / 255;
+  const g = rgb.g / 255;
+  const b = rgb.b / 255;
+  
+  // Apply gamma correction
+  const R = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
+  const G = g <= 0.03928 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4);
+  const B = b <= 0.03928 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4);
+  
+  // Calculate luminance
+  return 0.2126 * R + 0.7152 * G + 0.0722 * B;
 }

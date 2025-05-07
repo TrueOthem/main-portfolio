@@ -6,6 +6,7 @@ import "../globals.css";
 
 // Import components
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { AdvancedPageTransition } from "@/components/ui/page-transition";
 import { ScrollProgressBar } from "@/components/ui/interactive-motion";
 import { DeviceContextProvider } from "@/components/device-provider";
@@ -29,18 +30,25 @@ export default async function LocaleLayout({
   const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={direction} suppressHydrationWarning>
+    <html lang={locale} dir={direction} suppressHydrationWarning className="scroll-smooth">
       <body
-        className="min-h-screen flex-col flex static top-auto right-auto bottom-auto left-auto"
+        className="min-h-screen flex flex-col bg-background text-foreground"
         suppressHydrationWarning
       >
         <DeviceContextProvider>
           <ScrollProgressBar height={3} color="var(--primary)" />
-
+          
           <Navbar />
-          <main className="flex-grow grid-container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <AdvancedPageTransition>{children}</AdvancedPageTransition>
+          
+          <main className="flex-grow w-full">
+            <AdvancedPageTransition>
+              <div className="relative mx-auto w-full">
+                {children}
+              </div>
+            </AdvancedPageTransition>
           </main>
+          
+          <Footer />
         </DeviceContextProvider>
       </body>
     </html>

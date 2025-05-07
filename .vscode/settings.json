@@ -1,0 +1,14 @@
+{
+    "mcp": {
+        
+        "inputs": [],
+        "servers": {
+            "apple-mcp": {
+                "command": "bunx",
+                "args": [
+                    "@dhravya/apple-mcp@latest"
+                ]
+            }
+        }
+    }
+}
