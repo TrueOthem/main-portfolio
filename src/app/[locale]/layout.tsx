@@ -38,7 +38,7 @@ export default async function LocaleLayout({
           <ScrollProgressBar height={3} color="var(--primary)" />
 
           <Navbar />
-          <main className="flex-grow grid-container mx-auto px-0 md:px-0 lg:px-0 w-[1184px]">
+          <main className="flex-grow grid-container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <AdvancedPageTransition>{children}</AdvancedPageTransition>
           </main>
         </DeviceContextProvider>

@@ -362,7 +362,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
       {/* Hero Section with Enhanced Animations */}
       <section
         id="hero-section"
-        className="section-container hero-section w-full min-h-[80vh] md:min-h-[85vh] flex flex-col md:flex-row items-center py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 overflow-hidden justify-between relative"
+        className="section-container hero-section w-full flex flex-col md:flex-row items-center overflow-hidden justify-between relative"
         data-testid="hero-section"
       >
         {/* Background decorative elements */}
@@ -496,7 +496,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
       {/* About Section */}
       <ScrollReveal>
-        <section id="about-section" className="section-container min-h-[355px]">
+        <section id="about-section" className="section-container">
           <div className="section-sidebar">
             <div className="section-header">
               <span className="mr-2 text-sm">+</span>
@@ -554,38 +554,40 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
       {/* Company Logos Section */}
       <ScrollReveal>
-        <section className="col-span-3 border-b border-[#d1d1c7] overflow-hidden py-8 md:py-12 px-6 md:px-8">
-          <StaggerContainer
-            staggerChildren={0.1}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
-          >
-            {logoData.map((logo) => (
-              <StaggerItem key={logo.id}>
-                <div className="flex justify-center items-center">
-                  <MagneticElement distanceThreshold={100} magnetStrength={0.2}>
-                    <div className="h-20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
-                      {logo.imgSrc ? (
-                        <div className="h-full flex items-center justify-center">
-                          <Image
-                            src={logo.imgSrc}
-                            alt={logo.company}
-                            priority
-                            width={120}
-                            height={60}
-                            className="max-h-16 object-contain"
-                          />
-                        </div>
-                      ) : (
-                        <div className="h-16 w-full flex items-center justify-center text-sm text-center">
-                          {logo.company}
-                        </div>
-                      )}
-                    </div>
-                  </MagneticElement>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+        <section className="section-container">
+          <div className="section-content !p-0">
+            <StaggerContainer
+              staggerChildren={0.1}
+              className="logo-grid"
+            >
+              {logoData.map((logo) => (
+                <StaggerItem key={logo.id}>
+                  <div className="flex justify-center items-center">
+                    <MagneticElement distanceThreshold={100} magnetStrength={0.2}>
+                      <div className="h-20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
+                        {logo.imgSrc ? (
+                          <div className="h-full flex items-center justify-center">
+                            <Image
+                              src={logo.imgSrc}
+                              alt={logo.company}
+                              priority
+                              width={120}
+                              height={60}
+                              className="max-h-16 object-contain"
+                            />
+                          </div>
+                        ) : (
+                          <div className="h-16 w-full flex items-center justify-center text-sm text-center">
+                            {logo.company}
+                          </div>
+                        )}
+                      </div>
+                    </MagneticElement>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </div>
         </section>
       </ScrollReveal>
 
@@ -607,7 +609,7 @@ export default function HomeClient({ locale }: HomeClientProps) {
 
               <StaggerContainer
                 staggerChildren={0.1}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                className="skills-grid"
               >
                 <StaggerItem>
                   <TiltCard glareEffect={true} className="h-full">
